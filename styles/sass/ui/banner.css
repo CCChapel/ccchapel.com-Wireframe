@@ -1,0 +1,47 @@
+/* line 1, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/styles/sass/ui/banner.scss */
+.campus-select {
+  height: 2em;
+  color: brown; }
+  /* line 6, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/styles/sass/ui/banner.scss */
+  .campus-select__options {
+    text-align: center !important;
+    color: #FFF; }
+
+/* line 13, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/styles/sass/ui/banner.scss */
+.banner {
+  height: 4em;
+  color: darkgreen; }
+  /* line 18, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/styles/sass/ui/banner.scss */
+  .banner__logo {
+    height: 100%;
+    text-align: center;
+    color: limegreen; }
+  /* line 26, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/styles/sass/ui/banner.scss */
+  .banner__menu {
+    height: 100%;
+    color: limegreen; }
+
+/* line 33, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/styles/sass/ui/banner.scss */
+.menu {
+  height: 100%; }
+  /* line 36, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/styles/sass/ui/banner.scss */
+  .menu__item {
+    height: 100%;
+    color: #FFF;
+    text-align: center; }
+
+/* line 44, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/styles/sass/ui/banner.scss */
+.logo {
+  padding: 4px 0;
+  height: 54px; }
+
+/* line 49, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/styles/sass/ui/banner.scss */
+.notifications {
+  color: #ff007f; }
+  /* line 52, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/styles/sass/ui/banner.scss */
+  .notifications__item {
+    height: 2em;
+    color: #FFF;
+    text-align: center; }
+
+/*# sourceMappingURL=banner.css.map */

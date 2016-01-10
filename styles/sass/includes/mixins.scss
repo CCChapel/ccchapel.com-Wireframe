@@ -1,0 +1,13 @@
+/*------------------------------------*\
+$MIXINS
+\*------------------------------------*/
+@mixin font-size($font-size, $unit: "rem"){
+    @if $unit == "em" {
+        font-size: ($font-size / $base-font-size)*1em;
+        line-height: min( (($base-line-height / $font-size)*1em), 1.5em);
+    }
+    @else {
+        font-size: ($font-size / $base-font-size)*1rem;
+        line-height: min( (($base-line-height / $font-size)*1rem), 1.5rem);
+    }
+} 

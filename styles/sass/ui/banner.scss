@@ -1,0 +1,59 @@
+.campus-select {
+    height: 2em;
+    
+    background-color: $blue;
+    
+    &__options {
+        text-align: center !important;
+        
+        height: 100%;
+        
+        @include font-size(14px);
+        color: #FFF;
+    }
+}
+
+.banner {
+    height: 4em;
+    
+    background-color: $dark-blue;
+
+    &__logo {
+        height: 100%;
+        
+        text-align: center;
+    }
+
+    &__menu {
+        height: 100%;
+    }
+}
+
+.menu {
+    height: 100%;
+    
+    &__item {
+        height: 100%;
+
+        color: #FFF;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+
+.logo {
+    padding: 4px 0;
+    height: 54px;
+}
+
+.notifications {
+    background-color: $green;
+    
+    &__item {
+        height: 3em;
+        
+        color: #FFF;
+        text-align: center;
+    }
+}

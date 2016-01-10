@@ -1,0 +1,15 @@
+.accent {
+    text-transform: uppercase;
+    font-weight: 200;
+}
+
+.primary-header {
+    @include font-size($primary-headline-size);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.secondary-header {
+    @include font-size($secondary-headline-size);
+    font-weight: bold;
+}

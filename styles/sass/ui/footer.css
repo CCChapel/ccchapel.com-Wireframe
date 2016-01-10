@@ -1,0 +1,16 @@
+/* line 1, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/styles/sass/ui/footer.scss */
+.footer {
+  color: maroon; }
+  /* line 4, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/styles/sass/ui/footer.scss */
+  .footer__social {
+    height: 4em;
+    color: tomato; }
+  /* line 10, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/styles/sass/ui/footer.scss */
+  .footer__navigation {
+    color: tomato; }
+  /* line 14, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/styles/sass/ui/footer.scss */
+  .footer__copyright {
+    height: 2em;
+    color: tomato; }
+
+/*# sourceMappingURL=footer.css.map */

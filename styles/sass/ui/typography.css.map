@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "typography.css",
+  "sources": [
+    "typography.scss"
+  ],
+  "sourcesContent": [],
+  "mappings": ";AAAA,OAAO,CAAC;EACJ,cAAc,EAAE,SAAU;EAC1B,WAAW,EAAE,GAAI,GAFZ",
+  "names": []
+}

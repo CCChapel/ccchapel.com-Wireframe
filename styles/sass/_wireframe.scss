@@ -1,0 +1,19 @@
+.wireframe {
+    border: currentColor 1pt solid;
+    
+    &--solid {
+        background: currentColor;
+    }
+    
+//    &:hover {
+//        background: currentColor;
+//        
+//        border-color: #FFF;
+//        
+//        text-shadow: 2px 2px #FFF;
+//        
+//        & > * {
+//            text-shadow: none;
+//        }
+//    }
+}

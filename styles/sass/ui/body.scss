@@ -1,0 +1,178 @@
+.body {
+    color: rgb(25,25,112);
+}
+
+
+.content-section {
+    margin-bottom: $vertical-padding;
+    
+    &--noBottomBuffer {
+        margin-bottom: inherit;
+    }
+}
+
+.content-wrapper {
+    @include grid-media-query("desk") {
+        padding: $vertical-padding ($magic-number*2);
+    }
+    @include grid-media-query("portable"){
+        padding: $vertical-padding $mobile-padding;
+    }
+    
+    &--no-vertical {
+        @include grid-media-query("desk") {
+            padding: 0 ($magic-number*2);
+        }
+        @include grid-media-query("portable"){
+            padding: 0 $mobile-padding;
+        }
+    }
+}
+
+.header-image {
+    color: #FFF; //rgb(0,0,255);
+    
+    min-height: 66vh;
+    
+    &__title {
+        @include font-size($primary-headline-size);
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        
+        margin: 0 0 3rem 0;
+        //height: 4em;
+        
+        //color: rgb(135,206,235);
+    }
+    
+    &__copy {
+        margin: 0 auto 3rem auto;
+        
+        
+        text-align: center;
+        
+        @include grid-media-query("desk") {
+            width: 50%;
+        }
+    }
+    
+    &__cta {
+        //height: 3em;
+        
+        color: rgb(135,206,235);
+        
+        @include grid-media-query("palm") {
+            & > * {
+                margin-bottom: $magic-number;
+            }
+
+            & div:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    
+    &__cta1,
+    &__cta2 {
+        color: rgb(135,206,235);
+    }
+}
+
+.search {
+    color: $black;
+    text-align: center;
+    
+    &__title {
+        @include font-size($secondary-headline-size);
+        font-weight: bold;
+    }
+    
+    &__keywords {
+        height: 3em;
+    }
+    
+    &__controls {
+        height: 3em;
+    }
+}
+
+.campusInfo {
+    color: rgb(0, 204, 204);
+    
+    &__item {
+        height: 15em;
+        
+        color: rgb(0, 102, 102);
+    }
+    
+    &__cta {
+        text-align: center;
+    }
+}
+
+.message {
+    color: rgb(75,0,130);
+    
+    &__series-logo {
+        color: rgb(186,85,211);
+        
+        height: 12em;
+    }
+    
+    &__info {
+        color: #FFF;
+        
+    }
+    
+    &__title {
+        @include font-size($secondary-headline-size);
+        font-weight: bold;
+    }
+    
+    &__details {
+        margin-bottom: $vertical-padding;
+    }
+    
+    &__cta {
+        text-align: center;
+    }
+}
+
+.events {
+    color: rgb(139,69,19);
+    
+    &__1,
+    &__2,
+    &__3 {
+        color: rgb(139,69,19);
+        
+        @include grid-media-query("portable") {
+            margin-bottom: $magic-number;
+            
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    
+    &__image {
+        border: rgb(244,164,96) solid 1px;
+        height: 9em;
+    }
+    
+    &__details {
+        position: relative;
+        margin: -2em auto 0 auto;
+        
+        min-height: 4em;
+        
+        color: rgb(244,164,96);
+    }
+    
+    &__cta {
+        .cta {
+            color: rgb(139,69,19);
+        }
+    }
+}
