@@ -126,7 +126,7 @@
     }
     
     &__title {
-        @include font-size($secondary-headline-size);
+        @include font-size($secondary-headline-size, "em");
         font-weight: bold;
     }
     

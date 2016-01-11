@@ -1516,8 +1516,8 @@ body {
   .campus-select__options {
     text-align: center !important;
     height: 100%;
-    font-size: 0.875rem;
-    line-height: 1.5rem;
+    font-size: 0.875em;
+    line-height: 1.5em;
     color: #FFF; }
 
 /* line 16, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/banner.scss */
@@ -1662,8 +1662,8 @@ body {
     color: #FFF; }
   /* line 128, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/body.scss */
   .message__title {
-    font-size: 2rem;
-    line-height: 0.75rem;
+    font-size: 2em;
+    line-height: 0.75em;
     font-weight: bold; }
   /* line 133, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/body.scss */
   .message__details {
@@ -1723,15 +1723,15 @@ body {
 
 /* line 6, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/typography.scss */
 .primary-header {
-  font-size: 4rem;
-  line-height: 0.375rem;
+  font-size: 4em;
+  line-height: 0.375em;
   font-weight: bold;
   text-transform: uppercase; }
 
 /* line 12, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/typography.scss */
 .secondary-header {
-  font-size: 2rem;
-  line-height: 0.75rem;
+  font-size: 2em;
+  line-height: 0.75em;
   font-weight: bold; }
 
 /*# sourceMappingURL=styles.css.map */

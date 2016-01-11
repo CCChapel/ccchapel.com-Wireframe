@@ -1412,8 +1412,8 @@ body {
   .campus-select__options {
     text-align: center !important;
     height: 100%;
-    font-size: 0.875rem;
-    line-height: 1.5rem;
+    font-size: 0.875em;
+    line-height: 1.5em;
     color: #FFF; }
 
 .banner {
@@ -1520,8 +1520,8 @@ body {
   .message__info {
     color: #FFF; }
   .message__title {
-    font-size: 2rem;
-    line-height: 0.75rem;
+    font-size: 2em;
+    line-height: 0.75em;
     font-weight: bold; }
   .message__details {
     margin-bottom: 3em; }
@@ -1561,14 +1561,14 @@ body {
   font-weight: 200; }
 
 .primary-header {
-  font-size: 4rem;
-  line-height: 0.375rem;
+  font-size: 4em;
+  line-height: 0.375em;
   font-weight: bold;
   text-transform: uppercase; }
 
 .secondary-header {
-  font-size: 2rem;
-  line-height: 0.75rem;
+  font-size: 2em;
+  line-height: 0.75em;
   font-weight: bold; }
 
 /*# sourceMappingURL=styles.css.map */
