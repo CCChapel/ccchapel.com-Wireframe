@@ -35,7 +35,7 @@
     min-height: 66vh;
     
     &__title {
-        @include font-size($primary-headline-size);
+        @include font-size($primary-headline-size, "em");
         font-weight: bold;
         text-align: center;
         text-transform: uppercase;
@@ -84,7 +84,7 @@
     text-align: center;
     
     &__title {
-        @include font-size($secondary-headline-size);
+        @include font-size($secondary-headline-size, "em");
         font-weight: bold;
     }
     
