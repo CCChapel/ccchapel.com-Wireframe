@@ -82,6 +82,12 @@ body
     
     height: 100%;
     width: 100%;
+    
+    &.alt {
+        flex-flow: column wrap;
+        align-items: flex-start;
+        align-content: center;
+    }
 }
 
 .cta {
@@ -116,6 +122,13 @@ body
     
     @include grid-media-query("portable") {
         width: 100%;
+    }
+    
+    &.auto {
+        margin-left: 0;
+        padding: 0 $magic-number;
+
+        width: auto;
     }
     
     &--transparent {

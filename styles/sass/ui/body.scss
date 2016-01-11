@@ -130,6 +130,8 @@
     }
     
     &__info {
+        height: $message-section-height;
+        
         color: #FFF;
         
         &.dark {
@@ -148,6 +150,7 @@
     
     &__cta {
         text-align: center;
+        display: inline-block;
     }
 }
 

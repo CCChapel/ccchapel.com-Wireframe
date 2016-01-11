@@ -1356,6 +1356,10 @@ body {
   /* align vertical */
   height: 100%;
   width: 100%; }
+  .center-vertically.alt, .alt.cta, .alt.cta--transparent {
+    flex-flow: column wrap;
+    align-items: flex-start;
+    align-content: center; }
 
 .cta, .cta--transparent {
   background-color: rgba(202, 55, 55, 0.8);
@@ -1380,6 +1384,10 @@ body {
   @media only screen and (max-width: 1023px) {
     .cta, .cta--transparent {
       width: 100%; } }
+  .cta.auto, .auto.cta--transparent {
+    margin-left: 0;
+    padding: 0 24px;
+    width: auto; }
   .cta--transparent {
     background-color: transparent;
     color: #0b4673; }
@@ -1536,6 +1544,7 @@ body {
     .message__series-logo .series-logo {
       max-height: 90%; }
   .message__info {
+    height: 19rem;
     color: #FFF; }
     .message__info.dark {
       color: #333333; }
@@ -1546,7 +1555,8 @@ body {
   .message__details {
     margin-bottom: 3em; }
   .message__cta {
-    text-align: center; }
+    text-align: center;
+    display: inline-block; }
 
 .events {
   color: saddlebrown; }
