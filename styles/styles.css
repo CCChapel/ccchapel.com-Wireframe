@@ -1557,9 +1557,16 @@ body {
 
 .footer {
   background-color: #333333;
-  color: #FFF; }
+  color: #FFF;
+  text-align: center; }
   .footer__social {
-    height: 4em; }
+    margin-bottom: 3rem; }
+  .footer__logo {
+    margin-bottom: 1rem; }
+  .footer__address {
+    margin-bottom: 3rem; }
+  .footer__navigation {
+    margin-bottom: 3rem; }
   .footer__copyright {
     height: 2em; }
 

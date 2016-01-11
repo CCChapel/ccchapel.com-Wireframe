@@ -1,12 +1,23 @@
 .footer {
     background-color: $charcoal;
     color: #FFF;
+    
+    text-align: center;
 
     &__social {
-        height: 4em;
+        margin-bottom: 3rem;
+    }
+    
+    &__logo {
+        margin-bottom: 1rem;
+    }
+    
+    &__address {
+        margin-bottom: 3rem;
     }
 
     &__navigation {
+        margin-bottom: 3rem;
     }
 
     &__copyright {
