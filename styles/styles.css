@@ -1449,8 +1449,7 @@ body {
     text-transform: uppercase; }
 
 .logo {
-  padding: 4px 0;
-  height: 54px; }
+  height: 85%; }
 
 .notifications {
   background-color: #99b624; }
@@ -1568,6 +1567,9 @@ body {
     margin-bottom: 3rem; }
   .footer__logo {
     margin-bottom: 1rem; }
+  .footer .logo--footer {
+    height: 85px;
+    width: auto; }
   .footer__address {
     margin-bottom: 1rem; }
   .footer__navigation {
