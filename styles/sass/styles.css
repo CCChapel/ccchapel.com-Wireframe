@@ -1731,11 +1731,12 @@ body {
     margin-bottom: 1rem; }
   /* line 15, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/footer.scss */
   .footer__address {
-    margin-bottom: 3rem; }
+    margin-bottom: 1rem; }
   /* line 19, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/footer.scss */
   .footer__navigation {
-    margin-bottom: 3rem; }
-  /* line 23, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/footer.scss */
+    margin-bottom: 3rem;
+    text-align: left; }
+  /* line 25, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/footer.scss */
   .footer__copyright {
     height: 2em; }
 

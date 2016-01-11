@@ -1569,9 +1569,10 @@ body {
   .footer__logo {
     margin-bottom: 1rem; }
   .footer__address {
-    margin-bottom: 3rem; }
+    margin-bottom: 1rem; }
   .footer__navigation {
-    margin-bottom: 3rem; }
+    margin-bottom: 3rem;
+    text-align: left; }
   .footer__copyright {
     height: 2em; }
 
