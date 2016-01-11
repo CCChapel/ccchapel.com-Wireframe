@@ -87,8 +87,8 @@ body
 .cta {
     @extend .center-vertically;
     
-    background-color: transparentize($charcoal, .3);
-    border: 2px solid currentColor;
+    background-color: transparentize($red, .2); //transparentize($charcoal, .3);
+    border: $dark-red; //2px solid currentColor;
     border-radius: $border-radius;
     box-sizing: border-box;
     
@@ -107,9 +107,9 @@ body
     width: 75%;
     
     &:hover {
-        background-color: #FFF;
-        border-color: #FFF;
-        color: transparentize($charcoal, .3);
+        background-color: $dark-red; //#FFF;
+        //border-color: #FFF;
+        color: #FFF; //transparentize($charcoal, .3);
         
         text-decoration: none;
     }

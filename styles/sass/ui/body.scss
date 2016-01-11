@@ -19,6 +19,8 @@
         padding: $vertical-padding $mobile-padding;
     }
     
+    height: 100%;
+    
     &--no-vertical {
         @include grid-media-query("desk") {
             padding: 0 ($magic-number*2);
@@ -26,6 +28,8 @@
         @include grid-media-query("portable"){
             padding: 0 $mobile-padding;
         }
+        
+        height: 100%;
     }
 }
 
@@ -110,15 +114,27 @@
 }
 
 .message {
-    color: rgb(75,0,130);
+    //color: rgb(75,0,130);
+    $message-section-height: 19rem;
+    //height: $message-section-height;
+    
+    background-attachment: fixed;
+    //background-position: center center;
     
     &__series-logo {
-        height: 12em;
+        height: $message-section-height;
+        
+        .series-logo {
+            max-height: 90%;
+        }
     }
     
     &__info {
         color: #FFF;
         
+        &.dark {
+            color: $charcoal;
+        }
     }
     
     &__title {

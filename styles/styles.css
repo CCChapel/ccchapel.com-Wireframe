@@ -1358,8 +1358,8 @@ body {
   width: 100%; }
 
 .cta, .cta--transparent {
-  background-color: rgba(51, 51, 51, 0.7);
-  border: 2px solid currentColor;
+  background-color: rgba(202, 55, 55, 0.8);
+  border: #b82b2b;
   border-radius: 6px;
   box-sizing: border-box;
   margin-left: auto;
@@ -1374,9 +1374,8 @@ body {
   height: 3em;
   width: 75%; }
   .cta:hover, .cta--transparent:hover {
-    background-color: #FFF;
-    border-color: #FFF;
-    color: rgba(51, 51, 51, 0.7);
+    background-color: #b82b2b;
+    color: #FFF;
     text-decoration: none; }
   @media only screen and (max-width: 1023px) {
     .cta, .cta--transparent {
@@ -1466,18 +1465,22 @@ body {
   .content-section--noBottomBuffer {
     margin-bottom: inherit; }
 
-@media only screen and (min-width: 1024px) {
-  .content-wrapper {
-    padding: 3em 48px; } }
-@media only screen and (max-width: 1023px) {
-  .content-wrapper {
-    padding: 3em 10px; } }
-@media only screen and (min-width: 1024px) {
+.content-wrapper {
+  height: 100%; }
+  @media only screen and (min-width: 1024px) {
+    .content-wrapper {
+      padding: 3em 48px; } }
+  @media only screen and (max-width: 1023px) {
+    .content-wrapper {
+      padding: 3em 10px; } }
   .content-wrapper--no-vertical {
-    padding: 0 48px; } }
-@media only screen and (max-width: 1023px) {
-  .content-wrapper--no-vertical {
-    padding: 0 10px; } }
+    height: 100%; }
+    @media only screen and (min-width: 1024px) {
+      .content-wrapper--no-vertical {
+        padding: 0 48px; } }
+    @media only screen and (max-width: 1023px) {
+      .content-wrapper--no-vertical {
+        padding: 0 10px; } }
 
 .header-image {
   color: #FFF;
@@ -1527,11 +1530,15 @@ body {
     text-align: center; }
 
 .message {
-  color: indigo; }
+  background-attachment: fixed; }
   .message__series-logo {
-    height: 12em; }
+    height: 19rem; }
+    .message__series-logo .series-logo {
+      max-height: 90%; }
   .message__info {
     color: #FFF; }
+    .message__info.dark {
+      color: #333333; }
   .message__title {
     font-size: 2em;
     line-height: 0.75em;
