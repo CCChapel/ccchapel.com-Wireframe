@@ -90,6 +90,7 @@ body
     background-color: transparentize($charcoal, .3);
     border: 2px solid currentColor;
     border-radius: $border-radius;
+    box-sizing: border-box;
     
     margin-left: auto;
     margin-right: auto;
@@ -98,6 +99,9 @@ body
     font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
+    white-space: nowrap;
+    text-overflow: hidden;
+    overflow: hidden;
     
     height: 3em;
     width: 75%;

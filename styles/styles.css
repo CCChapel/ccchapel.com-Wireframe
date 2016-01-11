@@ -1361,12 +1361,16 @@ body {
   background-color: rgba(51, 51, 51, 0.7);
   border: 2px solid currentColor;
   border-radius: 6px;
+  box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
   color: #FFF;
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
+  white-space: nowrap;
+  text-overflow: hidden;
+  overflow: hidden;
   height: 3em;
   width: 75%; }
   .cta:hover, .cta--transparent:hover {
