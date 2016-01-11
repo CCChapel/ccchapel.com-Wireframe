@@ -1,8 +1,10 @@
+//GENERAL
 .accent {
     text-transform: uppercase;
     font-weight: 200;
 }
 
+//HEADERS
 .primary-header {
     @include font-size($primary-headline-size);
     font-weight: bold;
@@ -12,4 +14,16 @@
 .secondary-header {
     @include font-size($secondary-headline-size);
     font-weight: bold;
+}
+
+//LINKS
+a {
+    color: $color-root;
+    font-weight: bold;
+    text-decoration: none;
+    
+    &:hover,
+    &:active {
+        text-decoration: underline;
+    }
 }

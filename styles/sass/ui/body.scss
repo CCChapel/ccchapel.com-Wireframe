@@ -41,14 +41,10 @@
         text-transform: uppercase;
         
         margin: 0 0 3rem 0;
-        //height: 4em;
-        
-        //color: rgb(135,206,235);
     }
     
     &__copy {
         margin: 0 auto 3rem auto;
-        
         
         text-align: center;
         
@@ -86,10 +82,12 @@
     &__title {
         @include font-size($secondary-headline-size, "em");
         font-weight: bold;
+        
+        margin: 0 0 .5rem 0;
     }
     
     &__keywords {
-        height: 3em;
+        margin: 0 0 1.5rem 0;
     }
     
     &__controls {
@@ -115,8 +113,6 @@
     color: rgb(75,0,130);
     
     &__series-logo {
-        color: rgb(186,85,211);
-        
         height: 12em;
     }
     
@@ -172,7 +168,7 @@
     
     &__cta {
         .cta {
-            color: rgb(139,69,19);
+            //color: rgb(139,69,19);
         }
     }
 }
