@@ -1481,35 +1481,69 @@ body {
 
 .content-wrapper {
   box-sizing: border-box;
-  height: 100%; }
-  @media only screen and (min-width: 1024px) {
-    .content-wrapper {
-      padding: 3em 48px; } }
+  height: 100%;
+  padding: 3em 48px; }
   @media only screen and (max-width: 1023px) {
     .content-wrapper {
       padding: 3em 10px; } }
-  .content-wrapper--no-vertical {
-    box-sizing: border-box;
-    height: 100%; }
-    @media only screen and (min-width: 1024px) {
-      .content-wrapper--no-vertical {
-        padding: 0 48px; } }
-    @media only screen and (max-width: 1023px) {
-      .content-wrapper--no-vertical {
-        padding: 0 10px; } }
+  .content-wrapper.no-vertical {
+    padding-top: 0;
+    padding-bottom: 0; }
   .content-wrapper--mobile {
     box-sizing: border-box;
     height: 100%; }
     @media only screen and (max-width: 1023px) {
       .content-wrapper--mobile {
         padding: 3em 10px; } }
-    .content-wrapper--mobile--no-vertical {
-      box-sizing: border-box;
-      height: 100%; }
-      @media only screen and (max-width: 1023px) {
-        .content-wrapper--mobile--no-vertical {
-          padding: 0 10px; } }
+    .content-wrapper--mobile.no-vertical {
+      padding-top: 0;
+      padding-bottom: 0; }
 
+/*.content-wrapper {
+    box-sizing: border-box;
+    
+    @include grid-media-query("desk") {
+        padding: $vertical-padding ($magic-number*2);
+    }
+    @include grid-media-query("portable"){
+        padding: $vertical-padding $mobile-padding;
+    }
+    
+    height: 100%;
+    
+    &--no-vertical {
+        box-sizing: border-box;
+        
+        @include grid-media-query("desk") {
+            padding: 0 ($magic-number*2);
+        }
+        @include grid-media-query("portable"){
+            padding: 0 $mobile-padding;
+        }
+        
+        height: 100%;
+    }
+    
+    &--mobile {
+        box-sizing: border-box;
+        
+        @include grid-media-query("portable"){
+            padding: $vertical-padding $mobile-padding;
+        }
+        
+        height: 100%;
+
+        &--no-vertical {
+            box-sizing: border-box;
+            
+            @include grid-media-query("portable"){
+                padding: 0 $mobile-padding;
+            }
+            
+            height: 100%;
+        }
+    }
+} */
 .header-image {
   color: #FFF;
   min-height: 66vh; }

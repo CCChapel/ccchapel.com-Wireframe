@@ -13,6 +13,36 @@
 
 .content-wrapper {
     box-sizing: border-box;
+    height: 100%;
+    
+    padding: $vertical-padding ($magic-number*2);
+    
+    @include grid-media-query("portable") {
+        padding: $vertical-padding $mobile-padding;
+    }
+    
+    &.no-vertical {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    
+    &--mobile {
+        box-sizing: border-box;
+        height: 100%;
+        
+        @include grid-media-query("portable") {
+            padding: $vertical-padding $mobile-padding;
+        }
+        
+        &.no-vertical {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+}
+
+/*.content-wrapper {
+    box-sizing: border-box;
     
     @include grid-media-query("desk") {
         padding: $vertical-padding ($magic-number*2);
@@ -55,7 +85,7 @@
             height: 100%;
         }
     }
-}
+} */
 
 .header-image {
     color: #FFF; //rgb(0,0,255);
