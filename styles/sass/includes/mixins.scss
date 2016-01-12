@@ -10,7 +10,7 @@ $MIXINS
         line-height: $new-line-height;
         
         @include grid-media-query("portable") {
-            line-height: ($new-font-size / 2em) * $new-line-height;
+            line-height: max(($new-font-size / 2em) * 1.333) * $new-line-height;
         }
     }
     @else {

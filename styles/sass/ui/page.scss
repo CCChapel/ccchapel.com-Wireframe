@@ -88,6 +88,10 @@ body
         align-items: flex-start;
         //align-content: center;
     }
+    
+    &.right-justify {
+        justify-content: flex-end;
+    }
 }
 
 .cta {
