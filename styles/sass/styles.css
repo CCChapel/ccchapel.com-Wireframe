@@ -1388,7 +1388,8 @@ input {
   height: 100%;
   width: 90%;
   border: 1px solid #333333;
-  border-radius: 6px; }
+  border-radius: 6px;
+  -webkit-appearance: none; }
 
 /* line 1, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/page.scss */
 html {

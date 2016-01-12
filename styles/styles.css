@@ -1307,7 +1307,8 @@ input {
   height: 100%;
   width: 90%;
   border: 1px solid #333333;
-  border-radius: 6px; }
+  border-radius: 6px;
+  -webkit-appearance: none; }
 
 html {
   font-family: "Open Sans", Verdana, sans-serif;
