@@ -1517,15 +1517,11 @@ body {
     @media only screen and (min-width: 1024px) {
       .header-image__copy {
         width: 50%; } }
-  .header-image__cta {
-    color: skyblue; }
-    @media only screen and (max-width: 480px) {
-      .header-image__cta > * {
-        margin-bottom: 24px; }
-      .header-image__cta div:last-child {
-        margin-bottom: 0; } }
-  .header-image__cta1, .header-image__cta2 {
-    color: skyblue; }
+  @media only screen and (max-width: 1023px) {
+    .header-image__cta > * {
+      margin-bottom: 24px; }
+    .header-image__cta div:last-child {
+      margin-bottom: 0; } }
 
 .search {
   color: #333;

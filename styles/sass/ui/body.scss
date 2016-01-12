@@ -74,11 +74,7 @@
     }
     
     &__cta {
-        //height: 3em;
-        
-        color: rgb(135,206,235);
-        
-        @include grid-media-query("palm") {
+        @include grid-media-query("portable") {
             & > * {
                 margin-bottom: $magic-number;
             }
@@ -91,7 +87,6 @@
     
     &__cta1,
     &__cta2 {
-        color: rgb(135,206,235);
     }
 }
 
@@ -120,10 +115,6 @@
         position: relative;
         
         background: $medium-gray center bottom/cover no-repeat scroll;
-//        background-attachment: scroll;
-//        background-position: center bottom;
-//        background-repeat: no-repeat;
-//        background-size: cover;
         
         height: 15em;
     }
