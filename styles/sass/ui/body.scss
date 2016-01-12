@@ -183,6 +183,19 @@
 .events {
     color: rgb(139,69,19);
     
+    text-align: center;
+
+    &__title {
+        @include font-size($secondary-headline-size, "em");
+        font-weight: bold;
+
+        margin: 0 0 .5rem 0;
+    }
+
+    &__keywords {
+        margin: 0 0 1.5rem 0;
+    }
+    
     &__1,
     &__2,
     &__3 {
