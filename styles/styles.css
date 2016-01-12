@@ -1614,6 +1614,16 @@ body {
   text-transform: uppercase;
   font-weight: 200; }
 
+small {
+  font-size: 0.75em;
+  line-height: 1.5em; }
+
+i {
+  font-style: italic; }
+
+b, em {
+  font-weight: bold; }
+
 .primary-header {
   font-size: 4em;
   line-height: 0.375em;
@@ -1625,11 +1635,48 @@ body {
   line-height: 0.75em;
   font-weight: bold; }
 
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 24px; }
+
+h1, .h1 {
+  font-size: 3em;
+  line-height: 0.5em; }
+  @media only screen and (max-width: 480px) {
+    h1, .h1 {
+      font-size: 2.25em;
+      line-height: 0.66667em; } }
+
+h2, .h2 {
+  font-size: 1.375em;
+  line-height: 1.09091em; }
+
+h3, .h3 {
+  font-size: 1.25em;
+  line-height: 1.2em; }
+
+h4, .h4 {
+  font-size: 1.125em;
+  line-height: 1.33333em; }
+
+h5, h6,
+.h5, .h6 {
+  font-size: 1em;
+  line-height: 1.5em; }
+
+h1 > a {
+  font-weight: normal; }
+  h1 > a:hover {
+    border-bottom: none; }
+
 a {
   color: #0b4673;
   font-weight: bold;
   text-decoration: none; }
   a:hover, a:active {
     text-decoration: underline; }
+
+blockquote, p, ul, ol,
+.addBottomMargin {
+  margin-bottom: 24px; }
 
 /*# sourceMappingURL=styles.css.map */
