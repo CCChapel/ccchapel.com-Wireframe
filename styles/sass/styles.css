@@ -1450,8 +1450,7 @@ body {
   /* line 86, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/page.scss */
   .center-vertically.alt, .alt.cta, .alt.cta--transparent {
     flex-flow: column wrap;
-    align-items: flex-start;
-    align-content: center; }
+    align-items: flex-start; }
 
 /* line 93, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/page.scss */
 .cta, .cta--transparent {

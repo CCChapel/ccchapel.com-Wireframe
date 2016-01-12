@@ -1359,8 +1359,7 @@ body {
   width: 100%; }
   .center-vertically.alt, .alt.cta, .alt.cta--transparent {
     flex-flow: column wrap;
-    align-items: flex-start;
-    align-content: center; }
+    align-items: flex-start; }
 
 .cta, .cta--transparent {
   background-color: rgba(202, 55, 55, 0.8);
