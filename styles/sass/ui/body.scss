@@ -12,6 +12,8 @@
 }
 
 .content-wrapper {
+    box-sizing: border-box;
+    
     @include grid-media-query("desk") {
         padding: $vertical-padding ($magic-number*2);
     }
@@ -22,6 +24,8 @@
     height: 100%;
     
     &--no-vertical {
+        box-sizing: border-box;
+        
         @include grid-media-query("desk") {
             padding: 0 ($magic-number*2);
         }
@@ -33,6 +37,8 @@
     }
     
     &--mobile {
+        box-sizing: border-box;
+        
         @include grid-media-query("portable"){
             padding: $vertical-padding $mobile-padding;
         }
@@ -40,6 +46,8 @@
         height: 100%;
 
         &--no-vertical {
+            box-sizing: border-box;
+            
             @include grid-media-query("portable"){
                 padding: 0 $mobile-padding;
             }

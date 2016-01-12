@@ -1477,6 +1477,7 @@ body {
     margin-bottom: inherit; }
 
 .content-wrapper {
+  box-sizing: border-box;
   height: 100%; }
   @media only screen and (min-width: 1024px) {
     .content-wrapper {
@@ -1485,6 +1486,7 @@ body {
     .content-wrapper {
       padding: 3em 10px; } }
   .content-wrapper--no-vertical {
+    box-sizing: border-box;
     height: 100%; }
     @media only screen and (min-width: 1024px) {
       .content-wrapper--no-vertical {
@@ -1493,11 +1495,13 @@ body {
       .content-wrapper--no-vertical {
         padding: 0 10px; } }
   .content-wrapper--mobile {
+    box-sizing: border-box;
     height: 100%; }
     @media only screen and (max-width: 1023px) {
       .content-wrapper--mobile {
         padding: 3em 10px; } }
     .content-wrapper--mobile--no-vertical {
+      box-sizing: border-box;
       height: 100%; }
       @media only screen and (max-width: 1023px) {
         .content-wrapper--mobile--no-vertical {
