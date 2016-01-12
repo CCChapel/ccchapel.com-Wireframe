@@ -129,12 +129,13 @@
 }
 
 .message {
-    //color: rgb(75,0,130);
     $message-section-height: 19rem;
-    //height: $message-section-height;
     
     background-attachment: fixed;
-    //background-position: center center;
+    
+    @include grid-media-query("palm") {
+        background-attachment: scroll;
+    }
     
     &__series-logo {
         height: $message-section-height;

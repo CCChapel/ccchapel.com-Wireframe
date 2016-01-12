@@ -1548,6 +1548,9 @@ body {
 
 .message {
   background-attachment: fixed; }
+  @media only screen and (max-width: 480px) {
+    .message {
+      background-attachment: scroll; } }
   .message__series-logo {
     height: 19rem; }
     .message__series-logo .series-logo {
