@@ -1490,12 +1490,16 @@ body {
     @media only screen and (max-width: 1023px) {
       .content-wrapper--no-vertical {
         padding: 0 10px; } }
-  @media only screen and (max-width: 1023px) {
-    .content-wrapper--mobile {
-      padding: 3em 10px; } }
-  @media only screen and (max-width: 1023px) {
+  .content-wrapper--mobile {
+    height: 100%; }
+    @media only screen and (max-width: 1023px) {
+      .content-wrapper--mobile {
+        padding: 3em 10px; } }
     .content-wrapper--mobile--no-vertical {
-      padding: 0 10px; } }
+      height: 100%; }
+      @media only screen and (max-width: 1023px) {
+        .content-wrapper--mobile--no-vertical {
+          padding: 0 10px; } }
 
 .header-image {
   color: #FFF;
@@ -1536,13 +1540,15 @@ body {
   .search__controls {
     height: 3em; }
 
-.campusInfo {
-  color: #00cccc; }
-  .campusInfo__item {
-    height: 15em;
-    color: #006666; }
-  .campusInfo__cta {
-    text-align: center; }
+.campusInfo__item {
+  position: relative;
+  background: #CCC center bottom/cover no-repeat scroll;
+  height: 15em; }
+.campusInfo__cta {
+  position: relative;
+  top: 11em;
+  height: auto;
+  width: 100%; }
 
 .message {
   background-attachment: fixed; }

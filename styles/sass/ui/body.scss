@@ -37,10 +37,14 @@
             padding: $vertical-padding $mobile-padding;
         }
         
+        height: 100%;
+
         &--no-vertical {
             @include grid-media-query("portable"){
                 padding: 0 $mobile-padding;
             }
+            
+            height: 100%;
         }
     }
 }
@@ -112,16 +116,24 @@
 }
 
 .campusInfo {
-    color: rgb(0, 204, 204);
-    
     &__item {
-        height: 15em;
+        position: relative;
         
-        color: rgb(0, 102, 102);
+        background: $medium-gray center bottom/cover no-repeat scroll;
+//        background-attachment: scroll;
+//        background-position: center bottom;
+//        background-repeat: no-repeat;
+//        background-size: cover;
+        
+        height: 15em;
     }
     
     &__cta {
-        text-align: center;
+        position: relative;
+        top: 11em;
+        
+        height: auto;
+        width: 100%;
     }
 }
 
