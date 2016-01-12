@@ -1789,7 +1789,7 @@ body {
   font-weight: 200; }
 
 /* line 7, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/typography.scss */
-small {
+small, .smaller {
   font-size: 0.75em;
   line-height: 1.5em; }
 

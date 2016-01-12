@@ -1614,7 +1614,7 @@ body {
   text-transform: uppercase;
   font-weight: 200; }
 
-small {
+small, .smaller {
   font-size: 0.75em;
   line-height: 1.5em; }
 
