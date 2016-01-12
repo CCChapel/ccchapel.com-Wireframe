@@ -1489,6 +1489,12 @@ body {
     @media only screen and (max-width: 1023px) {
       .content-wrapper--no-vertical {
         padding: 0 10px; } }
+  @media only screen and (max-width: 1023px) {
+    .content-wrapper--mobile {
+      padding: 3em 10px; } }
+  @media only screen and (max-width: 1023px) {
+    .content-wrapper--mobile--no-vertical {
+      padding: 0 10px; } }
 
 .header-image {
   color: #FFF;
@@ -1548,6 +1554,12 @@ body {
     color: #FFF; }
     .message__info.dark {
       color: #333333; }
+    @media only screen and (max-width: 480px) {
+      .message__info {
+        margin-bottom: 3em;
+        height: auto; }
+        .message__info > div {
+          align-items: center !important; } }
   .message__title {
     font-size: 2em;
     line-height: 0.75em;

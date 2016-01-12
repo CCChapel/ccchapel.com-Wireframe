@@ -31,6 +31,18 @@
         
         height: 100%;
     }
+    
+    &--mobile {
+        @include grid-media-query("portable"){
+            padding: $vertical-padding $mobile-padding;
+        }
+        
+        &--no-vertical {
+            @include grid-media-query("portable"){
+                padding: 0 $mobile-padding;
+            }
+        }
+    }
 }
 
 .header-image {
@@ -136,6 +148,16 @@
         
         &.dark {
             color: $charcoal;
+        }
+        
+        @include grid-media-query("palm") {
+            margin-bottom: $vertical-padding;
+        
+            height: auto;
+                        
+            & > div {
+                align-items: center !important;
+            }
         }
     }
     
