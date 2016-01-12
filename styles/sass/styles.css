@@ -1760,23 +1760,26 @@ body {
   color: #FFF;
   text-align: center; }
   /* line 7, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/footer.scss */
-  .footer__social {
-    margin-bottom: 3rem; }
-  /* line 11, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/footer.scss */
   .footer__logo {
-    margin-bottom: 1rem; }
-  /* line 15, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/footer.scss */
+    margin-bottom: .5rem; }
+  /* line 11, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/footer.scss */
   .footer .logo--footer {
     height: 85px;
     width: auto; }
-  /* line 20, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/footer.scss */
+  /* line 16, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/footer.scss */
   .footer__address {
+    margin-bottom: .5rem; }
+  /* line 20, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/footer.scss */
+  .footer__campuses {
     margin-bottom: 1rem; }
   /* line 24, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/footer.scss */
+  .footer__social {
+    margin-bottom: 3rem; }
+  /* line 28, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/footer.scss */
   .footer__navigation {
     margin-bottom: 3rem;
     text-align: left; }
-  /* line 30, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/footer.scss */
+  /* line 34, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/footer.scss */
   .footer__copyright {
     height: 2em; }
 

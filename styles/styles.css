@@ -1593,15 +1593,17 @@ body {
   background-color: #333333;
   color: #FFF;
   text-align: center; }
-  .footer__social {
-    margin-bottom: 3rem; }
   .footer__logo {
-    margin-bottom: 1rem; }
+    margin-bottom: .5rem; }
   .footer .logo--footer {
     height: 85px;
     width: auto; }
   .footer__address {
+    margin-bottom: .5rem; }
+  .footer__campuses {
     margin-bottom: 1rem; }
+  .footer__social {
+    margin-bottom: 3rem; }
   .footer__navigation {
     margin-bottom: 3rem;
     text-align: left; }

@@ -3,13 +3,9 @@
     color: #FFF;
     
     text-align: center;
-
-    &__social {
-        margin-bottom: 3rem;
-    }
     
     &__logo {
-        margin-bottom: 1rem;
+        margin-bottom: .5rem;
     }
     
     .logo--footer {
@@ -18,7 +14,15 @@
     }
     
     &__address {
+        margin-bottom: .5rem;
+    }
+    
+    &__campuses {
         margin-bottom: 1rem;
+    }
+
+    &__social {
+        margin-bottom: 3rem;
     }
 
     &__navigation {
