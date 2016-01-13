@@ -1,0 +1,189 @@
+@charset "UTF-8";
+/**
+ * Typecsset
+ *
+ * Typecsset is a small, unopinionated library for creating beautifully set type
+ * on the web. Typecsset gives perfect vertical rhythm at any configurable font
+ * size, as well as many other typographical niceties.
+ */
+/*------------------------------------*    #SHARED
+\*------------------------------------*/
+/**
+ * A lot of elements in Typecsset need to share some declarations (mainly for
+ * vertical rhythm), so we `@extend` some silent classes.
+ */
+/* line 100, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/includes/typecsset.scss */
+h1, h2, h3, h4, h5, h6, ul, ol, dd, p, address, pre, blockquote, table {
+  margin: 0;
+  padding: 0; }
+
+/* line 105, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/includes/typecsset.scss */
+h1, h2, h3, h4, h5, h6, ul, ol, dd, p, address, pre, blockquote, table {
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem; }
+
+/*------------------------------------*    #BASE
+\*------------------------------------*/
+/**
+ * 1. Set the base element’s `font-size` to the value of your choosing. Set in
+ *    ems, assuming a browser default of 16px.
+ * 2. Work out the unitless `line-height` for your project based around your
+ *    desired `line-height` (defined previously in pixels), and your project’s
+ *    base font size.
+ */
+/* line 132, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/includes/typecsset.scss */
+html {
+  font-size: 1em;
+  /* [1] */
+  line-height: 1.5;
+  /* [2] */ }
+
+/* line 146, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/includes/typecsset.scss */
+body {
+  margin: 0; }
+
+/*------------------------------------*    #HEADINGS
+\*------------------------------------*/
+/* line 157, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/includes/typecsset.scss */
+h1 {
+  font-size: 48px;
+  font-size: 3rem;
+  line-height: 1; }
+
+/* line 162, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/includes/typecsset.scss */
+h2 {
+  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 1.33333; }
+
+/* line 167, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/includes/typecsset.scss */
+h3 {
+  font-size: 30px;
+  font-size: 1.875rem;
+  line-height: 1.6; }
+
+/* line 172, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/includes/typecsset.scss */
+h4 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1; }
+
+/* line 177, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/includes/typecsset.scss */
+h5 {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.2; }
+
+/* line 182, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/includes/typecsset.scss */
+h6 {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.33333; }
+
+/*------------------------------------*    #LISTS
+\*------------------------------------*/
+/* line 194, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/includes/typecsset.scss */
+ul, ol, dd {
+  margin-left: 48px;
+  margin-left: 3rem; }
+
+/* line 200, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/includes/typecsset.scss */
+li > ul,
+li > ol {
+  margin-bottom: 0; }
+
+/*------------------------------------*    #PARAGRAPHS
+\*------------------------------------*/
+/**
+ * Not strictly a paragraph, but probably doesn’t need its own section.
+ */
+/*------------------------------------*    #CODE
+\*------------------------------------*/
+/**
+ * 1. Fix an odd quirk whereby, without this, code blocks are rendered at a
+ *    font-size smaller than 1em.
+ */
+/* line 251, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/includes/typecsset.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  /* [1] */ }
+
+/*------------------------------------*    #QUOTES
+\*------------------------------------*/
+/**
+ * 1. Hang the opening quote of the blockquote.
+ */
+/* line 265, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/includes/typecsset.scss */
+blockquote {
+  text-indent: -0.41em;
+  /* [1] */ }
+
+/**
+ * Set up quote marks on quoting elements. This is very English-based, so we are
+ * using “, ”, ‘, and ’ quotes.
+ */
+/* line 273, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/includes/typecsset.scss */
+blockquote {
+  quotes: "“" "”";
+  margin-left: 48px;
+  margin-left: 3rem; }
+  /* line 280, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/includes/typecsset.scss */
+  blockquote p:before {
+    content: "“";
+    content: open-quote; }
+  /* line 285, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/includes/typecsset.scss */
+  blockquote p:after {
+    content: "";
+    content: no-close-quote; }
+  /* line 290, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/includes/typecsset.scss */
+  blockquote p:last-of-type:after {
+    content: "”";
+    content: close-quote; }
+
+/* line 299, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/includes/typecsset.scss */
+q {
+  quotes: "‘" "’" "“" "”";
+  /**
+     * If an element opens with an inline quote, let’s hang that.
+     */ }
+  /* line 302, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/includes/typecsset.scss */
+  q:before {
+    content: "‘";
+    content: open-quote; }
+  /* line 307, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/includes/typecsset.scss */
+  q:after {
+    content: "’";
+    content: close-quote; }
+  /* line 312, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/includes/typecsset.scss */
+  q q:before {
+    content: "“";
+    content: open-quote; }
+  /* line 317, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/includes/typecsset.scss */
+  q q:after {
+    content: "”";
+    content: close-quote; }
+  /* line 325, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/includes/typecsset.scss */
+  q:first-child {
+    display: inline-block;
+    text-indent: -0.22em; }
+
+/*------------------------------------*    #TABLES
+\*------------------------------------*/
+/**
+ * Crude table styles; tables are very difficult to keep on the baseline.
+ */
+/* line 342, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/includes/typecsset.scss */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 350, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/includes/typecsset.scss */
+th,
+td {
+  padding: 12px; }
+
+/*# sourceMappingURL=typecsset.css.map */

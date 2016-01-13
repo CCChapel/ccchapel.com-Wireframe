@@ -1,5 +1,4 @@
 .body {
-    color: rgb(25,25,112);
 }
 
 
@@ -46,7 +45,8 @@
     min-height: 66vh;
     
     &__title {
-        @include font-size($primary-headline-size, "em");
+        @include typecsset-font-size($primary-headline-size);
+        //@include font-size($primary-headline-size, "em");
         font-weight: bold;
         text-align: center;
         text-transform: uppercase;
@@ -86,10 +86,11 @@
     text-align: center;
     
     &__title {
-        @include font-size($secondary-headline-size, "em");
+        @include typecsset-font-size($secondary-headline-size);
+        //@include font-size($secondary-headline-size, "em");
         font-weight: bold;
         
-        margin: 0 0 .5rem 0;
+        //margin: 0 0 .5rem 0;
     }
     
     &__keywords {
@@ -157,7 +158,8 @@
     }
     
     &__title {
-        @include font-size($secondary-headline-size, "em");
+        @include typecsset-font-size($secondary-headline-size);
+        //@include font-size($secondary-headline-size, "em");
         font-weight: bold;
     }
     
@@ -177,10 +179,11 @@
     text-align: center;
 
     &__title {
-        @include font-size($secondary-headline-size, "em");
+        @include typecsset-font-size($secondary-headline-size);
+        //@include font-size($secondary-headline-size, "em");
         font-weight: bold;
 
-        margin: 0 0 .5rem 0;
+        //margin: 0 0 .5rem 0;
     }
 
     &__keywords {

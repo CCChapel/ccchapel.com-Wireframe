@@ -1,9 +1,11 @@
+//Variables
+@import "_vars.scss";
+
+//Includes
 @import "includes/mixins.scss";
 @import "includes/reset.scss";
 @import "includes/csswizardry-grids.scss";
-
-//Variables
-@import "_vars.scss";
+@import "includes/typecsset";
 
 //Wireframe
 @import "_wireframe.scss";

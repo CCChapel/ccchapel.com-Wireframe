@@ -6,7 +6,8 @@
 
 small, .smaller
 {
-    @include font-size(12px, "em");
+    @include typecsset-font-size(14px);
+    //@include font-size(12px, "em");
 }
 
 i
@@ -21,25 +22,29 @@ b, em
 
 //HEADERS
 .primary-header {
-    @include font-size($primary-headline-size);
+    @include typecsset-font-size($primary-headline-size);
+    //@include font-size($primary-headline-size);
     font-weight: bold;
     text-transform: uppercase;
 }
 
 .secondary-header {
-    @include font-size($secondary-headline-size);
+    @include typecsset-font-size($secondary-headline-size);
+    //@include font-size($secondary-headline-size);
     font-weight: bold;
 }
 
-h1, h2, h3, h4, h5, h6 {
+/*h1, h2, h3, h4, h5, h6 {
     margin-bottom: $magic-number;
 }
 
 h1, .h1 {
-    @include font-size(48px);
+    @include typecsset-font-size($primary-headline-size);
+    //@include font-size(48px);
 
     @include grid-media-query("palm") {
-        @include font-size(36px);
+        @include typecsset-font-size($primary-headline-size);
+        //@include font-size(36px);
     }
 }
 
@@ -58,7 +63,7 @@ h4, .h4 {
 h5, h6,
 .h5, .h6 {
     @include font-size(16px);
-}
+}*/
 
 h1 > a
 {
