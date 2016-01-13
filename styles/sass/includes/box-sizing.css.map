@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "box-sizing.css",
+  "sources": [
+    "box-sizing.scss"
+  ],
+  "sourcesContent": [],
+  "mappings": "AAAA;wCAEwC;AACxC;;;;;EAKE;;AACF,IAAI,CAAC;EACD,kBAAkB,EAAE,UAAW;EAC/B,eAAe,EAAE,UAAW;EAC5B,UAAU,EAAE,UAAW,GAHrB;;;AASD,CAAC;AACN,CAAC,AAAA,OAAO;AACR,CAAC,AAAA,MAAM,CAFK;EACJ,kBAAkB,EAAE,OAAQ;EAC5B,eAAe,EAAE,OAAQ;EACzB,UAAU,EAAE,OAAQ,GAHf",
+  "names": []
+}

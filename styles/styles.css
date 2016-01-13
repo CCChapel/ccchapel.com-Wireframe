@@ -60,6 +60,27 @@ table {
 }
 
 /*------------------------------------*\
+#BOX-SIZING
+\*------------------------------------*/
+/**
+* Set the global `box-sizing` state to `border-box`.
+*
+* css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+* paulirish.com/2012/box-sizing-border-box-ftw
+*/
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/*------------------------------------*\
 $CSSWIZARDRY-GRIDS
 \*------------------------------------*/
 /**
@@ -2115,6 +2136,11 @@ body {
   padding-top: 0;
   padding-bottom: 0;
 }
+@media only screen and (max-width: 1023px) {
+  .content-wrapper.no-mobile {
+    padding: 0;
+  }
+}
 .content-wrapper--mobile {
   box-sizing: border-box;
   height: 100%;
@@ -2230,7 +2256,6 @@ body {
 }
 
 .events {
-  color: saddlebrown;
   text-align: center;
 }
 .events__title {
@@ -2242,9 +2267,6 @@ body {
 .events__keywords {
   margin: 0 0 1.5rem 0;
 }
-.events__1, .events__2, .events__3 {
-  color: saddlebrown;
-}
 @media only screen and (max-width: 1023px) {
   .events__1, .events__2, .events__3 {
     margin-bottom: 24px;
@@ -2254,14 +2276,16 @@ body {
   }
 }
 .events__image {
-  border: sandybrown solid 1px;
-  height: 9em;
+  background: #CCC center bottom/cover no-repeat scroll;
+  height: 18em;
 }
 .events__details {
-  position: relative;
-  margin: -2em auto 0 auto;
-  min-height: 4em;
-  color: sandybrown;
+  background: #EEE;
+  box-sizing: border-box;
+  padding: 1em 0;
+  border-bottom: 2px solid #0b4673;
+  min-height: 3rem;
+  color: #333;
 }
 
 .footer {
