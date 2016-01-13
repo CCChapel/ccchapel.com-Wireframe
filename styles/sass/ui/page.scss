@@ -89,8 +89,34 @@ body
         //align-content: center;
     }
     
+    &.left-justify {
+        justify-content: flex-start;
+        
+        &--mobile {
+            @include grid-media-query("portable") {
+                justify-content: flex-start;
+            }
+        }
+    }
+    
+    &.center {
+        justify-content: center;
+
+        &--mobile {
+            @include grid-media-query("portable") {
+                justify-content: center;
+            }
+        }
+    }
+    
     &.right-justify {
         justify-content: flex-end;
+        
+        &--mobile {
+            @include grid-media-query("portable") {
+                justify-content: flex-end;
+            }
+        }
     }
 }
 

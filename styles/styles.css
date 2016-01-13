@@ -1360,8 +1360,21 @@ body {
   .center-vertically.alt, .alt.cta, .alt.cta--transparent {
     flex-flow: column wrap;
     align-items: flex-start; }
+  .center-vertically.left-justify, .left-justify.cta, .left-justify.cta--transparent {
+    justify-content: flex-start; }
+    @media only screen and (max-width: 1023px) {
+      .center-vertically.left-justify--mobile, .left-justify--mobile.cta, .left-justify--mobile.cta--transparent {
+        justify-content: flex-start; } }
+  .center-vertically.center, .center.cta, .center.cta--transparent {
+    justify-content: center; }
+    @media only screen and (max-width: 1023px) {
+      .center-vertically.center--mobile, .center--mobile.cta, .center--mobile.cta--transparent {
+        justify-content: center; } }
   .center-vertically.right-justify, .right-justify.cta, .right-justify.cta--transparent {
     justify-content: flex-end; }
+    @media only screen and (max-width: 1023px) {
+      .center-vertically.right-justify--mobile, .right-justify--mobile.cta, .right-justify--mobile.cta--transparent {
+        justify-content: flex-end; } }
 
 /* The animation code */
 @keyframes cta-background {
@@ -1454,8 +1467,7 @@ body {
   height: 4em;
   background-color: #0b4673; }
   .banner__logo {
-    height: 100%;
-    text-align: center; }
+    height: 100%; }
   .banner__menu {
     height: 100%; }
 
