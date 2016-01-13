@@ -1369,7 +1369,7 @@ body {
     justify-content: center; }
     @media only screen and (max-width: 1023px) {
       .center-vertically.center--mobile, .center--mobile.cta, .center--mobile.cta--transparent {
-        justify-content: center; } }
+        justify-content: center !important; } }
   .center-vertically.right-justify, .right-justify.cta, .right-justify.cta--transparent {
     justify-content: flex-end; }
     @media only screen and (max-width: 1023px) {

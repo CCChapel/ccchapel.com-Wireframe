@@ -1464,7 +1464,7 @@ body {
     @media only screen and (max-width: 1023px) {
       /* line 105, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/page.scss */
       .center-vertically.center--mobile, .center--mobile.cta, .center--mobile.cta--transparent {
-        justify-content: center; } }
+        justify-content: center !important; } }
   /* line 112, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/page.scss */
   .center-vertically.right-justify, .right-justify.cta, .right-justify.cta--transparent {
     justify-content: flex-end; }
