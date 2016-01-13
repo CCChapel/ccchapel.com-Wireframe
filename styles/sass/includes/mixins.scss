@@ -1,20 +1,20 @@
 /*------------------------------------*\
 $MIXINS
 \*------------------------------------*/
-@mixin font-size($font-size, $unit: "em"){
-    @if $unit == "em" {
-        $new-font-size: ($font-size / $base-font-size)*1em;
-        $new-line-height: min( (($base-line-height / $font-size)*1em), 1.5em);
-        
-        font-size: $new-font-size;
-        line-height: $new-line-height;
-        
-        @include grid-media-query("portable") {
-            line-height: max(($new-font-size / 2em) * 1.333) * $new-line-height;
-        }
-    }
-    @else {
-        font-size: ($font-size / $base-font-size)*1rem;
-        line-height: min( (($base-line-height / $font-size)*1rem), 1.5rem);
-    }
-} 
+//@mixin font-size($font-size, $unit: "em"){
+//    @if $unit == "em" {
+//        $new-font-size: ($font-size / $base-font-size)*1em;
+//        $new-line-height: min( (($base-line-height / $font-size)*1em), 1.5em);
+//        
+//        font-size: $new-font-size;
+//        line-height: $new-line-height;
+//        
+//        @include grid-media-query("portable") {
+//            line-height: max(($new-font-size / 2em) * 1.333) * $new-line-height;
+//        }
+//    }
+//    @else {
+//        font-size: ($font-size / $base-font-size)*1rem;
+//        line-height: min( (($base-line-height / $font-size)*1rem), 1.5rem);
+//    }
+//} 
