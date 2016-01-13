@@ -45,13 +45,12 @@
 }
 
 .header-image {
-    color: #FFF; //rgb(0,0,255);
+    color: #FFF;
     
     min-height: 66vh;
     
     &__title {
         @include typecsset-font-size($primary-headline-size);
-        //@include font-size($primary-headline-size, "em");
         font-weight: bold;
         text-align: center;
         text-transform: uppercase;
@@ -92,10 +91,7 @@
     
     &__title {
         @include typecsset-font-size($secondary-headline-size);
-        //@include font-size($secondary-headline-size, "em");
         font-weight: bold;
-        
-        //margin: 0 0 .5rem 0;
     }
     
     &__keywords {
@@ -164,7 +160,6 @@
     
     &__title {
         @include typecsset-font-size($secondary-headline-size);
-        //@include font-size($secondary-headline-size, "em");
         font-weight: bold;
     }
     
@@ -183,10 +178,7 @@
 
     &__title {
         @include typecsset-font-size($secondary-headline-size);
-        //@include font-size($secondary-headline-size, "em");
         font-weight: bold;
-
-        //margin: 0 0 .5rem 0;
     }
 
     &__keywords {
@@ -212,8 +204,6 @@
     }
     
     &__details {
-        //position: relative;
-        //margin: -2em auto 0 auto;
         background: $light-gray;
         box-sizing: border-box;
         padding: 1em 0;
@@ -222,12 +212,11 @@
         
         min-height: 3rem;
         
-        color: $black; //rgb(244,164,96);
+        color: $black; 
     }
     
     &__cta {
         .cta {
-            //color: rgb(139,69,19);
         }
     }
 }
