@@ -29,6 +29,8 @@
     
     @include grid-media-query("portable") {
         padding: $vertical-padding $mobile-padding;
+        
+        overflow-x: hidden;
     }
     
     &.no-vertical {
