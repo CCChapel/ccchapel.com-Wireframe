@@ -1540,6 +1540,11 @@ input {
   font-style: italic;
   font-weight: 200; }
 
+@media screen and (-webkit-min-device-pixal-ratio: 0) {
+  select,
+  textarea,
+  input {
+    font-size: 16px; } }
 html {
   font-family: "proxima-nova", "Open Sans", Verdana, sans-serif;
   color: #333;

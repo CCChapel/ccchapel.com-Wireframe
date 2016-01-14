@@ -49,3 +49,12 @@ input {
 :placeholder-shown {
     @include placeholder-defaults;
 }
+
+//Fixes
+@media screen and (-webkit-min-device-pixal-ratio:0){
+    select,
+    textarea,
+    input {
+        font-size: 16px;
+    }
+}
