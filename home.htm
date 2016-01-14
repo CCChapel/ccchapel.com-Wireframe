@@ -88,6 +88,9 @@
                      and (-webkit-device-pixel-ratio: 1)"
               rel="apple-touch-startup-image">
         
+        <!-- #TYPEKIT -->
+        <script src="https://use.typekit.net/xyy6wad.js"></script>
+        <script>try{Typekit.load({ async: true });}catch(e){}</script>
         
         <!-- #STYLESHEETS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -167,6 +170,8 @@
         
         <!-- #BODY -->
         <div class="body grid">
+            
+            <!-- #HEADER -->
             <div class="header-image content-section center-vertically [ grid__item one-whole ] [ wireframe--solid ]" 
                  style="background-image: url(https://scontent.xx.fbcdn.net/hphotos-xpt1/t31.0-8/12375133_1039438016076654_2406050984808791927_o.jpg);">
                 <div class="content-wrapper">
@@ -195,6 +200,7 @@
                 </div>
             </div><!--
         
+            #SEARCH
          --><div class="search content-section [ grid__item one-whole ]">
                 <div class="content-wrapper">
                     <div class="search__title">
@@ -212,54 +218,84 @@
                 </div> <!-- /content-wrapper -->
             </div><!--
 
-         --><div class="campusInfo content-section [ grid__item one-whole ]">
-                <div class="grid grid--full">
-                    <div class="campusInfo__item [ grid__item one-quarter lap--one-half palm--one-whole ]" 
-                         style="background-image: url(./images/campuses/Hudson.jpg)">
-                        <div class="content-wrapper--mobile no-vertical">
-                            <div class="campusInfo__cta">
-                                <a class="cta" href="#">
-                                    Hudson Campus
-                                </a>
-                            </div> <!-- /campusInfo__cta -->
-                        </div> <!-- /content-wrapper no-vertical -->
-                    </div><!--
+            #CAMPUS
+         --><div class="campusInfo [ content-section light-blue no-bottom-margin ] [ grid__item one-whole ]">
+                <div class="content-wrapper">
+                    <div class="grid">
+                        <div class="campusInfo__description [ grid__item one-third portable--one-whole ]">
+                            <div class="campusInfo__title">
+                                One Church, Many Locations
+                            </div>
+                            
+                            <div class="campusInfo__instructions">
+                                Select a campus for details and events going on at that location.
+                            </div>
+                        </div><!--
+            
+                     --><div class="campusInfo__list [ grid__item two-thirds portable--one-whole ]">
+                            <div class="grid">
+                                <div class="campusInfo__campus [ grid__item one-half palm--one-whole ]">
+                                    <div class="campusInfo__image" 
+                                         style="background-image: url(./images/campuses/Hudson-bw.jpg)">
+                                    </div>
 
-                 --><div class="campusInfo__item [ grid__item one-quarter lap--one-half palm--one-whole ]" 
-                         style="background-image: url(./images/campuses/Aurora.jpg)">
-                        <div class="content-wrapper--mobile no-vertical">
-                            <div class="campusInfo__cta">
-                                <a class="cta" href="#">
-                                    Aurora Campus
-                                </a>
-                            </div> <!-- campusInfo__cta -->
-                        </div> <!-- /content-wrapper no-vertical -->
-                    </div><!--
+                                    <div class="campusInfo__name">
+                                        Hudson Campus
+                                    </div>
 
-                 --><div class="campusInfo__item [ grid__item one-quarter lap--one-half palm--one-whole ]" 
-                         style="background-image: url(./images/campuses/Stow.jpg)">
-                        <div class="content-wrapper--mobile no-vertical">
-                            <div class="campusInfo__cta">
-                                <a class="cta" href="#">
-                                    Stow Campus
-                                </a>
-                            </div> <!-- /campusInfo__cta -->
-                        </div> <!-- /content-wrapper no-vertical -->
-                    </div><!--
+                                    <div class="campusInfo__details">
+                                        750 W Streetsboro Street | Hudson, Ohio
+                                    </div>
+                                </div><!--
 
-                 --><div class="campusInfo__item [ grid__item one-quarter lap--one-half palm--one-whole ]" 
-                         style="background-image: url(./images/campuses/Highland-Square.jpg)">
-                        <div class="content-wrapper--mobile no-vertical">
-                            <div class="campusInfo__cta">
-                                <a class="cta" href="#">
-                                    Highland Square Campus
-                                </a>
-                            </div> <!-- /campusInfo__cta -->
-                        </div> <!-- /content-wrapper no-vertical -->
-                    </div> <!-- /campusInfo__item -->
-                </div> <!-- /grid -->
+                             --><div class="campusInfo__campus [ grid__item one-half palm--one-whole ]">
+                                    <div class="campusInfo__image"
+                                         style="background-image: url(./images/campuses/Aurora-bw.jpg)">
+                                    </div>
+                                
+                                    <div class="campusInfo__name">
+                                        Aurora Campus
+                                    </div>
+                                
+                                    <div class="campusInfo__details">
+                                        252 N Chillicothe Road | Aurora, Ohio
+                                    </div>
+                                </div><!--
+
+                             --><div class="campusInfo__campus [ grid__item one-half palm--one-whole ]">
+                                    <div class="campusInfo__image"
+                                         style="background-image(./images/campuses/Stow-bw.jpg)">
+                                    </div>
+
+                                    <div class="campusInfo__name">
+                                        Stow Campus
+                                    </div>
+
+                                    <div class="campusInfo__details">
+                                        3900 Kent Road | Stow, Ohio
+                                    </div>
+                                </div><!--
+
+                             --><div class="campusInfo__campus [ grid__item one-half palm--one-whole ]">
+                                    <div class="campusInfo__image"
+                                         style="background-image: url(./images/campuses/Highland-Square-bw.jpg)">
+                                    </div>
+
+                                    <div class="campusInfo__name">
+                                        Highland Square Campus
+                                    </div>
+
+                                    <div class="campusInfo__details">
+                                        55 S Portage Path | Akron, Ohio
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- /content-wrapper -->
             </div><!--
 
+            #MESSAGE
          --><div class="message content-section [ grid__item one-whole ]" 
                  style="background-image: url(./images/KnowTheStory_Background.jpg)">
                 <div class="grid grid--full">
@@ -288,6 +324,7 @@
                 </div> <!-- /grid -->
             </div><!--
 
+            #EVENTS
          --><div class="events content-section--noBottomBuffer [ grid__item one-whole ]">
                 <div class="grid">
                     <div class="grid__item one-whole">

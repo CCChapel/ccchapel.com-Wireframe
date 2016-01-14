@@ -4,8 +4,14 @@
 .content-section {
     margin-bottom: $vertical-padding;
     
-    &--noBottomBuffer {
+    &--noBottomBuffer,
+    &.no-bottom-margin {
         margin-bottom: inherit;
+    }
+    
+    &.light-blue {
+        background: $light-blue;
+        color: #FFF;
     }
 }
 
@@ -104,21 +110,60 @@
 }
 
 .campusInfo {
-    &__item {
-        position: relative;
+    text-align: left;
+    
+    &__title {
+        @include typecsset-font-size($primary-headline-size);
+        font-weight: bold;
+        text-transform: uppercase;
         
-        background: $medium-gray center bottom/cover no-repeat scroll;
-        
-        height: 15em;
+        margin: 0 0 3rem 0;
     }
     
-    &__cta {
-        position: relative;
-        top: 11em;
+    &__instructions {
+        @include grid-media-query("portable") {
+            margin: 0 0 3rem 0;
+        }
+    }
+    
+    &__campus {
+        margin: 0 0 3rem 0;
         
-        height: auto;
+        @include grid-media-query("desk") {
+            &:nth-last-child(1),
+            &:nth-last-child(2) {
+                margin-bottom: 0;
+            }
+        }
+    }
+    
+    &__name {
+        @include typecsset-font-size($secondary-headline-size);
+        font-weight: bold;
+    }
+    
+    &__image {
+        background: $medium-gray center bottom/cover no-repeat scroll;
+
+        height: 6em;
         width: 100%;
     }
+    
+//    &__item {
+//        position: relative;
+//        
+//        background: $medium-gray center bottom/cover no-repeat scroll;
+//        
+//        height: 15em;
+//    }
+//    
+//    &__cta {
+//        position: relative;
+//        top: 11em;
+//        
+//        height: auto;
+//        width: 100%;
+//    }
 }
 
 .message {

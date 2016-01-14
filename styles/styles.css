@@ -1541,7 +1541,7 @@ input {
   font-weight: 200; }
 
 html {
-  font-family: "Open Sans", Verdana, sans-serif;
+  font-family: "proxima-nova", "Open Sans", Verdana, sans-serif;
   color: #333;
   -webkit-text-size-adjust: none;
   -moz-text-size-adjust: none;
@@ -1787,8 +1787,11 @@ body {
 
 .content-section {
   margin-bottom: 3em; }
-  .content-section--noBottomBuffer {
+  .content-section--noBottomBuffer, .content-section.no-bottom-margin {
     margin-bottom: inherit; }
+  .content-section.light-blue {
+    background: #41a5ea;
+    color: #FFF; }
 
 .content-wrapper {
   box-sizing: border-box;
@@ -1846,15 +1849,32 @@ body {
   .search__controls {
     height: 3em; }
 
-.campusInfo__item {
-  position: relative;
-  background: #CCC center bottom/cover no-repeat scroll;
-  height: 15em; }
-.campusInfo__cta {
-  position: relative;
-  top: 11em;
-  height: auto;
-  width: 100%; }
+.campusInfo {
+  text-align: left; }
+  .campusInfo__title {
+    font-size: 64px;
+    font-size: 4rem;
+    line-height: 1.125;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 0 3rem 0; }
+  @media only screen and (max-width: 1023px) {
+    .campusInfo__instructions {
+      margin: 0 0 3rem 0; } }
+  .campusInfo__campus {
+    margin: 0 0 3rem 0; }
+    @media only screen and (min-width: 1024px) {
+      .campusInfo__campus:nth-last-child(1), .campusInfo__campus:nth-last-child(2) {
+        margin-bottom: 0; } }
+  .campusInfo__name {
+    font-size: 32px;
+    font-size: 2rem;
+    line-height: 1.5;
+    font-weight: bold; }
+  .campusInfo__image {
+    background: #CCC center bottom/cover no-repeat scroll;
+    height: 6em;
+    width: 100%; }
 
 .message {
   background-attachment: fixed; }
