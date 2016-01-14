@@ -1577,19 +1577,19 @@ body {
 
 @media only screen and (max-width: 480px) {
   .palm--hide {
-    display: none; } }
+    display: none !important; } }
 
 @media only screen and (min-width: 481px) and (max-width: 1023px) {
   .lap--hide {
-    display: none; } }
+    display: none !important; } }
 
 @media only screen and (max-width: 1023px) {
   .portable--hide {
-    display: none; } }
+    display: none !important; } }
 
 @media only screen and (min-width: 1024px) {
   .desk--hide {
-    display: none; } }
+    display: none !important; } }
 
 .center-vertically, .cta, .cta--transparent {
   display: flex;
@@ -1702,6 +1702,16 @@ body {
     font-size: 0.875rem;
     line-height: 1.7142857;
     color: #FFF; }
+  .campus-select__list {
+    display: inline; }
+  .campus-select__campus {
+    display: inline; }
+    .campus-select__campus:after {
+      content: '|';
+      padding: 0 10px; }
+    .campus-select__campus:last-child:after {
+      content: '';
+      padding: 0; }
 
 .banner {
   height: 4em;

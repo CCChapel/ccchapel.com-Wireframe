@@ -35,7 +35,7 @@ body
 {
     @include grid-media-query("palm")
     {
-        display: none;
+        display: none !important;
     }
 }
 
@@ -43,7 +43,7 @@ body
 {
     @include grid-media-query("lap")
     {
-        display: none;
+        display: none !important;
     }
 }
 
@@ -51,7 +51,7 @@ body
 {
     @include grid-media-query("portable")
     {
-        display: none;
+        display: none !important;
     }
 }
 
@@ -59,7 +59,7 @@ body
 {
     @include grid-media-query("desk")
     {
-        display: none;
+        display: none !important;
     }
 }
 
