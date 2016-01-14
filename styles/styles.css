@@ -1492,6 +1492,7 @@ td {
 input {
   box-sizing: border-box;
   padding: .5em;
+  font-size: 16px;
   height: 100%;
   width: 90%;
   border: 1px solid #333333;
@@ -1501,6 +1502,7 @@ input {
 /* Safari, Chrome and Opera */
 ::-webkit-input-placeholder {
   color: #AAA;
+  text-align: center;
   text-transform: uppercase;
   font-style: italic;
   font-weight: 200; }
@@ -1508,6 +1510,7 @@ input {
 /* Firefox 18- */
 :-moz-placeholder {
   color: #AAA;
+  text-align: center;
   text-transform: uppercase;
   font-style: italic;
   font-weight: 200; }
@@ -1515,6 +1518,7 @@ input {
 /* Firefox 19+ */
 ::-moz-placeholder {
   color: #AAA;
+  text-align: center;
   text-transform: uppercase;
   font-style: italic;
   font-weight: 200; }
@@ -1522,6 +1526,7 @@ input {
 /* IE 10+ */
 :-ms-input-placeholder {
   color: #AAA;
+  text-align: center;
   text-transform: uppercase;
   font-style: italic;
   font-weight: 200; }
@@ -1529,6 +1534,7 @@ input {
 /* Edge */
 ::-ms-input-placeholder {
   color: #AAA;
+  text-align: center;
   text-transform: uppercase;
   font-style: italic;
   font-weight: 200; }
@@ -1536,6 +1542,7 @@ input {
 /* Default Usage */
 :placeholder-shown {
   color: #AAA;
+  text-align: center;
   text-transform: uppercase;
   font-style: italic;
   font-weight: 200; }

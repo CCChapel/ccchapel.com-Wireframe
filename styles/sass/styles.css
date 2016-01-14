@@ -1594,6 +1594,7 @@ td {
 input {
   box-sizing: border-box;
   padding: .5em;
+  font-size: 16px;
   height: 100%;
   width: 90%;
   border: 1px solid #333333;
@@ -1601,55 +1602,61 @@ input {
   -webkit-appearance: none; }
 
 /* Safari, Chrome and Opera */
-/* line 24, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/form-controls.scss */
+/* line 27, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/form-controls.scss */
 ::-webkit-input-placeholder {
   color: #AAA;
+  text-align: center;
   text-transform: uppercase;
   font-style: italic;
   font-weight: 200; }
 
 /* Firefox 18- */
-/* line 29, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/form-controls.scss */
+/* line 32, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/form-controls.scss */
 :-moz-placeholder {
   color: #AAA;
+  text-align: center;
   text-transform: uppercase;
   font-style: italic;
   font-weight: 200; }
 
 /* Firefox 19+ */
-/* line 34, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/form-controls.scss */
+/* line 37, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/form-controls.scss */
 ::-moz-placeholder {
   color: #AAA;
+  text-align: center;
   text-transform: uppercase;
   font-style: italic;
   font-weight: 200; }
 
 /* IE 10+ */
-/* line 39, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/form-controls.scss */
+/* line 42, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/form-controls.scss */
 :-ms-input-placeholder {
   color: #AAA;
+  text-align: center;
   text-transform: uppercase;
   font-style: italic;
   font-weight: 200; }
 
 /* Edge */
-/* line 44, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/form-controls.scss */
+/* line 47, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/form-controls.scss */
 ::-ms-input-placeholder {
   color: #AAA;
+  text-align: center;
   text-transform: uppercase;
   font-style: italic;
   font-weight: 200; }
 
 /* Default Usage */
-/* line 49, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/form-controls.scss */
+/* line 52, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/form-controls.scss */
 :placeholder-shown {
   color: #AAA;
+  text-align: center;
   text-transform: uppercase;
   font-style: italic;
   font-weight: 200; }
 
 @media screen and (-webkit-min-device-pixal-ratio: 0) {
-  /* line 57, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/form-controls.scss */
+  /* line 60, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/form-controls.scss */
   select,
   textarea,
   input {

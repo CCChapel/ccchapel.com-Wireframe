@@ -2,6 +2,8 @@
 input {
     box-sizing: border-box;
     padding: .5em;
+    
+    font-size: $typecsset-base-font-size;
 
     height: 100%;
     width: 90%;
@@ -15,6 +17,7 @@ input {
 //Placeholder
 @mixin placeholder-defaults {
     color: $dark-gray;
+    text-align: center;
     text-transform: uppercase;
     font-style: italic;
     font-weight: 200;
