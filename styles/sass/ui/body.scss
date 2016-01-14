@@ -248,13 +248,7 @@
     &__1,
     &__2,
     &__3 {
-        @include grid-media-query("portable") {
-            margin-bottom: $magic-number;
-            
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
+        margin-bottom: $magic-number;
     }
     
     &__image {
