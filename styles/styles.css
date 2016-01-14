@@ -1792,6 +1792,8 @@ body {
   .content-section.light-blue {
     background: #41a5ea;
     color: #FFF; }
+  .content-section.light-gray {
+    background: #EEE; }
 
 .content-wrapper {
   box-sizing: border-box;
