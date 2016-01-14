@@ -61,11 +61,11 @@
         text-align: center;
         text-transform: uppercase;
         
-        margin: 0 0 3rem 0;
+        margin: 0 0 $bottom-margin 0;
     }
     
     &__copy {
-        margin: 0 auto 3rem auto;
+        margin: 0 auto $bottom-margin auto;
         
         text-align: center;
         
@@ -117,17 +117,17 @@
         font-weight: bold;
         text-transform: uppercase;
         
-        margin: 0 0 3rem 0;
+        margin: 0 0 $bottom-margin 0;
     }
     
     &__instructions {
         @include grid-media-query("portable") {
-            margin: 0 0 3rem 0;
+            margin: 0 0 $bottom-margin 0;
         }
     }
     
     &__campus {
-        margin: 0 0 3rem 0;
+        margin: 0 0 $bottom-margin 0;
         
         @include grid-media-query("desk") {
             &:nth-last-child(1),
