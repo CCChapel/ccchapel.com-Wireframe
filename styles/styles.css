@@ -1498,6 +1498,48 @@ input {
   border-radius: 6px;
   -webkit-appearance: none; }
 
+/* Safari, Chrome and Opera */
+::-webkit-input-placeholder {
+  color: #AAA;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 200; }
+
+/* Firefox 18- */
+:-moz-placeholder {
+  color: #AAA;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 200; }
+
+/* Firefox 19+ */
+::-moz-placeholder {
+  color: #AAA;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 200; }
+
+/* IE 10+ */
+:-ms-input-placeholder {
+  color: #AAA;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 200; }
+
+/* Edge */
+::-ms-input-placeholder {
+  color: #AAA;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 200; }
+
+/* Default Usage */
+:placeholder-shown {
+  color: #AAA;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 200; }
+
 html {
   font-family: "Open Sans", Verdana, sans-serif;
   color: #333;

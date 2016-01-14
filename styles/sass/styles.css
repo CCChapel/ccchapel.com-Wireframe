@@ -1590,7 +1590,7 @@ td {
   .wireframe--solid {
     background: currentColor; }
 
-/* line 1, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/form-controls.scss */
+/* line 2, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/form-controls.scss */
 input {
   box-sizing: border-box;
   padding: .5em;
@@ -1599,6 +1599,54 @@ input {
   border: 1px solid #333333;
   border-radius: 6px;
   -webkit-appearance: none; }
+
+/* Safari, Chrome and Opera */
+/* line 24, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/form-controls.scss */
+::-webkit-input-placeholder {
+  color: #AAA;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 200; }
+
+/* Firefox 18- */
+/* line 29, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/form-controls.scss */
+:-moz-placeholder {
+  color: #AAA;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 200; }
+
+/* Firefox 19+ */
+/* line 34, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/form-controls.scss */
+::-moz-placeholder {
+  color: #AAA;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 200; }
+
+/* IE 10+ */
+/* line 39, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/form-controls.scss */
+:-ms-input-placeholder {
+  color: #AAA;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 200; }
+
+/* Edge */
+/* line 44, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/form-controls.scss */
+::-ms-input-placeholder {
+  color: #AAA;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 200; }
+
+/* Default Usage */
+/* line 49, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/form-controls.scss */
+:placeholder-shown {
+  color: #AAA;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 200; }
 
 /* line 1, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/page.scss */
 html {
