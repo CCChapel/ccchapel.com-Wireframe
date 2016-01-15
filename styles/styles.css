@@ -1681,7 +1681,8 @@ body {
   z-index: 100; }
 
 .campus-select {
-  background-color: #185e94; }
+  background-color: #185e94;
+  padding: .5em 0; }
   .campus-select__options {
     text-align: center !important;
     height: 100%;
