@@ -1676,6 +1676,10 @@ body {
 .circle {
   border-radius: 50%; }
 
+.header {
+  position: relative;
+  z-index: 100; }
+
 .campus-select {
   background-color: #185e94; }
   .campus-select__options {
@@ -1724,6 +1728,10 @@ body {
 
 .menu {
   height: 100%; }
+  @media only screen and (max-width: 1023px) {
+    .menu__items {
+      background: rgba(51, 51, 51, 0.9);
+      height: 100vh; } }
   .menu__item {
     height: 100%;
     color: #FFF;
@@ -1731,6 +1739,12 @@ body {
     text-align: center;
     text-transform: uppercase;
     white-space: nowrap; }
+    @media only screen and (max-width: 1023px) {
+      .menu__item {
+        font-size: 24px;
+        font-size: 1.5rem;
+        line-height: 1;
+        height: 3rem; } }
 
 .logo {
   height: 85%; }
@@ -2057,5 +2071,14 @@ blockquote, p, ul, ol,
 @media only screen and (min-width: 1024px) {
   .desk--hide {
     display: none; } }
+
+.hide-overflow {
+  overflow: hidden;
+  height: 100vh; }
+
+.blur {
+  filter: url("http://staff.ccchapel.com/CMSTemplates/_CCC/_Assets/svg/blur.svg#blur");
+  -webkit-filter: blur(5px);
+  filter: blur(5px); }
 
 /*# sourceMappingURL=styles.css.map */

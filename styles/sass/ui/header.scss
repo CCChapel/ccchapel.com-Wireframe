@@ -1,3 +1,9 @@
+$header-z-index: 100;
+.header {
+    position: relative;
+    z-index: 100;
+}
+
 .campus-select {
     //TO DO: add back in for minimum
     //height: 2em;
@@ -76,6 +82,17 @@
 .menu {
     height: 100%;
     
+    &__items {
+        @include grid-media-query("portable") {
+            background: transparentize($charcoal, .1);
+
+//            position: relative;
+//            z-index: $menu-z-index;
+            
+            height: 100vh;
+        }
+    }
+    
     &__item {
         height: 100%;
 
@@ -84,6 +101,15 @@
         text-align: center;
         text-transform: uppercase;
         white-space: nowrap;
+        
+        @include grid-media-query("portable") {
+            @include typecsset-font-size($tertiary-headline-size);
+            
+//            position: relative;
+//            z-index: $menu-z-index;
+            
+            height: 3rem;
+        }
     }
 }
 

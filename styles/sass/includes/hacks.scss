@@ -30,3 +30,16 @@
         display: none;
     }
 }
+
+//Control scrolling
+.hide-overflow {
+    overflow: hidden;
+    height: 100vh;
+}
+
+//Blur
+.blur {
+    filter: url("http://staff.ccchapel.com/CMSTemplates/_CCC/_Assets/svg/blur.svg#blur");
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+}

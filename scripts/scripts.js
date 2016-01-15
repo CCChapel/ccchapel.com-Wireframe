@@ -16,6 +16,19 @@ function toggleMobileCampusList() {
 //Mobile Menu
 var menuClass = ".banner__menu";
 
+/*** MODAL FUNCTIONS ***/
+function setupMobileMenu() {
+    //Toggle open and close
+    $("#nav-icon").click(function () {
+        $("#nav-icon").toggleClass("close");
+        $(".banner__menu").slideToggle(250);
+        
+        //$("#modal--fullscreen").toggleClass("show");
+        $("body").toggleClass("hide-overflow");
+        $(".notifications, .body, .footer").toggleClass("blur");                                          
+    });
+}
+
 function showMobileMenu() {
     $(menuClass).show();
 }
