@@ -1575,22 +1575,6 @@ body {
       padding-left: 0;
       padding-right: 0; } }
 
-@media only screen and (max-width: 480px) {
-  .palm--hide {
-    display: none !important; } }
-
-@media only screen and (min-width: 481px) and (max-width: 1023px) {
-  .lap--hide {
-    display: none !important; } }
-
-@media only screen and (max-width: 1023px) {
-  .portable--hide {
-    display: none !important; } }
-
-@media only screen and (min-width: 1024px) {
-  .desk--hide {
-    display: none !important; } }
-
 .center-vertically, .cta, .cta--transparent {
   display: flex;
   justify-content: center;
@@ -1693,7 +1677,6 @@ body {
   border-radius: 50%; }
 
 .campus-select {
-  height: 2em;
   background-color: #185e94; }
   .campus-select__options {
     text-align: center !important;
@@ -1704,14 +1687,29 @@ body {
     color: #FFF; }
   .campus-select__list {
     display: inline; }
+    @media only screen and (max-width: 1023px) {
+      .campus-select__list {
+        display: block;
+        padding: .5em 0; } }
+  .campus-select__campus-marker {
+    cursor: pointer; }
   .campus-select__campus {
     display: inline; }
-    .campus-select__campus:after {
-      content: '|';
-      padding: 0 10px; }
-    .campus-select__campus:last-child:after {
-      content: '';
-      padding: 0; }
+    @media only screen and (min-width: 1024px) {
+      .campus-select__campus:after {
+        content: '|';
+        padding: 0 10px; }
+      .campus-select__campus:last-child:after {
+        content: '';
+        padding: 0; } }
+    @media only screen and (max-width: 1023px) {
+      .campus-select__campus {
+        display: block;
+        font-size: 24px;
+        font-size: 1.5rem;
+        line-height: 1;
+        font-weight: bold;
+        padding: .25em 0; } }
 
 .banner {
   height: 4em;
@@ -1892,9 +1890,6 @@ body {
       .campusInfo__campus:nth-last-child(1), .campusInfo__campus:nth-last-child(2) {
         margin-bottom: 0; } }
   .campusInfo__name {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 1;
     font-weight: bold; }
   .campusInfo__image {
     background: #CCC center bottom/cover no-repeat scroll;
@@ -2046,5 +2041,21 @@ a {
 blockquote, p, ul, ol,
 .addBottomMargin {
   margin-bottom: 24px; }
+
+@media only screen and (max-width: 480px) {
+  .palm--hide {
+    display: none; } }
+
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+  .lap--hide {
+    display: none; } }
+
+@media only screen and (max-width: 1023px) {
+  .portable--hide {
+    display: none; } }
+
+@media only screen and (min-width: 1024px) {
+  .desk--hide {
+    display: none; } }
 
 /*# sourceMappingURL=styles.css.map */

@@ -100,18 +100,16 @@
         <!-- #CAMPUS SELECT -->
         <div class="campus-select [ grid grid--center ]">
             <div class="campus-select__options [ grid__item one-whole ]">
-                <div class="center-vertically">
-                    <i class="fa fa-map-marker"></i>&nbsp;&nbsp;
-                    <span class="desk--hide">Campuses</span>
-                    <div class="campus-select__list portable--hide">
-                        <div class="campus-select__campus">Hudson</div>
-                        <div class="campus-select__campus">Aurora</div>
-                        <div class="campus-select__campus">Stow</div>
-                        <div class="campus-select__campus">Highland Square</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                <i class="fa fa-map-marker"></i>&nbsp;&nbsp;
+                <span class="campus-select__campus-marker desk--hide" role="button">Campuses</span>
+                <div class="campus-select__list portable--hide">
+                    <div class="campus-select__campus">Hudson</div>
+                    <div class="campus-select__campus">Aurora</div>
+                    <div class="campus-select__campus">Stow</div>
+                    <div class="campus-select__campus">Highland Square</div>
+                </div> <!-- /campus-select__list -->
+            </div> <!-- /campus-select__options -->
+        </div> <!-- /campus-select -->
         
         <!-- #BANNER -->
         <div class="banner grid">
@@ -121,7 +119,7 @@
                         <img class="logo" src="images/logo.png" alt="" />
                     </span>
                 </div> <!-- /content-wrapper--mobile -->
-            </div><!--   
+            </div><!-- /banner__logo --><!--   
 
          --><div class="banner__mobile-menu [ grid__item desk--hide portable--one-quarter ]">
                 <div class="[ content-wrapper--mobile no-vertical ] [ center-vertically right-justify ]">
@@ -129,7 +127,7 @@
                         <span class="lines"></span>
                     </div>
                 </div>
-            </div><!--
+            </div><!-- /banner__mobile-menu --><!--
 
          --><div class="banner__menu [ grid__item four-fifths portable--hide ]">
                 <nav class="menu grid">
@@ -229,9 +227,10 @@
          --><div class="campusInfo [ content-section light-blue no-bottom-margin ] [ grid__item one-whole ]">
                 <div class="content-wrapper">
                     <div class="grid">
-                        <div class="campusInfo__description [ grid__item one-third palm--one-whole ]">
+                        <div class="campusInfo__description [ grid__item one-third portable--one-whole ]">
                             <div class="campusInfo__title">
-                                One Church, Many Locations
+                                One Church,<br />
+                                Many Locations
                             </div>
                             
                             <div class="campusInfo__instructions">
@@ -239,7 +238,7 @@
                             </div>
                         </div><!--
             
-                     --><div class="campusInfo__list [ grid__item two-thirds palm--one-whole ]">
+                     --><div class="campusInfo__list [ grid__item two-thirds portable--one-whole ]">
                             <div class="grid">
                                 <div class="campusInfo__campus [ grid__item one-half palm--one-whole ]">
                                     <div class="campusInfo__image" 
@@ -390,14 +389,14 @@
                         </div>
                     </div> <!-- /grid -->
             
-                <div class="events__cta [ grid grid--center ]">
+                    <div class="events__cta [ grid grid--center ]">
                         <div class="events__cta1 [ grid__item one-third portable--one-whole ]">
                             <a class="cta" href="#">
                                 All Events
                             </a>
                         </div>
-                    </div> <!-- /content-wrapper -->
-                </div> <!-- /events__cta -->
+                    </div> <!-- /events__cta -->
+                </div> <!-- /content-wrapper -->
             </div> <!-- /events -->
         </div> <!-- /body -->
         
@@ -484,5 +483,14 @@
                 </div> 
             </div> <!-- /content-wrapper -->
         </footer> <!-- /grid -->
+        
+        <!-- #JAVASCRIPT -->
+        <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+        <script type="text/javascript" src="./scripts/scripts.js"></script>
+        <script type="text/javascript">
+            $(document).ready( function() {
+                $(".campus-select__campus-marker").click(toggleMobileCampusList);
+            });
+        </script>
     </body>
 </html> 

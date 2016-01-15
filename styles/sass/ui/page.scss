@@ -31,38 +31,6 @@ body
     }
 }
 
-.palm--hide
-{
-    @include grid-media-query("palm")
-    {
-        display: none !important;
-    }
-}
-
-.lap--hide
-{
-    @include grid-media-query("lap")
-    {
-        display: none !important;
-    }
-}
-
-.portable--hide
-{
-    @include grid-media-query("portable")
-    {
-        display: none !important;
-    }
-}
-
-.desk--hide
-{
-    @include grid-media-query("desk")
-    {
-        display: none !important;
-    }
-}
-
 .center-vertically {
     display: flex;
     justify-content: center; /* align horizontal */

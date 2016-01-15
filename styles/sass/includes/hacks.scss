@@ -1,0 +1,32 @@
+//Hide Elements
+.palm--hide
+{
+    @include grid-media-query("palm")
+    {
+        display: none;
+    }
+}
+
+.lap--hide
+{
+    @include grid-media-query("lap")
+    {
+        display: none;
+    }
+}
+
+.portable--hide
+{
+    @include grid-media-query("portable")
+    {
+        display: none;
+    }
+}
+
+.desk--hide
+{
+    @include grid-media-query("desk")
+    {
+        display: none;
+    }
+}

@@ -1,5 +1,6 @@
 .campus-select {
-    height: 2em;
+    //TO DO: add back in for minimum
+    //height: 2em;
     
     background-color: $blue;
     
@@ -14,19 +15,40 @@
     
     &__list {
         display: inline;
+        
+        @include grid-media-query("portable") {
+            display: block;
+            
+            padding: .5em 0;
+        }
+    }
+    
+    &__campus-marker {
+        cursor: pointer;
     }
     
     &__campus {
         display: inline;
         
-        &:after {
-            content: '|';
-            padding: 0 10px;
+        @include grid-media-query("desk") {
+            &:after {
+                content: '|';
+                padding: 0 10px;
+            }
+
+            &:last-child:after {
+                content: '';
+                padding: 0;
+            }
         }
         
-        &:last-child:after {
-            content: '';
-            padding: 0;
+        @include grid-media-query("portable") {
+            display: block;
+            
+            @include typecsset-font-size($tertiary-headline-size);
+            font-weight: bold;
+            
+            padding: .25em 0;
         }
     }
 }
