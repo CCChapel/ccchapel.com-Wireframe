@@ -1877,9 +1877,9 @@ body {
 .campusInfo {
   text-align: left; }
   .campusInfo__title {
-    font-size: 64px;
-    font-size: 4rem;
-    line-height: 1.125;
+    font-size: 48px;
+    font-size: 3rem;
+    line-height: 1;
     font-weight: bold;
     text-transform: uppercase;
     margin: 0 0 3rem 0; }
@@ -1892,9 +1892,9 @@ body {
       .campusInfo__campus:nth-last-child(1), .campusInfo__campus:nth-last-child(2) {
         margin-bottom: 0; } }
   .campusInfo__name {
-    font-size: 32px;
-    font-size: 2rem;
-    line-height: 1.5;
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1;
     font-weight: bold; }
   .campusInfo__image {
     background: #CCC center bottom/cover no-repeat scroll;

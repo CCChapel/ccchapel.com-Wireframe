@@ -124,7 +124,7 @@
     text-align: left;
     
     &__title {
-        @include typecsset-font-size($primary-headline-size);
+        @include typecsset-font-size(48px); //$primary-headline-size);
         font-weight: bold;
         text-transform: uppercase;
         
@@ -149,7 +149,7 @@
     }
     
     &__name {
-        @include typecsset-font-size($secondary-headline-size);
+        @include typecsset-font-size($tertiary-headline-size);
         font-weight: bold;
     }
     
