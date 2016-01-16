@@ -103,14 +103,18 @@ $header-z-index: 100;
         }
     }
     
+    &__search-grid {
+        height: 100%;
+    }
+    
     &__search-field {
         @include grid-media-query("desk") {
-            //display: none; 
+            padding: 1em 0;
         }
         
-//        &.show {
-//            display: inline-block;
-//        }
+        &.show {
+            display: inline-block;
+        }
     }
     
     &__search-icon {

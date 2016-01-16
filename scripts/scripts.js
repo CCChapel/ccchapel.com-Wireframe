@@ -23,15 +23,15 @@ function setupMobileMenu() {
         //animate icon
         $("#nav-icon").toggleClass("close");
         
+        //toggle screen lock
+        $("body").toggleClass("hide-overflow");
+        $("body").toggleClass("lock-position");   
+        
         //toggle menu
         $(".banner__menu").slideToggle(250, function () {
             //blur backgrounds after menu displays
-            $(".notifications, .body, .footer").toggleClass("blur");   
-        });
-        
-        //toggle screen lock
-        $("body").toggleClass("hide-overflow");
-        $("body").toggleClass("lock-position");                                       
+            //$(".notifications, .body, .footer").toggleClass("blur");   
+        });                                    
     });
 }
 
@@ -44,20 +44,22 @@ function hideMobileMenu() {
 }
 
 //Desktop Search
-var searchItem = ".menu__search";
+var searchItemClass = ".menu__search";
 var searchFieldClass = ".menu__search-field";
+var searchIconClass = ".menu__search-icon";
 
 function setupDesktopSearch() {
     //Set trigger
     $(".menu__search-icon").click(function () {
         //Hide Menu
-        $(menuItemsClass).hide();
+        $(menuItemsClass).toggle();
         
         //Toggle Width
-        $(searchItem).toggleClass("one-whole");
+        $(searchItemClass).toggleClass("one-tenth").toggleClass("one-whole");
+        $(searchIconClass).toggleClass("desk--one-whole").toggleClass("desk--one-tenth");
         
         //Show Search Field
-        showSearchField();
+        $(searchFieldClass).toggleClass("show");
     });  
 }
 
