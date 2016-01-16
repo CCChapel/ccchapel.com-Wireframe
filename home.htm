@@ -133,14 +133,20 @@
              --><div class="banner__menu [ grid__item four-fifths portable--one-whole portable--hide ]">
                     <nav class="menu [ grid grid--rev ]">
                         <div class="menu__search [ grid__item one-tenth portable--one-whole ]">
-                            <div class="menu__item">
-                                <span class="center-vertically">
-                                    <div class="menu__search-field [ desk--hide portable--one-whole ]">
+                            <div class="grid">
+                                <div class="menu__search-field [ grid__item desk--nine-tenths desk--hide portable--one-whole ]">
+                                    <span class="center-vertically">
                                         <input type="search" placeholder="Search" />
-                                    </div>
-
-                                    <i class="menu__search-icon [ fa fa-search ] [ portable--hide ]"></i>
-                                </span>
+                                    </span>
+                                </div>
+                            </div><!--
+        
+                         --><div class="menu__search-icon [ grid__item desk--one-whole portable--hide ]">
+                                <div class="menu__item">
+                                    <span class="center-vertically">
+                                        <i class="[ fa fa-search ] [ portable--hide ]"></i>
+                                    </span>
+                                </div>
                             </div>
                         </div><!-- /menu__search --><!--
                         
@@ -504,6 +510,9 @@
                 
                 //Mobile Menu
                 setupMobileMenu();
+                
+                //Desktop Search
+                setupDesktopSearch();
             });
         </script>
     </body>

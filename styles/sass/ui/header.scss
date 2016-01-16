@@ -98,16 +98,25 @@ $header-z-index: 100;
     }
     
     &__search {
-        height: 100%;
+        @include grid-media-query("desk") {
+            height: 100%;
+        }
     }
     
     &__search-field {
         @include grid-media-query("desk") {
             //display: none; 
         }
+        
+//        &.show {
+//            display: inline-block;
+//        }
     }
     
     &__search-icon {
+        cursor: pointer;
+        
+        height: 100%;
     }
     
     &__items {

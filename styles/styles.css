@@ -1743,7 +1743,11 @@ body {
       background: rgba(51, 51, 51, 0.9);
       padding: .5em 0;
       height: 100vh; } }
-  .menu__search {
+  @media only screen and (min-width: 1024px) {
+    .menu__search {
+      height: 100%; } }
+  .menu__search-icon {
+    cursor: pointer;
     height: 100%; }
   .menu__items {
     height: 100%; }

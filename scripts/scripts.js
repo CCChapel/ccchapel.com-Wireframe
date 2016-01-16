@@ -15,8 +15,8 @@ function toggleMobileCampusList() {
 
 //Mobile Menu
 var menuClass = ".banner__menu";
+var menuItemsClass = ".menu__items";
 
-/*** MODAL FUNCTIONS ***/
 function setupMobileMenu() {
     //Toggle open and close
     $("#nav-icon").click(function () {
@@ -41,4 +41,30 @@ function showMobileMenu() {
 
 function hideMobileMenu() {
     $(menuClass).hide();
+}
+
+//Desktop Search
+var searchItem = ".menu__search";
+var searchFieldClass = ".menu__search-field";
+
+function setupDesktopSearch() {
+    //Set trigger
+    $(".menu__search-icon").click(function () {
+        //Hide Menu
+        $(menuItemsClass).hide();
+        
+        //Toggle Width
+        $(searchItem).toggleClass("one-whole");
+        
+        //Show Search Field
+        showSearchField();
+    });  
+}
+
+function showSearchField() {
+    $(searchFieldClass).show();
+}
+
+function hideSearchField() {
+    $(searchFieldClass).hide();
 }
