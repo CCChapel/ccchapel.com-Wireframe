@@ -20,12 +20,18 @@ var menuClass = ".banner__menu";
 function setupMobileMenu() {
     //Toggle open and close
     $("#nav-icon").click(function () {
+        //animate icon
         $("#nav-icon").toggleClass("close");
-        $(".banner__menu").slideToggle(250);
         
-        //$("#modal--fullscreen").toggleClass("show");
+        //toggle menu
+        $(".banner__menu").slideToggle(250, function () {
+            //blur backgrounds after menu displays
+            $(".notifications, .body, .footer").toggleClass("blur");   
+        });
+        
+        //toggle screen lock
         $("body").toggleClass("hide-overflow");
-        $(".notifications, .body, .footer").toggleClass("blur");                                          
+        $("body").toggleClass("lock-position");                                       
     });
 }
 

@@ -52,11 +52,16 @@ $header-z-index: 100;
         
         @include grid-media-query("portable") {
             display: block;
+            border-bottom: 1pt solid $dark-blue;
             
             @include typecsset-font-size($tertiary-headline-size);
             font-weight: bold;
             
             padding: .25em 0;
+            
+            &:last-child {
+                border-bottom: none;
+            }
         }
     }
 }
@@ -83,15 +88,25 @@ $header-z-index: 100;
 
 .menu {
     height: 100%;
+
+    @include grid-media-query("portable") {
+        background: transparentize($charcoal, .1);
+        
+        padding: .5em 0;
+
+        height: 100vh;
+    }
+    
+    &__search {
+        
+    }
+    
+    &__search-field {
+       display: none; 
+    }
     
     &__items {
         height: 100%;
-        
-        @include grid-media-query("portable") {
-            background: transparentize($charcoal, .1);
-
-            height: 100vh;
-        }
     }
     
     &__grid {
