@@ -1743,8 +1743,8 @@ body {
       background: rgba(51, 51, 51, 0.9);
       padding: .5em 0;
       height: 100vh; } }
-  .menu__search-field {
-    display: none; }
+  .menu__search {
+    height: 100%; }
   .menu__items {
     height: 100%; }
   .menu__grid {
