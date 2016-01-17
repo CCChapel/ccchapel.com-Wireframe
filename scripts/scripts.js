@@ -34,11 +34,9 @@ var viewportLocked = false;
 function toggleViewport() {
     if (viewportLocked == false) {
         lockViewport();
-	viewportLocked = true;
     }
     else {
         unlockViewport();
-	viewportLocked = false;
     }
 }
 
@@ -47,13 +45,17 @@ function lockViewport() {
     content += ", maximum-scale=1.0";
     
     $("meta[name='viewport']").attr("content", content);
+
+    viewportLocked = true;
 }
 
 function unlockViewport() {
     var content = $("meta[name='viewport']").attr("content");
-    content.replace(", maximum-scale=1.0", "");
+    content = content.replace(", maximum-scale=1.0", "");
 
     $("meta[name='viewport']").attr("content", content);
+
+    viewportLocked = false;
 }
 
 //Desktop Search
