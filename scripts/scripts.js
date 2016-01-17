@@ -4,14 +4,6 @@ var campusSelect = ".campus-select__list";
 function toggleMobileCampusList() {
     $(campusSelect).slideToggle(250);
 }
-//
-//function showCampusList() {
-//    $(campusSelect).show();
-//}
-//
-//function hideCampusList() {
-//    $(campusSelect).hide();
-//}
 
 //Mobile Menu
 var menuClass = ".banner__menu";
@@ -27,6 +19,8 @@ function setupMobileMenu() {
         $("body").toggleClass("hide-overflow");
         $("body").toggleClass("lock-position");   
         
+        toggleViewport();
+        
         //toggle menu
         $(".banner__menu").slideToggle(250, function () {
             //blur backgrounds after menu displays
@@ -35,12 +29,29 @@ function setupMobileMenu() {
     });
 }
 
-function showMobileMenu() {
-    $(menuClass).show();
+var viewportLocked = false;
+
+function toggleViewport() {
+    if (viewportLocked == false) {
+        lockViewport();
+    }
+    else {
+        unlockViewport();
+    }
 }
 
-function hideMobileMenu() {
-    $(menuClass).hide();
+function lockViewport() {
+    var content = $("meta[name='viewport']").attr("content");
+    content += ", maximum-scale=1.0";
+    
+    $("meta[name='viewport']").attr("content", content);
+}
+
+function unlockViewport() {
+    var content = $("meta[name='viewport']").attr("content");
+    content.replace(", maximum-scale=1.0", "");
+
+    $("meta[name='viewport']").attr("content", content);
 }
 
 //Desktop Search
@@ -61,12 +72,4 @@ function setupDesktopSearch() {
         //Show Search Field
         $(searchFieldClass).toggleClass("show");
     });  
-}
-
-function showSearchField() {
-    $(searchFieldClass).show();
-}
-
-function hideSearchField() {
-    $(searchFieldClass).hide();
 }
