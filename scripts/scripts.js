@@ -34,9 +34,11 @@ var viewportLocked = false;
 function toggleViewport() {
     if (viewportLocked == false) {
         lockViewport();
+	viewportLocked = true;
     }
     else {
         unlockViewport();
+	viewportLocked = false;
     }
 }
 
