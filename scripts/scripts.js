@@ -40,9 +40,11 @@ function toggleViewport() {
     }
 }
 
+var viewportLockProperty = ", maximum-scale=1.0";
+
 function lockViewport() {
     var content = $("meta[name='viewport']").attr("content");
-    content += ", maximum-scale=1.0";
+    content += viewportLockProperty;
     
     $("meta[name='viewport']").attr("content", content);
 
@@ -51,7 +53,7 @@ function lockViewport() {
 
 function unlockViewport() {
     var content = $("meta[name='viewport']").attr("content");
-    content = content.replace(", maximum-scale=1.0", "");
+    content = content.replace(viewportLockProperty, "");
 
     $("meta[name='viewport']").attr("content", content);
 
