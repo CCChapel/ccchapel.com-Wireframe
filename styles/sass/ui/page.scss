@@ -86,12 +86,6 @@ body
 }
 
 //Call To Action Buttons
-/* The animation code */
-@keyframes cta-background {
-    from    { background-color: transparentize($red, .2); }
-    to      { background-color: $dark-red; }
-}
-
 .cta {
     @extend .center-vertically;
     
@@ -114,8 +108,7 @@ body
     height: 3em;
     width: 75%;
     
-    //animation: cta-background 250ms linear;
-    //animation-direction: reverse;
+    transition: background-color 250ms linear;
     
     &:hover {
         background-color: $dark-red; //#FFF;
@@ -123,9 +116,6 @@ body
         color: #FFF; //transparentize($charcoal, .3);
         
         text-decoration: none;
-        
-        animation: cta-background 500ms linear;
-        animation-direction: normal;
     }
     
     @include grid-media-query("portable") {

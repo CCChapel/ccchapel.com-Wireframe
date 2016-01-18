@@ -1608,12 +1608,6 @@ body {
       .center-vertically.right-justify--mobile, .right-justify--mobile.cta, .right-justify--mobile.cta--transparent {
         justify-content: flex-end; } }
 
-/* The animation code */
-@keyframes cta-background {
-  from {
-    background-color: rgba(202, 55, 55, 0.8); }
-  to {
-    background-color: #b82b2b; } }
 .cta, .cta--transparent {
   background-color: rgba(202, 55, 55, 0.8);
   border: #b82b2b;
@@ -1629,13 +1623,12 @@ body {
   text-overflow: hidden;
   overflow: hidden;
   height: 3em;
-  width: 75%; }
+  width: 75%;
+  transition: background-color 250ms linear; }
   .cta:hover, .cta--transparent:hover {
     background-color: #b82b2b;
     color: #FFF;
-    text-decoration: none;
-    animation: cta-background 500ms linear;
-    animation-direction: normal; }
+    text-decoration: none; }
   @media only screen and (max-width: 1023px) {
     .cta, .cta--transparent {
       width: 100%; } }
