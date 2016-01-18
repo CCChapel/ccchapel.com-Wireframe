@@ -1686,6 +1686,8 @@ body {
 .header {
   position: relative;
   z-index: 100; }
+  .header a {
+    color: #FFF; }
 
 .campus-select {
   background-color: #185e94;
@@ -1708,6 +1710,8 @@ body {
   .campus-select__campus {
     display: inline; }
     @media only screen and (min-width: 1024px) {
+      .campus-select__campus a {
+        font-weight: normal; }
       .campus-select__campus:after {
         content: '|';
         padding: 0 10px; }
@@ -1721,7 +1725,6 @@ body {
         font-size: 24px;
         font-size: 1.5rem;
         line-height: 1;
-        font-weight: bold;
         padding: .25em 0; }
         .campus-select__campus:after {
           border-bottom: 1px solid #0b4673;
