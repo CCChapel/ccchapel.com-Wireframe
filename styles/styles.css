@@ -1581,7 +1581,7 @@ body {
       padding-left: 0;
       padding-right: 0; } }
 
-.center-vertically, .cta, .cta--transparent {
+.center-vertically, .cta, .cta.translucent, .cta.transparent {
   display: flex;
   justify-content: center;
   /* align horizontal */
@@ -1589,26 +1589,26 @@ body {
   /* align vertical */
   height: 100%;
   width: 100%; }
-  .center-vertically.alt, .alt.cta, .alt.cta--transparent {
+  .center-vertically.alt, .alt.cta {
     flex-flow: column wrap;
     align-items: flex-start; }
-  .center-vertically.left-justify, .left-justify.cta, .left-justify.cta--transparent {
+  .center-vertically.left-justify, .left-justify.cta {
     justify-content: flex-start; }
     @media only screen and (max-width: 1023px) {
-      .center-vertically.left-justify--mobile, .left-justify--mobile.cta, .left-justify--mobile.cta--transparent {
+      .center-vertically.left-justify--mobile, .left-justify--mobile.cta {
         justify-content: flex-start; } }
-  .center-vertically.center, .center.cta, .center.cta--transparent {
+  .center-vertically.center, .center.cta {
     justify-content: center; }
     @media only screen and (max-width: 1023px) {
-      .center-vertically.center--mobile, .center--mobile.cta, .center--mobile.cta--transparent {
+      .center-vertically.center--mobile, .center--mobile.cta {
         justify-content: center !important; } }
-  .center-vertically.right-justify, .right-justify.cta, .right-justify.cta--transparent {
+  .center-vertically.right-justify, .right-justify.cta {
     justify-content: flex-end; }
     @media only screen and (max-width: 1023px) {
-      .center-vertically.right-justify--mobile, .right-justify--mobile.cta, .right-justify--mobile.cta--transparent {
+      .center-vertically.right-justify--mobile, .right-justify--mobile.cta {
         justify-content: flex-end; } }
 
-.cta, .cta--transparent {
+.cta, .cta.translucent, .cta.transparent {
   background-color: rgba(202, 55, 55, 0.8);
   border: #b82b2b;
   border-radius: 6px;
@@ -1624,22 +1624,30 @@ body {
   overflow: hidden;
   height: 3em;
   width: 75%;
-  transition: background-color 250ms linear; }
-  .cta:hover, .cta--transparent:hover {
+  transition: background-color 250ms linear, border-color 250ms linear, color 250ms linear; }
+  .cta:hover {
     background-color: #b82b2b;
     color: #FFF;
     text-decoration: none; }
   @media only screen and (max-width: 1023px) {
-    .cta, .cta--transparent {
+    .cta, .cta.translucent, .cta.transparent {
       width: 100%; } }
-  .cta.auto, .auto.cta--transparent {
+  .cta.auto {
     margin-left: 0;
     padding: 0 24px;
     width: auto; }
-  .cta--transparent {
+  .cta.translucent {
+    background-color: rgba(51, 51, 51, 0.7);
+    border: 2px solid currentColor; }
+    .cta.translucent:hover {
+      background-color: #FFF;
+      border-color: #FFF;
+      color: rgba(51, 51, 51, 0.7); }
+  .cta.transparent {
     background-color: transparent;
+    border: 2px solid currentColor;
     color: #0b4673; }
-    .cta--transparent:hover {
+    .cta.transparent:hover {
       background-color: #0b4673;
       border-color: #0b4673;
       color: #FFF; }

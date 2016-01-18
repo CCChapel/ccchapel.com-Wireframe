@@ -87,10 +87,13 @@ body
 
 //Call To Action Buttons
 .cta {
+    $transitionDuration: 250ms;
+    $transitionTimingFunction: linear;
+    
     @extend .center-vertically;
     
-    background-color: transparentize($red, .2); //transparentize($charcoal, .3);
-    border: $dark-red; //2px solid currentColor;
+    background-color: transparentize($red, .2);
+    border: $dark-red;
     border-radius: $border-radius;
     box-sizing: border-box;
     
@@ -108,12 +111,13 @@ body
     height: 3em;
     width: 75%;
     
-    transition: background-color 250ms linear;
+    transition: background-color $transitionDuration $transitionTimingFunction, 
+                border-color $transitionDuration $transitionTimingFunction, 
+                color $transitionDuration $transitionTimingFunction;
     
     &:hover {
-        background-color: $dark-red; //#FFF;
-        //border-color: #FFF;
-        color: #FFF; //transparentize($charcoal, .3);
+        background-color: $dark-red;
+        color: #FFF;
         
         text-decoration: none;
     }
@@ -121,7 +125,8 @@ body
     @include grid-media-query("portable") {
         width: 100%;
     }
-    
+
+    //Size variants
     &.auto {
         margin-left: 0;
         padding: 0 $magic-number;
@@ -129,10 +134,25 @@ body
         width: auto;
     }
     
-    &--transparent {
+    //Color variants
+    &.translucent {
+        @extend .cta;
+        
+        background-color: transparentize($charcoal, .3);
+        border: 2px solid currentColor;
+        
+        &:hover {
+            background-color: #FFF;
+            border-color: #FFF;
+            color: transparentize($charcoal, .3);
+        }
+    }
+    
+    &.transparent {
         @extend .cta;
         
         background-color: transparent;
+        border: 2px solid currentColor;
         color: $color-root;
         
         &:hover {
