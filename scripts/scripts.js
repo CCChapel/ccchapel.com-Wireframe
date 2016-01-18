@@ -62,6 +62,9 @@ var searchIconClass = ".menu__search-icon";
 function setupDesktopSearch() {
     //Set trigger
     $(".menu__search-icon").click(function () {
+        //Toggle Icon
+        $(this).toggleClass("open");
+        
         //Hide Menu
         $(menuItemsClass).toggle();
         
