@@ -8,9 +8,13 @@ $header-z-index: 100;
     }
     
     @include grid-media-query("desk") {
-        position: fixed;
+        //position: fixed;
         width: 100%;
     }
+    
+//    &.sticky + * {
+//        //margin-top: 4em;
+//    }
 }
 
 .campus-select {
@@ -91,9 +95,15 @@ $header-z-index: 100;
 }
 
 .banner {
+    $transitionTiming: 250ms;
+    $transitionTimingFunction: linear;
+    
     height: 4em;
     
     background-color: $dark-blue;
+    
+    transition: background-color $transitionTiming $transitionTimingFunction,
+                height $transitionTiming $transitionTimingFunction;
 
     &__logo {
         height: 100%;
@@ -107,6 +117,23 @@ $header-z-index: 100;
         height: 100%;
         
         color: #FFF;
+    }
+    
+    .sticky & {
+        background-color: transparentize($dark-blue, .2);
+        
+        position: fixed;
+        top: 0;
+        margin-left: 0;
+        
+        width: 100%;
+        
+        //height: 2em;
+        
+        &:hover {
+            background-color: $dark-blue;
+            height: 4em;
+        }
     }
 }
 

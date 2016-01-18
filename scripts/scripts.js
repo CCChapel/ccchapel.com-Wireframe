@@ -84,22 +84,46 @@ function setupDesktopSearch() {
 }
 
 var campusSelectStartingHeight = $(".campus-select").height();
+var bannerClass = ".banner";
+var bannerStartingHeight = $(bannerClass).height();
+var bannerEndingHeight = bannerStartingHeight / 2;
+var bodyStartingPosition = $(".body :first-child").position().top;
 
 function setupDesktopStickyMenu() {
     $(window).scroll(function() {
         //Check that we're at a desktop breakpoint
         //1024 is breakpoint set in grid
         if ($(window).width() >= 1024) {
-            var pos = $(window).scrollTop();
-            var newHeight = campusSelectStartingHeight - pos;
+//            var pos = $(window).scrollTop();
+//            var newHeight = campusSelectStartingHeight - pos;
+//
+//            //No sense in adjusting to a negative height
+//            if (newHeight >= 0) {
+//                //Adjust campus-select Height
+//                $(".campus-select").height(newHeight);
+//            }
+//            else {
+//                $(".campus-select").height(0);
+//            }
+//            
+            //Style Banner
+            var bodyPosition = $(".body :first-child").position().top;
+            var bannerAdjustment = bodyStartingPosition - bodyPosition;
 
-            //No sense in adjusting to a negative height
-            if (newHeight >= 0) {
-                //Adjust campus-select Height
-                $(".campus-select").height(newHeight);
+            var newBannerHeight = bannerStartingHeight + bannerAdjustment;
+
+            if ((newBannerHeight < bannerStartingHeight) && (bannerEndingHeight < newBannerHeight)) {                    
+                $(bannerClass).height(newBannerHeight);
             }
-            else {
-                $(".campus-select").height(0);
+            else if (newBannerHeight < bannerStartingHeight) {
+                $(bannerClass).height(bannerEndingHeight);
+                
+                $(".header").addClass("sticky");
+            }
+            else if (bannerEndingHeight < newBannerHeight) {
+                $(bannerClass).height(bannerStartingHeight);
+                
+                $(".header").removeClass("sticky");
             }
         }
     });

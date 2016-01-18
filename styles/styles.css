@@ -1690,7 +1690,6 @@ body {
     color: #FFF; }
   @media only screen and (min-width: 1024px) {
     .header {
-      position: fixed;
       width: 100%; } }
 
 .campus-select {
@@ -1745,7 +1744,8 @@ body {
 
 .banner {
   height: 4em;
-  background-color: #0b4673; }
+  background-color: #0b4673;
+  transition: background-color 250ms linear, height 250ms linear; }
   .banner__logo {
     height: 100%; }
   .banner__menu {
@@ -1753,6 +1753,15 @@ body {
   .banner__mobile-menu {
     height: 100%;
     color: #FFF; }
+  .sticky .banner {
+    background-color: rgba(11, 70, 115, 0.8);
+    position: fixed;
+    top: 0;
+    margin-left: 0;
+    width: 100%; }
+    .sticky .banner:hover {
+      background-color: #0b4673;
+      height: 4em; }
 
 .menu {
   height: 100%;
@@ -1869,10 +1878,6 @@ body {
   .nav-icon.close .lines:after {
     -webkit-transform: rotate3d(0, 0, 1, -45deg);
     transform: rotate3d(0, 0, 1, -45deg); }
-
-@media only screen and (min-width: 1024px) {
-  .body {
-    padding-top: 6em; } }
 
 .content-section {
   margin-bottom: 3em; }
