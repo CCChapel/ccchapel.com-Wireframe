@@ -1684,6 +1684,7 @@ body {
   border-radius: 50%; }
 
 .header {
+  height: 6em;
   position: relative;
   z-index: 100; }
   .header a {
@@ -1757,8 +1758,7 @@ body {
     background-color: rgba(11, 70, 115, 0.8);
     position: fixed;
     top: 0;
-    margin-left: 0;
-    width: 100%; }
+    width: calc(100% + 24px); }
     .sticky .banner:hover {
       background-color: #0b4673;
       height: 4em; }

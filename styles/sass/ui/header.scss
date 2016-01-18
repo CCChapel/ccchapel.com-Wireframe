@@ -1,5 +1,7 @@
 $header-z-index: 100;
 .header {
+    height: 6em;
+    
     position: relative;
     z-index: 100;
     
@@ -124,9 +126,8 @@ $header-z-index: 100;
         
         position: fixed;
         top: 0;
-        margin-left: 0;
         
-        width: 100%;
+        width: calc(100% + #{$gutter});    //Offset left margin while keeping proportions
         
         //height: 2em;
         
