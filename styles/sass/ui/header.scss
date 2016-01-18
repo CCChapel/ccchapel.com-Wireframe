@@ -19,15 +19,14 @@ $header-z-index: 100;
     
     background-color: $blue;
     
-    padding: .25em 0;
-    
     &__options {
-        text-align: center !important;
+        padding: .25em 0;
         
         height: 100%;
         
         @include typecsset-font-size(14px);
         color: #FFF;
+        text-align: center !important;
     }
     
     &__list {

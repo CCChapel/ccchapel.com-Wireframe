@@ -1696,15 +1696,15 @@ body {
 .campus-select {
   height: 2em;
   overflow: hidden;
-  background-color: #185e94;
-  padding: .25em 0; }
+  background-color: #185e94; }
   .campus-select__options {
-    text-align: center !important;
+    padding: .25em 0;
     height: 100%;
     font-size: 14px;
     font-size: 0.875rem;
     line-height: 1.7142857;
-    color: #FFF; }
+    color: #FFF;
+    text-align: center !important; }
   .campus-select__list {
     display: inline; }
     @media only screen and (max-width: 1023px) {
