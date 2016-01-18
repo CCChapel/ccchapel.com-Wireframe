@@ -1717,13 +1717,21 @@ body {
     @media only screen and (max-width: 1023px) {
       .campus-select__campus {
         display: block;
-        border-bottom: 1pt solid #0b4673;
+        position: relative;
         font-size: 24px;
         font-size: 1.5rem;
         line-height: 1;
         font-weight: bold;
         padding: .25em 0; }
-        .campus-select__campus:last-child {
+        .campus-select__campus:after {
+          border-bottom: 1px solid #0b4673;
+          content: "";
+          position: absolute;
+          left: 10%;
+          bottom: 0;
+          height: 1px;
+          width: 80%; }
+        .campus-select__campus:last-child:after {
           border-bottom: none; } }
 
 .banner {

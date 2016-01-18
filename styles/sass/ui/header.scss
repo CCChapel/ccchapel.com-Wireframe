@@ -52,16 +52,29 @@ $header-z-index: 100;
         
         @include grid-media-query("portable") {
             display: block;
-            border-bottom: 1pt solid $dark-blue;
+            position: relative;
             
             @include typecsset-font-size($tertiary-headline-size);
             font-weight: bold;
             
             padding: .25em 0;
-            
-            &:last-child {
+                   
+            &:after {
+                border-bottom: 1px solid $dark-blue;
+
+                content: "";
+                position: absolute;
+                left: 10%;
+                bottom: 0;
+                
+                height: 1px;
+                width: 80%;
+            }
+
+            &:last-child:after {
                 border-bottom: none;
             }
+
         }
     }
 }
