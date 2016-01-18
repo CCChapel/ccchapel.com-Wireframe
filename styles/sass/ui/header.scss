@@ -1,6 +1,5 @@
 $header-z-index: 100;
 .header {
-    height: 6em;
     
     position: relative;
     z-index: 100;
@@ -11,6 +10,7 @@ $header-z-index: 100;
     
     @include grid-media-query("desk") {
         //position: fixed;
+        height: 6em;
         width: 100%;
     }
     
@@ -20,7 +20,7 @@ $header-z-index: 100;
 }
 
 .campus-select {
-    height: 2em;
+    min-height: 2em;
     overflow: hidden;
     
     background-color: $blue;

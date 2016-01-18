@@ -1684,17 +1684,17 @@ body {
   border-radius: 50%; }
 
 .header {
-  height: 6em;
   position: relative;
   z-index: 100; }
   .header a {
     color: #FFF; }
   @media only screen and (min-width: 1024px) {
     .header {
+      height: 6em;
       width: 100%; } }
 
 .campus-select {
-  height: 2em;
+  min-height: 2em;
   overflow: hidden;
   background-color: #185e94; }
   .campus-select__options {

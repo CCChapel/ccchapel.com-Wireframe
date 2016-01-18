@@ -3,6 +3,7 @@ var campusSelect = ".campus-select__list";
 
 function toggleMobileCampusList() {
     $(campusSelect).slideToggle(250);
+    console.log("toggled");
 }
 
 //Mobile Menu
