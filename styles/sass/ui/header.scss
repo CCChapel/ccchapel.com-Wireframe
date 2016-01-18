@@ -6,15 +6,20 @@ $header-z-index: 100;
     a {
         color: #FFF;
     }
+    
+    @include grid-media-query("desk") {
+        position: fixed;
+        width: 100%;
+    }
 }
 
 .campus-select {
-    //TO DO: add back in for minimum
-    //height: 2em;
+    height: 2em;
+    overflow: hidden;
     
     background-color: $blue;
     
-    padding: .5em 0;
+    padding: .25em 0;
     
     &__options {
         text-align: center !important;

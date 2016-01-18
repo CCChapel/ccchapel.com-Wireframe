@@ -1688,10 +1688,16 @@ body {
   z-index: 100; }
   .header a {
     color: #FFF; }
+  @media only screen and (min-width: 1024px) {
+    .header {
+      position: fixed;
+      width: 100%; } }
 
 .campus-select {
+  height: 2em;
+  overflow: hidden;
   background-color: #185e94;
-  padding: .5em 0; }
+  padding: .25em 0; }
   .campus-select__options {
     text-align: center !important;
     height: 100%;
@@ -1863,6 +1869,10 @@ body {
   .nav-icon.close .lines:after {
     -webkit-transform: rotate3d(0, 0, 1, -45deg);
     transform: rotate3d(0, 0, 1, -45deg); }
+
+@media only screen and (min-width: 1024px) {
+  .body {
+    padding-top: 6em; } }
 
 .content-section {
   margin-bottom: 3em; }
