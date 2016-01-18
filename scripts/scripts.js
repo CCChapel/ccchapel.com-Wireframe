@@ -81,13 +81,20 @@ var campusSelectStartingHeight = $(".campus-select").height();
 
 function setupDesktopStickyMenu() {
     $(window).scroll(function() {
-        var pos = $(window).scrollTop();
-        var newHeight = campusSelectStartingHeight - pos;
-        
-        //No sense in adjusting to a negative height
-        if (newHeight >= 0) {
-            //Adjust campus-select Height
-            $(".campus-select").height(newHeight);
+        //Check that we're at a desktop breakpoint
+        //1024 is breakpoint set in grid
+        if ($(window).width() >= 1024) {
+            var pos = $(window).scrollTop();
+            var newHeight = campusSelectStartingHeight - pos;
+
+            //No sense in adjusting to a negative height
+            if (newHeight >= 0) {
+                //Adjust campus-select Height
+                $(".campus-select").height(newHeight);
+            }
+            else {
+                $(".campus-select").height(0);
+            }
         }
     });
 }
