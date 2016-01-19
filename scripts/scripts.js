@@ -134,7 +134,7 @@
         //Properties
         CssClass: DesktopSearch.BannerClass,
         StartingHeight: "64px",
-        EndingHeight: "32px",
+        EndingHeight: "41px",
         BodySelector: ".body :first-child",
         BodyStartingPosition: "0",
         HeaderClass: ".header",
@@ -143,7 +143,7 @@
         setup: function() {
             //Set Heights
             this.StartingHeight = $(this.CssClass).height();
-            this.EndingHeight = this.StartingHeight / 2;
+            this.EndingHeight = Math.round(this.StartingHeight * .64);
             
             //Set BodyStartingPosition
             //Use :first-child because Notifications may not always be there

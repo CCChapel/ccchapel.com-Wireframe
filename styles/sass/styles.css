@@ -1919,7 +1919,7 @@ body {
     background-color: rgba(11, 70, 115, 0.8);
     position: fixed;
     top: 0;
-    height: 2em;
+    height: 3em;
     width: calc(100% + 24px); }
     /* line 148, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/header.scss */
     .sticky .banner:hover,

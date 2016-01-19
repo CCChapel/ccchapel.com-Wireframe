@@ -1758,7 +1758,7 @@ body {
     background-color: rgba(11, 70, 115, 0.8);
     position: fixed;
     top: 0;
-    height: 2em;
+    height: 3em;
     width: calc(100% + 24px); }
     .sticky .banner:hover, .sticky .banner.fullHeight {
       background-color: #0b4673;
