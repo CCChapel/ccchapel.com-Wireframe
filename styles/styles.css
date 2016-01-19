@@ -1689,7 +1689,7 @@ body {
   .header a {
     color: #FFF; }
   .header.sticky {
-    font-size: 85%; }
+    font-size: 90%; }
     .header.sticky:hover {
       font-size: 1rem; }
 
@@ -2013,19 +2013,27 @@ body {
 .events__keywords {
   margin: 0 0 1.5rem 0;
   text-align: center; }
-.events__1, .events__2, .events__3 {
+
+.event {
   margin-bottom: 24px; }
-.events__image {
-  background: #CCC center bottom/cover no-repeat scroll;
-  margin-bottom: 1em;
-  height: 10em; }
-.events__name {
-  font-size: 24px;
-  font-size: 1.5rem;
-  line-height: 1;
-  font-weight: bold; }
-.events__details {
-  color: #333; }
+  .event__image {
+    background: #CCC center bottom/cover no-repeat scroll;
+    margin-bottom: 1em;
+    height: 10em; }
+  .event__name {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: bold; }
+  .event__details {
+    color: #333; }
+    @media only screen and (max-width: 1023px) {
+      .event__details {
+        border-bottom: #0b4673 1pt solid;
+        padding-bottom: 24px; }
+        .event:last-child .event__details {
+          border-bottom: none;
+          padding-bottom: 0; } }
 
 .footer {
   background-color: #333333;
