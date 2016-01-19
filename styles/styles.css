@@ -1688,10 +1688,6 @@ body {
   z-index: 100; }
   .header a {
     color: #FFF; }
-  @media only screen and (min-width: 1024px) {
-    .header {
-      height: 6em;
-      width: 100%; } }
 
 .campus-select {
   min-height: 2em;
@@ -1758,7 +1754,8 @@ body {
     background-color: rgba(11, 70, 115, 0.8);
     position: fixed;
     top: 0;
-    width: calc(100% + 24px); }
+    width: calc(100% + 24px);
+    height: 2em; }
     .sticky .banner:hover {
       background-color: #0b4673;
       height: 4em; }

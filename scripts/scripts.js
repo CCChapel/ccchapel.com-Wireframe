@@ -107,23 +107,69 @@ function setupDesktopStickyMenu() {
 //                $(".campus-select").height(0);
 //            }
 //            
-            //Style Banner
-            var bodyPosition = $(".body :first-child").position().top;
-            var bannerAdjustment = bodyStartingPosition - bodyPosition;
-
-            var newBannerHeight = bannerStartingHeight + bannerAdjustment;
-
-            if ((newBannerHeight < bannerStartingHeight) && (bannerEndingHeight < newBannerHeight)) {                    
-                $(bannerClass).height(newBannerHeight);
+//            //Style Banner
+//            var bodyPosition = $(".body :first-child").position().top;
+//            var bannerAdjustment = bodyStartingPosition - bodyPosition;
+//
+//            var newBannerHeight = bannerStartingHeight + bannerAdjustment;
+//
+//            if ((newBannerHeight < bannerStartingHeight) && (bannerEndingHeight < newBannerHeight)) {                    
+//                $(bannerClass).height(newBannerHeight);
+//            }
+//            else if (newBannerHeight < bannerStartingHeight) {
+//                $(bannerClass).height(bannerEndingHeight);
+//                
+//                $(".header").addClass("sticky");
+//            }
+//            else if (bannerEndingHeight < newBannerHeight) {
+//                $(bannerClass).height(bannerStartingHeight);
+//                
+//                $(".header").removeClass("sticky");
+//            }
+            
+//            //Style Banner
+//            var bannerOffset = $(bannerClass).offset().top;
+//            var windowPosition = $(window).scrollTop();
+//            var offset = Math.round(bannerOffset - windowPosition);
+//
+//            if (offset != 0) {
+//                var newHeight = bannerStartingHeight + offset;
+//
+//                if ((newHeight < bannerStartingHeight) && (newHeight > bannerEndingHeight)) {
+//                    $(bannerClass).height(newHeight);
+//
+//                    console.log("Scaling");
+//                }
+//                else if (newHeight <= bannerEndingHeight) {
+//                    $(bannerClass).height(bannerEndingHeight);
+//
+//                    $(".header").addClass("sticky");
+//
+//                    console.log("End Height");
+//                }
+//                else { //if (newHeight >= bannerStartingHeight) {
+//                    $(bannerClass).height(bannerStartingHeight);
+//
+//                    $(".header").removeClass("sticky");
+//
+//                    console.log("Starting Height");
+//                }
+//
+//                console.log("bannerStartingHeight: " + bannerStartingHeight + 
+//                            " | bannerEndingHeight: " + bannerEndingHeight + 
+//                            " | offset: " + offset + 
+//                            " | newHeight: " + newHeight);
+//            }
+            
+            //Scale Banner
+            var bodyOffet = $(".body :first-child").offset().top;
+            var windowPosition = $(window).scrollTop();
+            var offset = Math.round(bodyOffet - windowPosition);
+            
+            if (offset <= 0) {
+                $(".header").addClass("sticky")
             }
-            else if (newBannerHeight < bannerStartingHeight) {
-                $(bannerClass).height(bannerEndingHeight);
-                
-                $(".header").addClass("sticky");
-            }
-            else if (bannerEndingHeight < newBannerHeight) {
-                $(bannerClass).height(bannerStartingHeight);
-                
+            else {
                 $(".header").removeClass("sticky");
             }
         }
