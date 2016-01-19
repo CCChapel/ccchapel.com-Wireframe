@@ -1,128 +1,224 @@
-//Mobile Campus Menu
-var campusSelect = ".campus-select__list";
-
-function toggleMobileCampusList() {
-    $(campusSelect).slideToggle(250);
-    console.log("toggled");
-}
-
-//Mobile Menu
-var menuClass = ".banner__menu";
-var menuItemsClass = ".menu__items";
-
-function setupMobileMenu() {
-    //Toggle open and close
-    $("#nav-icon").click(function () {
-        //animate icon
-        $("#nav-icon").toggleClass("close");
+(function ( $ ) {
+    $(document).ready(function() {
+        //Mobile Campus List
+        CampusSelect.setup();
         
-        //toggle screen lock
-        $("body").toggleClass("hide-overflow");
-        $("body").toggleClass("lock-position");   
+        //Mobile Menu
+        MobileMenu.setup();
         
-        toggleViewport();
+        //Desktop Search
+        DesktopSearch.setup();
         
-        //toggle menu
-        $(".banner__menu").slideToggle(250, function () {
-            //blur backgrounds after menu displays
-            //$(".notifications, .body, .footer").toggleClass("blur");   
-        });                                    
-    });
-}
-
-var viewportLocked = false;
-
-function toggleViewport() {
-    if (viewportLocked == false) {
-        lockViewport();
-    }
-    else {
-        unlockViewport();
-    }
-}
-
-var viewportLockProperty = ", maximum-scale=1.0";
-
-function lockViewport() {
-    var content = $("meta[name='viewport']").attr("content");
-    content += viewportLockProperty;
-    
-    $("meta[name='viewport']").attr("content", content);
-
-    viewportLocked = true;
-}
-
-function unlockViewport() {
-    var content = $("meta[name='viewport']").attr("content");
-    content = content.replace(viewportLockProperty, "");
-
-    $("meta[name='viewport']").attr("content", content);
-
-    viewportLocked = false;
-}
-
-//Desktop Search
-var searchItemClass = ".menu__search";
-var searchFieldClass = ".menu__search-field";
-var searchIconClass = ".menu__search-icon";
-
-function setupDesktopSearch() {
-    //Set trigger
-    $(".menu__search-icon").click(function () {
-        //Toggle Icon
-        $(this).toggleClass("open");
-        
-        //Hide Menu
-        $(menuItemsClass).toggle();
-        
-        //Toggle Width
-        $(searchItemClass).toggleClass("one-tenth").toggleClass("one-whole");
-        $(searchIconClass).toggleClass("desk--one-whole").toggleClass("desk--one-tenth");
-        
-        //Toggle Banner Height
-        $(bannerClass).toggleClass("fullHeight");
-        
-        //Show Search Field
-        $(searchFieldClass).toggleClass("show");
-    });  
-}
-
-//Desktop Sticky Menu
-var campusSelectStartingHeight = $(".campus-select").height();
-var bannerClass = ".banner";
-var bannerStartingHeight = $(bannerClass).height();
-var bannerEndingHeight = bannerStartingHeight / 2;
-var bodyStartingPosition = $(".body :first-child").position().top;
-
-function setupDesktopStickyMenu() {
-    //Setup Scroll Event
-    $(window).scroll(function() {
-        adjustDesktopStickyMenu();
+        //Desktop Sticky Menu
+        DesktopStickyMenu.setup();
     });
     
-    //Initial Page Check
-    $(document).ready(function () {
-        //We only care if we're not at the top of the screen
-        if ($(window).scrollTop != 0) {
-            adjustDesktopStickyMenu();
-        }
-    });
-}
+    /*** CAMPUS SELECT ***/
+    var CampusSelect = {
+        //Properties
+        CssClass: ".campus-select__list",
+        ToggleTrigger: ".campus-select__campus-marker",
 
-function adjustDesktopStickyMenu() {
-    //Check that we're at a desktop breakpoint
-    //1024 is breakpoint set in grid
-    if ($(window).width() >= 1024) {
-        //Scale Banner
-        var bodyOffet = $(".body :first-child").offset().top;
-        var windowPosition = $(window).scrollTop();
-        var offset = Math.round(bodyOffet - windowPosition);
-
-        if (offset <= 0) {
-            $(".header").addClass("sticky")
-        }
-        else {
-            $(".header").removeClass("sticky");
+        //Functions
+        toggleMobileList: function() {
+            $(this.CssClass).slideToggle(250);
+        },
+        setup: function() {
+            $(this.ToggleTrigger).click(function() {
+                CampusSelect.toggleMobileList();
+            });
         }
     }
-}
+    
+    /*** MOBILE MENU ***/
+    var MobileMenu = {
+        //Properties
+        MenuClass: ".banner__menu",
+        ItemsClass: ".menu__items",
+        Trigger: "#nav-icon",
+        
+        //Functions
+        toggleMenu: function () {
+            //animate icon
+            $(this.Trigger).toggleClass("close");
+
+            //toggle screen lock
+            $("body").toggleClass("hide-overflow");
+            $("body").toggleClass("lock-position");   
+
+            Viewport.toggle();
+
+            //toggle menu
+            $(this.MenuClass).slideToggle(250, function () {
+                //blur backgrounds after menu displays
+                //$(".notifications, .body, .footer").toggleClass("blur");   
+            });  
+        },
+        setup: function() {
+            //Toggle open and close
+            $(this.Trigger).click(function () {
+                MobileMenu.toggleMenu();
+            });
+        }
+    }
+    
+    /*** VIEWPORT ***/
+    var Viewport = {
+        //Properties
+        Locked: false,
+        LockProperty: ", maximum-scale=1.0",
+        
+        //Functions
+        toggle: function() {
+            if (this.Locked == false) {
+                this.lock();
+            }
+            else {
+                this.unlock();
+            }
+        },
+        lock: function() {
+            var content = $("meta[name='viewport']").attr("content");
+            content += this.LockProperty;
+
+            $("meta[name='viewport']").attr("content", content);
+
+            this.Locked = true;
+        },
+        unlock: function() {
+            var content = $("meta[name='viewport']").attr("content");
+            content = content.replace(this.LockProperty, "");
+
+            $("meta[name='viewport']").attr("content", content);
+
+            this.Locked = false;
+        }
+    }
+    
+    /*** DESKTOP SEARCH ***/
+    var DesktopSearch = {
+        //Properties
+        ItemClass: ".menu__search",
+        FieldClass: ".menu__search-field",
+        IconClass: ".menu__search-icon",
+        BannerClass: ".banner",
+        MenuItemsClass: MobileMenu.ItemsClass,
+        
+        //Functions
+        setup: function() {
+            $(this.IconClass).click(function () {
+                DesktopSearch.toggle();
+            });
+        },
+        toggle: function() {
+            //Toggle Icon
+            $(this.IconClass).toggleClass("open");
+
+            //Hide Menu
+            $(this.MenuItemsClass).toggle();
+
+            //Toggle Width
+            $(this.ItemClass).toggleClass("one-tenth").toggleClass("one-whole");
+            $(this.IconClass).toggleClass("desk--one-whole").toggleClass("desk--one-tenth");
+
+            //Toggle Banner Height
+            $(this.BannerClass).toggleClass("fullHeight");
+
+            //Show Search Field
+            $(this.FieldClass).toggleClass("show");
+        }
+    }
+    
+    /*** DESKTOP STICKY MENU ***/
+    var DesktopStickyMenu = {
+        //Properties
+        CssClass: DesktopSearch.BannerClass,
+        StartingHeight: "64px",
+        EndingHeight: "32px",
+        BodySelector: ".body :first-child",
+        BodyStartingPosition: "0",
+        HeaderClass: ".header",
+        
+        //Functions
+        setup: function() {
+            //Set Heights
+            this.StartingHeight = $(this.CssClass).height();
+            this.EndingHeight = this.StartingHeight / 2;
+            
+            //Set BodyStartingPosition
+            //Use :first-child because Notifications may not always be there
+            this.BodyStartingPosition = $(this.BodySelector).position().top;
+            
+            //Setup Scroll Event
+            $(window).scroll(function() {
+                DesktopStickyMenu.adjustStickyMenu();
+            });
+            
+            //Initial Page Check
+            $(document).ready(function () {
+                //We only care if we're not at the top of the screen
+                if ($(window).scrollTop != 0) {
+                    DesktopStickyMenu.adjustStickyMenu();
+                }
+            });
+        },
+        adjustStickyMenu: function() {
+            //Check that we're at a desktop breakpoint
+            //1024 is breakpoint set in grid
+            if ($(window).width() >= 1024) {
+                //Scale Banner
+                var bodyOffet = $(this.BodySelector).offset().top;
+                var windowPosition = $(window).scrollTop();
+                var offset = Math.round(bodyOffet - windowPosition);
+
+                if (offset <= 0) {
+                    $(this.HeaderClass).addClass("sticky")
+                }
+                else {
+                    $(this.HeaderClass).removeClass("sticky");
+                }
+            }
+        }
+    }
+}( jQuery ));
+
+
+////Desktop Sticky Menu
+////var campusSelectStartingHeight = $(".campus-select").height();
+//var bannerClass = ".banner";
+//var bannerStartingHeight = $(bannerClass).height();
+//var bannerEndingHeight = bannerStartingHeight / 2;
+//var bodyStartingPosition = $(".body :first-child").position().top;
+//
+//function setupDesktopStickyMenu() {
+//    //Setup Scroll Event
+//    $(window).scroll(function() {
+//        adjustDesktopStickyMenu();
+//    });
+//    
+//    //Initial Page Check
+//    $(document).ready(function () {
+//        //We only care if we're not at the top of the screen
+//        if ($(window).scrollTop != 0) {
+//            adjustDesktopStickyMenu();
+//        }
+//    });
+//}
+//
+//function adjustDesktopStickyMenu() {
+//    //Check that we're at a desktop breakpoint
+//    //1024 is breakpoint set in grid
+//    if ($(window).width() >= 1024) {
+//        //Scale Banner
+//        var bodyOffet = $(".body :first-child").offset().top;
+//        var windowPosition = $(window).scrollTop();
+//        var offset = Math.round(bodyOffet - windowPosition);
+//
+//        if (offset <= 0) {
+//            $(".header").addClass("sticky")
+//        }
+//        else {
+//            $(".header").removeClass("sticky");
+//        }
+//    }
+//}
