@@ -1,4 +1,6 @@
-//Input
+//**************************************************
+// INPUT
+//**************************************************/
 input {
     box-sizing: border-box;
     padding: .5em;
@@ -9,12 +11,14 @@ input {
     width: 90%;
 
     border: 1px solid $charcoal;
-    border-radius: $border-radius;
+    border-radius: 500px;
     
     -webkit-appearance: none;
 }
 
-//Placeholder
+//**************************************************
+// PLACEHOLDER
+//**************************************************/
 @mixin placeholder-defaults {
     color: $dark-gray;
     text-align: center;
