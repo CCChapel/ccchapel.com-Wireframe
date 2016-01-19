@@ -21,7 +21,7 @@ $header-z-index: 100;
         font-size: 85%;
         
         &:hover {
-            font-size: 100%;
+            font-size: 1rem;
         }
     }
 }
@@ -147,8 +147,9 @@ $header-z-index: 100;
         &:hover,
         &.fullHeight {
             background-color: $dark-blue;
+            font-size: 1rem;
             
-            height: 4em;
+            height: 4rem;
         }
     }
 }
