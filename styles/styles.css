@@ -1756,7 +1756,7 @@ body {
     top: 0;
     width: calc(100% + 24px);
     height: 2em; }
-    .sticky .banner:hover {
+    .sticky .banner:hover, .sticky .banner.fullHeight {
       background-color: #0b4673;
       height: 4em; }
 
@@ -1779,7 +1779,8 @@ body {
     height: 100%; }
   @media only screen and (min-width: 1024px) {
     .menu__search-field {
-      padding: 1em 0; } }
+      padding-top: 1em;
+      padding-bottom: 1em; } }
   .menu__search-field.show {
     display: inline-block; }
   .menu__search-icon {
