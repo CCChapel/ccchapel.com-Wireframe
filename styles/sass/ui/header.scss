@@ -1,3 +1,6 @@
+//**************************************************
+// HEADER
+//**************************************************/
 $header-z-index: 100;
 .header {
     position: relative;
@@ -6,16 +9,6 @@ $header-z-index: 100;
     a {
         color: #FFF;
     }
-    
-//    @include grid-media-query("desk") {
-//        //position: fixed;
-//        height: 6em;
-//        width: 100%;
-//    }
-    
-//    &.sticky + * {
-//        //margin-top: 4em;
-//    }
     
     &.sticky {
         font-size: 90%;
@@ -26,6 +19,9 @@ $header-z-index: 100;
     }
 }
 
+//**************************************************
+// CAMPUS SELECT
+//**************************************************/
 .campus-select {
     min-height: 2em;
     overflow: hidden;
@@ -103,6 +99,9 @@ $header-z-index: 100;
     }
 }
 
+//**************************************************
+// BANNER
+//**************************************************/
 .banner {
     $transitionTiming: 250ms;
     $transitionTimingFunction: linear;
@@ -115,12 +114,6 @@ $header-z-index: 100;
                 height $transitionTiming $transitionTimingFunction,                
                 font-size $transitionTiming $transitionTimingFunction;
     
-//    @include grid-media-query("desk") {
-//        position: absolute;
-//        bottom: 0;
-//        width: calc(100% + #{$gutter});     //Offset left margin while keeping proportions
-//    }
-
     &__logo {
         height: 100%;
     }
@@ -154,8 +147,15 @@ $header-z-index: 100;
     }
 }
 
+//**************************************************
+// MENU
+//**************************************************/
 .menu {
     height: 100%;
+    
+    div {
+        height: 100%;
+    }
     
     color: #FFF;
     font-weight: bold;
@@ -174,73 +174,58 @@ $header-z-index: 100;
     }
     
     &__search {
-        @include grid-media-query("desk") {
+        @include grid-media-query("portable") {
+            height: auto !important;
+        }
+        
+        &-grid {
             height: 100%;
         }
-    }
-    
-    &__search-grid {
-        height: 100%;
-    }
-    
-    &__search-field {
-        @include grid-media-query("desk") {
-            padding-top: 1em;
-            padding-bottom: 1em;
+        
+        &-field {
+            @include grid-media-query("desk") {
+                padding-top: 1em;
+                padding-bottom: 1em;
+            }
+
+            &.show {
+                display: inline-block;
+            }
         }
         
-        &.show {
-            display: inline-block;
-        }
-    }
-    
-    &__search-icon {
-        cursor: pointer;
-        
-        height: 100%;
-        
-        transition: color 250ms linear;
-        
-        &.open {
-            color: $light-blue;
+        &-icon {
+            cursor: pointer;
+
+            height: 100%;
+
+            transition: color 250ms linear;
+
+            &.open {
+                color: $light-blue;
+            }
         }
     }
     
     &__items {
-        height: 100%;
     }
     
     &__grid {
-        height: 100%;
     }
     
     &__item {
-        height: 100%;
-        
         text-transform: uppercase;
         white-space: nowrap;
         
         @include grid-media-query("portable") {
             @include typecsset-font-size($tertiary-headline-size);
             
-            height: 3rem;
+            height: 3rem !important;
         }
     }
 }
 
 .logo {
     height: 85%;
-}
-
-.notifications {
-    background-color: $green;
-    
-    &__item {
-        height: 3em;
-        
-        color: #FFF;
-        text-align: center;
-    }
 }
 
 //*# Menu Icon #*//
