@@ -16,6 +16,14 @@ $header-z-index: 100;
 //    &.sticky + * {
 //        //margin-top: 4em;
 //    }
+    
+    &.sticky {
+        font-size: 85%;
+        
+        &:hover {
+            font-size: 100%;
+        }
+    }
 }
 
 .campus-select {
@@ -104,7 +112,8 @@ $header-z-index: 100;
     background-color: $dark-blue;
     
     transition: background-color $transitionTiming $transitionTimingFunction,
-                height $transitionTiming $transitionTimingFunction;
+                height $transitionTiming $transitionTimingFunction,                
+                font-size $transitionTiming $transitionTimingFunction;
     
 //    @include grid-media-query("desk") {
 //        position: absolute;
@@ -132,13 +141,13 @@ $header-z-index: 100;
         position: fixed;
         top: 0;
         
-        width: calc(100% + #{$gutter});    //Offset left margin while keeping proportions
-        
         height: 2em;
+        width: calc(100% + #{$gutter});    //Offset left margin while keeping proportions
         
         &:hover,
         &.fullHeight {
             background-color: $dark-blue;
+            
             height: 4em;
         }
     }

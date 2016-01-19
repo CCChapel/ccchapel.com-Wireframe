@@ -1688,6 +1688,10 @@ body {
   z-index: 100; }
   .header a {
     color: #FFF; }
+  .header.sticky {
+    font-size: 85%; }
+    .header.sticky:hover {
+      font-size: 100%; }
 
 .campus-select {
   min-height: 2em;
@@ -1742,7 +1746,7 @@ body {
 .banner {
   height: 4em;
   background-color: #0b4673;
-  transition: background-color 250ms linear, height 250ms linear; }
+  transition: background-color 250ms linear, height 250ms linear, font-size 250ms linear; }
   .banner__logo {
     height: 100%; }
   .banner__menu {
@@ -1754,8 +1758,8 @@ body {
     background-color: rgba(11, 70, 115, 0.8);
     position: fixed;
     top: 0;
-    width: calc(100% + 24px);
-    height: 2em; }
+    height: 2em;
+    width: calc(100% + 24px); }
     .sticky .banner:hover, .sticky .banner.fullHeight {
       background-color: #0b4673;
       height: 4em; }
