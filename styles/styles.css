@@ -1875,7 +1875,7 @@ body {
     transform: rotate3d(0, 0, 1, -45deg); }
 
 .content-section {
-  margin-bottom: 3em; }
+  margin-bottom: 72px; }
   .content-section--noBottomBuffer, .content-section.no-bottom-margin {
     margin-bottom: inherit; }
   .content-section.light-blue {
@@ -1887,10 +1887,10 @@ body {
 .content-wrapper {
   box-sizing: border-box;
   height: 100%;
-  padding: 3em 48px; }
+  padding: 72px 48px; }
   @media only screen and (max-width: 1023px) {
     .content-wrapper {
-      padding: 3em 10px;
+      padding: 72px 10px;
       overflow-x: hidden; } }
   .content-wrapper.no-vertical, .content-wrapper--mobile.no-vertical {
     padding-top: 0;
@@ -1903,7 +1903,7 @@ body {
     height: 100%; }
     @media only screen and (max-width: 1023px) {
       .content-wrapper--mobile {
-        padding: 3em 10px; } }
+        padding: 72px 10px; } }
 
 .notifications {
   background-color: #99b624; }
@@ -1923,7 +1923,7 @@ body {
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
-    margin: 0 0 3rem 0; }
+    margin: 0 0 72px 0; }
   .header-image__video-controls {
     cursor: pointer;
     font-size: 6rem;
@@ -1935,7 +1935,7 @@ body {
     .header-image__video-controls .fa-stack-1x {
       margin-left: .1em; }
   .header-image__copy {
-    margin: 0 auto 3rem auto;
+    margin: 0 auto 72px auto;
     text-align: center; }
     @media only screen and (min-width: 1024px) {
       .header-image__copy {
@@ -1962,26 +1962,42 @@ body {
 .campus-info {
   text-align: left; }
   .campus-info__title {
-    font-size: 48px;
-    font-size: 3rem;
-    line-height: 1;
+    font-size: calc(3vw + 2vh + 1vmin);
+    line-height: 1em;
     font-weight: bold;
     text-transform: uppercase;
-    margin: 0 0 3rem 0; }
+    margin: 0 0 72px 0; }
+    @media only screen and (max-width: 1023px) {
+      .campus-info__title {
+        font-size: 56px;
+        font-size: 3.5rem; } }
   @media only screen and (max-width: 1023px) {
     .campus-info__instructions {
-      margin: 0 0 3rem 0; } }
+      margin: 0 0 72px 0; } }
   .campus-info__campus {
-    margin: 0 0 3rem 0; }
+    cursor: pointer;
+    margin: 0 0 72px 0;
+    text-align: center; }
     @media only screen and (min-width: 1024px) {
       .campus-info__campus:nth-last-child(1), .campus-info__campus:nth-last-child(2) {
         margin-bottom: 0; } }
+    .campus-info__campus:hover {
+      filter: invert(100%); }
   .campus-info__name {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1;
     font-weight: bold; }
   .campus-info__image {
     background: #CCC center bottom/cover no-repeat scroll;
     height: 6em;
     width: 100%; }
+  .campus-info__icon img {
+    height: auto;
+    width: 45%; }
+    @media only screen and (max-width: 1023px) {
+      .campus-info__icon img {
+        width: 65%; } }
 
 .message {
   background-attachment: fixed; }
@@ -1999,7 +2015,7 @@ body {
       color: #333333; }
     @media only screen and (max-width: 480px) {
       .message__info {
-        margin-bottom: 3em;
+        margin-bottom: 72px;
         height: auto; }
         .message__info > div {
           align-items: center !important; } }
@@ -2009,7 +2025,7 @@ body {
     line-height: 1.5;
     font-weight: bold; }
   .message__details {
-    margin-bottom: 3em; }
+    margin-bottom: 72px; }
   .message__cta {
     text-align: center;
     display: inline-block; }

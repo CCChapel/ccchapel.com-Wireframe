@@ -173,11 +173,16 @@
     text-align: left;
     
     &__title {
-        @include typecsset-font-size(48px); //$primary-headline-size);
+        font-size: calc(3vw + 2vh + 1vmin);
+        line-height: 1em;
         font-weight: bold;
         text-transform: uppercase;
         
         margin: 0 0 $bottom-margin 0;
+        
+        @include grid-media-query("portable") {
+            @include typecsset-font-size(56px, false);
+        }
     }
     
     &__instructions {
@@ -187,7 +192,11 @@
     }
     
     &__campus {
+        cursor: pointer;
+        
         margin: 0 0 $bottom-margin 0;
+        
+        text-align: center;
         
         @include grid-media-query("desk") {
             &:nth-last-child(1),
@@ -195,9 +204,14 @@
                 margin-bottom: 0;
             }
         }
+        
+        &:hover {
+            filter: invert(100%);
+        }
     }
     
     &__name {
+        @include typecsset-font-size($tertiary-headline-size);
         font-weight: bold;
     }
     
@@ -208,21 +222,16 @@
         width: 100%;
     }
     
-//    &__item {
-//        position: relative;
-//        
-//        background: $medium-gray center bottom/cover no-repeat scroll;
-//        
-//        height: 15em;
-//    }
-//    
-//    &__cta {
-//        position: relative;
-//        top: 11em;
-//        
-//        height: auto;
-//        width: 100%;
-//    }
+    &__icon {
+        img {
+            height: auto;
+            width: 45%;
+            
+            @include grid-media-query("portable") {
+                width: 65%;
+            }
+        }
+    }
 }
 
 //**************************************************
