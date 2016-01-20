@@ -1621,7 +1621,7 @@ td {
   .cta.auto {
     margin-left: 0;
     padding: 0 24px;
-    width: auto; }
+    width: auto !important; }
   /* line 53, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/form-controls.scss */
   .cta.translucent, .translucent.cta {
     background-color: rgba(51, 51, 51, 0.7);
