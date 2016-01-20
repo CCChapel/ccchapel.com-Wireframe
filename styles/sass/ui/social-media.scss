@@ -1,0 +1,38 @@
+$transitionTime: 250ms;
+$transitionFunction: linear;
+
+.facebook-icon {
+    color: currentColor;
+    transition: color $transitionTime $transitionFunction;
+    
+    &:hover {
+        color: $facebook;
+    }
+}
+
+.twitter-icon {
+    color: currentColor;
+    transition: color $transitionTime $transitionFunction;
+    
+    &:hover {
+        color: $twitter;
+    }
+}
+
+.youtube-icon {
+    color: currentColor;
+    transition: color $transitionTime $transitionFunction;
+
+    &:hover {
+        color: $youtube;
+    }
+}
+
+.vimeo-icon {
+    color: currentColor;
+    transition: color $transitionTime $transitionFunction;
+
+    &:hover {
+        color: $vimeo;
+    }
+}

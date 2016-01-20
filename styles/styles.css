@@ -2124,6 +2124,30 @@ blockquote, p, ul, ol,
 .addBottomMargin {
   margin-bottom: 24px; }
 
+.facebook-icon {
+  color: currentColor;
+  transition: color 250ms linear; }
+  .facebook-icon:hover {
+    color: #3b5998; }
+
+.twitter-icon {
+  color: currentColor;
+  transition: color 250ms linear; }
+  .twitter-icon:hover {
+    color: #00aced; }
+
+.youtube-icon {
+  color: currentColor;
+  transition: color 250ms linear; }
+  .youtube-icon:hover {
+    color: #bb0000; }
+
+.vimeo-icon {
+  color: currentColor;
+  transition: color 250ms linear; }
+  .vimeo-icon:hover {
+    color: #1ab7ea; }
+
 @media only screen and (max-width: 480px) {
   .palm--hide {
     display: none; } }
