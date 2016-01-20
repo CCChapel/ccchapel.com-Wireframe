@@ -1489,6 +1489,50 @@ td {
   .wireframe--solid {
     background: currentColor; }
 
+.cta, .cta.translucent, .cta.transparent {
+  background-color: rgba(202, 55, 55, 0.8);
+  border: #b82b2b;
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  color: #FFF;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-overflow: hidden;
+  overflow: hidden;
+  height: 3em;
+  width: 75%;
+  transition: background-color 250ms linear, border-color 250ms linear, color 250ms linear; }
+  .cta:hover {
+    background-color: #b82b2b;
+    color: #FFF;
+    text-decoration: none; }
+  @media only screen and (max-width: 1023px) {
+    .cta, .cta.translucent, .cta.transparent {
+      width: 100%; } }
+  .cta.auto {
+    margin-left: 0;
+    padding: 0 24px;
+    width: auto; }
+  .cta.translucent {
+    background-color: rgba(51, 51, 51, 0.7);
+    border: 2px solid currentColor; }
+    .cta.translucent:hover {
+      background-color: #FFF;
+      border-color: #FFF;
+      color: rgba(51, 51, 51, 0.7); }
+  .cta.transparent {
+    background-color: transparent;
+    border: 2px solid currentColor;
+    color: #0b4673; }
+    .cta.transparent:hover {
+      background-color: #0b4673;
+      border-color: #0b4673;
+      color: #FFF; }
+
 input {
   box-sizing: border-box;
   padding: .5em;
@@ -1580,50 +1624,6 @@ body {
     .palm--padding {
       padding-left: 0;
       padding-right: 0; } }
-
-.cta, .cta.translucent, .cta.transparent {
-  background-color: rgba(202, 55, 55, 0.8);
-  border: #b82b2b;
-  border-radius: 6px;
-  box-sizing: border-box;
-  margin-left: auto;
-  margin-right: auto;
-  color: #FFF;
-  font-weight: bold;
-  text-decoration: none;
-  text-transform: uppercase;
-  white-space: nowrap;
-  text-overflow: hidden;
-  overflow: hidden;
-  height: 3em;
-  width: 75%;
-  transition: background-color 250ms linear, border-color 250ms linear, color 250ms linear; }
-  .cta:hover {
-    background-color: #b82b2b;
-    color: #FFF;
-    text-decoration: none; }
-  @media only screen and (max-width: 1023px) {
-    .cta, .cta.translucent, .cta.transparent {
-      width: 100%; } }
-  .cta.auto {
-    margin-left: 0;
-    padding: 0 24px;
-    width: auto; }
-  .cta.translucent {
-    background-color: rgba(51, 51, 51, 0.7);
-    border: 2px solid currentColor; }
-    .cta.translucent:hover {
-      background-color: #FFF;
-      border-color: #FFF;
-      color: rgba(51, 51, 51, 0.7); }
-  .cta.transparent {
-    background-color: transparent;
-    border: 2px solid currentColor;
-    color: #0b4673; }
-    .cta.transparent:hover {
-      background-color: #0b4673;
-      border-color: #0b4673;
-      color: #FFF; }
 
 .center-vertically, .cta, .cta.translucent, .cta.transparent {
   display: flex;

@@ -16,8 +16,6 @@ body
     margin: 0 auto;
     line-height: 1.5em;
 
-    //padding-top: $magic-number * 11;
-    //-webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -37,85 +35,5 @@ body
     @include grid-media-query("desk") {
         padding-left: 0;
         padding-right: 0;
-    }
-}
-
-//**************************************************
-// CALL TO ACTION BUTTONS
-//**************************************************/
-.cta {
-    $transitionDuration: 250ms;
-    $transitionTimingFunction: linear;
-    
-    @extend .center-vertically;
-    
-    background-color: transparentize($red, .2);
-    border: $dark-red;
-    border-radius: $border-radius;
-    box-sizing: border-box;
-    
-    margin-left: auto;
-    margin-right: auto;
-
-    color: #FFF;
-    font-weight: bold;
-    text-decoration: none;
-    text-transform: uppercase;
-    white-space: nowrap;
-    text-overflow: hidden;
-    overflow: hidden;
-    
-    height: 3em;
-    width: 75%;
-    
-    transition: background-color $transitionDuration $transitionTimingFunction, 
-                border-color $transitionDuration $transitionTimingFunction, 
-                color $transitionDuration $transitionTimingFunction;
-    
-    &:hover {
-        background-color: $dark-red;
-        color: #FFF;
-        
-        text-decoration: none;
-    }
-    
-    @include grid-media-query("portable") {
-        width: 100%;
-    }
-
-    //Size variants
-    &.auto {
-        margin-left: 0;
-        padding: 0 $magic-number;
-
-        width: auto;
-    }
-    
-    //Color variants
-    &.translucent {
-        @extend .cta;
-        
-        background-color: transparentize($charcoal, .3);
-        border: 2px solid currentColor;
-        
-        &:hover {
-            background-color: #FFF;
-            border-color: #FFF;
-            color: transparentize($charcoal, .3);
-        }
-    }
-    
-    &.transparent {
-        @extend .cta;
-        
-        background-color: transparent;
-        border: 2px solid currentColor;
-        color: $color-root;
-        
-        &:hover {
-            background-color: $color-root;
-            border-color: $color-root;
-            color: #FFF;
-        }
     }
 }
