@@ -84,6 +84,7 @@
 // HEADER IMAGE
 //**************************************************/
 .header-image {
+    background: currentColor none center center/cover no-repeat padding-box border-box scroll;
     color: #FFF;
     
     min-height: 66vh;
@@ -95,6 +96,26 @@
         text-transform: uppercase;
         
         margin: 0 0 $bottom-margin 0;
+    }
+    
+    &__video-controls {
+        $color: #FFF;
+        
+        cursor: pointer;
+        
+        font-size: 6rem;
+        text-align: center;
+        color: transparentize($color, .6);
+        
+        transition: color 250ms linear;
+        
+        &:hover {
+            color: $color;
+        }
+        
+        .fa-stack-1x {
+            margin-left: .1em;
+        }
     }
     
     &__copy {

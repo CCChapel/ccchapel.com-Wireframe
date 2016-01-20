@@ -1913,6 +1913,7 @@ body {
     text-align: center; }
 
 .header-image {
+  background: currentColor none center center/cover no-repeat padding-box border-box scroll;
   color: #FFF;
   min-height: 66vh; }
   .header-image__title {
@@ -1923,6 +1924,16 @@ body {
     text-align: center;
     text-transform: uppercase;
     margin: 0 0 3rem 0; }
+  .header-image__video-controls {
+    cursor: pointer;
+    font-size: 6rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.4);
+    transition: color 250ms linear; }
+    .header-image__video-controls:hover {
+      color: #FFF; }
+    .header-image__video-controls .fa-stack-1x {
+      margin-left: .1em; }
   .header-image__copy {
     margin: 0 auto 3rem auto;
     text-align: center; }
