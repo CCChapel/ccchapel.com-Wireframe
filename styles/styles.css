@@ -1913,9 +1913,11 @@ body {
       .campus-info__title {
         font-size: 56px;
         font-size: 3.5rem; } }
+  .campus-info__instructions {
+    margin-bottom: 72px; }
   @media only screen and (max-width: 1023px) {
-    .campus-info__instructions {
-      margin: 0 0 72px 0; } }
+    .campus-info__cta {
+      margin-bottom: 72px; } }
   .campus-info__campus {
     cursor: pointer;
     margin: 0 0 72px 0;

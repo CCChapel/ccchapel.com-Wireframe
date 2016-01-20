@@ -186,8 +186,12 @@
     }
     
     &__instructions {
+        margin-bottom: $bottom-margin;
+    }
+    
+    &__cta {
         @include grid-media-query("portable") {
-            margin: 0 0 $bottom-margin 0;
+            margin-bottom: $bottom-margin;
         }
     }
     
