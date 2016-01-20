@@ -1732,6 +1732,8 @@ body {
         font-size: 1.5rem;
         line-height: 1;
         padding: .25em 0; }
+        .campus-select__campus a {
+          text-decoration: none; }
         .campus-select__campus:after {
           border-bottom: 1px solid #0b4673;
           content: "";
