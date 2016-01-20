@@ -1915,33 +1915,34 @@ body {
         font-size: 3.5rem; } }
   .campus-info__instructions {
     margin-bottom: 72px; }
-  @media only screen and (max-width: 1023px) {
-    .campus-info__cta {
-      margin-bottom: 72px; } }
+  .campus-info__cta {
+    display: inline-flex; }
+    @media only screen and (max-width: 1023px) {
+      .campus-info__cta {
+        margin-bottom: 72px; } }
   .campus-info__campus {
     cursor: pointer;
-    margin: 0 0 72px 0;
-    text-align: center; }
+    margin-bottom: 48px;
+    text-align: center;
+    color: #333; }
+    .campus-info__campus:hover {
+      color: #FFF; }
     @media only screen and (min-width: 1024px) {
       .campus-info__campus:nth-last-child(1), .campus-info__campus:nth-last-child(2) {
         margin-bottom: 0; } }
-    .campus-info__campus:hover {
-      filter: invert(100%); }
-  .campus-info__name {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 1;
-    font-weight: bold; }
-  .campus-info__image {
-    background: #CCC center bottom/cover no-repeat scroll;
-    height: 6em;
-    width: 100%; }
   .campus-info__icon img {
     height: auto;
     width: 45%; }
     @media only screen and (max-width: 1023px) {
       .campus-info__icon img {
         width: 65%; } }
+  .campus-info__name {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: bold; }
+  .campus-info__details {
+    color: #FFF; }
 
 .message {
   background-attachment: fixed; }

@@ -190,6 +190,8 @@
     }
     
     &__cta {
+        display: inline-flex;
+        
         @include grid-media-query("portable") {
             margin-bottom: $bottom-margin;
         }
@@ -198,9 +200,15 @@
     &__campus {
         cursor: pointer;
         
-        margin: 0 0 $bottom-margin 0;
+        margin-bottom: $magic-number * 2;
         
         text-align: center;
+        
+        color: $black;
+        
+        &:hover {
+            color: #FFF;
+        }
         
         @include grid-media-query("desk") {
             &:nth-last-child(1),
@@ -208,23 +216,14 @@
                 margin-bottom: 0;
             }
         }
-        
-        &:hover {
-            filter: invert(100%);
-        }
     }
     
-    &__name {
-        @include typecsset-font-size($tertiary-headline-size);
-        font-weight: bold;
-    }
-    
-    &__image {
-        background: $medium-gray center bottom/cover no-repeat scroll;
-
-        height: 6em;
-        width: 100%;
-    }
+//    &__image {
+//        background: $medium-gray center bottom/cover no-repeat scroll;
+//
+//        height: 6em;
+//        width: 100%;
+//    }
     
     &__icon {
         img {
@@ -235,6 +234,15 @@
                 width: 65%;
             }
         }
+    }
+
+    &__name {
+        @include typecsset-font-size($tertiary-headline-size);
+        font-weight: bold;
+    }
+    
+    &__details {
+        color: #FFF;
     }
 }
 
@@ -289,6 +297,7 @@
     
     &__cta {
         text-align: center;
+        
         display: inline-block;
     }
 }
