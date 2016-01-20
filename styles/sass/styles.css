@@ -2179,10 +2179,10 @@ body {
     height: 3em; }
 
 /* line 172, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/body.scss */
-.campusInfo {
+.campus-info {
   text-align: left; }
   /* line 175, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/body.scss */
-  .campusInfo__title {
+  .campus-info__title {
     font-size: 48px;
     font-size: 3rem;
     line-height: 1;
@@ -2191,21 +2191,21 @@ body {
     margin: 0 0 3rem 0; }
   @media only screen and (max-width: 1023px) {
     /* line 183, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/body.scss */
-    .campusInfo__instructions {
+    .campus-info__instructions {
       margin: 0 0 3rem 0; } }
   /* line 189, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/body.scss */
-  .campusInfo__campus {
+  .campus-info__campus {
     margin: 0 0 3rem 0; }
     @media only screen and (min-width: 1024px) {
       /* line 194, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/body.scss */
-      .campusInfo__campus:nth-last-child(1),
-      .campusInfo__campus:nth-last-child(2) {
+      .campus-info__campus:nth-last-child(1),
+      .campus-info__campus:nth-last-child(2) {
         margin-bottom: 0; } }
   /* line 200, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/body.scss */
-  .campusInfo__name {
+  .campus-info__name {
     font-weight: bold; }
   /* line 204, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/body.scss */
-  .campusInfo__image {
+  .campus-info__image {
     background: #CCC center bottom/cover no-repeat scroll;
     height: 6em;
     width: 100%; }

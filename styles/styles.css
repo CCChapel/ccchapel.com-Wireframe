@@ -1959,9 +1959,9 @@ body {
   .search__controls {
     height: 3em; }
 
-.campusInfo {
+.campus-info {
   text-align: left; }
-  .campusInfo__title {
+  .campus-info__title {
     font-size: 48px;
     font-size: 3rem;
     line-height: 1;
@@ -1969,16 +1969,16 @@ body {
     text-transform: uppercase;
     margin: 0 0 3rem 0; }
   @media only screen and (max-width: 1023px) {
-    .campusInfo__instructions {
+    .campus-info__instructions {
       margin: 0 0 3rem 0; } }
-  .campusInfo__campus {
+  .campus-info__campus {
     margin: 0 0 3rem 0; }
     @media only screen and (min-width: 1024px) {
-      .campusInfo__campus:nth-last-child(1), .campusInfo__campus:nth-last-child(2) {
+      .campus-info__campus:nth-last-child(1), .campus-info__campus:nth-last-child(2) {
         margin-bottom: 0; } }
-  .campusInfo__name {
+  .campus-info__name {
     font-weight: bold; }
-  .campusInfo__image {
+  .campus-info__image {
     background: #CCC center bottom/cover no-repeat scroll;
     height: 6em;
     width: 100%; }
