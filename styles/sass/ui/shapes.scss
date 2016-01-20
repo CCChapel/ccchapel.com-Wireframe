@@ -1,0 +1,61 @@
+//**************************************************
+// SQUARE
+//**************************************************/
+.square {
+    position: relative;
+
+    padding-left: 0;
+    margin-left: 24px;
+
+    //max-width: 64px;
+    //padding-left: 10px !important;
+    //float: left;
+
+    & > div {
+        position:  absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+        border-radius: inherit;
+
+        //@include grid-media-query("lap")
+        //{
+        //    max-height: 64px;
+        //}
+    }
+    .grid--full > &
+    {
+        margin-left: 0;
+    }
+
+    /* Other ratios */
+    .ratio2_1:before{
+        margin-top: 50%;
+    }
+    .ratio1_2:before{
+        margin-top: 200%;
+    }
+    .ratio4_3:before{
+        margin-top: 75%;
+    }
+    .ratio16_9:before{
+        margin-top: 56.25%;
+    }
+
+    &:before {
+        content: "";
+        display: block;
+        margin-top: 100%; /* initial ratio of 1:1*/
+    }
+}
+
+//**************************************************
+// CIRCLE
+//**************************************************/
+.circle {
+    @extend .square;
+
+    border-radius: 50%;
+}

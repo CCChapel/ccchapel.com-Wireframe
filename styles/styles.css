@@ -2079,6 +2079,37 @@ body {
   .footer__navigation {
     text-align: left; }
 
+.square, .circle {
+  position: relative;
+  padding-left: 0;
+  margin-left: 24px;
+  /* Other ratios */ }
+  .square > div, .circle > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: inherit; }
+  .grid--full > .square, .grid--full > .circle {
+    margin-left: 0; }
+  .square .ratio2_1:before, .circle .ratio2_1:before {
+    margin-top: 50%; }
+  .square .ratio1_2:before, .circle .ratio1_2:before {
+    margin-top: 200%; }
+  .square .ratio4_3:before, .circle .ratio4_3:before {
+    margin-top: 75%; }
+  .square .ratio16_9:before, .circle .ratio16_9:before {
+    margin-top: 56.25%; }
+  .square:before, .circle:before {
+    content: "";
+    display: block;
+    margin-top: 100%;
+    /* initial ratio of 1:1*/ }
+
+.circle {
+  border-radius: 50%; }
+
 .accent {
   text-transform: uppercase;
   font-weight: 200; }

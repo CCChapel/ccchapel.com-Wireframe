@@ -2337,6 +2337,46 @@ body {
   .footer__navigation {
     text-align: left; }
 
+/* line 4, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/shapes.scss */
+.square, .circle {
+  position: relative;
+  padding-left: 0;
+  margin-left: 24px;
+  /* Other ratios */ }
+  /* line 14, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/shapes.scss */
+  .square > div, .circle > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: inherit; }
+  /* line 28, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/shapes.scss */
+  .grid--full > .square, .grid--full > .circle {
+    margin-left: 0; }
+  /* line 34, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/shapes.scss */
+  .square .ratio2_1:before, .circle .ratio2_1:before {
+    margin-top: 50%; }
+  /* line 37, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/shapes.scss */
+  .square .ratio1_2:before, .circle .ratio1_2:before {
+    margin-top: 200%; }
+  /* line 40, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/shapes.scss */
+  .square .ratio4_3:before, .circle .ratio4_3:before {
+    margin-top: 75%; }
+  /* line 43, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/shapes.scss */
+  .square .ratio16_9:before, .circle .ratio16_9:before {
+    margin-top: 56.25%; }
+  /* line 47, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/shapes.scss */
+  .square:before, .circle:before {
+    content: "";
+    display: block;
+    margin-top: 100%;
+    /* initial ratio of 1:1*/ }
+
+/* line 57, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/shapes.scss */
+.circle {
+  border-radius: 50%; }
+
 /* line 2, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/typography.scss */
 .accent {
   text-transform: uppercase;
