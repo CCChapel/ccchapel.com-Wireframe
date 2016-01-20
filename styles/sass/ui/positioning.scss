@@ -1,0 +1,54 @@
+//**************************************************
+// CENTER VERTICALLY
+//**************************************************/
+.center-vertically {
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+
+    height: 100%;
+    width: 100%;
+
+    &.alt {
+        flex-flow: column wrap;
+        align-items: flex-start;
+        //align-content: center;
+    }
+
+    &.left-justify {
+        justify-content: flex-start;
+
+        &--mobile {
+            @include grid-media-query("portable") {
+                justify-content: flex-start;
+            }
+        }
+    }
+
+    &.center {
+        justify-content: center;
+
+        &--mobile {
+            @include grid-media-query("portable") {
+                justify-content: center !important;
+            }
+        }
+    }
+
+    &.right-justify {
+        justify-content: flex-end;
+
+        &--mobile {
+            @include grid-media-query("portable") {
+                justify-content: flex-end;
+            }
+        }
+    }
+}
+
+//**************************************************
+// BACKGROUND POSITIONS
+//**************************************************/
+.bg--center-center {
+    background-position: center center;
+}
