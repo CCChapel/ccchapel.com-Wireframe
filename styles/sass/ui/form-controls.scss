@@ -23,8 +23,8 @@
     text-overflow: hidden;
     overflow: hidden;
 
-    height: 3em;
-    width: 75%;
+    height: 3em !important;
+    width: 75% !important;
 
     transition: background-color $transitionDuration $transitionTimingFunction, 
         border-color $transitionDuration $transitionTimingFunction, 
