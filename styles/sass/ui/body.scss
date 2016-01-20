@@ -321,6 +321,10 @@
         margin-bottom: 1em;
 
         height: 10em;
+        
+        @include grid-media-query("lap") {
+            height: 20em;
+        }
     }
 
     &__name {
