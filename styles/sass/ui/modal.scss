@@ -1,0 +1,11 @@
+.modal {
+    position: fixed;
+    display: none;
+    
+    background: transparentize($charcoal, .1);
+
+    padding: .5em 0;
+
+    height: 100vh;
+    width: 100vw;
+}

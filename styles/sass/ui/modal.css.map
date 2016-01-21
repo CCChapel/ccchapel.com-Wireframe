@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "modal.css",
+  "sources": [
+    "modal.scss"
+  ],
+  "sourcesContent": [],
+  "mappings": ";AAAA,MAAM,CAAC;EACH,QAAQ,EAAE,KAAM;EAEhB,MAAM,EAAE,KAAM;EACd,KAAK,EAAE,KAAM,GAJT",
+  "names": []
+}

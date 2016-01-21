@@ -166,8 +166,6 @@ $header-z-index: 100;
     text-align: center;
 
     @include grid-media-query("portable") {
-        background: transparentize($charcoal, .1);
-        
         padding: .5em 0;
 
         height: 100vh;

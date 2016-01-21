@@ -16,6 +16,30 @@
         ContentSearch.setup();
     });
     
+    /*** MODAL ***/
+    var Modal = {
+        //Properties
+        CssClass: ".modal",
+        TransitionDuration: 250,
+        
+        //Functions
+        setup: function() {
+            
+        },
+        toggle: function() {
+            $(this.CssClass).fadeToggle(this.TransitionDuration);
+            Viewport.toggle();
+        },
+        open: function() {
+            $(this.CssClass).fadeIn(this.TransitionDuration);
+            Viewport.lock();
+        },
+        close: function() {
+            $(this.CssClass).fadeOut(this.TransitionDuration);
+            Viewport.unlock();
+        }
+    }
+    
     /*** CAMPUS SELECT ***/
     var CampusSelect = {
         //Properties
@@ -49,7 +73,8 @@
             $("body").toggleClass("hide-overflow");
             $("body").toggleClass("lock-position");   
 
-            Viewport.toggle();
+            
+            Modal.toggle();
 
             //toggle menu
             $(this.MenuClass).slideToggle(250, function () {
@@ -115,12 +140,14 @@
                 DesktopSearch.toggle();
             });
             
-            //Field Loses Focus
-            $(this.SearchField).focusout(function() {
-                DesktopSearch.close(); 
-            });
+//            //Field Loses Focus
+//            $("this.SearchField").focusout(function() {
+//                DesktopSearch.close(); 
+//            });
         },
         toggle: function() {
+            console.log("toggle");
+            
             //Toggle Icon
             $(this.IconClass).toggleClass("open");
 
@@ -134,8 +161,11 @@
             //Toggle Banner Height
             $(this.BannerClass).toggleClass("fullHeight");
 
-            //Show Search Field
+            //Toggle Search Field
             $(this.FieldClass).toggleClass("show");
+            
+            //Toggle Modal
+            Modal.toggle();
             
             //Set focus if visible
             if ($(this.FieldClass).hasClass("show")) {
@@ -143,6 +173,7 @@
             }
         },
         open: function() {
+            console.log("open");
             //Show Icon
             $(this.IconClass).addClass("open");
 
@@ -158,25 +189,32 @@
 
             //Show Search Field
             $(this.FieldClass).addClass("show");
+            
+            //Show Modal
+            Modal.open();
 
-            //Set focus if visible
+            //Set focus
             $(this.SearchField).focus();
         },
         close: function() {
-            //Toggle Icon
+            console.log("close");
+            //Hide Icon
             $(this.IconClass).removeClass("open");
 
             //Show Menu
             $(this.MenuItemsClass).show();
 
-            //Toggle Width
+            //Hide Width
             $(this.ItemClass).addClass("one-tenth").removeClass("one-whole");
             $(this.IconClass).addClass("desk--one-whole").removeClass("desk--one-tenth");
 
-            //Toggle Banner Height
+            //Hide Banner Height
             $(this.BannerClass).removeClass("fullHeight");
+            
+            //Hide Modal
+            Modal.close();
 
-            //Show Search Field
+            //Hide Search Field
             $(this.FieldClass).removeClass("show");
         }
     }
