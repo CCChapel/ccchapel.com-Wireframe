@@ -1,22 +1,32 @@
 (function ( $ ) {
     $(document).ready(function() {
-        //Mobile Campus List
-        CampusSelect.setup();
-        
-        //Mobile Menu
-        MobileMenu.setup();
-        
-        //Desktop Search
-        DesktopSearch.setup();
-        
-        //Desktop Sticky Menu
-        DesktopStickyMenu.setup();
-        
         //Content Search Setup
         ContentSearch.setup();
+
+        //DESKTOP FUNCTIONS
+        var desktopWidth = 1024;
+        if ($(window).width() >= desktopWidth) {
+            //Desktop Search
+            DesktopSearch.setup();
+
+            //Desktop Sticky Menu
+            DesktopStickyMenu.setup();
+
+            //Homepage Campus Section
+            HomepageCampusSection.desktopSetup();
+        }
         
-        //Homepage Campus Section
-        HomepageCampusSection.setup();
+        //PORTABLE FUNCTION
+        if ($(window).width() < desktopWidth) {
+            //Mobile Campus List
+            CampusSelect.setup();
+
+            //Mobile Menu
+            MobileMenu.setup();
+
+            //Homepage Campus Section
+            HomepageCampusSection.portableSetup();
+        }
     });
     
     /*** MODAL ***/
@@ -272,20 +282,16 @@
             });
         },
         adjustStickyMenu: function() {
-            //Check that we're at a desktop breakpoint
-            //1024 is breakpoint set in grid
-            if ($(window).width() >= 1024) {
-                //Scale Banner
-                var bodyOffet = $(this.BodySelector).offset().top;
-                var windowPosition = $(window).scrollTop();
-                var offset = Math.round(bodyOffet - windowPosition);
+            //Scale Banner
+            var bodyOffet = $(this.BodySelector).offset().top;
+            var windowPosition = $(window).scrollTop();
+            var offset = Math.round(bodyOffet - windowPosition);
 
-                if (offset <= 0) {
-                    $(this.HeaderClass).addClass("sticky")
-                }
-                else {
-                    $(this.HeaderClass).removeClass("sticky");
-                }
+            if (offset <= 0) {
+                $(this.HeaderClass).addClass("sticky")
+            }
+            else {
+                $(this.HeaderClass).removeClass("sticky");
             }
         }
     }
@@ -293,18 +299,20 @@
     /*** CAMPUS SECTION ***/
     var HomepageCampusSection = {
         //Properties
-        CssClass: ".campus-info__other-list a",
+        ListClass: ".campus-info__other-list",
+        CampusesClass: ".campus-info__other-list a",
         DetailsClass: ".campus-info__current",
+        TitleClass: ".campus-info__other-title",
         StartingCampus: "",
         
         //Functions
-        setup: function() {
+        desktopSetup: function() {
             //Set StartingCampus
             this.StartingCampus = 
                 this.DetailsClass + "[data-campus='"+ $(this.DetailsClass).filter(":visible").attr("data-campus") + "']";
             
             //Setup Hover Effect
-            $(this.CssClass).hover(
+            $(this.CampusesClass).hover(
                 //Over
                 function() {
                     var campus = $(this).attr("data-campus");
@@ -326,6 +334,11 @@
                     $(HomepageCampusSection.StartingCampus).show();
                 }
             );
+        },
+        portableSetup: function() {
+            $(this.TitleClass).click(function() {
+                $(".campus-info__other-list").slideToggle(); 
+            });
         }
     }
 }( jQuery ));
