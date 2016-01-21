@@ -252,6 +252,21 @@
         color: #FFF;
     }
     
+    &__map {
+        display: none;
+        margin: 0 auto;
+        
+        width: 60vw;
+        height: 34rem;
+        
+        @include grid-media-query("portable") {
+            width: 90vw;
+            height: 90vw;
+            
+            max-height: 90vw;
+        }
+    }
+    
     // CURRENT CAMPUS
     &__current {
         height: 24em;

@@ -1959,6 +1959,16 @@ body {
           height: auto !important; } }
   .campus-info__address {
     color: #FFF; }
+  .campus-info__map {
+    display: none;
+    margin: 0 auto;
+    width: 60vw;
+    height: 34rem; }
+    @media only screen and (max-width: 1023px) {
+      .campus-info__map {
+        width: 90vw;
+        height: 90vw;
+        max-height: 90vw; } }
   .campus-info__current {
     height: 24em;
     margin-bottom: 24px; }

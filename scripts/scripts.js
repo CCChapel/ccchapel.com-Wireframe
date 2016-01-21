@@ -2,6 +2,9 @@
     $(document).ready(function() {
         //Content Search Setup
         ContentSearch.setup();
+        
+        //Campus Map
+        CampusLocationMap.setup();
 
         //DESKTOP FUNCTIONS
         var desktopWidth = 1024;
@@ -339,6 +342,38 @@
             $(this.TitleClass).click(function() {
                 $(".campus-info__other-list").slideToggle(); 
             });
+        }
+    }
+    
+    /*** CAMPUS LOCATION MAP ***/
+    var CampusLocationMap = {
+        //Properties
+        ListClass: ".campus-info__icon-list",
+        MapClass: ".campus-info__map",
+        ButtonClass: "#toggle-campus-map",
+        
+        //Functions
+        setup: function() {
+            $(this.ButtonClass).click(function() {
+                
+                if ($(window).width() > 1024) {
+                    CampusLocationMap.setSize();
+                }
+                
+                CampusLocationMap.toggle();
+            });
+        },
+        toggle: function() {
+            $(this.ListClass).fadeToggle();
+            $(this.MapClass).fadeToggle();
+        },
+        setSize: function() {
+            //Get Current List Size
+            var height = $(this.ListClass).height();
+            var width = $(this.ListClass).width();
+            
+            $(this.MapClass).height(height);
+            $(this.MapClass).width(width);
         }
     }
 }( jQuery ));

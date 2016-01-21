@@ -297,8 +297,7 @@
             </div><!--
 
             #CAMPUS
-         --><div class="campus-info [ content-section light-blue no-bottom-margin ] [ grid__item one-whole ]"
-                 style="display: none;">
+         --><div class="campus-info [ content-section light-blue no-bottom-margin ] [ grid__item one-whole ]">
                 <div class="content-wrapper">
                     <div class="grid">
                         <div class="campus-info__description [ grid__item one-third portable--one-whole ]">
@@ -314,12 +313,12 @@
                             </div>
                             
                             <div class="campus-info__cta">
-                                <a class="cta transparent auto" href="#">Which campus is closest to me?</a>
+                                <a id="toggle-campus-map" class="cta transparent auto" href="javascript:void(0)">Which campus is closest to me?</a>
                             </div>
                         </div><!--
             
                      --><div class="campus-info__list [ grid__item two-thirds portable--one-whole ]">
-                            <div class="grid">
+                            <div class="campus-info__icon-list grid" style="">
                                 <div class="campus-info__campus [ grid__item one-half palm--one-whole ]">
                                     <div class="campus-info__icon">
                                         <img src="images/campuses/icons/hudson.png" alt="" />
@@ -376,12 +375,53 @@
                                     </div>
                                 </div><!-- /campus-info__campus -->
                             </div> <!-- /grid -->
-                        </div> <!-- /campus-info__list -->
+                        
+                            <div id="campus-info__map" class="campus-info__map"></div>
+                            <script type="text/javascript">
+                                var map;
+                                function initMap() {
+                                    map = new google.maps.Map(document.getElementById('campus-info__map'), {
+                                        center: {lat: 41.231812, lng: -81.4850237},
+                                        zoom: 11
+                                    });
+                                    
+                                    var markers = [
+                                        {
+                                            name: 'Hudson Campus',
+                                            location: { lat: 41.231812, lng: -81.485023 }
+                                        },
+                                        {
+                                            name: 'Aurora Campus',
+                                            location: { lat: 41.323287, lng: -81.345287 }
+                                        },
+                                        {
+                                            name: 'Stow Campus',
+                                            location: { lat: 41.158564, lng: -81.42059 }
+                                        },
+                                        {
+                                            name: 'Highland Square Campus',
+                                            location: { lat: 41.095619, lng: -81.544334 }
+                                        }
+                                    ];
+                                    
+                                    var x;
+                                    for (x in markers) {
+                                        var marker = new google.maps.Marker({
+                                            position: markers[x].location,
+                                            map: map,
+                                            title: markers[x].name
+                                        });
+                                    }
+                                }
+                            </script>
+
+                        </div><!-- /campus-info__list -->
                     </div> <!-- /grid -->
                 </div> <!-- /content-wrapper -->
             </div><!-- /campus-info --><!--
 
-         --><div class="campus-info [ content-section light-blue no-bottom-margin ] [ grid__item one-whole ]">
+         --><div class="campus-info [ content-section light-blue no-bottom-margin ] [ grid__item one-whole ]"
+                 style="display: none;">
                 <div class="content-wrapper">
                     <!-- HUDSON -->
                     <div data-campus="hudson" class="campus-info__current">
@@ -741,6 +781,9 @@
         <!-- #JAVASCRIPT -->
         <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
         <script type="text/javascript" src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+        
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAz-PEj0orqPeMuXxor8KRCanI843fOYJY&callback=initMap"></script>
+        
         <script type="text/javascript" src="./scripts/scripts.js"></script>
         <script type="text/javascript">
             $(document).ready( function() {
