@@ -1973,8 +1973,10 @@ body {
     @media only screen and (max-width: 480px) {
       .campus-info__details > div {
         align-items: center !important; } }
-  .campus-info__address {
+  .campus-info__address, .campus-info__services {
     margin-bottom: 24px; }
+  .campus-info__cta a:first-child {
+    margin-right: 24px; }
   .campus-info__services-title {
     font-size: 20px;
     font-size: 1.25rem;

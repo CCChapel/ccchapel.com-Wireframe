@@ -279,8 +279,15 @@
         }
     }
     
-    &__address {
+    &__address,
+    &__services {
         margin-bottom: $magic-number;
+    }
+    
+    &__cta {
+        a:first-child {
+            margin-right: $magic-number;
+        }
     }
     
     &__services-title {
