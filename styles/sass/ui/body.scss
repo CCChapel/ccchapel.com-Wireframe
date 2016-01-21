@@ -172,6 +172,10 @@
 .campus-info {
     //All Campuses
     text-align: left;
+
+    @include grid-media-query("lap") {
+        text-align: center;
+    }
     
     &__title {
         font-size: calc(3vw + 2vh + 1vmin);
@@ -195,6 +199,14 @@
         
         @include grid-media-query("portable") {
             margin-bottom: $bottom-margin;
+        }
+        
+        @include grid-media-query("palm") {
+            width: 100%;
+            
+            .cta {
+                width: 100% !important;
+            }
         }
     }
     

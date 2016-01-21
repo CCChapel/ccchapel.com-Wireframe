@@ -1914,6 +1914,9 @@ body {
 
 .campus-info {
   text-align: left; }
+  @media only screen and (min-width: 481px) and (max-width: 1023px) {
+    .campus-info {
+      text-align: center; } }
   .campus-info__title {
     font-size: calc(3vw + 2vh + 1vmin);
     line-height: 1em;
@@ -1931,6 +1934,11 @@ body {
     @media only screen and (max-width: 1023px) {
       .campus-info__cta {
         margin-bottom: 72px; } }
+    @media only screen and (max-width: 480px) {
+      .campus-info__cta {
+        width: 100%; }
+        .campus-info__cta .cta {
+          width: 100% !important; } }
   .campus-info__campus {
     cursor: pointer;
     margin-bottom: 48px;
