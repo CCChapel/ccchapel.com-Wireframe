@@ -1631,6 +1631,7 @@ body {
 .modal {
   position: fixed;
   display: none;
+  z-index: 100;
   background: rgba(51, 51, 51, 0.9);
   padding: .5em 0;
   height: 100vh;
