@@ -139,15 +139,20 @@
             $(this.IconClass).click(function () {
                 DesktopSearch.toggle();
             });
-            
+
 //            //Field Loses Focus
-//            $("this.SearchField").focusout(function() {
-//                DesktopSearch.close(); 
+//            $(this.SearchField).focusout(function() {
+//                if (!$(DesktopSearch.IconClass).is(":focus")) {
+//                    console.log( $(DesktopSearch.IconClass).is(":focus") );
+//                    
+//                    DesktopSearch.close(); 
+//                }
+//                else {
+//                    console.log("icon clicked");
+//                }
 //            });
         },
         toggle: function() {
-            console.log("toggle");
-            
             //Toggle Icon
             $(this.IconClass).toggleClass("open");
 
@@ -173,7 +178,6 @@
             }
         },
         open: function() {
-            console.log("open");
             //Show Icon
             $(this.IconClass).addClass("open");
 
@@ -197,7 +201,6 @@
             $(this.SearchField).focus();
         },
         close: function() {
-            console.log("close");
             //Hide Icon
             $(this.IconClass).removeClass("open");
 
