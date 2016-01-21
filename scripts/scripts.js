@@ -11,6 +11,9 @@
         
         //Desktop Sticky Menu
         DesktopStickyMenu.setup();
+        
+        //Content Search Setup
+        ContentSearch.setup();
     });
     
     /*** CAMPUS SELECT ***/
@@ -100,21 +103,28 @@
         //Properties
         ItemClass: ".menu__search",
         FieldClass: ".menu__search-field",
+        SearchField: "#menu-search",
         IconClass: ".menu__search-icon",
         BannerClass: ".banner",
         MenuItemsClass: MobileMenu.ItemsClass,
         
         //Functions
         setup: function() {
+            //Icon Click
             $(this.IconClass).click(function () {
                 DesktopSearch.toggle();
+            });
+            
+            //Field Loses Focus
+            $(this.SearchField).focusout(function() {
+                DesktopSearch.close(); 
             });
         },
         toggle: function() {
             //Toggle Icon
             $(this.IconClass).toggleClass("open");
 
-            //Hide Menu
+            //Toggle Menu
             $(this.MenuItemsClass).toggle();
 
             //Toggle Width
@@ -126,6 +136,61 @@
 
             //Show Search Field
             $(this.FieldClass).toggleClass("show");
+            
+            //Set focus if visible
+            if ($(this.FieldClass).hasClass("show")) {
+                $(this.SearchField).focus();
+            }
+        },
+        open: function() {
+            //Show Icon
+            $(this.IconClass).addClass("open");
+
+            //Show Menu
+            $(this.MenuItemsClass).hide();
+
+            //Set Width
+            $(this.ItemClass).removeClass("one-tenth").addClass("one-whole");
+            $(this.IconClass).removeClass("desk--one-whole").addClass("desk--one-tenth");
+
+            //Set Banner Height
+            $(this.BannerClass).addClass("fullHeight");
+
+            //Show Search Field
+            $(this.FieldClass).addClass("show");
+
+            //Set focus if visible
+            $(this.SearchField).focus();
+        },
+        close: function() {
+            //Toggle Icon
+            $(this.IconClass).removeClass("open");
+
+            //Show Menu
+            $(this.MenuItemsClass).show();
+
+            //Toggle Width
+            $(this.ItemClass).addClass("one-tenth").removeClass("one-whole");
+            $(this.IconClass).addClass("desk--one-whole").removeClass("desk--one-tenth");
+
+            //Toggle Banner Height
+            $(this.BannerClass).removeClass("fullHeight");
+
+            //Show Search Field
+            $(this.FieldClass).removeClass("show");
+        }
+    }
+    
+    /*** CONTENT SEARCH ***/
+    var ContentSearch = {
+        //Properties
+        CssClass: ".search__input",
+        
+        //Functions
+        setup: function() {
+            $(this.CssClass).click(function() {
+                DesktopSearch.open();
+            });
         }
     }
     
