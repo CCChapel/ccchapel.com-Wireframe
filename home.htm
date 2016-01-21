@@ -294,7 +294,8 @@
             </div><!--
 
             #CAMPUS
-         --><div class="campus-info [ content-section light-blue no-bottom-margin ] [ grid__item one-whole ]">
+         --><div class="campus-info [ content-section light-blue no-bottom-margin ] [ grid__item one-whole ]"
+                 style="display: none;">
                 <div class="content-wrapper">
                     <div class="grid">
                         <div class="campus-info__description [ grid__item one-third portable--one-whole ]">
@@ -379,7 +380,8 @@
 
          --><div class="campus-info [ content-section light-blue no-bottom-margin ] [ grid__item one-whole ]">
                 <div class="content-wrapper">
-                    <div class="campus-info__current">
+                    <!-- HUDSON -->
+                    <div data-campus="hudson" class="campus-info__current">
                         <div class="grid">
                             <div class="campus-info__icon [ grid__item one-half palm--one-whole ]">
                                 <div class="content-wrapper no-vertical">
@@ -408,16 +410,115 @@
                                         </div>
                                     </div>
                                 </div> <!-- /content-wrapper -->
-                            </div> <!-- /campus-info__details -->
+                            </div><!-- /campus-info__details -->
+                        </div> <!-- /grid -->
+                    </div> <!-- /campus-info__current -->
+                    
+                    <!-- AURORA -->
+                    <div data-campus="aurora" class="campus-info__current" style="display: none;">
+                        <div class="grid">
+                            <div class="campus-info__icon [ grid__item one-half palm--one-whole ]">
+                                <div class="content-wrapper no-vertical">
+                                    <div class="center-vertically right-justify center--mobile">
+                                        <img src="images/campuses/icons/aurora.png" alt="" />
+                                    </div>
+                                </div>
+                            </div><!-- /campus-info__icon --><!--
+
+                         --><div class="campus-info__details [ grid__item one-half palm--one-whole ]">
+                                <div class="content-wrapper no-vertical center-vertically alt">
+                                    <div class="campus-info__name">
+                                        Aurora Campus
+                                    </div> 
+
+                                    <div class="campus-info__address">
+                                        252 N Chillicothe Road | Aurora, Ohio<br />
+                                        330.562.3438 | aurora@ccchapel.com
+                                    </div>
+
+                                    <div class="campus-info__services">
+                                        <div class="campus-info__services-title">Worship Times</div>
+                                        <div>
+                                            Sunday Mornings at 9:30 &amp; 11
+                                        </div>
+                                    </div>
+                                </div> <!-- /content-wrapper -->
+                            </div><!-- /campus-info__details -->
+                        </div> <!-- /grid -->
+                    </div> <!-- /campus-info__current -->
+                    
+                    <!-- STOW -->
+                    <div data-campus="stow" class="campus-info__current" style="display: none;">
+                        <div class="grid">
+                            <div class="campus-info__icon [ grid__item one-half palm--one-whole ]">
+                                <div class="content-wrapper no-vertical">
+                                    <div class="center-vertically right-justify center--mobile">
+                                        <img src="images/campuses/icons/highland-square.png" alt="" />
+                                    </div>
+                                </div>
+                            </div><!-- /campus-info__icon --><!--
+
+                         --><div class="campus-info__details [ grid__item one-half palm--one-whole ]" style="dispaly: none;">
+                                <div class="content-wrapper no-vertical center-vertically alt">
+                                    <div class="campus-info__name">
+                                        Stow Campus
+                                    </div> 
+
+                                    <div class="campus-info__address">
+                                        3900 Kent Road | Stow, Ohio<br />
+                                        330.688.2440 | stow@ccchapel.com
+                                    </div>
+
+                                    <div class="campus-info__services">
+                                        <div class="campus-info__services-title">Worship Times</div>
+                                        <div>
+                                            Sunday Mornings at 8:30, 10 &amp; 11:30
+                                        </div>
+                                    </div>
+                                </div> <!-- /content-wrapper -->
+                            </div><!-- /campus-info__details -->
+                        </div> <!-- /grid -->
+                    </div> <!-- /campus-info__current -->
+                    
+                    <!-- HIGHLAND SQUARE -->
+                    <div data-campus="highland square" class="campus-info__current" style="display: none;">
+                        <div class="grid">
+                            <div class="campus-info__icon [ grid__item one-half palm--one-whole ]">
+                                <div class="content-wrapper no-vertical">
+                                    <div class="center-vertically right-justify center--mobile">
+                                        <img src="images/campuses/icons/stow.png" alt="" />
+                                    </div>
+                                </div>
+                            </div><!-- /campus-info__icon --><!--
+
+                         --><div class="campus-info__details [ grid__item one-half palm--one-whole ]" style="dispaly: none;">
+                                <div class="content-wrapper no-vertical center-vertically alt">
+                                    <div class="campus-info__name">
+                                        Highland Square Campus
+                                    </div> 
+
+                                    <div class="campus-info__address">
+                                        55 S Portage Path | Akron, Ohio<br />
+                                        330.794.5343 | highlandsquare@ccchapel.com
+                                    </div>
+
+                                    <div class="campus-info__services">
+                                        <div class="campus-info__services-title">Worship Times</div>
+                                        <div>
+                                            Sunday Mornings at 11
+                                        </div>
+                                    </div>
+                                </div> <!-- /content-wrapper -->
+                            </div><!-- /campus-info__details -->
                         </div> <!-- /grid -->
                     </div> <!-- /campus-info__current -->
                     
                     <div class="campus-info__other">
                         <div class="campus-info__other-title">Not Your Campus?</div>
                         <div class="campus-info__other-list">
-                            <a href="#">Aurora Campus</a>
-                            <a href="#">Stow Campus</a>
-                            <a href="#">Highland Square</a>
+                            <a data-campus="aurora" href="#">Aurora Campus</a>
+                            <a data-campus="stow" href="#">Stow Campus</a>
+                            <a data-campus="highland square" href="#">Highland Square</a>
                         </div> <!-- /campus-info__other-list -->
                     </div> <!-- /campus-info__other -->
                 </div> <!-- /content-wrapper -->

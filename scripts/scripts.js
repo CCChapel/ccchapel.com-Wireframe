@@ -14,6 +14,9 @@
         
         //Content Search Setup
         ContentSearch.setup();
+        
+        //Homepage Campus Section
+        HomepageCampusSection.setup();
     });
     
     /*** MODAL ***/
@@ -284,6 +287,45 @@
                     $(this.HeaderClass).removeClass("sticky");
                 }
             }
+        }
+    }
+
+    /*** CAMPUS SECTION ***/
+    var HomepageCampusSection = {
+        //Properties
+        CssClass: ".campus-info__other-list a",
+        DetailsClass: ".campus-info__current",
+        StartingCampus: "",
+        
+        //Functions
+        setup: function() {
+            //Set StartingCampus
+            this.StartingCampus = 
+                this.DetailsClass + "[data-campus='"+ $(this.DetailsClass).filter(":visible").attr("data-campus") + "']";
+            
+            //Setup Hover Effect
+            $(this.CssClass).hover(
+                //Over
+                function() {
+                    var campus = $(this).attr("data-campus");
+                    var selector = HomepageCampusSection.DetailsClass + "[data-campus='" + campus + "']";
+
+                    //Hide All
+                    $(HomepageCampusSection.DetailsClass).hide();
+                    
+                    //Show Hovered One
+                    $(selector).show();
+                },
+                    
+                //Out
+                function() {
+                    //Hide Hovered
+                    $(HomepageCampusSection.DetailsClass).hide();
+                    
+                    //Show Original
+                    $(HomepageCampusSection.StartingCampus).show();
+                }
+            );
         }
     }
 }( jQuery ));
