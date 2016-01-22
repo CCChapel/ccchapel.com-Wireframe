@@ -1944,8 +1944,8 @@ body {
     margin-bottom: 48px;
     text-align: center;
     color: #333; }
-    .campus-info__campus:hover {
-      color: #FFF; }
+    .campus-info__campus:hover .campus-info__name {
+      color: #FFF !important; }
     @media only screen and (min-width: 1024px) {
       .campus-info__campus:nth-last-child(1), .campus-info__campus:nth-last-child(2) {
         margin-bottom: 0; } }

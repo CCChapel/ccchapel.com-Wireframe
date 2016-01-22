@@ -219,8 +219,8 @@
         
         color: $black;
         
-        &:hover {
-            color: #FFF;
+        &:hover .campus-info__name {
+            color: #FFF !important;
         }
         
         @include grid-media-query("desk") {
@@ -246,8 +246,7 @@
             }
         }
     }
-    
-    
+       
     &__address {
         color: #FFF;
     }
