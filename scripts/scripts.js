@@ -1,8 +1,5 @@
 (function ( $ ) {
     $(document).ready(function() {
-        //Content Search Setup
-        ContentSearch.setup();
-        
         //Campus Map
         CampusLocationMap.setup();
 
@@ -17,6 +14,9 @@
 
             //Homepage Campus Section
             HomepageCampusSection.desktopSetup();
+
+            //Content Search Setup
+            ContentSearch.desktopSetup();
         }
         
         //PORTABLE FUNCTION
@@ -29,6 +29,9 @@
 
             //Homepage Campus Section
             HomepageCampusSection.portableSetup();
+            
+            //Content Search Setup
+            ContentSearch.portableSetup();
         }
     });
     
@@ -81,6 +84,12 @@
         Trigger: "#nav-icon",
         
         //Functions
+        setup: function() {
+            //Toggle open and close
+            $(this.Trigger).click(function () {
+                MobileMenu.toggleMenu();
+            });
+        },
         toggleMenu: function () {
             //animate icon
             $(this.Trigger).toggleClass("close");
@@ -88,7 +97,6 @@
             //toggle screen lock
             $("body").toggleClass("hide-overflow");
             $("body").toggleClass("lock-position");   
-
             
             Modal.toggle();
 
@@ -98,11 +106,37 @@
                 //$(".notifications, .body, .footer").toggleClass("blur");   
             });  
         },
-        setup: function() {
-            //Toggle open and close
-            $(this.Trigger).click(function () {
-                MobileMenu.toggleMenu();
-            });
+        open: function() {
+            //animate icon
+            $(this.Trigger).addClass("close");
+
+            //toggle screen lock
+            $("body").addClass("hide-overflow");
+            $("body").addClass("lock-position");   
+
+            Modal.open();
+
+            //toggle menu
+            $(this.MenuClass).slideDown(250, function () {
+                //blur backgrounds after menu displays
+                //$(".notifications, .body, .footer").toggleClass("blur");   
+            });  
+        },
+        close: function() {
+            //animate icon
+            $(this.Trigger).removeClass("close");
+
+            //toggle screen lock
+            $("body").removeClass("hide-overflow");
+            $("body").removeClass("lock-position");   
+
+            Modal.close();
+
+            //toggle menu
+            $(this.MenuClass).slideUp(250, function () {
+                //blur backgrounds after menu displays
+                //$(".notifications, .body, .footer").toggleClass("blur");   
+            });  
         }
     }
     
@@ -244,9 +278,18 @@
         CssClass: ".search__input",
         
         //Functions
-        setup: function() {
+        desktopSetup: function() {
             $(this.CssClass).click(function() {
                 DesktopSearch.open();
+            });
+        },
+        portableSetup: function() {
+            $(this.CssClass).click(function() {
+                //Open Menu
+                MobileMenu.open();
+                
+                //Setup Focus
+                $(DesktopSearch.SearchField).focus();
             });
         }
     }
