@@ -97,13 +97,13 @@ input {
 }
 
 .search-go {
-    position: relative;
-    display: inline-block;
-    margin-left: -2em;
+    position: absolute;
+    top: 0;
+    right: 10%;
     
     cursor: pointer;
     
-    height: auto !important;
+    height: 100%;
     
     color: $dark-gray;
     

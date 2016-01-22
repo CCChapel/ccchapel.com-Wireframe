@@ -1544,11 +1544,11 @@ input {
   -webkit-appearance: none; }
 
 .search-go {
-  position: relative;
-  display: inline-block;
-  margin-left: -2em;
+  position: absolute;
+  top: 0;
+  right: 10%;
   cursor: pointer;
-  height: auto !important;
+  height: 100%;
   color: #AAA; }
   .search-go:hover {
     color: #333; }
@@ -1920,6 +1920,7 @@ body {
   .search__keywords {
     margin: 0 0 1.5rem 0; }
   .search__controls {
+    position: relative;
     height: 3em; }
 
 .campus-info {

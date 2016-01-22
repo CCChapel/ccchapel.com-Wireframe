@@ -42,11 +42,27 @@
     var SearchFields = {
         //Properties
         Selector: "input[type='search']",
-        Html: '<div class="search-go"><i class="fa fa-chevron-right"></i></div>',
+        Html: '<div class="search-go"><div class="center-vertically"><i class="fa fa-chevron-right"></i></div></div>',
         
         //Functions
         setup: function() {
-            $(this.Selector).after(this.Html);
+            $(this.Selector).each(function() {
+                //Make Parent Position Relative for Absolute Positioning
+                $(this).parent().css("position", "relative");
+                
+                $(this).focus(function() {
+                    //Get Horizontal Positioning
+                    var horizontalPosition = $(this).position().left + $(this).width();
+
+                    //Add Chevron
+                    $(this).after(SearchFields.Html);
+                    $(this).parent().find(".search-go").css("left", horizontalPosition);
+                })
+                .blur(function() {
+                    //Add Chevron
+                    $(this).parent().find(".search-go").remove();
+                });
+            });
         }
     }
     
