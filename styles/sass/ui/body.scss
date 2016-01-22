@@ -281,6 +281,10 @@
         .campus-info__icon {
             margin-bottom: $magic-number;
         }
+        
+        .cta:first-child {
+            margin-right: $magic-number;
+        }
     }
     
     &__details {
@@ -299,9 +303,6 @@
     }
     
     &__cta {
-        a:first-child {
-            margin-right: $magic-number;
-        }
     }
     
     &__services-title {

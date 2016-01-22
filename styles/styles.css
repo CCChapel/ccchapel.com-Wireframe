@@ -1978,6 +1978,8 @@ body {
         text-align: center; } }
     .campus-info__current .campus-info__icon {
       margin-bottom: 24px; }
+    .campus-info__current .cta:first-child {
+      margin-right: 24px; }
   .campus-info__details {
     height: 100%; }
     @media only screen and (max-width: 480px) {
@@ -1985,8 +1987,6 @@ body {
         align-items: center !important; } }
   .campus-info__address, .campus-info__services {
     margin-bottom: 24px; }
-  .campus-info__cta a:first-child {
-    margin-right: 24px; }
   .campus-info__services-title {
     font-size: 20px;
     font-size: 1.25rem;
