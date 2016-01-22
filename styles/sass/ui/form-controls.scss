@@ -96,6 +96,22 @@ input {
     -webkit-appearance: none;
 }
 
+.search-go {
+    position: relative;
+    display: inline-block;
+    margin-left: -2em;
+    
+    cursor: pointer;
+    
+    height: auto !important;
+    
+    color: $dark-gray;
+    
+    &:hover {
+        color: $black;
+    }
+}
+
 //**************************************************
 // PLACEHOLDER
 //**************************************************/

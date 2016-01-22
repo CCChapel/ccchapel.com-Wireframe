@@ -2,6 +2,9 @@
     $(document).ready(function() {
         //Campus Map
         CampusLocationMap.setup();
+        
+        //Search Fields
+        SearchFields.setup();
 
         //DESKTOP FUNCTIONS
         var desktopWidth = 1024;
@@ -34,6 +37,18 @@
             ContentSearch.portableSetup();
         }
     });
+    
+    /** FORM CONTROLS ***/
+    var SearchFields = {
+        //Properties
+        Selector: "input[type='search']",
+        Html: '<div class="search-go"><i class="fa fa-chevron-right"></i></div>',
+        
+        //Functions
+        setup: function() {
+            $(this.Selector).after(this.Html);
+        }
+    }
     
     /*** MODAL ***/
     var Modal = {
