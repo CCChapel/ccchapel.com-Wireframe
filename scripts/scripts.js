@@ -484,9 +484,15 @@
             ContentSearch.portableSetup();
         }
     };
-    
 }( window.CCChapel = window.CCChapel || {}, jQuery ));
+
+//(function( CCChapel, $, undefined ) {
+//    CCChapel.test = function() {
+//        alert("hi");
+//    }
+//}( window.CCChapel = window.CCChapel || {}, jQuery ));
 
 $(document).ready( function() {
     CCChapel.initialize();
+//    CCChapel.test();
 })
