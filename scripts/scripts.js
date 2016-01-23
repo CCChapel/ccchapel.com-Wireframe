@@ -428,7 +428,8 @@
         
         //Functions
         setup: function() {
-            $(this.ButtonClass).click(function() {
+            $(this.ButtonClass).click(function(e) {
+                e.preventDefault();
                 
                 if ($(window).width() > 1024) {
                     CampusLocationMap.setSize();
