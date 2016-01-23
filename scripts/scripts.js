@@ -1,80 +1,47 @@
-(function ( $ ) {
-    $(document).ready(function() {
-        //Campus Map
-        CampusLocationMap.setup();
-        
-        //Search Fields
-        SearchFields.setup();
-
-        //DESKTOP FUNCTIONS
-        var desktopWidth = 1024;
-        if ($(window).width() >= desktopWidth) {
-            //Desktop Search
-            DesktopSearch.setup();
-
-            //Desktop Sticky Menu
-            DesktopStickyMenu.setup();
-
-            //Homepage Campus Section
-            HomepageCampusSection.desktopSetup();
-
-            //Content Search Setup
-            ContentSearch.desktopSetup();
-        }
-        
-        //PORTABLE FUNCTION
-        if ($(window).width() < desktopWidth) {
-            //Mobile Campus List
-            CampusSelect.setup();
-
-            //Mobile Menu
-            MobileMenu.setup();
-
-            //Homepage Campus Section
-            HomepageCampusSection.portableSetup();
-            
-            //Content Search Setup
-            ContentSearch.portableSetup();
-        }
-    });
+(function( CCChapel, $, undefined ) {
+//    //Private Property
+//    var isHot = true;
+//
+//    //Public Property
+//    skillet.ingredient = "Bacon Strips";
+//
+//    //Public Method
+//    skillet.fry = function() {
+//        var oliveOil;
+//
+//        addItem( "\t\n Butter \n\t" );
+//        addItem( oliveOil );
+//        console.log( "Frying " + skillet.ingredient );
+//    };
+//
+//    //Private Method
+//    function addItem( item ) {
+//        if ( item !== undefined ) {
+//            console.log( "Adding " + $.trim(item) );
+//        }
+//    }
     
-    /** FORM CONTROLS ***/
-    var SearchFields = {
-        //Properties
-        Selector: "input[type='search']",
-        Html: '<div class="search-go"><div class="center-vertically"><i class="fa fa-chevron-right"></i></div></div>',
-        
-        //Functions
-        setup: function() {
-            $(this.Selector).each(function() {
-                //Make Parent Position Relative for Absolute Positioning
-                $(this).parent().css("position", "relative");
-                
-                $(this).focus(function() {
-                    //Get Horizontal Positioning
-                    var horizontalPosition = $(this).position().left + $(this).width();
-
-                    //Add Chevron
-                    $(this).after(SearchFields.Html);
-                    $(this).parent().find(".search-go").css("left", horizontalPosition);
-                })
-                .blur(function() {
-                    //Add Chevron
-                    $(this).parent().find(".search-go").remove();
-                });
-            });
-        }
-    }
+    //************************************************
+    // Private Properties
+    //***********************************************/
+    var desktopBreakpoint = 1024;
     
+    //************************************************
+    // Public Properties
+    //***********************************************/
+
+    //************************************************
+    // Private Methods
+    //***********************************************/
     /*** MODAL ***/
     var Modal = {
         //Properties
         CssClass: ".modal",
         TransitionDuration: 250,
-        
+
         //Functions
         setup: function() {
-            
+
         },
         toggle: function() {
             $(this.CssClass).fadeToggle(this.TransitionDuration);
@@ -89,7 +56,316 @@
             Viewport.unlock();
         }
     }
+
+    /*** VIEWPORT ***/
+    var Viewport = {
+        //Properties
+        Locked: false,
+        LockProperty: ", maximum-scale=1.0",
+
+        //Functions
+        toggle: function() {
+            if (this.Locked == false) {
+                this.lock();
+            }
+            else {
+                this.unlock();
+            }
+        },
+        lock: function() {
+            var content = $("meta[name='viewport']").attr("content");
+            content += this.LockProperty;
+
+            $("meta[name='viewport']").attr("content", content);
+
+            this.Locked = true;
+        },
+        unlock: function() {
+            var content = $("meta[name='viewport']").attr("content");
+            content = content.replace(this.LockProperty, "");
+
+            $("meta[name='viewport']").attr("content", content);
+
+            this.Locked = false;
+        }
+    }
+
+    /*** CAMPUS LOCATION MAP ***/
+    var CampusLocationMap = {
+        //Properties
+        ListClass: ".campus-info__icon-list",
+        MapClass: ".campus-info__map",
+        ButtonClass: "#toggle-campus-map",
+
+        //Functions
+        setup: function() {
+            $(this.ButtonClass).click(function(e) {
+                e.preventDefault();
+
+                if ($(window).width() > 1024) {
+                    CampusLocationMap.setSize();
+                }
+
+                CampusLocationMap.toggle();
+            });
+        },
+        toggle: function() {
+            $(this.ListClass).fadeToggle();
+            $(this.MapClass).fadeToggle();
+        },
+        setSize: function() {
+            //Get Current List Size
+            var height = $(this.ListClass).height();
+            var width = $(this.ListClass).width();
+
+            $(this.MapClass).height(height);
+            $(this.MapClass).width(width);
+        }
+    }
     
+    /** FORM CONTROLS ***/
+    var SearchFields = {
+        //Properties
+        Selector: "input[type='search']",
+        Html: '<div class="search-go"><div class="center-vertically"><i class="fa fa-chevron-right"></i></div></div>',
+
+        //Functions
+        setup: function() {
+            $(this.Selector).each(function() {
+                //Make Parent Position Relative for Absolute Positioning
+                $(this).parent().css("position", "relative");
+
+                $(this).focus(function() {
+                    //Get Horizontal Positioning
+                    var horizontalPosition = $(this).position().left + $(this).width();
+
+                    //Add Chevron
+                    $(this).after(SearchFields.Html);
+                    $(this).parent().find(".search-go").css("left", horizontalPosition);
+                })
+                    .blur(function() {
+                    //Add Chevron
+                    $(this).parent().find(".search-go").remove();
+                });
+            });
+        }
+    }
+    
+    /*** DESKTOP SEARCH ***/
+    var DesktopSearch = {
+        //Properties
+        ItemClass: ".menu__search",
+        FieldClass: ".menu__search-field",
+        SearchField: "#menu-search",
+        IconClass: ".menu__search-icon",
+        BannerClass: ".banner",
+        MenuItemsClass: ".menu__items", //CCChapel.MobileMenu.ItemsClass,
+
+        //Functions
+        setup: function() {
+            //Icon Click
+            $(this.IconClass).click(function () {
+                DesktopSearch.toggle();
+            });
+
+            //            //Field Loses Focus
+            //            $(this.SearchField).focusout(function() {
+            //                if (!$(DesktopSearch.IconClass).is(":focus")) {
+            //                    console.log( $(DesktopSearch.IconClass).is(":focus") );
+            //                    
+            //                    DesktopSearch.close(); 
+            //                }
+            //                else {
+            //                    console.log("icon clicked");
+            //                }
+            //            });
+        },
+        toggle: function() {
+            //Toggle Icon
+            $(this.IconClass).toggleClass("open");
+
+            //Toggle Menu
+            $(this.MenuItemsClass).toggle();
+
+            //Toggle Width
+            $(this.ItemClass).toggleClass("one-tenth").toggleClass("one-whole");
+            $(this.IconClass).toggleClass("desk--one-whole").toggleClass("desk--one-tenth");
+
+            //Toggle Banner Height
+            $(this.BannerClass).toggleClass("fullHeight");
+
+            //Toggle Search Field
+            $(this.FieldClass).toggleClass("show");
+
+            //Toggle Modal
+            Modal.toggle();
+
+            //Set focus if visible
+            if ($(this.FieldClass).hasClass("show")) {
+                $(this.SearchField).focus();
+            }
+        },
+        open: function() {
+            //Show Icon
+            $(this.IconClass).addClass("open");
+
+            //Show Menu
+            $(this.MenuItemsClass).hide();
+
+            //Set Width
+            $(this.ItemClass).removeClass("one-tenth").addClass("one-whole");
+            $(this.IconClass).removeClass("desk--one-whole").addClass("desk--one-tenth");
+
+            //Set Banner Height
+            $(this.BannerClass).addClass("fullHeight");
+
+            //Show Search Field
+            $(this.FieldClass).addClass("show");
+
+            //Show Modal
+            Modal.open();
+
+            //Set focus
+            $(this.SearchField).focus();
+        },
+        close: function() {
+            //Hide Icon
+            $(this.IconClass).removeClass("open");
+
+            //Show Menu
+            $(this.MenuItemsClass).show();
+
+            //Hide Width
+            $(this.ItemClass).addClass("one-tenth").removeClass("one-whole");
+            $(this.IconClass).addClass("desk--one-whole").removeClass("desk--one-tenth");
+
+            //Hide Banner Height
+            $(this.BannerClass).removeClass("fullHeight");
+
+            //Hide Modal
+            Modal.close();
+
+            //Hide Search Field
+            $(this.FieldClass).removeClass("show");
+        }
+    }
+    
+    /*** DESKTOP STICKY MENU ***/
+    var DesktopStickyMenu = {
+        //Properties
+        CssClass: ".banner",
+        StartingHeight: "64px",
+        EndingHeight: "41px",
+        BodySelector: ".body :first-child",
+        BodyStartingPosition: "0",
+        HeaderClass: ".header",
+
+        //Functions
+        setup: function() {
+            //Set Heights
+            this.StartingHeight = $(this.CssClass).height();
+            this.EndingHeight = Math.round(this.StartingHeight * .64);
+
+            //Set BodyStartingPosition
+            //Use :first-child because Notifications may not always be there
+            this.BodyStartingPosition = $(this.BodySelector).position().top;
+
+            //Setup Scroll Event
+            $(window).scroll(function() {
+                DesktopStickyMenu.adjustStickyMenu();
+            });
+
+            //Initial Page Check
+            $(document).ready(function () {
+                //We only care if we're not at the top of the screen
+                if ($(window).scrollTop != 0) {
+                    DesktopStickyMenu.adjustStickyMenu();
+                }
+            });
+        },
+        adjustStickyMenu: function() {
+            //Scale Banner
+            var bodyOffet = $(this.BodySelector).offset().top;
+            var windowPosition = $(window).scrollTop();
+            var offset = Math.round(bodyOffet - windowPosition);
+
+            if (offset <= 0) {
+                $(this.HeaderClass).addClass("sticky")
+            }
+            else {
+                $(this.HeaderClass).removeClass("sticky");
+            }
+        }
+    }
+
+    /*** CAMPUS SECTION ***/
+    var HomepageCampusSection = {
+        //Properties
+        ListClass: ".campus-info__other-list",
+        CampusesClass: ".campus-info__other-list a",
+        DetailsClass: ".campus-info__current",
+        TitleClass: ".campus-info__other-title",
+        StartingCampus: "",
+
+        //Functions
+        desktopSetup: function() {
+            //Set StartingCampus
+            this.StartingCampus = 
+                this.DetailsClass + "[data-campus='"+ $(this.DetailsClass).filter(":visible").attr("data-campus") + "']";
+
+            //Setup Hover Effect
+            $(this.CampusesClass).hover(
+                //Over
+                function() {
+                    var campus = $(this).attr("data-campus");
+                    var selector = HomepageCampusSection.DetailsClass + "[data-campus='" + campus + "']";
+
+                    //Hide All
+                    $(HomepageCampusSection.DetailsClass).hide();
+
+                    //Show Hovered One
+                    $(selector).show();
+                },
+
+                //Out
+                function() {
+                    //Hide Hovered
+                    $(HomepageCampusSection.DetailsClass).hide();
+
+                    //Show Original
+                    $(HomepageCampusSection.StartingCampus).show();
+                }
+            );
+        },
+        portableSetup: function() {
+            $(this.TitleClass).click(function() {
+                $(".campus-info__other-list").slideToggle(); 
+            });
+        }
+    }
+
+    /*** CONTENT SEARCH ***/
+    var ContentSearch = {
+        //Properties
+        CssClass: ".search__input",
+
+        //Functions
+        desktopSetup: function() {
+            $(this.CssClass).click(function() {
+                DesktopSearch.open();
+            });
+        },
+        portableSetup: function() {
+            $(this.CssClass).click(function() {
+                //Open Menu
+                MobileMenu.open();
+
+                //Setup Focus
+                $(DesktopSearch.SearchField).focus();
+            });
+        }
+    }
+
     /*** CAMPUS SELECT ***/
     var CampusSelect = {
         //Properties
@@ -106,14 +382,14 @@
             });
         }
     }
-    
+
     /*** MOBILE MENU ***/
     var MobileMenu = {
         //Properties
         MenuClass: ".banner__menu",
         ItemsClass: ".menu__items",
         Trigger: "#nav-icon",
-        
+
         //Functions
         setup: function() {
             //Toggle open and close
@@ -128,7 +404,7 @@
             //toggle screen lock
             $("body").toggleClass("hide-overflow");
             $("body").toggleClass("lock-position");   
-            
+
             Modal.toggle();
 
             //toggle menu
@@ -170,285 +446,47 @@
             });  
         }
     }
+
+    //************************************************
+    // Public Methods
+    //***********************************************/
+    CCChapel.initialize = function() {
+        CampusLocationMap.setup();
+        SearchFields.setup();
+        
+        //DESKTOP FUNCTIONS
+        if ($(window).width() >= desktopBreakpoint) {
+            //Desktop Search
+            DesktopSearch.setup();
+
+            //Desktop Sticky Menu
+            DesktopStickyMenu.setup();
+
+            //Homepage Campus Section
+            HomepageCampusSection.desktopSetup();
+
+            //Content Search Setup
+            ContentSearch.desktopSetup();
+        }
+        
+        //PORTABLE FUNCTIONS
+        if ($(window).width() < desktopBreakpoint) {
+            //Mobile Campus List
+            CampusSelect.setup();
+
+            //Mobile Menu
+            MobileMenu.setup();
+
+            //Homepage Campus Section
+            HomepageCampusSection.portableSetup();
+
+            //Content Search Setup
+            ContentSearch.portableSetup();
+        }
+    };
     
-    /*** VIEWPORT ***/
-    var Viewport = {
-        //Properties
-        Locked: false,
-        LockProperty: ", maximum-scale=1.0",
-        
-        //Functions
-        toggle: function() {
-            if (this.Locked == false) {
-                this.lock();
-            }
-            else {
-                this.unlock();
-            }
-        },
-        lock: function() {
-            var content = $("meta[name='viewport']").attr("content");
-            content += this.LockProperty;
+}( window.CCChapel = window.CCChapel || {}, jQuery ));
 
-            $("meta[name='viewport']").attr("content", content);
-
-            this.Locked = true;
-        },
-        unlock: function() {
-            var content = $("meta[name='viewport']").attr("content");
-            content = content.replace(this.LockProperty, "");
-
-            $("meta[name='viewport']").attr("content", content);
-
-            this.Locked = false;
-        }
-    }
-    
-    /*** DESKTOP SEARCH ***/
-    var DesktopSearch = {
-        //Properties
-        ItemClass: ".menu__search",
-        FieldClass: ".menu__search-field",
-        SearchField: "#menu-search",
-        IconClass: ".menu__search-icon",
-        BannerClass: ".banner",
-        MenuItemsClass: MobileMenu.ItemsClass,
-        
-        //Functions
-        setup: function() {
-            //Icon Click
-            $(this.IconClass).click(function () {
-                DesktopSearch.toggle();
-            });
-
-//            //Field Loses Focus
-//            $(this.SearchField).focusout(function() {
-//                if (!$(DesktopSearch.IconClass).is(":focus")) {
-//                    console.log( $(DesktopSearch.IconClass).is(":focus") );
-//                    
-//                    DesktopSearch.close(); 
-//                }
-//                else {
-//                    console.log("icon clicked");
-//                }
-//            });
-        },
-        toggle: function() {
-            //Toggle Icon
-            $(this.IconClass).toggleClass("open");
-
-            //Toggle Menu
-            $(this.MenuItemsClass).toggle();
-
-            //Toggle Width
-            $(this.ItemClass).toggleClass("one-tenth").toggleClass("one-whole");
-            $(this.IconClass).toggleClass("desk--one-whole").toggleClass("desk--one-tenth");
-
-            //Toggle Banner Height
-            $(this.BannerClass).toggleClass("fullHeight");
-
-            //Toggle Search Field
-            $(this.FieldClass).toggleClass("show");
-            
-            //Toggle Modal
-            Modal.toggle();
-            
-            //Set focus if visible
-            if ($(this.FieldClass).hasClass("show")) {
-                $(this.SearchField).focus();
-            }
-        },
-        open: function() {
-            //Show Icon
-            $(this.IconClass).addClass("open");
-
-            //Show Menu
-            $(this.MenuItemsClass).hide();
-
-            //Set Width
-            $(this.ItemClass).removeClass("one-tenth").addClass("one-whole");
-            $(this.IconClass).removeClass("desk--one-whole").addClass("desk--one-tenth");
-
-            //Set Banner Height
-            $(this.BannerClass).addClass("fullHeight");
-
-            //Show Search Field
-            $(this.FieldClass).addClass("show");
-            
-            //Show Modal
-            Modal.open();
-
-            //Set focus
-            $(this.SearchField).focus();
-        },
-        close: function() {
-            //Hide Icon
-            $(this.IconClass).removeClass("open");
-
-            //Show Menu
-            $(this.MenuItemsClass).show();
-
-            //Hide Width
-            $(this.ItemClass).addClass("one-tenth").removeClass("one-whole");
-            $(this.IconClass).addClass("desk--one-whole").removeClass("desk--one-tenth");
-
-            //Hide Banner Height
-            $(this.BannerClass).removeClass("fullHeight");
-            
-            //Hide Modal
-            Modal.close();
-
-            //Hide Search Field
-            $(this.FieldClass).removeClass("show");
-        }
-    }
-    
-    /*** CONTENT SEARCH ***/
-    var ContentSearch = {
-        //Properties
-        CssClass: ".search__input",
-        
-        //Functions
-        desktopSetup: function() {
-            $(this.CssClass).click(function() {
-                DesktopSearch.open();
-            });
-        },
-        portableSetup: function() {
-            $(this.CssClass).click(function() {
-                //Open Menu
-                MobileMenu.open();
-                
-                //Setup Focus
-                $(DesktopSearch.SearchField).focus();
-            });
-        }
-    }
-    
-    /*** DESKTOP STICKY MENU ***/
-    var DesktopStickyMenu = {
-        //Properties
-        CssClass: DesktopSearch.BannerClass,
-        StartingHeight: "64px",
-        EndingHeight: "41px",
-        BodySelector: ".body :first-child",
-        BodyStartingPosition: "0",
-        HeaderClass: ".header",
-        
-        //Functions
-        setup: function() {
-            //Set Heights
-            this.StartingHeight = $(this.CssClass).height();
-            this.EndingHeight = Math.round(this.StartingHeight * .64);
-            
-            //Set BodyStartingPosition
-            //Use :first-child because Notifications may not always be there
-            this.BodyStartingPosition = $(this.BodySelector).position().top;
-            
-            //Setup Scroll Event
-            $(window).scroll(function() {
-                DesktopStickyMenu.adjustStickyMenu();
-            });
-            
-            //Initial Page Check
-            $(document).ready(function () {
-                //We only care if we're not at the top of the screen
-                if ($(window).scrollTop != 0) {
-                    DesktopStickyMenu.adjustStickyMenu();
-                }
-            });
-        },
-        adjustStickyMenu: function() {
-            //Scale Banner
-            var bodyOffet = $(this.BodySelector).offset().top;
-            var windowPosition = $(window).scrollTop();
-            var offset = Math.round(bodyOffet - windowPosition);
-
-            if (offset <= 0) {
-                $(this.HeaderClass).addClass("sticky")
-            }
-            else {
-                $(this.HeaderClass).removeClass("sticky");
-            }
-        }
-    }
-
-    /*** CAMPUS SECTION ***/
-    var HomepageCampusSection = {
-        //Properties
-        ListClass: ".campus-info__other-list",
-        CampusesClass: ".campus-info__other-list a",
-        DetailsClass: ".campus-info__current",
-        TitleClass: ".campus-info__other-title",
-        StartingCampus: "",
-        
-        //Functions
-        desktopSetup: function() {
-            //Set StartingCampus
-            this.StartingCampus = 
-                this.DetailsClass + "[data-campus='"+ $(this.DetailsClass).filter(":visible").attr("data-campus") + "']";
-            
-            //Setup Hover Effect
-            $(this.CampusesClass).hover(
-                //Over
-                function() {
-                    var campus = $(this).attr("data-campus");
-                    var selector = HomepageCampusSection.DetailsClass + "[data-campus='" + campus + "']";
-
-                    //Hide All
-                    $(HomepageCampusSection.DetailsClass).hide();
-                    
-                    //Show Hovered One
-                    $(selector).show();
-                },
-                    
-                //Out
-                function() {
-                    //Hide Hovered
-                    $(HomepageCampusSection.DetailsClass).hide();
-                    
-                    //Show Original
-                    $(HomepageCampusSection.StartingCampus).show();
-                }
-            );
-        },
-        portableSetup: function() {
-            $(this.TitleClass).click(function() {
-                $(".campus-info__other-list").slideToggle(); 
-            });
-        }
-    }
-    
-    /*** CAMPUS LOCATION MAP ***/
-    var CampusLocationMap = {
-        //Properties
-        ListClass: ".campus-info__icon-list",
-        MapClass: ".campus-info__map",
-        ButtonClass: "#toggle-campus-map",
-        
-        //Functions
-        setup: function() {
-            $(this.ButtonClass).click(function(e) {
-                e.preventDefault();
-                
-                if ($(window).width() > 1024) {
-                    CampusLocationMap.setSize();
-                }
-                
-                CampusLocationMap.toggle();
-            });
-        },
-        toggle: function() {
-            $(this.ListClass).fadeToggle();
-            $(this.MapClass).fadeToggle();
-        },
-        setSize: function() {
-            //Get Current List Size
-            var height = $(this.ListClass).height();
-            var width = $(this.ListClass).width();
-            
-            $(this.MapClass).height(height);
-            $(this.MapClass).width(width);
-        }
-    }
-}( jQuery ));
+$(document).ready( function() {
+    CCChapel.initialize();
+})
