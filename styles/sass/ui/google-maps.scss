@@ -16,8 +16,9 @@
 }
 
 .google-map__label {
-    font-size: 16px;
-    color: #228FCB;
+    @include typecsset-font-size($typecsset-base-font-size);
+
+    color: $light-blue;
     font-weight: bold;
     text-shadow: 1px 1px 1px #FFF;
 
