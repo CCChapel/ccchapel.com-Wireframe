@@ -109,10 +109,15 @@
                 CampusLocationMap.toggle();
             });
         },
+        drawMap: function() {
+            
+        },
         toggle: function() {
             $(this.ButtonClass).toggleClass("active");
             $(this.ListClass).fadeToggle();
             $(this.MapClass).fadeToggle();
+            
+            initMap();
         },
         setSize: function() {
             //Get Current List Size
