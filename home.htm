@@ -318,7 +318,7 @@
                         </div><!--
             
                      --><div class="campus-info__list [ grid__item two-thirds portable--one-whole ]">
-                            <div class="campus-info__icon-list grid" style="">
+                            <div class="campus-info__icon-list grid">
                                 <div class="campus-info__campus [ grid__item one-half palm--one-whole ]">
                                     <div class="campus-info__icon">
                                         <img src="images/campuses/icons/hudson.png" alt="" />
@@ -385,32 +385,67 @@
                                         zoom: 11
                                     });
                                     
-                                    var markers = [
+                                    function createMapInfo(name, address, link) {
+                                        return '<div class="google-map__info-window">' +
+                                                    '<div class="google-map__location-name">' + name + '</div>' +
+                                                    '<div class="google-map__location-address">' + address + '</div>' +
+                                                    '<div><a class="cta" href="' + link + '">Get Directions</a></div>' +
+                                               '</div>';
+                                    }
+                                    
+                                    var locations = [
                                         {
                                             name: 'Hudson Campus',
-                                            location: { lat: 41.231812, lng: -81.485023 }
+                                            location: { lat: 41.231812, lng: -81.485023 },
+                                            info: createMapInfo("Christ Community Chapel &ndash; Hudson Campus", "750 W Streetsboro Street | Hudson, Ohio", "")
                                         },
                                         {
                                             name: 'Aurora Campus',
-                                            location: { lat: 41.323287, lng: -81.345287 }
+                                            location: { lat: 41.323287, lng: -81.345287 },
+                                            info: createMapInfo("Christ Community Chapel &ndash; Aurora Campus", "750 W Streetsboro Street | Hudson, Ohio", "")
                                         },
                                         {
                                             name: 'Stow Campus',
-                                            location: { lat: 41.158564, lng: -81.42059 }
+                                            location: { lat: 41.158564, lng: -81.42059 },
+                                            info: createMapInfo("Christ Community Chapel &ndash; Stow Campus", "750 W Streetsboro Street | Hudson, Ohio", "")
                                         },
                                         {
                                             name: 'Highland Square Campus',
-                                            location: { lat: 41.095619, lng: -81.544334 }
+                                            location: { lat: 41.095619, lng: -81.544334 },
+                                            info: createMapInfo("Christ Community Chapel &ndash; Highland Square Campus", "750 W Streetsboro Street | Hudson, Ohio", "")
                                         }
                                     ];
                                     
                                     var x;
-                                    for (x in markers) {
+                                    var markerIcon = {
+                                        url: "./images/icons/maps/google-map-icon.png",
+                                        size: new google.maps.Size(75, 75)
+                                    };
+                                    
+                                    var markers = new Array();
+                                    
+                                    var infoWindow = new google.maps.InfoWindow({
+                                        content: "Loading..."
+                                    });
+                                    
+                                    for (i = 0; i < locations.length; i++) {
                                         var marker = new google.maps.Marker({
-                                            position: markers[x].location,
+                                            position: locations[i].location,
+                                            draggable: false,
                                             map: map,
-                                            title: markers[x].name
+                                            title: locations[i].name,
+                                            icon: markerIcon,
+                                            animation: google.maps.Animation.DROP
                                         });
+                                        
+                                        markers.push(marker);
+                                        
+                                        google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                                            return function() {
+                                                infoWindow.setContent(locations[i].info);
+                                                infoWindow.open(map, marker);
+                                            }
+                                        })(marker, i));
                                     }
                                 }
                             </script>

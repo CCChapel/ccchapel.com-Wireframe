@@ -110,6 +110,7 @@
             });
         },
         toggle: function() {
+            $(this.ButtonClass).toggleClass("active");
             $(this.ListClass).fadeToggle();
             $(this.MapClass).fadeToggle();
         },

@@ -30,7 +30,8 @@
         border-color $transitionDuration $transitionTimingFunction, 
         color $transitionDuration $transitionTimingFunction;
 
-    &:hover {
+    &:hover,
+    &.active {
         background-color: $dark-red;
         color: #FFF;
 
@@ -56,7 +57,8 @@
         background-color: transparentize($charcoal, .3);
         border: 2px solid currentColor;
 
-        &:hover {
+        &:hover,
+        &.active {
             background-color: #FFF;
             border-color: #FFF;
             color: transparentize($charcoal, .3);
@@ -70,7 +72,8 @@
         border: 2px solid currentColor;
         color: $color-root;
 
-        &:hover {
+        &:hover,
+        &.active {
             background-color: $color-root;
             border-color: $color-root;
             color: #FFF;
