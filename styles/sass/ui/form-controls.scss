@@ -30,6 +30,10 @@
         border-color $transitionDuration $transitionTimingFunction, 
         color $transitionDuration $transitionTimingFunction;
 
+    @include grid-media-query("portable") {
+        width: 100%;
+    }
+    
     &:hover,
     &.active {
         background-color: $dark-red;
@@ -37,15 +41,7 @@
 
         text-decoration: none;
     }
-
-    & + & {
-        margin-right: $magic-number;
-    }
-
-    @include grid-media-query("portable") {
-        width: 100%;
-    }
-
+    
     //Size variants
     &.auto {
         margin-left: 0;
@@ -54,6 +50,10 @@
         width: auto !important;
     }
 
+    & + & {
+        margin-left: $magic-number;
+    }
+    
     //Color variants
     &.translucent {
         @extend .cta;
