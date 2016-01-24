@@ -14,3 +14,13 @@
 .google-map__location-address {
     margin-bottom: $magic-number;
 }
+
+.google-map__label {
+    font-size: 16px;
+    color: #228FCB;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #FFF;
+
+    height: 75px;
+    max-width: 25%;
+}

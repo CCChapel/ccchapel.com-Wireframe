@@ -38,6 +38,10 @@
         text-decoration: none;
     }
 
+    & + & {
+        margin-right: $magic-number;
+    }
+
     @include grid-media-query("portable") {
         width: 100%;
     }
