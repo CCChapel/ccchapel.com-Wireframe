@@ -22,7 +22,16 @@
     }
 
     &__social {
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
+    }
+    
+    &__cta {
+        display: inline-flex;
+        margin-bottom: 2rem;
+        
+        .cta {
+            color: #FFF !important;
+        }
     }
 
     &__navigation {
