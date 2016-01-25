@@ -26,8 +26,11 @@
     }
     
     &__cta {
-        display: inline-flex;
         margin-bottom: 2rem;
+    }
+    
+    &__buttons {
+        display: inline-flex;
         
         .cta {
             color: #FFF !important;

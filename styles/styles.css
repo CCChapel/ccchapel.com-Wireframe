@@ -2138,9 +2138,10 @@ body {
   .footer__social {
     margin-bottom: 2rem; }
   .footer__cta {
-    display: inline-flex;
     margin-bottom: 2rem; }
-    .footer__cta .cta {
+  .footer__buttons {
+    display: inline-flex; }
+    .footer__buttons .cta {
       color: #FFF !important; }
   .footer__navigation {
     text-align: left; }
