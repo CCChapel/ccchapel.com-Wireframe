@@ -117,7 +117,7 @@
             $(this.ListClass).fadeToggle();
             $(this.MapClass).fadeToggle();
             
-            initMap();
+            CCChapel.initMap();
         },
         setSize: function() {
             //Get Current List Size
@@ -490,6 +490,135 @@
             ContentSearch.portableSetup();
         }
     };
+}( window.CCChapel = window.CCChapel || {}, jQuery ));
+
+//MAPS
+(function( CCChapel, $, undefined ) {
+    //************************************************
+    // Public Properties
+    //***********************************************/
+    CCChapel.CampusLocations = [
+        {
+            name: 'Christ Community Chapel &ndash; Hudson Campus',
+            location: { lat: 41.231812, lng: -81.485023 },
+            info: createMapInfo(
+                "Christ Community Chapel &ndash; Hudson Campus",
+                "750 W Streetsboro Street | Hudson, Ohio",
+                "https://www.google.com/maps/dir//Christ+Community+Chapel+-+Hudson+Campus,+750+W+Streetsboro+St,+Hudson,+OH+44236,+United+States/@41.231745,-81.4859318,17z/data=!4m12!1m3!3m2!1s0x883120ef6e7919cd:0x308c6f24f427b843!2sChrist+Community+Chapel+-+Hudson+Campus!4m7!1m0!1m5!1m1!1s0x883120ef6e7919cd:0x308c6f24f427b843!2m2!1d-81.4837431!2d41.231745")
+        },
+        {
+            name: 'Christ Community Chapel &ndash; Aurora Campus',
+            location: { lat: 41.323287, lng: -81.345287 },
+            info: createMapInfo(
+                "Christ Community Chapel &ndash; Aurora Campus",
+                "252 N Chillicothe Road | Aurora, Ohio",
+                "https://www.google.com/maps/dir//Christ+Community+Chapel+-+Aurora+Campus,+252+N+Chillicothe+Rd,+Aurora,+OH+44202,+United+States/@41.3240885,-81.3459627,17z/data=!4m12!1m3!3m2!1s0x883119d734fb37c5:0xb499c4ffae160675!2sChrist+Community+Chapel+-+Aurora+Campus!4m7!1m0!1m5!1m1!1s0x883119d734fb37c5:0xb499c4ffae160675!2m2!1d-81.343774!2d41.3240885")
+        },
+        {
+            name: 'Christ Community Chapel &ndash; Stow Campus',
+            location: { lat: 41.158564, lng: -81.42059 },
+            info: createMapInfo(
+                "Christ Community Chapel &ndash; Stow Campus",
+                "3900 Kent Road | Stow, Ohio",
+                "https://www.google.com/maps/dir//Christ+Community+Chapel+-+Stow+Campus,+3900+Kent+Rd,+Stow,+OH+44224,+United+States/@41.1572009,-81.4232236,17z/data=!4m12!1m3!3m2!1s0x883125d3a382d885:0xc0fd9e409b822ec7!2sChrist+Community+Chapel+-+Stow+Campus!4m7!1m0!1m5!1m1!1s0x883125d3a382d885:0xc0fd9e409b822ec7!2m2!1d-81.4210349!2d41.1572009")
+        },
+        {
+            name: 'Christ Community Chapel &ndash; Highland Square Campus',
+            location: { lat: 41.095619, lng: -81.544334 },
+            info: createMapInfo(
+                "Christ Community Chapel &ndash; Highland Square Campus",
+                "<div class='accent'>Meeting at Portage Path Community Learning Center</div> 55 S Portage Path | Akron, Ohio",
+                "https://www.google.com/maps/dir//Portage+Path+CLC+Elementary+School,+55+S+Portage+Path,+Akron,+OH+44303/@41.0955219,-81.5465821,17z/data=!4m12!1m3!3m2!1s0x8830d7b3e1a79a8d:0x436ee5a6712ac32c!2sPortage+Path+CLC+Elementary+School!4m7!1m0!1m5!1m1!1s0x8830d7b3e1a79a8d:0x436ee5a6712ac32c!2m2!1d-81.5443934!2d41.0955219")
+        }
+    ];
+    
+    /************************************************
+    // Private Properties
+    //***********************************************/
+    var map;
+    
+    /************************************************
+    // Public Methods
+    //***********************************************/
+    //Initialize Map
+    CCChapel.initMap = function() {
+        //Create Map
+        map = new google.maps.Map(document.getElementById('campus-info__map'), {
+            center: { lat: 41.231812, lng: -81.4850237 },
+            zoom: 11
+        });
+
+        //Marker Icon Options
+        var markerIcon = {
+            url: "./images/icons/maps/google-map-icon.png",
+            size: new google.maps.Size(75, 75)
+        };
+
+        //Array for Markers
+        var markers = new Array();
+
+        //Create Info Window
+        var infoWindow = new google.maps.InfoWindow({
+            content: "Loading..."
+        });
+        
+        //Create Viewpoint Bound
+        var bounds = new google.maps.LatLngBounds();
+
+        //Create Markers and Click Event
+        for (i = 0; i < CCChapel.CampusLocations.length; i++) {
+            marker = new MarkerWithLabel({
+                position: CCChapel.CampusLocations[i].location,
+                draggable: false,
+                map: map,
+                icon: markerIcon,
+                labelContent: CCChapel.CampusLocations[i].name,
+                labelAnchor: new google.maps.Point(-40, 75),
+                labelClass: "google-map__label",
+                animation: google.maps.Animation.DROP
+            });
+
+            //Add markers to array
+            markers.push(marker);
+
+            //Add click event for InfoWindow
+            google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                return function () {
+                    //Load proper information for clicked campus
+                    infoWindow.setContent(CCChapel.CampusLocations[i].info);
+
+                    //Open Info Window
+                    infoWindow.open(map, marker);
+                }
+            })(marker, i));
+            
+            //Extend bounds
+            bounds.extend(
+                new google.maps.LatLng(
+                    CCChapel.CampusLocations[i].location.lat, 
+                    CCChapel.CampusLocations[i].location.lng)
+            );
+        }
+        
+        //Fit bounds to map
+        map.fitBounds(bounds);
+    }
+    
+    //************************************************
+    // Private Methods
+    //***********************************************/
+    function createMapInfo(name, address, link) {
+        return '<div class="google-map__info-window">' +
+                    '<div class="google-map__location-name">' + name + '</div>' +
+                    '<div class="google-map__location-address">' + address + '</div>' +
+                    '<div><a class="cta" href="' + link + '">Get Directions</a></div>' +
+               '</div>';
+    }
+    
+    
+    CCChapel.test = function() {
+        alert("hi");
+    }
 }( window.CCChapel = window.CCChapel || {}, jQuery ));
 
 //(function( CCChapel, $, undefined ) {
