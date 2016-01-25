@@ -87,6 +87,8 @@
     background: currentColor none center center/cover no-repeat padding-box border-box scroll;
     color: #FFF;
     
+    position: relative;
+    
     min-height: 66vh;
     
     &.dark {
@@ -128,6 +130,31 @@
         @include grid-media-query("desk") {
             width: 50%;
         }
+    }
+    
+    &__controls {
+        position: relative;
+        margin-top: $magic-number;
+        
+        width: 100vw;
+    }
+    
+    &__social-controls {
+        position: absolute;
+        left: 0;
+
+        width: 50%;
+
+        text-align: left;   
+    }
+    
+    &__button-controls {
+        position: absolute;
+        right: 0;
+        
+        width: 50%;
+        
+        text-align: right;
     }
     
     &__cta {
