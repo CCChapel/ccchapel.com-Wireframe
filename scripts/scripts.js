@@ -117,7 +117,7 @@
             $(this.ListClass).fadeToggle();
             $(this.MapClass).fadeToggle();
             
-            CCChapel.initMap();
+            CCChapel.createMap("campus-info__map", CCChapel.CampusLocations);
         },
         setSize: function() {
             //Get Current List Size
@@ -536,72 +536,67 @@
     // Private Properties
     //***********************************************/
     var map;
+
+    //Marker Icon Options
+    var markerIcon = {
+        url: "./images/icons/maps/google-map-icon.png",
+        size: new google.maps.Size(75, 75)
+    };
     
     /************************************************
     // Public Methods
     //***********************************************/
     //Initialize Map
-    CCChapel.initMap = function() {
+    CCChapel.createMap = function(elementID, markers = CCChapel.CampusLocations, center = CCChapel.CampusLocations[0].location, zoom = 11) {
         //Create Map
-        map = new google.maps.Map(document.getElementById('campus-info__map'), {
-            center: { lat: 41.231812, lng: -81.4850237 },
+        map = new google.maps.Map(document.getElementById(elementID), {
+            center: center,
             zoom: 11
         });
-
-        //Marker Icon Options
-        var markerIcon = {
-            url: "./images/icons/maps/google-map-icon.png",
-            size: new google.maps.Size(75, 75)
-        };
-
-        //Array for Markers
-        var markers = new Array();
-
+        
         //Create Info Window
         var infoWindow = new google.maps.InfoWindow({
             content: "Loading..."
         });
-        
+
         //Create Viewpoint Bound
         var bounds = new google.maps.LatLngBounds();
-
+        
         //Create Markers and Click Event
-        for (i = 0; i < CCChapel.CampusLocations.length; i++) {
+        for (i = 0; i < markers.length; i++) {
             marker = new MarkerWithLabel({
-                position: CCChapel.CampusLocations[i].location,
+                position: markers[i].location,
                 draggable: false,
                 map: map,
                 icon: markerIcon,
-                labelContent: CCChapel.CampusLocations[i].name,
+                labelContent: markers[i].name,
                 labelAnchor: new google.maps.Point(-40, 75),
                 labelClass: "google-map__label",
                 animation: google.maps.Animation.DROP
             });
 
-            //Add markers to array
-            markers.push(marker);
-
             //Add click event for InfoWindow
             google.maps.event.addListener(marker, 'click', (function (marker, i) {
                 return function () {
                     //Load proper information for clicked campus
-                    infoWindow.setContent(CCChapel.CampusLocations[i].info);
+                    infoWindow.setContent(markers[i].info);
 
                     //Open Info Window
                     infoWindow.open(map, marker);
                 }
             })(marker, i));
-            
+
             //Extend bounds
             bounds.extend(
                 new google.maps.LatLng(
-                    CCChapel.CampusLocations[i].location.lat, 
-                    CCChapel.CampusLocations[i].location.lng)
+                    markers[i].location.lat, 
+                    markers[i].location.lng)
             );
         }
-        
+
         //Fit bounds to map
         map.fitBounds(bounds);
+
     }
     
     //************************************************
@@ -613,11 +608,6 @@
                     '<div class="google-map__location-address">' + address + '</div>' +
                     '<div><a class="cta" href="' + link + '">Get Directions</a></div>' +
                '</div>';
-    }
-    
-    
-    CCChapel.test = function() {
-        alert("hi");
     }
 }( window.CCChapel = window.CCChapel || {}, jQuery ));
 
