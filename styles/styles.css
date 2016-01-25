@@ -2127,18 +2127,20 @@ body {
   color: #FFF;
   text-align: center; }
   .footer__logo {
-    margin-bottom: .5rem; }
+    margin-bottom: 12px; }
   .footer .logo--footer {
     height: 85px;
     width: auto; }
   .footer__address {
-    margin-bottom: .5rem; }
+    margin-bottom: 12px; }
   .footer__campuses {
-    margin-bottom: 1rem; }
+    margin-bottom: 24px; }
   .footer__social {
-    margin-bottom: 2rem; }
+    margin-bottom: 48px; }
+    .footer__social .grid__item {
+      text-align: center; }
   .footer__cta {
-    margin-bottom: 2rem; }
+    margin-bottom: 48px; }
   .footer__buttons {
     display: inline-flex; }
     .footer__buttons .cta {
