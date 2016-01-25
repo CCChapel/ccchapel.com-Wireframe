@@ -297,7 +297,8 @@
             </div><!--
 
             #CAMPUS
-         --><div class="campus-info [ content-section light-blue no-bottom-margin ] [ grid__item one-whole ]">
+         --><div class="campus-info [ content-section light-blue no-bottom-margin ] [ grid__item one-whole ]"
+                style="display: none;">
                 <div class="content-wrapper">
                     <div class="grid">
                         <div class="campus-info__description [ grid__item one-third portable--one-whole ]">
@@ -385,8 +386,7 @@
                 </div> <!-- /content-wrapper -->
             </div><!-- /campus-info --><!--
 
-         --><div class="campus-info [ content-section light-blue no-bottom-margin ] [ grid__item one-whole ]"
-                 style="display: none;">
+         --><div class="campus-info [ content-section light-blue no-bottom-margin ] [ grid__item one-whole ]">
                 <div class="content-wrapper">
                     <!-- HUDSON -->
                     <div data-campus="hudson" class="campus-info__current">
@@ -759,13 +759,6 @@
         
         <script src="./scripts/scripts.js"></script>
         <script>
-            $(document).ready(function() {
-                var pos = {
-                    lat: 0,
-                    lng: 0
-                }
-                console.log(CCChapel.getUserLocation(pos).lat);
-            });
         </script>
     </body>
 </html> 
