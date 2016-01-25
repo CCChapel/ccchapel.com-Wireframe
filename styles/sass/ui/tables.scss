@@ -1,0 +1,21 @@
+table {
+    
+}
+
+thead {
+    //border-bottom: 2px solid $black;
+}
+
+th {
+    @extend .accent;
+    
+    text-align: left;
+}
+
+tr {
+    border-bottom: 1px solid $light-gray;
+    
+    &:last-child {
+        border-bottom: 2px solid $black;
+    }
+}

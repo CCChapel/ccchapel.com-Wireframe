@@ -2247,7 +2247,15 @@ body {
   height: 75px;
   max-width: 25%; }
 
-.accent {
+th {
+  text-align: left; }
+
+tr {
+  border-bottom: 1px solid #EEE; }
+  tr:last-child {
+    border-bottom: 2px solid #333; }
+
+.accent, th {
   text-transform: uppercase;
   font-weight: 200; }
 
