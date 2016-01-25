@@ -757,7 +757,12 @@
         
         <script src="./scripts/scripts.js"></script>
         <script>
-            $(document).ready( function() {
+            $(document).ready(function() {
+                var pos = {
+                    lat: 0,
+                    lng: 0
+                }
+                console.log(CCChapel.getUserLocation(pos).lat);
             });
         </script>
     </body>

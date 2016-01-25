@@ -546,7 +546,6 @@
     /************************************************
     // Public Methods
     //***********************************************/
-    //Initialize Map
     CCChapel.createMap = function(elementID, markers = CCChapel.CampusLocations, center = CCChapel.CampusLocations[0].location, zoom = 11) {
         //Create Map
         map = new google.maps.Map(document.getElementById(elementID), {
@@ -596,9 +595,35 @@
 
         //Fit bounds to map
         map.fitBounds(bounds);
-
     }
     
+//    CCChapel.getUserLocation = function(pos) {
+////        var pos = {
+////            lat: 0,
+////            lng: 0
+////        };
+//        
+//        if (navigator.geolocation) {
+//            navigator.geolocation.getCurrentPosition(function(position) {
+//                pos.lat = position.coords.latitude;
+//                pos.lng = position.coords.longitude;
+////                pos = {
+////                    lat: position.coords.latitude,
+////                    lng: position.coords.longitude
+////                };
+//                
+//                console.log(pos.lat);
+//                console.log(pos.lng);
+//                //map.setCenter(pos);
+//                
+//            });
+//        } 
+//        else {
+//            // Browser doesn't support Geolocation
+//            //handleLocationError(false, infoWindow, map.getCenter());
+//        }
+//    }
+//    
     //************************************************
     // Private Methods
     //***********************************************/
@@ -606,7 +631,7 @@
         return '<div class="google-map__info-window">' +
                     '<div class="google-map__location-name">' + name + '</div>' +
                     '<div class="google-map__location-address">' + address + '</div>' +
-                    '<div><a class="cta" href="' + link + '">Get Directions</a></div>' +
+                    '<div><a class="cta" href="' + link + '" target="_blank">Get Directions</a></div>' +
                '</div>';
     }
 }( window.CCChapel = window.CCChapel || {}, jQuery ));
