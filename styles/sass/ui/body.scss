@@ -89,6 +89,10 @@
     
     min-height: 66vh;
     
+    &.dark {
+        color: $black;
+    }
+    
     &__title {
         @include typecsset-font-size($primary-headline-size);
         font-weight: bold;
@@ -99,18 +103,16 @@
     }
     
     &__video-controls {
-        $color: #FFF;
-        
         cursor: pointer;
         
         font-size: 6rem;
         text-align: center;
-        color: transparentize($color, .6);
+        opacity: .4;
         
-        transition: color 250ms linear;
+        transition: opacity 250ms linear;
         
         &:hover {
-            color: $color;
+            opacity: 1;
         }
         
         .fa-stack-1x {

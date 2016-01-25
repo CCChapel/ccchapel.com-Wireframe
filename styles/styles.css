@@ -1881,6 +1881,8 @@ body {
   background: currentColor none center center/cover no-repeat padding-box border-box scroll;
   color: #FFF;
   min-height: 66vh; }
+  .header-image.dark {
+    color: #333; }
   .header-image__title {
     font-size: 64px;
     font-size: 4rem;
@@ -1893,10 +1895,10 @@ body {
     cursor: pointer;
     font-size: 6rem;
     text-align: center;
-    color: rgba(255, 255, 255, 0.4);
-    transition: color 250ms linear; }
+    opacity: .4;
+    transition: opacity 250ms linear; }
     .header-image__video-controls:hover {
-      color: #FFF; }
+      opacity: 1; }
     .header-image__video-controls .fa-stack-1x {
       margin-left: .1em; }
   .header-image__copy {
