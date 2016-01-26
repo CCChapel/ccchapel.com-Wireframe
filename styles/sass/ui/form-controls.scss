@@ -80,6 +80,10 @@
 
         width: auto !important;
     }
+    
+    &.full {
+        width: 100% !important;
+    }
 
     & + & {
         margin-left: $magic-number;
