@@ -548,11 +548,20 @@
     /************************************************
     // Public Methods
     //***********************************************/
-    CCChapel.createMap = function(elementID, markers = CCChapel.CampusLocations, center = CCChapel.CampusLocations[0].location, zoom = 11) {
+    CCChapel.createMap = function(elementID, options) { //markers = CCChapel.CampusLocations, center = CCChapel.CampusLocations[0].location, zoom = 11) {
+        //Setup Defaults
+        var defaults = {
+            markers: CCChapel.CampusLocations,
+            center: CCChapel.CampusLocations[0].location,
+            zoom: 11
+        };
+        
+        options = $.extend({}, defaults, options);
+        
         //Create Map
         map = new google.maps.Map(document.getElementById(elementID), {
-            center: center,
-            zoom: 11
+            center: options.center,
+            zoom: options.zoom
         });
         
         //Create Info Window
@@ -564,13 +573,13 @@
         var bounds = new google.maps.LatLngBounds();
         
         //Create Markers and Click Event
-        for (i = 0; i < markers.length; i++) {
+        for (i = 0; i < options.markers.length; i++) {
             marker = new MarkerWithLabel({
-                position: markers[i].location,
+                position: options.markers[i].location,
                 draggable: false,
                 map: map,
                 icon: markerIcon,
-                labelContent: markers[i].name,
+                labelContent: options.markers[i].name,
                 labelAnchor: new google.maps.Point(-40, 75),
                 labelClass: "google-map__label",
                 animation: google.maps.Animation.DROP
@@ -590,8 +599,8 @@
             //Extend bounds
             bounds.extend(
                 new google.maps.LatLng(
-                    markers[i].location.lat, 
-                    markers[i].location.lng)
+                    options.markers[i].location.lat, 
+                    options.markers[i].location.lng)
             );
         }
 
