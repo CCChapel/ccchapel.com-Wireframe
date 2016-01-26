@@ -2,6 +2,12 @@ table {
     
 }
 
+.palm--hide-col {
+    @include grid-media-query("palm") {
+        visibility: collapse;
+    }
+}
+
 thead {
     //border-bottom: 2px solid $black;
 }
