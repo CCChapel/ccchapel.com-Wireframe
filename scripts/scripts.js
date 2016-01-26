@@ -1,3 +1,5 @@
+"use strict";
+
 (function( CCChapel, $, undefined ) {
 //    //Private Property
 //    var isHot = true;
