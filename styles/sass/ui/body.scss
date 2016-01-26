@@ -225,7 +225,7 @@
     }
     
     &__cta {
-        display: inline-flex;
+        @include inline-flex;
         
         @include grid-media-query("portable") {
             margin-bottom: $bottom-margin;

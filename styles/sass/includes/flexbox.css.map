@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "flexbox.css",
+  "sources": [
+    "flexbox.scss"
+  ],
+  "sourcesContent": [],
+  "mappings": "",
+  "names": []
+}

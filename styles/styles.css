@@ -1959,6 +1959,10 @@ body {
   .campus-info__instructions {
     margin-bottom: 72px; }
   .campus-info__cta {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -moz-inline-flex;
+    display: -ms-inline-flexbox;
     display: inline-flex; }
     @media only screen and (max-width: 1023px) {
       .campus-info__cta {
@@ -2196,30 +2200,67 @@ body {
   border-radius: 50%; }
 
 .center-vertically, .cta, .cta.translucent, .cta.transparent {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
   justify-content: center;
-  /* align horizontal */
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
   align-items: center;
-  /* align vertical */
   height: 100%;
   width: 100%; }
   .center-vertically.alt, .alt.cta {
+    -webkit-flex-flow: column wrap;
+    -moz-flex-flow: column wrap;
+    -ms-flex-flow: column wrap;
     flex-flow: column wrap;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
     align-items: flex-start; }
   .center-vertically.left-justify, .left-justify.cta {
     justify-content: flex-start; }
     @media only screen and (max-width: 1023px) {
       .center-vertically.left-justify--mobile, .left-justify--mobile.cta {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        -webkit-justify-content: flex-start;
+        -moz-justify-content: flex-start;
         justify-content: flex-start; } }
   .center-vertically.center, .center.cta {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
     justify-content: center; }
     @media only screen and (max-width: 1023px) {
       .center-vertically.center--mobile, .center--mobile.cta {
+        -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+        -webkit-justify-content: center !important;
+        -moz-justify-content: center !important;
         justify-content: center !important; } }
   .center-vertically.right-justify, .right-justify.cta {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    -webkit-justify-content: flex-end;
+    -moz-justify-content: flex-end;
     justify-content: flex-end; }
     @media only screen and (max-width: 1023px) {
       .center-vertically.right-justify--mobile, .right-justify--mobile.cta {
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        -webkit-justify-content: flex-end;
+        -moz-justify-content: flex-end;
         justify-content: flex-end; } }
 
 .bg--center-center {

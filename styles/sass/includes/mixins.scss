@@ -17,4 +17,27 @@ $MIXINS
 //        font-size: ($font-size / $base-font-size)*1rem;
 //        line-height: min( (($base-line-height / $font-size)*1rem), 1.5rem);
 //    }
-//} 
+////} 
+//
+//@mixin display-flex {
+//    display: -webkit-box;      // OLD - iOS 6-, Safari 3.1-6
+//    display: -moz-box;         // OLD - Firefox 19- (buggy but mostly works)
+//    display: -ms-flexbox;      // TWEENER - IE 10
+//    display: -webkit-flex;     // NEW - Chrome
+//    display: flex;             // NEW, Spec - Opera 12.1, Firefox 20+
+//}
+//
+//@mixin display-inline-flex {
+//    display: -webkit-inline-flex;
+//    display: -ms-inline-flexbox;
+//    display: inline-flex;
+//}
+//
+//@mixin backwards-flex($property, $value) {
+//    -webkit-#{$property}: $value;      // OLD - iOS 6-, Safari 3.1-6
+//    -moz-#{$property}: $value;         // OLD - Firefox 19-
+//    //width: 20%;                         /* For old syntax, otherwise collapses. */
+//    -webkit-#{$property}: $value;      // Chrome
+//    -ms-#{$property}: $value;          // IE 10 
+//    #{$property}: $value;              // NEW, Spec - Opera 12.1, Firefox 20+ 
+//}
