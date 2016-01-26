@@ -1531,6 +1531,8 @@ td {
     margin-left: 0;
     padding: 0 24px;
     width: auto !important; }
+  .cta.full {
+    width: 100% !important; }
   .cta + .cta {
     margin-left: 24px; }
 
@@ -2136,6 +2138,32 @@ body {
         .event:last-child .event__details {
           border-bottom: none;
           padding-bottom: 0; } }
+
+.event-details__image {
+  background: #CCC center bottom/cover no-repeat scroll;
+  margin-bottom: 24px;
+  height: 10em; }
+  @media only screen and (min-width: 481px) and (max-width: 1023px) {
+    .event-details__image {
+      height: 20em; } }
+.event-details__cta {
+  margin-bottom: 24px; }
+.event-details__social {
+  margin-bottom: 24px;
+  text-align: center; }
+.event-details__name {
+  font-size: 64px;
+  font-size: 4rem;
+  line-height: 1.125;
+  font-weight: bold;
+  text-transform: uppercase; }
+.event-details__date, .event-details__time {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: bold; }
+.event-details__map {
+  margin-bottom: 24px; }
 
 .footer {
   background-color: #333333;
