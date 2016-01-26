@@ -67,6 +67,16 @@
 }
 
 //**************************************************
+// COMMON STYLES
+//**************************************************/
+.section-title {
+    @include typecsset-font-size($secondary-headline-size);
+    font-weight: bold;
+
+    text-align: center;
+}
+
+//**************************************************
 // NOTIFICATIONS
 //**************************************************/
 .notifications {
@@ -132,31 +142,6 @@
         }
     }
     
-    &__controls {
-        position: relative;
-        margin-top: $magic-number;
-        
-        width: 100vw;
-    }
-    
-    &__social-controls {
-        position: absolute;
-        left: 0;
-
-        width: 50%;
-
-        text-align: left;   
-    }
-    
-    &__button-controls {
-        position: absolute;
-        right: 0;
-        
-        width: 50%;
-        
-        text-align: right;
-    }
-    
     &__cta {
         @include grid-media-query("portable") {
             & > * {
@@ -174,6 +159,27 @@
     }
 }
 
+.header-controls {
+    position: relative;
+    margin-top: $magic-number;
+
+    &__social {
+        text-align: left;
+        
+        @include grid-media-query("palm") {
+            text-align: center;
+        }
+        
+        & > a:not(:last-child) {
+            margin-right: $magic-number;
+        }
+    }
+
+    &__buttons {
+        text-align: right;
+    }
+}
+
 //**************************************************
 // SEARCH
 //**************************************************/
@@ -182,8 +188,8 @@
     text-align: center;
     
     &__title {
-        @include typecsset-font-size($secondary-headline-size);
-        font-weight: bold;
+//        @include typecsset-font-size($secondary-headline-size);
+//        font-weight: bold;
     }
     
     &__keywords {
@@ -480,10 +486,10 @@
 //**************************************************/
 .events {
     &__title {
-        @include typecsset-font-size($secondary-headline-size);
-        font-weight: bold;
-        
-        text-align: center;
+//        @include typecsset-font-size($secondary-headline-size);
+//        font-weight: bold;
+//        
+//        text-align: center;
     }
 
     &__keywords {
