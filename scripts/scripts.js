@@ -119,7 +119,11 @@
             $(this.ListClass).fadeToggle();
             $(this.MapClass).fadeToggle();
             
-            CCChapel.createMap("campus-info__map", CCChapel.CampusLocations);
+            CCChapel.createMap("campus-info__map", {
+                markers: CCChapel.CampusLocations,
+                center: CCChapel.CampusLocations[0].location,
+                zoom: 11
+            });
         },
         setSize: function() {
             //Get Current List Size
@@ -548,7 +552,7 @@
     /************************************************
     // Public Methods
     //***********************************************/
-    CCChapel.createMap = function(elementID, options) { //markers = CCChapel.CampusLocations, center = CCChapel.CampusLocations[0].location, zoom = 11) {
+    CCChapel.createMap = function(elementID, options) {
         //Setup Defaults
         var defaults = {
             markers: CCChapel.CampusLocations,
@@ -573,8 +577,8 @@
         var bounds = new google.maps.LatLngBounds();
         
         //Create Markers and Click Event
-        for (i = 0; i < options.markers.length; i++) {
-            marker = new MarkerWithLabel({
+        for (var i = 0; i < options.markers.length; i++) {
+            var marker = new MarkerWithLabel({
                 position: options.markers[i].location,
                 draggable: false,
                 map: map,
@@ -589,7 +593,7 @@
             google.maps.event.addListener(marker, 'click', (function (marker, i) {
                 return function () {
                     //Load proper information for clicked campus
-                    infoWindow.setContent(markers[i].info);
+                    infoWindow.setContent(options.markers[i].info);
 
                     //Open Info Window
                     infoWindow.open(map, marker);
