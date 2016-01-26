@@ -2421,6 +2421,24 @@ blockquote, p, ul, ol,
   .vimeo-icon:hover {
     color: #1ab7ea; }
 
+.instagram-icon {
+  color: currentColor;
+  transition: color 250ms linear; }
+  .instagram-icon:hover {
+    color: #517fa4; }
+
+.google-plus-icon {
+  color: currentColor;
+  transition: color 250ms linear; }
+  .google-plus-icon:hover {
+    color: #dd4b39; }
+
+.email-icon {
+  color: currentColor;
+  transition: color 250ms linear; }
+  .email-icon:hover {
+    color: #185e94; }
+
 @media only screen and (max-width: 480px) {
   .palm--hide {
     display: none; } }

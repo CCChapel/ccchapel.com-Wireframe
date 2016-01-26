@@ -36,3 +36,30 @@ $transitionFunction: linear;
         color: $vimeo;
     }
 }
+
+.instagram-icon {
+    color: currentColor;
+    transition: color $transitionTime $transitionFunction;
+
+    &:hover {
+        color: $instagram;
+    }
+}
+
+.google-plus-icon {
+    color: currentColor;
+    transition: color $transitionTime $transitionFunction;
+
+    &:hover {
+        color: $google-plus;
+    }
+}
+
+.email-icon {
+    color: currentColor;
+    transition: color $transitionTime $transitionFunction;
+
+    &:hover {
+        color: $email;
+    }
+}
