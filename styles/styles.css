@@ -2121,6 +2121,8 @@ body {
         height: auto; }
         .message__info > div {
           align-items: center !important; } }
+    .message__info a {
+      color: currentColor !important; }
   .message__title {
     font-size: 32px;
     font-size: 2rem;
@@ -2138,6 +2140,8 @@ body {
 
 .event {
   margin-bottom: 24px; }
+  .event a {
+    color: currentColor !important; }
   .event__image {
     background: #CCC center bottom/cover no-repeat scroll;
     margin-bottom: 1em;
@@ -2151,7 +2155,8 @@ body {
     line-height: 1;
     font-weight: bold; }
   .event__details {
-    color: #333; }
+    color: #333;
+    font-weight: normal !important; }
     @media only screen and (max-width: 1023px) {
       .event__details {
         border-bottom: #0b4673 1pt solid;

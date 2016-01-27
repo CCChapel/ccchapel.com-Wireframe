@@ -492,6 +492,10 @@
                 align-items: center !important;
             }
         }
+
+        a {
+            color: currentColor !important;
+        }
     }
     
     &__title {
@@ -535,6 +539,10 @@
 
 .event {
     margin-bottom: $magic-number;
+    
+    a {
+        color: currentColor !important;
+    }
 
     &__image {
         background: $medium-gray center bottom/cover no-repeat scroll;
@@ -555,6 +563,7 @@
 
     &__details {
         color: $black;
+        font-weight: normal !important;
 
         @include grid-media-query("portable") {
             border-bottom: $dark-blue 1pt solid;
