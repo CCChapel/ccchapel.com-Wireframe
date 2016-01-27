@@ -584,6 +584,9 @@
     }
     
     &__map {
-        margin-bottom: $magic-number;
+        display: none;
+        
+        height: (15 * $magic-number);
+        width: 100%;
     }
 }

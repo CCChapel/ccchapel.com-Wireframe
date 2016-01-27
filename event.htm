@@ -235,7 +235,7 @@
 <!------------------------------------------------------------------------------------------------
 CHANGES
 ------------------------------------------------------------------------------------------------->
-            <div class="event-details [ grid__item one-whole ]">
+            <div class="event-details [ content-section no-bottom-margin ] [ grid__item one-whole ]">
                 <div class="content-wrapper">
                     <div class="grid">
                         <div class="left-column [ grid__item one-third palm--one-whole ]">
@@ -284,24 +284,26 @@ CHANGES
                         </div><!--
 
                      --><div class="right-column [ grid__item two-thirds palm--one-whole ]">
-                            <div class="event-details__name">
-                                Edge Games
+                            <div class="add-bottom-margin">
+                                <div class="event-details__name">
+                                    Edge Games
+                                </div>
+
+                                <div class="event-details__date">
+                                    Friday, Feburary 5 &ndash; Friday, February 19
+                                </div>
+
+                                <div class="event-details__time">
+                                    7 &ndash; 9:30 p.m.
+                                </div>
+
+                                <div class="event-details__location">
+                                    <a href="#">Hudson Campus | 750 W Streetsboro Street | Hudson, Ohio <i class="fa fa-map"></i></a>
+                                </div>
+
+                                <div id="event-details__map" class="event-details__map"></div>
                             </div>
-
-                            <div class="event-details__date">
-                                Friday, Feburary 5 &ndash; Friday, February 19
-                            </div>
-
-                            <div class="event-details__time">
-                                7 &ndash; 9:30 p.m.
-                            </div>
-
-                            <div class="event-details__location">
-                                <a href="#">Hudson Campus | 750 W Streetsboro Street | Hudson, Ohio <i class="fa fa-map"></i></a>
-                            </div>
-
-                            <div class="event-details__map"></div>
-
+                        
                             <div class="event-details__details">
                                 <p>
                                     Parents, get your middle schoolers pumped up for Edge Games XII Friday, 
@@ -329,6 +331,65 @@ CHANGES
                 </div> <!-- /content-wrapper -->
             </div> <!-- /event-details -->
 
+            <div class="related-items [ content-section light-gray no-bottom-margin ] [ grid__item one-whole ]">
+                <div class="content-wrapper">
+                    <div class="grid">
+                        <div class="grid__item one-whole">
+                            <div class="content-wrapper no-vertical">
+                                <div class="events__title section-title">
+                                    Did You Know?
+                                </div> <!-- /events__title -->
+
+                                <div class="events__keywords">
+                                    We thought you might want to check these out.
+                                </div> <!-- /events__keywords -->
+                            </div> <!-- /content-wrapper -->
+                        </div><!--
+
+                     --><div class="event [ grid__item one-third portable--one-whole ]">
+                            <div class="[ event__image bg--center-center ] [ one-whole ]"
+                                 style="background-image: url(./images/events/Wednesdays.jpg)">
+                            </div>
+
+                            <div class="event__name [ one-whole ]">
+                                Wednesday Nights at CCC
+                            </div>
+
+                            <div class="event__details [ one-whole ]">
+                                Starting Wedneday, January 13
+                            </div>
+                        </div><!--
+
+                     --><div class="event [ grid__item one-third portable--one-whole ]">
+                            <div class="event__image [ one-whole ]"
+                                 style="background-image: url(./images/events/WomensRetreat.jpg)">
+                            </div>
+
+                            <div class="event__name [ one-whole ]">
+                                Girls' Weekend Retreat
+                            </div>
+
+                            <div class="event__details [ one-whole ]">
+                                Friday, February 19 &amp; Saturday, February 20
+                            </div>
+                        </div><!--
+
+                     --><div class="event [ grid__item one-third portable--one-whole ]">
+                            <div class="event__image [ one-whole ]"
+                                 style="background-image: url(./images/events/MensFrat.jpg)">
+                            </div>
+
+                            <div class="event__name [ one-whole ]">
+                                Men's Frat
+                            </div>
+
+                            <div class="event__details [ one-whole ]">
+                                Resumes Friday, January 15
+                            </div>
+                        </div>
+                    </div> <!-- /grid -->
+                </div> <!-- /content-wrapper -->
+            </div>
 <!------------------------------------------------------------------------------------------------
 /END CHANGES
 ------------------------------------------------------------------------------------------------->
@@ -443,5 +504,27 @@ CHANGES
         <script src="./scripts/scripts.js"></script>
         <script>
         </script>
+        
+<!------------------------------------------------------------------------------------------------
+CHANGES
+------------------------------------------------------------------------------------------------->
+        <script>
+            $(".event-details__location a").click(function(e) {
+                e.preventDefault();
+                
+                //Show Map Section
+                $(".event-details__map").slideToggle();
+
+                //Load Map
+                CCChapel.createMap("event-details__map", {
+                    markers: [ CCChapel.CampusLocations[0] ],
+                    center: CCChapel.CampusLocations[0].location,
+                    zoom: 11
+                });
+            });
+        </script>
+<!------------------------------------------------------------------------------------------------
+/END CHANGES
+------------------------------------------------------------------------------------------------->
     </body>
 </html> 

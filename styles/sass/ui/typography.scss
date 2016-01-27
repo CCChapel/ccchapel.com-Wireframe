@@ -75,6 +75,14 @@ h1 > a
     }
 }
 
+p {
+    max-width: 32rem;
+    
+    &.full-width {
+        max-width: none;
+    }
+}
+
 //LINKS
 a {
     color: $color-root;
@@ -88,7 +96,8 @@ a {
 }
 
 //BLOCK ELEMENTS
-blockquote, p, ul, ol,
-.addBottomMargin {
+//blockquote, p, ul, ol,  //Included in TypeCsset
+.addBottomMargin,
+.add-bottom-margin {
     margin-bottom: $magic-number;
 }
