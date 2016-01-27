@@ -1631,14 +1631,14 @@ td {
   .cta.transparent, .transparent.cta {
     background-color: transparent;
     border: 2px solid currentColor;
-    color: #0b4673; }
+    color: #0b4673 !important; }
     /* line 64, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/form-controls.scss */
     .cta.transparent:hover,
     .transparent.cta:hover,
     .cta.transparent.active, .transparent.active.cta {
       background-color: #0b4673;
       border-color: #0b4673;
-      color: #FFF; }
+      color: #FFF !important; }
   /* line 72, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/form-controls.scss */
   .cta.auto {
     display: inline-flex !important;

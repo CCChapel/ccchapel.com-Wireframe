@@ -1521,11 +1521,11 @@ td {
   .cta.transparent {
     background-color: transparent;
     border: 2px solid currentColor;
-    color: #0b4673; }
+    color: #0b4673 !important; }
     .cta.transparent:hover, .cta.transparent.active {
       background-color: #0b4673;
       border-color: #0b4673;
-      color: #FFF; }
+      color: #FFF !important; }
   .cta.auto {
     display: inline-flex !important;
     margin-left: 0;

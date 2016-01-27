@@ -58,13 +58,13 @@
 
         background-color: transparent;
         border: 2px solid currentColor;
-        color: $color-root;
+        color: $color-root !important;
 
         &:hover,
         &.active {
             background-color: $color-root;
             border-color: $color-root;
-            color: #FFF;
+            color: #FFF !important;
         }
     }
 
