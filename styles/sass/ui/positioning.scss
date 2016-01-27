@@ -26,6 +26,7 @@
 
     &.center {
         @include justify-content(center);
+        @include align-items(center);
 
         &--mobile {
             @include grid-media-query("portable") {

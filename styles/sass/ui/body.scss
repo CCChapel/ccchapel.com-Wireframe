@@ -614,30 +614,25 @@
 
 .calendar-marker {
     float: left;
-    margin: 0 $magic-number $magic-number 0;
-    padding: 1rem 2rem;
+    margin: .25em 1rem 0 0;
     
     border: 2px solid currentColor;
     border-radius: $border-radius;
 
-    height: 6rem;
+    height: 5rem;
+    width: 6rem;
     
     @include typecsset-font-size($quaternary-headline-size, false);
+    line-height: 100%;
     font-weight: bold;
-    
-    //.center-vertically
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    //.alt
-    flex-flow: column wrap;
+    text-align: center;
     
     &__month {
         
     }
     
     &__day {
-        @include typecsset-font-size($secondary-headline-size, false);
+        @include typecsset-font-size($secondary-headline-size, false); 
+        line-height: 100%;
     }
 }
