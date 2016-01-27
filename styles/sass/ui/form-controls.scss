@@ -24,7 +24,8 @@
     width: 75% !important;
 
     transition: background-color $transition-length $transition-function,
-                color $transition-length $transition-function;
+                color $transition-length $transition-function,
+                border-color $transition-length $transition-function;
 
     @include grid-media-query("portable") {
         width: 100%;
