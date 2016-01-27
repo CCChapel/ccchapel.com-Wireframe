@@ -1607,7 +1607,7 @@ td {
   overflow: hidden;
   height: 3em !important;
   width: 75% !important;
-  transition: background-color 250ms linear color 250ms linear; }
+  transition: background-color 250ms linear, color 250ms linear; }
   @media only screen and (max-width: 1023px) {
     /* line 4, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/form-controls.scss */
     .cta, .cta.translucent, .cta.transparent {

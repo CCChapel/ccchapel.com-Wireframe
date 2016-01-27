@@ -23,7 +23,7 @@
     height: 3em !important;
     width: 75% !important;
 
-    transition: background-color $transition-length $transition-function
+    transition: background-color $transition-length $transition-function,
                 color $transition-length $transition-function;
 
     @include grid-media-query("portable") {
