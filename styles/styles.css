@@ -2167,6 +2167,24 @@ body {
   height: 360px;
   width: 100%; }
 
+.calendar-marker {
+  float: left;
+  margin: 0 24px 24px 0;
+  padding: 1rem 2rem;
+  border: 2px solid currentColor;
+  border-radius: 6px;
+  height: 6rem;
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap; }
+  .calendar-marker__day {
+    font-size: 32px;
+    font-size: 2rem; }
+
 .footer {
   background-color: #333333;
   color: #FFF;

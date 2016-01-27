@@ -2460,6 +2460,26 @@ body {
   height: 360px;
   width: 100%; }
 
+/* line 594, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/body.scss */
+.calendar-marker {
+  float: left;
+  margin: 0 24px 24px 0;
+  padding: 1rem 2rem;
+  border: 2px solid currentColor;
+  border-radius: 6px;
+  height: 6rem;
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap; }
+  /* line 619, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/body.scss */
+  .calendar-marker__day {
+    font-size: 32px;
+    font-size: 2rem; }
+
 /* line 1, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/footer.scss */
 .footer {
   background-color: #333333;

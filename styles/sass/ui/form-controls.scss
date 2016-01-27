@@ -27,8 +27,8 @@
     width: 75% !important;
 
     transition: background-color $transitionDuration $transitionTimingFunction, 
-        border-color $transitionDuration $transitionTimingFunction, 
-        color $transitionDuration $transitionTimingFunction;
+                border-color $transitionDuration $transitionTimingFunction, 
+                color $transitionDuration $transitionTimingFunction;
 
     @include grid-media-query("portable") {
         width: 100%;
