@@ -1,5 +1,15 @@
 "use strict";
 
+//************************************************
+// SETUP
+//***********************************************/
+(function( CCChapel, $, undefined ) {
+    //************************************************
+    // Public Methods
+    //***********************************************/
+    
+}( window.CCChapel = window.CCChapel || {}, jQuery ));
+
 (function( CCChapel, $, undefined ) {
 //    //Private Property
 //    var isHot = true;
@@ -463,9 +473,10 @@
     // Public Methods
     //***********************************************/
     CCChapel.initialize = function() {
+        CCChapel.setupCampusLinks();
         CampusLocationMap.setup();
         SearchFields.setup();
-        
+
         //DESKTOP FUNCTIONS
         if ($(window).width() >= desktopBreakpoint) {
             //Desktop Search
@@ -480,7 +491,7 @@
             //Content Search Setup
             ContentSearch.desktopSetup();
         }
-        
+
         //PORTABLE FUNCTIONS
         if ($(window).width() < desktopBreakpoint) {
             //Mobile Campus List
@@ -498,7 +509,9 @@
     };
 }( window.CCChapel = window.CCChapel || {}, jQuery ));
 
-//MAPS
+//************************************************
+// MAPS
+//***********************************************/
 (function( CCChapel, $, undefined ) {
     //************************************************
     // Public Properties
@@ -667,11 +680,52 @@
     }
 }( window.CCChapel = window.CCChapel || {}, jQuery ));
 
-//(function( CCChapel, $, undefined ) {
-//    CCChapel.test = function() {
-//        alert("hi");
-//    }
-//}( window.CCChapel = window.CCChapel || {}, jQuery ));
+//************************************************
+// CHANGE CAMPUS
+//***********************************************/
+(function( CCChapel, $, undefined ) {
+    /************************************************
+    // Private Properties
+    //***********************************************/
+    var linkClass = ".change-campus";
+    var dataAttr = "data-campus";
+    
+    //************************************************
+    // Public Methods
+    //***********************************************/
+    CCChapel.setupCampusLinks = function() {
+        $("a.change-campus").each(function() {
+            var newDomain = "";
+            
+            //Get Current Domain
+            var currentDomain = window.location.hostname;
+            
+            //Get Campus to Change To
+            var newCampus = $(this).attr(dataAttr);
+            
+            //Break Into Pieces
+            var pieces = currentDomain.split(".");
+            
+            //Check for subdomain
+            if (pieces.length == 2) {
+                //No subdomain
+                newDomain = newCampus + "." + currentDomain;
+            }
+            else if (pieces.length == 3) {
+                //Existing subdomain
+                newDomain = newCampus + "." + pieces[1] + "." + pieces[2];
+            }
+            
+            //Create full URL
+            var newUrl = location.protocol + "//" + newDomain + window.location.pathname;
+
+            //Set Href
+            $(this).attr("href", newUrl);
+            
+            console.log(newUrl);
+        })
+    }
+}( window.CCChapel = window.CCChapel || {}, jQuery ));
 
 $(document).ready( function() {
     CCChapel.initialize();
