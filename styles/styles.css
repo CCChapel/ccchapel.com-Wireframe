@@ -1496,7 +1496,7 @@ td {
   box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
-  color: #FFF;
+  color: #FFF !important;
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
@@ -2122,7 +2122,7 @@ body {
         .message__info > div {
           align-items: center !important; } }
     .message__info a {
-      color: currentColor !important; }
+      color: currentColor; }
   .message__title {
     font-size: 32px;
     font-size: 2rem;
@@ -2434,7 +2434,8 @@ p {
 a {
   color: #0b4673;
   font-weight: bold;
-  text-decoration: none; }
+  text-decoration: none;
+  transition: color 250ms linear; }
   a:hover, a:active {
     text-decoration: underline; }
 
