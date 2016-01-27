@@ -159,23 +159,44 @@
     }
 }
 
-.header-controls {
+.header-details {
     position: relative;
     margin-top: $magic-number;
-
-    &__social {
+    
+    height: 3rem;
+    
+    &__left {
+        @include typecsset-font-size($tertiary-headline-size, false);
         text-align: left;
+        
+        height: 100%;
+        
+        @include grid-media-query("palm") {
+            text-align: center;
+        }
+    }
+
+    &__right {
+        text-align: right;
+        
+        height: 100%;
         
         @include grid-media-query("palm") {
             text-align: center;
         }
         
-        & > a:not(:last-child) {
-            margin-right: $magic-number;
-        }
+//        & > a:not(:last-child) {
+//            margin-right: $magic-number;
+//        }
+    }
+    
+    &__social {
+        display: inline-block;
+        height: 100%;
     }
 
     &__buttons {
+        display: inline-block;
         text-align: right;
     }
 }

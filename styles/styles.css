@@ -1922,17 +1922,29 @@ body {
     .header-image__cta div:last-child {
       margin-bottom: 0; } }
 
-.header-controls {
+.header-details {
   position: relative;
-  margin-top: 24px; }
-  .header-controls__social {
-    text-align: left; }
+  margin-top: 24px;
+  height: 3rem; }
+  .header-details__left {
+    font-size: 24px;
+    font-size: 1.5rem;
+    text-align: left;
+    height: 100%; }
     @media only screen and (max-width: 480px) {
-      .header-controls__social {
+      .header-details__left {
         text-align: center; } }
-    .header-controls__social > a:not(:last-child) {
-      margin-right: 24px; }
-  .header-controls__buttons {
+  .header-details__right {
+    text-align: right;
+    height: 100%; }
+    @media only screen and (max-width: 480px) {
+      .header-details__right {
+        text-align: center; } }
+  .header-details__social {
+    display: inline-block;
+    height: 100%; }
+  .header-details__buttons {
+    display: inline-block;
     text-align: right; }
 
 .search {
