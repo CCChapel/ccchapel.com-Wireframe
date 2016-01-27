@@ -83,6 +83,15 @@ p {
     }
 }
 
+.byline {
+    font-weight: bold;
+    
+    &:after{
+        content: "|";
+        margin: 0 10px;
+    }
+}
+
 //LINKS
 a {
     color: $color-root;
