@@ -1,9 +1,6 @@
-$transitionTime: 250ms;
-$transitionFunction: linear;
-
 .facebook-icon {
     color: currentColor;
-    transition: color $transitionTime $transitionFunction;
+    transition: color $transition-length $transition-function;
     
     &:hover {
         color: $facebook;
@@ -12,7 +9,7 @@ $transitionFunction: linear;
 
 .twitter-icon {
     color: currentColor;
-    transition: color $transitionTime $transitionFunction;
+    transition: color $transition-length $transition-function;
     
     &:hover {
         color: $twitter;
@@ -21,7 +18,7 @@ $transitionFunction: linear;
 
 .youtube-icon {
     color: currentColor;
-    transition: color $transitionTime $transitionFunction;
+    transition: color $transition-length $transition-function;
 
     &:hover {
         color: $youtube;
@@ -30,7 +27,7 @@ $transitionFunction: linear;
 
 .vimeo-icon {
     color: currentColor;
-    transition: color $transitionTime $transitionFunction;
+    transition: color $transition-length $transition-function;
 
     &:hover {
         color: $vimeo;
@@ -39,7 +36,7 @@ $transitionFunction: linear;
 
 .instagram-icon {
     color: currentColor;
-    transition: color $transitionTime $transitionFunction;
+    transition: color $transition-length $transition-function;
 
     &:hover {
         color: $instagram;
@@ -48,7 +45,7 @@ $transitionFunction: linear;
 
 .google-plus-icon {
     color: currentColor;
-    transition: color $transitionTime $transitionFunction;
+    transition: color $transition-length $transition-function;
 
     &:hover {
         color: $google-plus;
@@ -57,7 +54,7 @@ $transitionFunction: linear;
 
 .email-icon {
     color: currentColor;
-    transition: color $transitionTime $transitionFunction;
+    transition: color $transition-length $transition-function;
 
     &:hover {
         color: $email;

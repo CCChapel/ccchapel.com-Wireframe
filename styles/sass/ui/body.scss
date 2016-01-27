@@ -121,7 +121,7 @@
         text-align: center;
         opacity: .4;
         
-        transition: opacity 250ms linear;
+        transition: opacity $transition-length $transition-function;
         
         &:hover {
             opacity: 1;
@@ -430,7 +430,7 @@
         font-weight: bold;
         color: $black;
         
-        transition: color 250ms linear;
+        transition: color $transition-length $transition-function;
     }
     
 

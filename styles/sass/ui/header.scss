@@ -107,16 +107,13 @@ $header-z-index: 100;
 // BANNER
 //**************************************************/
 .banner {
-    $transitionTiming: 250ms;
-    $transitionTimingFunction: linear;
-    
     height: 4em;
     
     background-color: $dark-blue;
     
-    transition: background-color $transitionTiming $transitionTimingFunction,
-                height $transitionTiming $transitionTimingFunction,                
-                font-size $transitionTiming $transitionTimingFunction;
+    transition: background-color $transition-length $transition-function,
+                height $transition-length $transition-function,                
+                font-size $transition-length $transition-function;
     
     &__logo {
         height: 100%;

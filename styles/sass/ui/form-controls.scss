@@ -2,9 +2,6 @@
 // CALL TO ACTION BUTTONS
 //**************************************************/
 .cta {
-    $transitionDuration: 250ms;
-    $transitionTimingFunction: linear;
-
     @extend .center-vertically;
 
     background-color: transparentize($red, .2);
@@ -26,9 +23,8 @@
     height: 3em !important;
     width: 75% !important;
 
-    transition: background-color $transitionDuration $transitionTimingFunction, 
-                border-color $transitionDuration $transitionTimingFunction, 
-                color $transitionDuration $transitionTimingFunction;
+    transition: background-color $transition-length $transition-function
+                color $transition-length $transition-function;
 
     @include grid-media-query("portable") {
         width: 100%;
