@@ -122,7 +122,7 @@
             CCChapel.createMap("campus-info__map", {
                 markers: CCChapel.CampusLocations,
                 center: CCChapel.CampusLocations[0].location,
-                zoom: 11
+                fitAllMarkers: true
             });
         },
         setSize: function() {
@@ -556,8 +556,11 @@
         //Setup Defaults
         var defaults = {
             markers: CCChapel.CampusLocations,
+            fitAllMarkers: false,
             center: CCChapel.CampusLocations[0].location,
-            zoom: 11
+            zoom: 11,
+            minZoom: 11,
+            maxZoom: 11
         };
         
         options = $.extend({}, defaults, options);
@@ -608,8 +611,21 @@
             );
         }
 
-        //Fit bounds to map
-        map.fitBounds(bounds);
+        //Check to fit to bounds
+        if (options.fitAllMarkers === true) {
+            //Fit bounds to map
+            map.fitBounds(bounds);
+        }
+        
+        //Check Zoom
+        if (map.getZoom() > options.maxZoom) {
+            console.log("set zoom");
+            map.setZoom(options.maxZoom);
+        }
+        else if (map.getZoom() < options.minZoom) {
+            console.log("set zoom");
+            map.setZoom(options.minZoom);
+        }
     }
     
 //    CCChapel.getUserLocation = function(pos) {

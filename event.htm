@@ -311,7 +311,7 @@ CHANGES
                                 </div>
                                 
                                 <p>
-                                    <span class="byline">7 &ndash; 9:30 p.m.</span>Parents, get your middle schoolers pumped up for Edge Games XII Friday, 
+                                    <span class="byline">Fridays, 7 &ndash; 9:30 p.m.</span>Parents, get your middle schoolers pumped up for Edge Games XII Friday, 
                                     February 5, 12 and 19 from 7-9:30 p.m. No pre-registration or payment 
                                     is required.
                                 </p>
@@ -514,17 +514,22 @@ CHANGES
 CHANGES
 ------------------------------------------------------------------------------------------------->
         <script>
+            //$(".event-details__map").show();
+            
             $(".event-details__location a").click(function(e) {
                 e.preventDefault();
                 
                 //Show Map Section
-                $(".event-details__map").slideToggle();
-
-                //Load Map
-                CCChapel.createMap("event-details__map", {
-                    markers: [ CCChapel.CampusLocations[0] ],
-                    center: CCChapel.CampusLocations[0].location,
-                    zoom: 11
+                $(".event-details__map").slideToggle(250, function() {
+                    //
+                    if ($(this).height() > 0) {
+                        //Load Map
+                        CCChapel.createMap("event-details__map", {
+                            markers: [ CCChapel.CampusLocations[0] ],
+                            center: CCChapel.CampusLocations[0].location,
+                            zoom: 11
+                        });
+                    }
                 });
             });
         </script>
