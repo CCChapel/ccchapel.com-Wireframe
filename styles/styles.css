@@ -2085,7 +2085,8 @@ body {
     font-size: 1.5rem;
     line-height: 1;
     font-weight: bold;
-    color: #333; }
+    color: #333;
+    transition: color 250ms linear; }
   .campus-info__icon {
     height: 100%; }
     .campus-info__icon div {
