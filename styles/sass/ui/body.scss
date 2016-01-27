@@ -242,6 +242,10 @@
         text-align: center;
     }
     
+    a:hover {
+        text-decoration: none;
+    }
+    
     &__title {
         font-size: calc(3vw + 2vh + 1vmin);
         line-height: 1em;
@@ -432,7 +436,6 @@
         
         transition: color $transition-length $transition-function;
     }
-    
 
     &__icon {
         height: 100%;
