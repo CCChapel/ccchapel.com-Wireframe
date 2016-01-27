@@ -163,13 +163,27 @@
     position: relative;
     margin-top: $magic-number;
     
-    height: 3rem;
-    
     &__left {
         @include typecsset-font-size($tertiary-headline-size, false);
         text-align: left;
         
+        height: 3rem;
+
+        @include grid-media-query("palm") {
+            margin-bottom: $magic-number;
+
+            text-align: center;
+            
+            & > div {
+                @include justify-content(center !important);
+            }
+        }
+    }
+    
+    &__social {
         height: 100%;
+        
+        @include typecsset-font-size($base-font-size, false);
         
         @include grid-media-query("palm") {
             text-align: center;
@@ -189,17 +203,8 @@
 //            margin-right: $magic-number;
 //        }
     }
-    
-    &__social {
-        display: inline-block;
-        margin-right: $magic-number;
-        
-        height: 100%;
-    }
 
     &__buttons {
-        display: inline-block;
-        
         text-align: right;
     }
 }

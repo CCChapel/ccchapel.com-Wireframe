@@ -1924,15 +1924,28 @@ body {
 
 .header-details {
   position: relative;
-  margin-top: 24px;
-  height: 3rem; }
+  margin-top: 24px; }
   .header-details__left {
     font-size: 24px;
     font-size: 1.5rem;
     text-align: left;
-    height: 100%; }
+    height: 3rem; }
     @media only screen and (max-width: 480px) {
       .header-details__left {
+        margin-bottom: 24px;
+        text-align: center; }
+        .header-details__left > div {
+          -webkit-box-pack: center !important;
+          -ms-flex-pack: center !important;
+          -webkit-justify-content: center !important;
+          -moz-justify-content: center !important;
+          justify-content: center !important; } }
+  .header-details__social {
+    height: 100%;
+    font-size: 16px;
+    font-size: 1rem; }
+    @media only screen and (max-width: 480px) {
+      .header-details__social {
         text-align: center; } }
   .header-details__right {
     text-align: right;
@@ -1940,12 +1953,7 @@ body {
     @media only screen and (max-width: 480px) {
       .header-details__right {
         text-align: center; } }
-  .header-details__social {
-    display: inline-block;
-    margin-right: 24px;
-    height: 100%; }
   .header-details__buttons {
-    display: inline-block;
     text-align: right; }
 
 .search {
