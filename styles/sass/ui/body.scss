@@ -192,11 +192,14 @@
     
     &__social {
         display: inline-block;
+        margin-right: $magic-number;
+        
         height: 100%;
     }
 
     &__buttons {
         display: inline-block;
+        
         text-align: right;
     }
 }
@@ -592,6 +595,7 @@
         font-weight: bold;
         //text-align: center;
         text-transform: uppercase;
+        margin-left: -#{(1/16)}em;
     }
     
     &__date,
@@ -612,27 +616,34 @@
     }
 }
 
-.calendar-marker {
-    float: left;
-    margin: .25em 1rem 0 0;
-    
-    border: 2px solid currentColor;
-    border-radius: $border-radius;
-
-    height: 5rem;
-    width: 6rem;
-    
-    @include typecsset-font-size($quaternary-headline-size, false);
-    line-height: 100%;
-    font-weight: bold;
-    text-align: center;
-    
-    &__month {
-        
-    }
-    
-    &__day {
-        @include typecsset-font-size($secondary-headline-size, false); 
-        line-height: 100%;
-    }
-}
+//.calendar-marker {
+//    float: left;
+//    margin: .25em 1rem 0 0;
+//    
+//    border: 2px solid currentColor;
+//    border-radius: $border-radius;
+//
+//    height: 5rem;
+//    width: 6rem;
+//    
+//    @include typecsset-font-size($quaternary-headline-size, false);
+//    line-height: 100%;
+//    font-weight: bold;
+//    text-align: center;
+//    
+//    &__month {
+//        
+//    }
+//    
+//    &__day {
+//        @include typecsset-font-size($secondary-headline-size, false); 
+//        line-height: 100%;
+//    }
+//}
+//
+//<div class="calendar-marker">
+//  <div class="center-vertically alt center">
+//      <div class="calendar-marker__month">Feb</div>
+//      <div class="calendar-marker__day">5</div>
+//  </div>
+//</div>
