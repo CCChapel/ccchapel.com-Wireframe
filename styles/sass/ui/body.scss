@@ -320,16 +320,16 @@
                     text-decoration: none;
                 }
                 
-                &:after {
-                    content: '|';
-                    padding: 0 10px;
-                    color: #FFF;
-                }
-                
-                &:last-child:after {
-                    content: '';
-                    padding: 0;
-                }
+//                &:after {
+//                    content: '|';
+//                    padding: 0 10px;
+//                    color: #FFF;
+//                }
+//                
+//                &:last-child:after {
+//                    content: '';
+//                    padding: 0;
+//                }
                 
                 @include grid-media-query("palm") {
                     display: block;

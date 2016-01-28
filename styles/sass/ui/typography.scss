@@ -137,6 +137,30 @@ a {
     margin-bottom: $magic-number;
 }
 
+//Lists
+.pipe-list {
+    & > * {
+        &:after {
+            content: '|';
+            padding: 0 10px;
+            color: #FFF !important;
+        }
+
+        &:last-child:after {
+            content: '';
+            padding: 0;
+        }
+    }
+    
+    &.black > * {
+        color: $black !important;
+    }
+
+    &.white > * {
+        color: #FFF !important;
+    }
+}
+
 //Colors
 .font-black {
     color: $black;

@@ -67,15 +67,15 @@ $header-z-index: 100;
                 font-weight: normal;
             }
             
-            &:after {
-                content: '|';
-                padding: 0 10px;
-            }
-
-            &:last-child:after {
-                content: '';
-                padding: 0;
-            }
+//            &:after {
+//                content: '|';
+//                padding: 0 10px;
+//            }
+//
+//            &:last-child:after {
+//                content: '';
+//                padding: 0;
+//            }
         }
         
         @include grid-media-query("portable") {

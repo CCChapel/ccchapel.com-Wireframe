@@ -117,7 +117,7 @@
                 <div class="campus-select__options [ grid__item one-whole ]">
                     <i class="fa fa-map-marker"></i>&nbsp;&nbsp;
                     <span class="campus-select__campus-marker desk--hide" role="button">Campuses</span>
-                    <div class="campus-select__list portable--hide">
+                    <div class="campus-select__list [ pipe-list ] [ portable--hide ]">
                         <div class="campus-select__campus">
                             <a class="change-campus hvr-underline" href="#">Hudson</a>
                         </div><!--
@@ -550,7 +550,7 @@
                     
                     <div class="campus-info__other">
                         <div class="campus-info__other-title">Not Your Campus?</div>
-                        <div class="campus-info__other-list portable--hide">
+                        <div class="campus-info__other-list [ pipe-list ] [ portable--hide ]">
                             <a class="change-campus" data-campus="aurora" href="#">Aurora Campus</a><!--
                          --><a class="change-campus" data-campus="stow" href="#">Stow Campus</a><!--
                          --><a class="change-campus" data-campus="highland square" href="#">Highland Square</a>
@@ -676,8 +676,11 @@
                     Hudson Campus | 750 W Streetsboro Street, Hudson, Ohio 44236 | 330.650.9533
                 </div><!--
 
-             --><div class="footer__campuses [ grid__item one-whole ]">
-                    Hudson | Aurora | Stow | Highland Square
+             --><div class="footer__campuses [ pipe-list ] [ grid__item one-whole ]">
+                    <a class="change-campus" data-campus="hudson" href="#">Hudson</a>
+                    <a class="change-campus" data-campus="aurora" href="#">Aurora</a>
+                    <a class="change-campus" data-campus="stow" href="#">Stow</a>
+                    <a class="change-campus" data-campus="highland square" href="#">Highland Square</a>
                 </div><!--
 
              --><div class="footer__social [ grid__item one-whole ]">

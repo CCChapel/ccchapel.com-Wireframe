@@ -4,6 +4,14 @@
     
     text-align: center;
     
+    a {
+        color: #FFF;
+        
+        &:hover {
+            color: $blue;
+        }
+    }
+    
     &__logo {
         margin-bottom: (.5 * $magic-number);
     }

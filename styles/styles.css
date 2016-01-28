@@ -1613,13 +1613,7 @@ body {
     display: inline; }
     @media only screen and (min-width: 1024px) {
       .campus-select__campus a {
-        font-weight: normal; }
-      .campus-select__campus:after {
-        content: '|';
-        padding: 0 10px; }
-      .campus-select__campus:last-child:after {
-        content: '';
-        padding: 0; } }
+        font-weight: normal; } }
     @media only screen and (max-width: 1023px) {
       .campus-select__campus {
         display: block;
@@ -1943,13 +1937,6 @@ body {
       color: currentColor; }
       .campus-info__other-list a:hover {
         text-decoration: none; }
-      .campus-info__other-list a:after {
-        content: '|';
-        padding: 0 10px;
-        color: #FFF; }
-      .campus-info__other-list a:last-child:after {
-        content: '';
-        padding: 0; }
       @media only screen and (max-width: 480px) {
         .campus-info__other-list a {
           display: block;
@@ -2074,6 +2061,10 @@ body {
   background-color: #333333;
   color: #FFF;
   text-align: center; }
+  .footer a {
+    color: #FFF; }
+    .footer a:hover {
+      color: #185e94; }
   .footer__logo {
     margin-bottom: 12px; }
   .footer .logo--footer {
@@ -2327,6 +2318,18 @@ a {
 .addBottomMargin,
 .add-bottom-margin {
   margin-bottom: 24px; }
+
+.pipe-list > *:after {
+  content: '|';
+  padding: 0 10px;
+  color: #FFF !important; }
+.pipe-list > *:last-child:after {
+  content: '';
+  padding: 0; }
+.pipe-list.black > * {
+  color: #333 !important; }
+.pipe-list.white > * {
+  color: #FFF !important; }
 
 .font-black {
   color: #333; }
