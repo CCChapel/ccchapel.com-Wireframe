@@ -1,24 +1,24 @@
+%social-media-icon;
+
 .facebook-icon {
-    color: currentColor;
-    transition: color $transition-length $transition-function;
+    @extend %social-media-icon;
     
     &:hover {
-        color: $facebook;
+        color: $facebook !important;
     }
 }
 
 .twitter-icon {
-    color: currentColor;
-    transition: color $transition-length $transition-function;
+    @extend %social-media-icon;
+    
     
     &:hover {
-        color: $twitter;
+        color: $twitter !important;
     }
 }
 
 .youtube-icon {
-    color: currentColor;
-    transition: color $transition-length $transition-function;
+    @extend %social-media-icon;
 
     &:hover {
         color: $youtube !important;
@@ -26,8 +26,7 @@
 }
 
 .vimeo-icon {
-    color: currentColor;
-    transition: color $transition-length $transition-function;
+    @extend %social-media-icon;
 
     &:hover {
         color: $vimeo !important;
@@ -35,8 +34,7 @@
 }
 
 .instagram-icon {
-    color: currentColor;
-    transition: color $transition-length $transition-function;
+    @extend %social-media-icon;
 
     &:hover {
         color: $instagram !important;
@@ -44,8 +42,7 @@
 }
 
 .google-plus-icon {
-    color: currentColor;
-    transition: color $transition-length $transition-function;
+    @extend %social-media-icon;
 
     &:hover {
         color: $google-plus !important;
@@ -53,8 +50,7 @@
 }
 
 .email-icon {
-    color: currentColor;
-    transition: color $transition-length $transition-function;
+    @extend %social-media-icon;
 
     &:hover {
         color: $email !important;
