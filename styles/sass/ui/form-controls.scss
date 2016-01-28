@@ -40,7 +40,8 @@
     &.blue-text {
         color: $blue#{$add};
         
-        &:hover {
+        &:hover,
+        &.active {
             color: #FFF#{$add};
         }
     }
