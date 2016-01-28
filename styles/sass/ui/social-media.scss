@@ -1,4 +1,7 @@
-%social-media-icon;
+%social-media-icon {
+    color: currentColor;
+    transition: color $transition-length $transition-function;
+};
 
 .facebook-icon {
     @extend %social-media-icon;
