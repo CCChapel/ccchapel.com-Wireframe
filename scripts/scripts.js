@@ -701,7 +701,7 @@
             var currentDomain = window.location.hostname;
             
             //Get Campus to Change To
-            var newCampus = $(this).attr(dataAttr).replace(" ", "");
+            var newCampus = $(this).attr(dataAttr).replace(" ", "").toLowerCase();
             
             //Break Into Pieces
             var pieces = currentDomain.split(".");
