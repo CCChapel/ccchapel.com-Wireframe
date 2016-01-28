@@ -1,18 +1,65 @@
 //**************************************************
 // CALL TO ACTION BUTTONS
 //**************************************************/
+//Color Variants
+@mixin cta--red($important: false) {
+    $add: "" !default;
+    @if $important == true {
+        $add: " !important";
+    }
+    
+    background-color: transparentize($red, .2)#{$add};
+    border: none#{$add};
+
+    color: #FFF#{$add};
+
+    &:hover,
+    &.active {
+        background-color: $dark-red#{$add};
+        color: #FFF#{$add};
+    } 
+}
+
+@mixin cta--transparent($important: false) {
+    $add: "" !default;
+    @if $important == true {
+        $add: " !important";
+    }
+    
+    background-color: transparent#{$add};
+    border-color: $blue#{$add};
+
+    color: #FFF#{$add};
+
+    &:hover,
+    &.active {
+        background-color: $blue#{$add};
+        color: #FFF#{$add};
+    }
+    
+    &.blue-text {
+        color: $blue#{$add};
+        
+        &:hover {
+            color: #FFF#{$add};
+        }
+    }
+}
+
 .cta {
+    $border-size: 2px;
+    
     @extend .center-vertically;
 
-    background-color: transparentize($red, .2);
-    border: $dark-red;
+    //background-color: transparentize($red, .2);
+    border: $border-size solid currentColor;
     border-radius: $border-radius;
     box-sizing: border-box;
 
     margin-left: auto;
     margin-right: auto;
 
-    color: #FFF !important;
+    //color: #FFF !important;
     font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
@@ -24,51 +71,13 @@
     width: 75% !important;
 
     transition: background-color $transition-length $transition-function,
-                color $transition-length $transition-function,
-                border-color $transition-length $transition-function;
+            color $transition-length $transition-function,
+            border-color $transition-length $transition-function;
 
     @include grid-media-query("portable") {
         width: 100%;
     }
     
-    &:hover,
-    &.active {
-        background-color: $dark-red;
-        color: #FFF;
-
-        text-decoration: none;
-    }
-    
-    //Color variants
-    &.translucent {
-        @extend .cta;
-
-        background-color: transparentize($charcoal, .3);
-        border: 2px solid currentColor;
-
-        &:hover,
-        &.active {
-            //background-color: currentColor;
-            border-color: transparentize($charcoal, .3);
-            //color: transparentize($charcoal, .3);
-        }
-    }
-
-    &.transparent {
-        @extend .cta;
-
-        background-color: transparent;
-        border: 2px solid currentColor;
-        color: $color-root !important;
-
-        &:hover,
-        &.active {
-            background-color: $color-root;
-            border-color: $color-root;
-            color: #FFF !important;
-        }
-    }
-
     //Size variants
     &.auto {
         display: inline-flex !important;
@@ -77,7 +86,7 @@
 
         width: auto !important;
     }
-    
+
     &.full {
         width: 100% !important;
     }
@@ -85,7 +94,116 @@
     & + & {
         margin-left: $magic-number;
     }
+    
+    //Transparent & Light Gray Sections
+    .content-section.transparent &,
+    .content-section.light-gray & {
+        @include cta--red;
+    }
+    
+    //Image, Light Blue & Footer Sections
+    .content-section.image &,
+    .content-section.light-blue &,
+    footer & {
+        @include cta--transparent;
+    }
+    
+    &.red {
+        @include cta--red(true);
+    }
+
+    &.transparent {
+        @include cta--transparent(true);
+    }
 }
+
+//
+//
+//.cta {
+//    @extend .center-vertically;
+//
+//    background-color: transparentize($red, .2);
+//    border: $dark-red;
+//    border-radius: $border-radius;
+//    box-sizing: border-box;
+//
+//    margin-left: auto;
+//    margin-right: auto;
+//
+//    color: #FFF !important;
+//    font-weight: bold;
+//    text-decoration: none;
+//    text-transform: uppercase;
+//    white-space: nowrap;
+//    text-overflow: hidden;
+//    overflow: hidden;
+//
+//    height: 3em !important;
+//    width: 75% !important;
+//
+//    transition: background-color $transition-length $transition-function,
+//                color $transition-length $transition-function,
+//                border-color $transition-length $transition-function;
+//
+//    @include grid-media-query("portable") {
+//        width: 100%;
+//    }
+//    
+//    &:hover,
+//    &.active {
+//        background-color: $dark-red;
+//        color: #FFF;
+//
+//        text-decoration: none;
+//    }
+//    
+//    //Color variants
+//    &.translucent {
+//        @extend .cta;
+//
+//        background-color: transparentize($charcoal, .3);
+//        border: 2px solid currentColor;
+//
+//        &:hover,
+//        &.active {
+//            //background-color: currentColor;
+//            border-color: transparentize($charcoal, .3);
+//            //color: transparentize($charcoal, .3);
+//        }
+//    }
+//
+//    &.transparent {
+//        @extend .cta;
+//
+//        background-color: transparent;
+//        border: 2px solid $blue;
+//        color: $blue !important;
+//
+//        &:hover,
+//        &.active {
+//            background-color: $blue;
+//            border-color: $blue;
+//            color: #FFF !important;
+//        }
+//    }
+//
+//    //Size variants
+//    &.auto {
+//        display: inline-flex !important;
+//        margin-left: 0;
+//        padding: 0 $magic-number;
+//
+//        width: auto !important;
+//    }
+//    
+//    &.full {
+//        width: 100% !important;
+//    }
+//
+//    & + & {
+//        margin-left: $magic-number;
+//    }
+//}
 
 //**************************************************
 // INPUT

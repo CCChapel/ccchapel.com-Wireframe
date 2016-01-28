@@ -102,7 +102,31 @@ a {
     
     &:hover,
     &:active {
-        text-decoration: underline;
+        //text-decoration: underline;
+        color: $blue;
+    }
+    
+    &.black {
+        color: $black;
+        
+        &:hover {
+            color: $blue;
+        }
+    }
+    
+    &.hvr-underline {
+        &:hover {
+            color: currentColor;
+            text-decoration: underline;
+        }
+    }
+    
+    &.hvr-light-blue {
+        color: currentColor;
+
+        &:hover {
+            color: $light-blue;
+        }
     }
 }
 

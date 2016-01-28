@@ -9,74 +9,6 @@
 }
 
 //**************************************************
-// CONTAINERS
-//**************************************************/
-.content-section {
-    margin-bottom: $vertical-padding;
-    
-    &--noBottomBuffer,
-    &.no-bottom-margin {
-        margin-bottom: inherit;
-    }
-    
-    &.light-blue {
-        background: $light-blue;
-        color: #FFF;
-    }
-    
-    &.light-gray {
-        background: $light-gray;
-    }
-}
-
-.content-wrapper {
-    box-sizing: border-box;
-    height: 100%;
-    
-    padding: $vertical-padding ($magic-number*2);
-    
-    @include grid-media-query("portable") {
-        padding: $vertical-padding $mobile-padding;
-        
-        overflow-x: hidden;
-    }
-    
-    &.no-vertical {
-        padding-top: 0;
-        padding-bottom: 0;
-    }
-    
-    &.no-mobile {
-        @include grid-media-query("portable") {
-            padding: 0;
-        }
-    }
-    
-    &--mobile {
-        box-sizing: border-box;
-        height: 100%;
-        
-        @include grid-media-query("portable") {
-            padding: $vertical-padding $mobile-padding;
-        }
-        
-        &.no-vertical {
-            @extend .content-wrapper.no-vertical;
-        }
-    }
-}
-
-//**************************************************
-// COMMON STYLES
-//**************************************************/
-.section-title {
-    @include typecsset-font-size($secondary-headline-size);
-    font-weight: bold;
-
-    text-align: center;
-}
-
-//**************************************************
 // NOTIFICATIONS
 //**************************************************/
 .notifications {
@@ -94,16 +26,16 @@
 // HEADER IMAGE
 //**************************************************/
 .header-image {
-    background: currentColor none center center/cover no-repeat padding-box border-box scroll;
-    color: #FFF;
+    //background: currentColor none center center/cover no-repeat padding-box border-box scroll;
+    //color: #FFF;
     
-    position: relative;
+    //position: relative;
     
     min-height: 66vh;
     
-    &.dark {
-        color: $black;
-    }
+//    &.dark {
+//        color: $black;
+//    }
     
     &__title {
         @include typecsset-font-size($primary-headline-size);
@@ -242,17 +174,13 @@
         text-align: center;
     }
     
-    a:hover {
-        text-decoration: none;
-    }
-    
     &__title {
         font-size: calc(3vw + 2vh + 1vmin);
         line-height: 1em;
         font-weight: bold;
         text-transform: uppercase;
         
-        margin: 0 0 $bottom-margin 0;
+        margin: 0 0 ($bottom-margin * 2) 0;
         
         @include grid-media-query("portable") {
             @include typecsset-font-size(56px, false);
@@ -260,7 +188,7 @@
     }
     
     &__instructions {
-        margin-bottom: $bottom-margin;
+        margin-bottom: ($bottom-margin * 3);
     }
     
     &__cta {
@@ -288,9 +216,8 @@
         
         color: $black;
         
-        
         &:hover .campus-info__name {
-            color: #FFF !important;
+            //color: #FFF !important;
         }
         
         @include grid-media-query("desk") {
@@ -396,6 +323,7 @@
                 &:after {
                     content: '|';
                     padding: 0 10px;
+                    color: #FFF;
                 }
                 
                 &:last-child:after {
@@ -432,7 +360,7 @@
     &__name {
         @include typecsset-font-size($tertiary-headline-size);
         font-weight: bold;
-        color: $black;
+        //color: $black;
         
         transition: color $transition-length $transition-function;
     }
@@ -466,12 +394,6 @@
 .message {
     $message-section-height: 24rem;
     
-    background-attachment: fixed;
-    
-    @include grid-media-query("palm") {
-        background-attachment: scroll;
-    }
-    
     &__series-logo {
         height: $message-section-height;
         
@@ -482,12 +404,6 @@
     
     &__info {
         height: $message-section-height;
-        
-        color: #FFF;
-        
-        &.dark {
-            color: $charcoal;
-        }
         
         @include grid-media-query("palm") {
             margin-bottom: $vertical-padding;
@@ -547,7 +463,7 @@
     margin-bottom: $magic-number;
     
     a {
-        color: currentColor !important;
+        color: currentColor;
     }
 
     &__image {
@@ -568,7 +484,6 @@
     }
 
     &__details {
-        color: $black;
         font-weight: normal !important;
 
         @include grid-media-query("portable") {

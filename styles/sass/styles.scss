@@ -12,11 +12,9 @@
 //Wireframe
 @import "_wireframe.scss";
 
-//Page Elements
-@import "ui/form-controls.scss";
-
 //Page Styles
 @import "ui/page.scss";
+@import "ui/content-section.scss";
 @import "ui/modal.scss";
 @import "ui/header.scss";
 @import "ui/body.scss";
@@ -31,6 +29,9 @@
 //Typography
 @import "ui/typography.scss";
 @import "ui/social-media.scss";
+
+//Page Elements
+@import "ui/form-controls.scss";
 
 //Hacks
 @import "includes/hacks.scss";
