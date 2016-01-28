@@ -52,7 +52,6 @@
     
     @extend .center-vertically;
 
-    //background-color: transparentize($red, .2);
     border: $border-size solid currentColor;
     border-radius: $border-radius;
     box-sizing: border-box;
@@ -60,10 +59,10 @@
     margin-left: auto;
     margin-right: auto;
 
-    //color: #FFF !important;
     font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
+    text-shadow: none;
     white-space: nowrap;
     text-overflow: hidden;
     overflow: hidden;

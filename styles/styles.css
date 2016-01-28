@@ -1528,9 +1528,11 @@ body {
   .content-section.image {
     background: currentColor none center center/cover no-repeat padding-box border-box scroll; }
     .content-section.image.light {
-      color: #FFF; }
+      color: #FFF;
+      text-shadow: 1px 1px 1px black; }
     .content-section.image.dark {
-      color: #333333; }
+      color: #333333;
+      text-shadow: 1px 1px 1px white; }
     .content-section.image.parallax {
       background-attachment: fixed; }
       @media only screen and (max-width: 480px) {
@@ -2385,6 +2387,7 @@ a {
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
+  text-shadow: none;
   white-space: nowrap;
   text-overflow: hidden;
   overflow: hidden;
