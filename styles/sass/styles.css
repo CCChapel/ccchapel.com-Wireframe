@@ -2698,7 +2698,7 @@ a {
   transition: color 250ms linear; }
   /* line 23, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/social-media.scss */
   .youtube-icon:hover {
-    color: #bb0000; }
+    color: #bb0000 !important; }
 
 /* line 28, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/social-media.scss */
 .vimeo-icon {
@@ -2706,7 +2706,7 @@ a {
   transition: color 250ms linear; }
   /* line 32, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/social-media.scss */
   .vimeo-icon:hover {
-    color: #1ab7ea; }
+    color: #1ab7ea !important; }
 
 /* line 37, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/social-media.scss */
 .instagram-icon {
@@ -2714,7 +2714,7 @@ a {
   transition: color 250ms linear; }
   /* line 41, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/social-media.scss */
   .instagram-icon:hover {
-    color: #517fa4; }
+    color: #517fa4 !important; }
 
 /* line 46, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/social-media.scss */
 .google-plus-icon {
@@ -2722,7 +2722,7 @@ a {
   transition: color 250ms linear; }
   /* line 50, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/social-media.scss */
   .google-plus-icon:hover {
-    color: #dd4b39; }
+    color: #dd4b39 !important; }
 
 /* line 55, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/social-media.scss */
 .email-icon {
@@ -2730,7 +2730,7 @@ a {
   transition: color 250ms linear; }
   /* line 59, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/social-media.scss */
   .email-icon:hover {
-    color: #185e94; }
+    color: #185e94 !important; }
 
 /* line 50, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/form-controls.scss */
 .cta {

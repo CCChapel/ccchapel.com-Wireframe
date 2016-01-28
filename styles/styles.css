@@ -2352,31 +2352,31 @@ a {
   color: currentColor;
   transition: color 250ms linear; }
   .youtube-icon:hover {
-    color: #bb0000; }
+    color: #bb0000 !important; }
 
 .vimeo-icon {
   color: currentColor;
   transition: color 250ms linear; }
   .vimeo-icon:hover {
-    color: #1ab7ea; }
+    color: #1ab7ea !important; }
 
 .instagram-icon {
   color: currentColor;
   transition: color 250ms linear; }
   .instagram-icon:hover {
-    color: #517fa4; }
+    color: #517fa4 !important; }
 
 .google-plus-icon {
   color: currentColor;
   transition: color 250ms linear; }
   .google-plus-icon:hover {
-    color: #dd4b39; }
+    color: #dd4b39 !important; }
 
 .email-icon {
   color: currentColor;
   transition: color 250ms linear; }
   .email-icon:hover {
-    color: #185e94; }
+    color: #185e94 !important; }
 
 .cta {
   border: 2px solid currentColor;

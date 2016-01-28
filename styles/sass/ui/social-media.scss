@@ -21,7 +21,7 @@
     transition: color $transition-length $transition-function;
 
     &:hover {
-        color: $youtube;
+        color: $youtube !important;
     }
 }
 
@@ -30,7 +30,7 @@
     transition: color $transition-length $transition-function;
 
     &:hover {
-        color: $vimeo;
+        color: $vimeo !important;
     }
 }
 
@@ -39,7 +39,7 @@
     transition: color $transition-length $transition-function;
 
     &:hover {
-        color: $instagram;
+        color: $instagram !important;
     }
 }
 
@@ -48,7 +48,7 @@
     transition: color $transition-length $transition-function;
 
     &:hover {
-        color: $google-plus;
+        color: $google-plus !important;
     }
 }
 
@@ -57,6 +57,6 @@
     transition: color $transition-length $transition-function;
 
     &:hover {
-        color: $email;
+        color: $email !important;
     }
 }
