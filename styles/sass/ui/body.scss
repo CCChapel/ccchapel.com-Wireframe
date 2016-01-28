@@ -180,7 +180,7 @@
         font-weight: bold;
         text-transform: uppercase;
         
-        margin: 0 0 ($bottom-margin * 2) 0;
+        margin: 0 0 $bottom-margin 0;
         
         @include grid-media-query("portable") {
             @include typecsset-font-size(56px, false);
