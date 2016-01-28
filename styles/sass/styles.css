@@ -2662,6 +2662,10 @@ a {
 .add-bottom-margin {
   margin-bottom: 24px; }
 
+/* line 141, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/typography.scss */
+.font-black {
+  color: #333; }
+
 /* line 1, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/social-media.scss */
 .facebook-icon {
   color: currentColor;

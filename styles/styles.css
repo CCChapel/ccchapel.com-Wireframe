@@ -2328,6 +2328,9 @@ a {
 .add-bottom-margin {
   margin-bottom: 24px; }
 
+.font-black {
+  color: #333; }
+
 .facebook-icon {
   color: currentColor;
   transition: color 250ms linear; }
