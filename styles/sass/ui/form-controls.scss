@@ -68,7 +68,7 @@
     overflow: hidden;
 
     height: 3em !important;
-    width: 75% !important;
+    width: 75%; // !important;
 
     transition: background-color $transition-length $transition-function,
             color $transition-length $transition-function,
@@ -84,7 +84,7 @@
         margin-left: 0;
         padding: 0 $magic-number;
 
-        width: auto !important;
+        width: auto; // !important;
     }
 
     &.full {

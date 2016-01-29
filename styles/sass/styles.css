@@ -2725,7 +2725,7 @@ a {
   text-overflow: hidden;
   overflow: hidden;
   height: 3em !important;
-  width: 75% !important;
+  width: 75%;
   transition: background-color 250ms linear, color 250ms linear, border-color 250ms linear; }
   @media only screen and (max-width: 1023px) {
     /* line 50, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/form-controls.scss */
@@ -2736,7 +2736,7 @@ a {
     display: inline-flex !important;
     margin-left: 0;
     padding: 0 24px;
-    width: auto !important; }
+    width: auto; }
   /* line 90, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/form-controls.scss */
   .cta.full {
     width: 100% !important; }

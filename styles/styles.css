@@ -2376,7 +2376,7 @@ a {
   text-overflow: hidden;
   overflow: hidden;
   height: 3em !important;
-  width: 75% !important;
+  width: 75%;
   transition: background-color 250ms linear, color 250ms linear, border-color 250ms linear; }
   @media only screen and (max-width: 1023px) {
     .cta {
@@ -2385,7 +2385,7 @@ a {
     display: inline-flex !important;
     margin-left: 0;
     padding: 0 24px;
-    width: auto !important; }
+    width: auto; }
   .cta.full {
     width: 100% !important; }
   .cta + .cta {
