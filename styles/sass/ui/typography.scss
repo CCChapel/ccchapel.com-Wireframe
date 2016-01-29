@@ -138,7 +138,7 @@ a {
 }
 
 //Lists
-.pipe-list {
+.pipe-list:not(.no-mobile) {
     & > * {
         &:after {
             content: '|';

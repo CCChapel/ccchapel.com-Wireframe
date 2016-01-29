@@ -1596,7 +1596,8 @@ body {
   overflow: hidden;
   background-color: #185e94; }
   .campus-select__options {
-    padding: .25em 0;
+    padding-top: .25em;
+    padding-bottom: .25em;
     height: 100%;
     font-size: 14px;
     font-size: 0.875rem;
@@ -2321,16 +2322,16 @@ a {
 .add-bottom-margin {
   margin-bottom: 24px; }
 
-.pipe-list > *:after {
+.pipe-list:not(.no-mobile) > *:after {
   content: '|';
   padding: 0 10px;
   color: #FFF !important; }
-.pipe-list > *:last-child:after {
+.pipe-list:not(.no-mobile) > *:last-child:after {
   content: '';
   padding: 0; }
-.pipe-list.black > * {
+.pipe-list:not(.no-mobile).black > * {
   color: #333 !important; }
-.pipe-list.white > * {
+.pipe-list:not(.no-mobile).white > * {
   color: #FFF !important; }
 
 .font-black {
