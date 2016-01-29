@@ -1606,10 +1606,18 @@ body {
     text-align: center !important; }
   .campus-select__list {
     display: inline; }
+    @media only screen and (min-width: 1024px) {
+      .campus-select__list a {
+        font-weight: normal; } }
     @media only screen and (max-width: 1023px) {
       .campus-select__list {
-        display: block;
-        padding: .5em 0; } }
+        display: block; }
+        .campus-select__list > * {
+          font-size: 24px;
+          font-size: 1.5rem;
+          line-height: 1; }
+          .campus-select__list > *:after {
+            border-bottom-color: #0b4673; } }
   .campus-select__campus-marker {
     cursor: pointer; }
   .campus-select__campus {
@@ -1618,12 +1626,14 @@ body {
       .campus-select__campus a {
         font-weight: normal; } }
     @media only screen and (max-width: 1023px) {
-      .campus-select__campus > * {
-        font-size: 24px;
-        font-size: 1.5rem;
-        line-height: 1; }
-        .campus-select__campus > *:after {
-          border-bottom-color: #0b4673; } }
+      .campus-select__campus {
+        display: block; }
+        .campus-select__campus > * {
+          font-size: 24px;
+          font-size: 1.5rem;
+          line-height: 1; }
+          .campus-select__campus > *:after {
+            border-bottom-color: #0b4673; } }
 
 .banner {
   height: 4em;

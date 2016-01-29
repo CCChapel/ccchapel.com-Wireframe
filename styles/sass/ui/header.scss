@@ -40,12 +40,32 @@ $header-z-index: 100;
     }
     
     &__list {
-        display: inline;
+//        display: inline;
+//        
+//        @include grid-media-query("portable") {
+//            //display: block;
+//            
+//            //padding: .5em 0;
+//        }
         
+        display: inline;
+
+        @include grid-media-query("desk") {
+            a {
+                font-weight: normal;
+            }
+        }
+
         @include grid-media-query("portable") {
             display: block;
-            
-            padding: .5em 0;
+
+            & > * {
+                @include typecsset-font-size($tertiary-headline-size);
+
+                &:after {
+                    border-bottom-color: $dark-blue;
+                }
+            }
         }
     }
     
@@ -63,6 +83,8 @@ $header-z-index: 100;
         }
         
         @include grid-media-query("portable") {
+            display: block;
+
             & > * {
                 @include typecsset-font-size($tertiary-headline-size);
 
