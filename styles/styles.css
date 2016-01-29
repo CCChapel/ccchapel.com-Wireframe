@@ -1619,22 +1619,11 @@ body {
         font-weight: normal; } }
     @media only screen and (max-width: 1023px) {
       .campus-select__campus > * {
-        display: block !important;
-        position: relative !important;
         font-size: 24px;
         font-size: 1.5rem;
-        line-height: 1;
-        padding: .25em 0 !important; }
+        line-height: 1; }
         .campus-select__campus > *:after {
-          border-bottom: 1px solid #0b4673 !important;
-          content: "" !important;
-          position: absolute !important;
-          left: 10% !important;
-          bottom: 0 !important;
-          height: 1px !important;
-          width: 80% !important; }
-        .campus-select__campus > *:last-child:after {
-          border-bottom: none !important; } }
+          border-bottom-color: #0b4673; } }
 
 .banner {
   height: 4em;
@@ -1936,23 +1925,9 @@ body {
       color: #333; }
     .campus-info__other-list a {
       color: currentColor; }
-      .campus-info__other-list a:hover {
-        text-decoration: none; }
-      @media only screen and (max-width: 480px) {
-        .campus-info__other-list a {
-          display: block;
-          position: relative;
-          padding: .5em 0; }
-          .campus-info__other-list a:after {
-            border-bottom: 1px solid #0b4673;
-            content: "";
-            position: absolute;
-            left: 10%;
-            bottom: 0;
-            height: 1px;
-            width: 80%; }
-          .campus-info__other-list a:last-child:after {
-            border-bottom: none; } }
+    @media only screen and (max-width: 480px) {
+      .campus-info__other-list > *:after {
+        border-bottom-color: #0b4673; } }
   .campus-info__name {
     font-size: 24px;
     font-size: 1.5rem;
@@ -2336,6 +2311,22 @@ a {
     color: #333 !important; }
   .horizontal-list.white > * {
     color: #FFF !important; }
+  @media only screen and (max-width: 480px) {
+    .horizontal-list.palm--vertical > * {
+      display: block !important;
+      position: relative !important;
+      padding: .5em 0 !important; }
+      .horizontal-list.palm--vertical > *:after {
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        content: "" !important;
+        position: absolute !important;
+        left: 10% !important;
+        bottom: 0 !important;
+        height: 1px !important;
+        width: 80% !important; }
+      .horizontal-list.palm--vertical > *:last-child:after {
+        border-bottom: none !important; } }
 
 .font-black {
   color: #333; }

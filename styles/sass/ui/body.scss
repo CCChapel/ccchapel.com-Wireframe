@@ -315,41 +315,12 @@
         &-list {
             a {
                 color: currentColor;
-                
-                &:hover {
-                    text-decoration: none;
-                }
-                
-//                &:after {
-//                    content: '|';
-//                    padding: 0 10px;
-//                    color: #FFF;
-//                }
-//                
-//                &:last-child:after {
-//                    content: '';
-//                    padding: 0;
-//                }
-                
-                @include grid-media-query("palm") {
-                    display: block;
-                    position: relative;
-                    padding: .5em 0;
-                    
+            }
+
+            @include grid-media-query("palm") {
+                & > * {
                     &:after {
-                        border-bottom: 1px solid $dark-blue;
-
-                        content: "";
-                        position: absolute;
-                        left: 10%;
-                        bottom: 0;
-
-                        height: 1px;
-                        width: 80%;
-                    }
-
-                    &:last-child:after {
-                        border-bottom: none;
+                        border-bottom-color: $dark-blue;
                     }
                 }
             }

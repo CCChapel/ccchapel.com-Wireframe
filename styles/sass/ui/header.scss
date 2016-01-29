@@ -64,28 +64,10 @@ $header-z-index: 100;
         
         @include grid-media-query("portable") {
             & > * {
-                //Override .horizontal-list
-                display: block !important;
-                position: relative !important;
-
                 @include typecsset-font-size($tertiary-headline-size);
 
-                padding: .25em 0 !important;
-
                 &:after {
-                    border-bottom: 1px solid $dark-blue !important;
-
-                    content: "" !important;
-                    position: absolute !important;
-                    left: 10% !important;
-                    bottom: 0 !important;
-
-                    height: 1px !important;
-                    width: 80% !important;
-                }
-
-                &:last-child:after {
-                    border-bottom: none !important;
+                    border-bottom-color: $dark-blue;
                 }
             }
         }

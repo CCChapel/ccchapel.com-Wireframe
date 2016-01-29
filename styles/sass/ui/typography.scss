@@ -164,6 +164,34 @@ a {
     &.white > * {
         color: #FFF !important;
     }
+    
+    &.palm--vertical {
+        @include grid-media-query("palm") {
+            & > * {
+                display: block !important;
+                position: relative !important;
+                padding: .5em 0 !important;
+
+                &:after {
+                    //border-bottom: 1px solid inherit !important;
+                    border-bottom-width: 1px;
+                    border-bottom-style: solid;
+
+                    content: "" !important;
+                    position: absolute !important;
+                    left: 10% !important;
+                    bottom: 0 !important;
+
+                    height: 1px !important;
+                    width: 80% !important;
+                }
+
+                &:last-child:after {
+                    border-bottom: none !important;
+                }
+            }
+        }
+    }
 }
 
 //Colors
