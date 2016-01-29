@@ -1834,7 +1834,22 @@ body {
       .header-details__right {
         text-align: center; } }
   .header-details__buttons {
-    text-align: right; }
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    justify-content: space-between; }
+    .header-details__buttons .cta {
+      -webkit-box-flex: 1;
+      -webkit-flex-grow: 1;
+      -moz-flex-grow: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1; }
 
 .search {
   color: #333;

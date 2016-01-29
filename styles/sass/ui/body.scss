@@ -137,7 +137,12 @@
     }
 
     &__buttons {
-        text-align: right;
+        @include flexbox;
+        @include justify-content(space-between);
+        
+        .cta {
+            @include flex-grow(1);
+        }
     }
 }
 
