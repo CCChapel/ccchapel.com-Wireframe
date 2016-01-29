@@ -117,22 +117,24 @@
                 <div class="campus-select__options [ grid__item one-whole ]">
                     <i class="fa fa-map-marker"></i>&nbsp;&nbsp;
                     <span class="campus-select__campus-marker desk--hide" role="button">Campuses</span>
-                    <div class="campus-select__list [ pipe-list no-mobile ] [ portable--hide ]">
-                        <div class="campus-select__campus">
-                            <a class="change-campus hvr-underline" data-campus="hudson" href="#">Hudson</a>
-                        </div><!--
+                    <div class="campus-select__list [ portable--hide ]">
+                        <ul class="campus-select__campus horizontal-list">
+                            <li>
+                                <a class="change-campus hvr-underline" data-campus="hudson" href="#">Hudson</a>
+                            </li><!--
 
-                     --><div class="campus-select__campus">
-                            <a class="change-campus hvr-underline" data-campus="aurora" href="#">Aurora</a>
-                        </div><!--
+                         --><li>
+                                <a class="change-campus hvr-underline" data-campus="aurora" href="#">Aurora</a>
+                            </li><!--
 
-                     --><div class="campus-select__campus">
-                            <a class="change-campus hvr-underline" data-campus="stow" href="#">Stow</a>
-                        </div><!--
+                         --><li>
+                                <a class="change-campus hvr-underline" data-campus="stow" href="#">Stow</a>
+                            </li><!--
 
-                     --><div class="campus-select__campus">
-                            <a class="change-campus hvr-underline" data-campus="highland square" href="#">Highland Square</a>
-                        </div>
+                         --><li>
+                                <a class="change-campus hvr-underline" data-campus="highland square" href="#">Highland Square</a>
+                            </li>
+                        </ul>
                     </div> <!-- /campus-select__list -->
                 </div> <!-- /campus-select__options -->
             </div> <!-- /campus-select -->
@@ -331,7 +333,10 @@
                                         </div>
 
                                         <div class="campus-info__address">
-                                            750 W Streetsboro Street | Hudson, Ohio
+                                            <ul class="horizontal-list">
+                                                <li>750 W Streetsboro Street</li><!--
+                                             --><li>Hudson, Ohio</li>
+                                            </ul>
                                         </div>
                                     </a>
                                 </div><!-- /campus-info__campus --><!--
@@ -343,11 +348,14 @@
                                         </div>
 
                                         <div class="campus-info__name">
-                                            Aurora Campus
+                                            Aurora Campu
                                         </div>
 
                                         <div class="campus-info__address">
-                                            252 N Chillicothe Road | Aurora, Ohio
+                                            <ul class="horizontal-list">
+                                                <li>252 N Chillicothe Road</li><!--
+                                             --><li>Aurora, Ohio</li>
+                                            </ul>
                                         </div>
                                     </a>
                                 </div><!-- /campus-info__campus --><!--
@@ -363,7 +371,10 @@
                                         </div>
 
                                         <div class="campus-info__address">
-                                            3900 Kent Road | Stow, Ohio
+                                            <ul class="horizontal-list">
+                                                <li>3900 Kent Road</li><!--
+                                             --><li>Stow, Ohio</li>
+                                            </ul>
                                         </div>
                                     </a>
                                 </div><!-- /campus-info__campus --><!--
@@ -380,7 +391,10 @@
 
                                         <div class="campus-info__address">
                                             <div class="accent">Meeting at Portage Path Community Learning Center</div>
-                                            55 S Portage Path | Akron, Ohio
+                                            <ul class="horizontal-list">
+                                                <li>55 S Portage Path</li><!--
+                                             --><li>Akron, Ohio</li>
+                                            </ul>
                                         </div>
                                     </a>
                                 </div><!-- /campus-info__campus -->
@@ -412,7 +426,10 @@
                                     </div> 
 
                                     <div class="campus-info__address">
-                                        750 W Streetsboro Street | Hudson, Ohio<br />
+                                        <ul class="horizontal-list">
+                                            <li>750 W Streetsboro Street</li><!--
+                                         --><li>Hudson, Ohio</li>
+                                        </ul>
                                         330.650.9533
                                     </div>
 
@@ -451,7 +468,10 @@
                                     </div> 
 
                                     <div class="campus-info__address">
-                                        252 N Chillicothe Road | Aurora, Ohio<br />
+                                        <ul class="horizontal-list">
+                                            <li>252 N Chillicothe Road</li><!--
+                                         --><li>Aurora, Ohio</li>
+                                        </ul>
                                         330.562.3438
                                     </div>
 
@@ -489,7 +509,10 @@
                                     </div> 
 
                                     <div class="campus-info__address">
-                                        3900 Kent Road | Stow, Ohio<br />
+                                        <ul class="horizontal-list">
+                                            <li>3900 Kent Road</li><!--
+                                         --><li>Stow, Ohio</li>
+                                        </ul>
                                         330.688.2440
                                     </div>
 
@@ -528,7 +551,10 @@
 
                                     <div class="campus-info__address">
                                         <div class="accent">Meeting at Portage Path Community Learning Center</div>
-                                        55 S Portage Path | Akron, Ohio<br />
+                                        <ul class="horizontal-list">
+                                            <li>55 S Portage Path</li><!--
+                                         --><li>Akron, Ohio</li>
+                                        </ul>
                                         330.794.5343
                                     </div>
 
@@ -550,10 +576,18 @@
                     
                     <div class="campus-info__other">
                         <div class="campus-info__other-title">Not Your Campus?</div>
-                        <div class="campus-info__other-list [ pipe-list ] [ portable--hide ]">
-                            <a class="change-campus" data-campus="aurora" href="#">Aurora Campus</a><!--
-                         --><a class="change-campus" data-campus="stow" href="#">Stow Campus</a><!--
-                         --><a class="change-campus" data-campus="highland square" href="#">Highland Square</a>
+                        <div class="campus-info__other-list [ portable--hide ]">
+                            <ul class="horizontal-list">
+                                <li>
+                                    <a class="change-campus" data-campus="aurora" href="#">Aurora Campus</a>
+                                </li><!--
+                             --><li>
+                                    <a class="change-campus" data-campus="stow" href="#">Stow Campus</a>
+                                </li><!--
+                             --><li>
+                                    <a class="change-campus" data-campus="highland square" href="#">Highland Square</a>
+                                </li>
+                            </ul>
                         </div> <!-- /campus-info__other-list -->
                     </div> <!-- /campus-info__other -->
                 </div> <!-- /content-wrapper -->
@@ -577,10 +611,15 @@
                             <div class="message__title">
                                 <a href="./sermon.htm">Jesus: The New Adam</a>
                             </div>
-                            <div class="message__details">Know the Story | 1.24 | Joe Coffey</div>
+                            <div class="message__details">
+                                <ul class="horizontal-list">
+                                    <li>Know the Story</li><!--
+                                 --><li>1.24</li><!--
+                                 --><li>Joe Coffey</li>
+                                </ul>
+                            </div>
 
                             <div class="message__cta">
-                                <!-- TO DO: create alt button class -->
                                 <a class="cta auto red" href="#">
                                     View Series Page
                                 </a>
@@ -673,14 +712,28 @@
 
 
              --><div class="footer__address [ grid__item one-whole ]">
-                    Hudson Campus | 750 W Streetsboro Street, Hudson, Ohio 44236 | 330.650.9533
+                    <ul class="horizontal-list">
+                        <li>Hudson Campus</li><!--
+                     --><li>750 W Streetsboro Street, Hudson, Ohio 44236</li><!--
+                     --><li>330.650.9533</li>
+                    </ul>
                 </div><!--
 
-             --><div class="footer__campuses [ pipe-list ] [ grid__item one-whole ]">
-                    <a class="change-campus" data-campus="hudson" href="#">Hudson</a>
-                    <a class="change-campus" data-campus="aurora" href="#">Aurora</a>
-                    <a class="change-campus" data-campus="stow" href="#">Stow</a>
-                    <a class="change-campus" data-campus="highland square" href="#">Highland Square</a>
+             --><div class="footer__campuses [ grid__item one-whole ]">
+                    <ul class="horizontal-list">
+                        <li>                    
+                            <a class="change-campus" data-campus="hudson" href="#">Hudson</a>
+                        </li><!--
+                     --><li>
+                            <a class="change-campus" data-campus="aurora" href="#">Aurora</a>
+                        </li><!--
+                     --><li>
+                            <a class="change-campus" data-campus="stow" href="#">Stow</a>
+                        </li><!--
+                     --><li>
+                            <a class="change-campus" data-campus="highland square" href="#">Highland Square</a>
+                        </li>
+                    </ul>
                 </div><!--
 
              --><div class="footer__social [ grid__item one-whole ]">

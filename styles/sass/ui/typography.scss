@@ -138,12 +138,17 @@ a {
 }
 
 //Lists
-.pipe-list:not(.no-mobile) {
+.horizontal-list:not(.no-mobile) {
+    margin-bottom: 0;
+    margin-left: 0;
+
     & > * {
+        display: inline-block;
+        
         &:after {
             content: '|';
             padding: 0 10px;
-            color: #FFF !important;
+            color: currentColor;
         }
 
         &:last-child:after {

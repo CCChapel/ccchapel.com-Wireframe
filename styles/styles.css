@@ -2322,17 +2322,22 @@ a {
 .add-bottom-margin {
   margin-bottom: 24px; }
 
-.pipe-list:not(.no-mobile) > *:after {
-  content: '|';
-  padding: 0 10px;
-  color: #FFF !important; }
-.pipe-list:not(.no-mobile) > *:last-child:after {
-  content: '';
-  padding: 0; }
-.pipe-list:not(.no-mobile).black > * {
-  color: #333 !important; }
-.pipe-list:not(.no-mobile).white > * {
-  color: #FFF !important; }
+.horizontal-list:not(.no-mobile) {
+  margin-bottom: 0;
+  margin-left: 0; }
+  .horizontal-list:not(.no-mobile) > * {
+    display: inline-block; }
+    .horizontal-list:not(.no-mobile) > *:after {
+      content: '|';
+      padding: 0 10px;
+      color: currentColor; }
+    .horizontal-list:not(.no-mobile) > *:last-child:after {
+      content: '';
+      padding: 0; }
+  .horizontal-list:not(.no-mobile).black > * {
+    color: #333 !important; }
+  .horizontal-list:not(.no-mobile).white > * {
+    color: #FFF !important; }
 
 .font-black {
   color: #333; }

@@ -55,28 +55,11 @@ $header-z-index: 100;
     
     &__campus {
         display: inline;
-//        
-//        a {
-//            &:hover {
-//                color: currentColor;
-//                text-decoration: underline;
-//            }    
-//        }
         
         @include grid-media-query("desk") {
             a {
                 font-weight: normal;
             }
-            
-//            &:after {
-//                content: '|';
-//                padding: 0 10px;
-//            }
-//
-//            &:last-child:after {
-//                content: '';
-//                padding: 0;
-//            }
         }
         
         @include grid-media-query("portable") {
