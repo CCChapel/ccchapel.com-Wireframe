@@ -746,9 +746,6 @@
     CCChapel.setupWebAppLinks = function() {
         $(document).ready(function(){
             if (("standalone" in window.navigator) && window.navigator.standalone) {
-                console.log("iOS Web App");
-                alert("iOS Web App");
-                
                 // For iOS Apps
                 $('a').on('click', function(e){
                     e.preventDefault();
