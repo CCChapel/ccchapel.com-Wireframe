@@ -1618,25 +1618,23 @@ body {
       .campus-select__campus a {
         font-weight: normal; } }
     @media only screen and (max-width: 1023px) {
-      .campus-select__campus {
-        display: block;
-        position: relative;
+      .campus-select__campus > * {
+        display: block !important;
+        position: relative !important;
         font-size: 24px;
         font-size: 1.5rem;
         line-height: 1;
-        padding: .25em 0; }
-        .campus-select__campus a {
-          text-decoration: none; }
-        .campus-select__campus:after {
-          border-bottom: 1px solid #0b4673;
-          content: "";
-          position: absolute;
-          left: 10%;
-          bottom: 0;
-          height: 1px;
-          width: 80%; }
-        .campus-select__campus:last-child:after {
-          border-bottom: none; } }
+        padding: .25em 0 !important; }
+        .campus-select__campus > *:after {
+          border-bottom: 1px solid #0b4673 !important;
+          content: "" !important;
+          position: absolute !important;
+          left: 10% !important;
+          bottom: 0 !important;
+          height: 1px !important;
+          width: 80% !important; }
+        .campus-select__campus > *:last-child:after {
+          border-bottom: none !important; } }
 
 .banner {
   height: 4em;
@@ -2322,21 +2320,21 @@ a {
 .add-bottom-margin {
   margin-bottom: 24px; }
 
-.horizontal-list:not(.no-mobile) {
+.horizontal-list {
   margin-bottom: 0;
   margin-left: 0; }
-  .horizontal-list:not(.no-mobile) > * {
+  .horizontal-list > * {
     display: inline-block; }
-    .horizontal-list:not(.no-mobile) > *:after {
+    .horizontal-list > *:after {
       content: '|';
       padding: 0 10px;
       color: currentColor; }
-    .horizontal-list:not(.no-mobile) > *:last-child:after {
+    .horizontal-list > *:last-child:after {
       content: '';
       padding: 0; }
-  .horizontal-list:not(.no-mobile).black > * {
+  .horizontal-list.black > * {
     color: #333 !important; }
-  .horizontal-list:not(.no-mobile).white > * {
+  .horizontal-list.white > * {
     color: #FFF !important; }
 
 .font-black {
