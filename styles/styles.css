@@ -1850,6 +1850,8 @@ body {
       -moz-flex-grow: 1;
       -ms-flex-positive: 1;
       flex-grow: 1; }
+  .header-details__social {
+    text-align: center; }
 
 .search {
   color: #333;
