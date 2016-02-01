@@ -138,7 +138,19 @@ a {
 }
 
 .footnote {
-    text-indent: -.5em;
+    //text-indent: -.5em;
+    
+    &:before {
+        content: '*';
+        
+        display: inline-block;
+        margin-left: -1em;
+        
+        width: 1em;
+        
+        color: currentColor;
+
+    }
 }
 
 //Lists

@@ -2322,8 +2322,12 @@ a {
 .add-bottom-margin {
   margin-bottom: 24px; }
 
-.footnote {
-  text-indent: -.5em; }
+.footnote:before {
+  content: '*';
+  display: inline-block;
+  margin-left: -1em;
+  width: 1em;
+  color: currentColor; }
 
 .horizontal-list {
   margin-bottom: 0;
