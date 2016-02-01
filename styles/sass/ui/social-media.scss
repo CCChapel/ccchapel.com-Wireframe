@@ -44,6 +44,14 @@
     }
 }
 
+.pinterest-icon {
+    @extend %social-media-icon;
+    
+    &:hover {
+        color: $pinterest !important;
+    }
+}
+
 .google-plus-icon {
     @extend %social-media-icon;
 
