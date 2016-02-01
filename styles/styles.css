@@ -2322,6 +2322,9 @@ a {
 .add-bottom-margin {
   margin-bottom: 24px; }
 
+.footnote {
+  text-indent: -.5em; }
+
 .horizontal-list {
   margin-bottom: 0;
   margin-left: 0; }
