@@ -1830,6 +1830,10 @@ body {
 
 .header-image {
   min-height: 66vh; }
+  .header-image.short {
+    min-height: 33vh; }
+  .header-image__content {
+    min-width: 50%; }
   .header-image__title {
     font-size: 64px;
     font-size: 4rem;

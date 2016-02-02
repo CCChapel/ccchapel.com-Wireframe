@@ -2,16 +2,15 @@
 // HEADER IMAGE
 //**************************************************/
 .header-image {
-    //background: currentColor none center center/cover no-repeat padding-box border-box scroll;
-    //color: #FFF;
-
-    //position: relative;
-
     min-height: 66vh;
+    
+    &.short {
+        min-height: 33vh;
+    }
 
-    //    &.dark {
-    //        color: $black;
-    //    }
+    &__content {
+        min-width: 50%;
+    }
 
     &__title {
         @include typecsset-font-size($primary-headline-size);
