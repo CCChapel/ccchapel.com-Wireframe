@@ -1,4 +1,8 @@
 //Hide Elements
+.hidden {
+    display: none;
+}
+
 .palm--hide
 {
     @include grid-media-query("palm")
