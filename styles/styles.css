@@ -2462,14 +2462,15 @@ a {
         color: #FFF !important; }
 
 input {
-  box-sizing: border-box;
   padding: .5em;
   font-size: 16px;
-  height: 100%;
-  width: 90%;
   border: 1px solid #333333;
   border-radius: 500px;
-  -webkit-appearance: none; }
+  height: 2.5em;
+  -webkit-appearance: none;
+  width: 90%; }
+  input:hover, input:active {
+    border-color: #41a5ea; }
   input[type="button"] {
     cursor: pointer;
     font-family: "proxima-nova", "Open Sans", Verdana, sans-serif;
@@ -2538,6 +2539,90 @@ input {
   textarea,
   input {
     font-size: 16px; } }
+/*
+* @CSS3 Metro Dropdown
+* @author Martin Ivanov
+* @website http://wemakesitesnet
+* @blog http://acidmartin.wordpress.com
+* @twitter https://twitter.com/#!/wemakesitesnet
+**/
+.css3-metro-dropdown option,
+.css3-metro-dropdown:after,
+.css3-metro-dropdown::after,
+.css3-metro-dropdown select {
+  color: #fff; }
+
+.css3-metro-dropdown select,
+.css3-metro-dropdown:after,
+.css3-metro-dropdown::after {
+  display: block;
+  background: #FFF; }
+
+.css3-metro-dropdown {
+  position: relative;
+  display: inline-block;
+  border: 0;
+  width: 90%; }
+
+.css3-metro-dropdown:after {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f078";
+  padding: .5em;
+  font-size: 16px;
+  border: 1px solid #333333;
+  border-radius: 500px;
+  height: 2.5em;
+  -webkit-appearance: none;
+  border-left: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  display: table-cell;
+  position: absolute;
+  padding: 0;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 3em;
+  font-size: 10px;
+  text-align: center;
+  -webkit-pointer-events: none;
+  -moz-pointer-events: none;
+  pointer-events: none;
+  color: #CCC;
+  line-height: 36px; }
+  .css3-metro-dropdown:after:hover, .css3-metro-dropdown:after:active {
+    border-color: #41a5ea; }
+
+.css3-metro-dropdown:hover:after {
+  border-color: #41a5ea;
+  color: #41a5ea; }
+
+.css3-metro-dropdown select {
+  padding: .5em;
+  font-size: 16px;
+  border: 1px solid #333333;
+  border-radius: 500px;
+  height: 2.5em;
+  -webkit-appearance: none;
+  vertical-align: middle;
+  outline: 0 none;
+  cursor: pointer;
+  font-size: 1em;
+  color: #333;
+  width: 100%; }
+  .css3-metro-dropdown select:hover, .css3-metro-dropdown select:active {
+    border-color: #41a5ea; }
+
+.css3-metro-dropdown option {
+  padding: .5em;
+  background: #fff;
+  color: #333; }
+
 @media only screen and (max-width: 480px) {
   .palm--hide {
     display: none; } }

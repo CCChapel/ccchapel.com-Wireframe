@@ -1,3 +1,21 @@
+@mixin form-control-defaults {
+    padding: .5em;
+    
+    font-size: $typecsset-base-font-size;
+    
+    border: 1px solid $charcoal;
+    border-radius: 500px;
+    
+    height: 2.5em;
+    
+    -webkit-appearance: none;
+    
+    &:hover,
+    &:active {
+        border-color: $light-blue;
+    }
+}
+
 //**************************************************
 // CALL TO ACTION BUTTONS
 //**************************************************/
@@ -211,18 +229,19 @@
 // INPUT
 //**************************************************/
 input {
-    box-sizing: border-box;
-    padding: .5em;
-    
-    font-size: $typecsset-base-font-size;
+    @include form-control-defaults;
+//    box-sizing: border-box;
+//    padding: .5em;
+//    
+//    font-size: $typecsset-base-font-size;
 
-    height: 100%;
+//    height: 100%;
     width: 90%;
 
-    border: 1px solid $charcoal;
-    border-radius: 500px;
+//    border: 1px solid $charcoal;
+//    border-radius: 500px;
     
-    -webkit-appearance: none;
+//    -webkit-appearance: none;
     
     &[type="button"] {
         cursor: pointer;
@@ -307,3 +326,137 @@ input {
 //    
 //    -webkit-appearance: none;
 //}
+
+//**************************************************
+// SELECT
+//**************************************************/
+/*
+* @CSS3 Metro Dropdown
+* @author Martin Ivanov
+* @website http://wemakesitesnet
+* @blog http://acidmartin.wordpress.com
+* @twitter https://twitter.com/#!/wemakesitesnet
+**/
+.css3-metro-dropdown option,
+.css3-metro-dropdown:after,
+.css3-metro-dropdown::after,
+.css3-metro-dropdown select
+{
+    color: #fff;
+}
+
+.css3-metro-dropdown select,
+.css3-metro-dropdown:after,
+.css3-metro-dropdown::after
+{
+    display: block;
+    background: #FFF;
+}
+
+//.css3-metro-dropdown select,
+//.css3-metro-dropdown option
+//{
+//    padding: 8px;
+//}
+
+.css3-metro-dropdown
+{
+    position: relative;
+    display: inline-block;
+    border: 0;
+    
+    width: 90%;
+}
+
+.css3-metro-dropdown:after
+{
+    //@extend .fa;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+    //@extend .fa-chevron-down:before;
+    content: "\f078";
+
+    @include form-control-defaults;
+    
+    //border: 1px solid $medium-gray;
+    border-left: none;
+    //border-radius: 0 3px 3px 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+    display: table-cell;
+    position: absolute;
+    padding: 0;
+    top: 0;
+    right: 0;
+//    box-sizing: border-box;
+
+    height: 100%;
+    width: 3em;
+
+    font-size: 10px;
+    text-align: center;
+
+    -webkit-pointer-events: none;
+    -moz-pointer-events: none;
+    pointer-events: none;
+
+    color: $medium-gray;
+    line-height: 36px; //Same as height
+    
+}
+
+.css3-metro-dropdown:hover:after {
+    border-color: $light-blue;
+    color: $light-blue;
+}
+
+//.css3-metro-dropdown:active:after {
+    //@extend .fa-chevron-up:before;
+    //animation: rotate180 250ms linear 1 forwards;
+//}
+
+.css3-metro-dropdown select
+{
+//    -webkit-appearance: none;
+
+//    padding: 0px ($magic-number * 1.25) 0 .5em;
+
+//    //Fix Firefox spacing
+//    #{$firefox} & 
+//    {
+//        padding-right: ($magic-number / 2);
+//    }
+
+
+//    border: 1px solid $medium-gray;
+//    border-radius: 3px;
+
+    @include form-control-defaults;
+
+    vertical-align: middle;
+    outline: 0 none;
+
+    cursor: pointer;
+
+//    height: 36px;
+
+    font-size: 1em;
+    
+    color: $black;
+    
+    width: 100%;
+}
+
+.css3-metro-dropdown option
+{
+    padding: .5em;
+
+    background: #fff;
+    color: $black;
+}
