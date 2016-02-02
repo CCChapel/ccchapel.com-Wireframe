@@ -2531,6 +2531,10 @@ input {
   textarea,
   input {
     font-size: 16px; } }
+button {
+  cursor: pointer;
+  -webkit-appearance: none; }
+
 @media only screen and (max-width: 480px) {
   .palm--hide {
     display: none; } }

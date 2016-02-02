@@ -2933,6 +2933,11 @@ input {
   input {
     font-size: 16px; } }
 
+/* line 295, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/form-controls.scss */
+button {
+  cursor: pointer;
+  -webkit-appearance: none; }
+
 @media only screen and (max-width: 480px) {
   /* line 2, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/includes/hacks.scss */
   .palm--hide {
