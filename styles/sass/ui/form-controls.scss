@@ -51,6 +51,8 @@
     $border-size: 2px;
     
     @extend .center-vertically;
+    
+    cursor: pointer;
 
     border: $border-size solid currentColor;
     border-radius: $border-radius;

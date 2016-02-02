@@ -2393,6 +2393,7 @@ a {
   color: #185e94 !important; }
 
 .cta {
+  cursor: pointer;
   border: 2px solid currentColor;
   border-radius: 6px;
   box-sizing: border-box;
