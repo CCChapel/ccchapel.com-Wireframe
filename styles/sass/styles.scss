@@ -14,7 +14,10 @@
 
 //Page Styles
 @import "ui/page.scss";
-@import "ui/content-section.scss";
+
+@import "ui/content-section/content-section.scss";
+@import "ui/content-section/cross-sell.scss";
+
 @import "ui/modal.scss";
 @import "ui/header.scss";
 
@@ -24,8 +27,6 @@
 @import "ui/body/search.scss";
 @import "ui/body/campus-info.scss";
 @import "ui/body/message.scss";
-
-@import "ui/body.scss";
 
 @import "ui/footer.scss";
 

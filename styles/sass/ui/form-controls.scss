@@ -71,8 +71,8 @@
     width: 75%; // !important;
 
     transition: background-color $transition-length $transition-function,
-            color $transition-length $transition-function,
-            border-color $transition-length $transition-function;
+                color $transition-length $transition-function,
+                border-color $transition-length $transition-function;
 
     @include grid-media-query("portable") {
         width: 100%;
@@ -221,6 +221,14 @@ input {
     border-radius: 500px;
     
     -webkit-appearance: none;
+    
+    &[type="button"] {
+        cursor: pointer;
+        
+        font-family: $sans-serif-fonts;
+        
+        -webkit-appearance: none;
+    }
 }
 
 .search-go {
@@ -292,8 +300,8 @@ input {
 //**************************************************
 // BUTTON
 //**************************************************/
-button {
-    cursor: pointer;
-    
-    -webkit-appearance: none;
-}
+//button {
+//    cursor: pointer;
+//    
+//    -webkit-appearance: none;
+//}

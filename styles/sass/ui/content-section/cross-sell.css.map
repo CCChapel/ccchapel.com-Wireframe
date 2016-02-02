@@ -1,8 +1,8 @@
 {
   "version": 3,
-  "file": "body.css",
+  "file": "cross-sell.css",
   "sources": [
-    "body.scss"
+    "cross-sell.scss"
   ],
   "sourcesContent": [],
   "mappings": "",

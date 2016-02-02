@@ -1572,6 +1572,64 @@ body {
   font-weight: bold;
   text-align: center; }
 
+.cross-sell__section-description {
+  margin: 0 0 1.5rem 0;
+  text-align: center; }
+.cross-sell__item {
+  margin-bottom: 24px; }
+  .cross-sell__item a {
+    color: currentColor; }
+.cross-sell__image {
+  background: #CCC center bottom/cover no-repeat scroll;
+  margin-bottom: 1em;
+  height: 10em; }
+  @media only screen and (min-width: 481px) and (max-width: 1023px) {
+    .cross-sell__image {
+      height: 20em; } }
+.cross-sell__name {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: bold; }
+.cross-sell__details {
+  font-weight: normal !important; }
+  @media only screen and (max-width: 1023px) {
+    .cross-sell__details {
+      border-bottom: #0b4673 1pt solid;
+      padding-bottom: 24px; }
+      .event:last-child .cross-sell__details {
+        border-bottom: none;
+        padding-bottom: 0; } }
+
+.event-details__image {
+  background: #CCC center bottom/cover no-repeat scroll;
+  margin-bottom: 24px;
+  height: 10em; }
+  @media only screen and (min-width: 481px) and (max-width: 1023px) {
+    .event-details__image {
+      height: 20em; } }
+.event-details__cta {
+  margin-bottom: 24px; }
+.event-details__social {
+  margin-bottom: 24px;
+  text-align: center; }
+.event-details__name {
+  font-size: 64px;
+  font-size: 4rem;
+  line-height: 1.125;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: -0.0625em; }
+.event-details__date, .event-details__time {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: bold; }
+.event-details__map {
+  display: none;
+  height: 360px;
+  width: 100%; }
+
 .modal {
   position: fixed;
   display: none;
@@ -2001,65 +2059,6 @@ body {
   text-align: center;
   display: inline-block; }
 
-.events__keywords {
-  margin: 0 0 1.5rem 0;
-  text-align: center; }
-
-.event {
-  margin-bottom: 24px; }
-  .event a {
-    color: currentColor; }
-  .event__image {
-    background: #CCC center bottom/cover no-repeat scroll;
-    margin-bottom: 1em;
-    height: 10em; }
-    @media only screen and (min-width: 481px) and (max-width: 1023px) {
-      .event__image {
-        height: 20em; } }
-  .event__name {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 1;
-    font-weight: bold; }
-  .event__details {
-    font-weight: normal !important; }
-    @media only screen and (max-width: 1023px) {
-      .event__details {
-        border-bottom: #0b4673 1pt solid;
-        padding-bottom: 24px; }
-        .event:last-child .event__details {
-          border-bottom: none;
-          padding-bottom: 0; } }
-
-.event-details__image {
-  background: #CCC center bottom/cover no-repeat scroll;
-  margin-bottom: 24px;
-  height: 10em; }
-  @media only screen and (min-width: 481px) and (max-width: 1023px) {
-    .event-details__image {
-      height: 20em; } }
-.event-details__cta {
-  margin-bottom: 24px; }
-.event-details__social {
-  margin-bottom: 24px;
-  text-align: center; }
-.event-details__name {
-  font-size: 64px;
-  font-size: 4rem;
-  line-height: 1.125;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-left: -0.0625em; }
-.event-details__date, .event-details__time {
-  font-size: 24px;
-  font-size: 1.5rem;
-  line-height: 1;
-  font-weight: bold; }
-.event-details__map {
-  display: none;
-  height: 360px;
-  width: 100%; }
-
 .footer {
   background-color: #333333;
   color: #FFF;
@@ -2406,7 +2405,7 @@ a {
   white-space: nowrap;
   text-overflow: hidden;
   overflow: hidden;
-  height: 3em !important;
+  height: 3rem !important;
   width: 75%;
   transition: background-color 250ms linear, color 250ms linear, border-color 250ms linear; }
   @media only screen and (max-width: 1023px) {
@@ -2467,6 +2466,10 @@ input {
   border: 1px solid #333333;
   border-radius: 500px;
   -webkit-appearance: none; }
+  input[type="button"] {
+    cursor: pointer;
+    font-family: "proxima-nova", "Open Sans", Verdana, sans-serif;
+    -webkit-appearance: none; }
 
 .search-go {
   position: absolute;
@@ -2531,10 +2534,6 @@ input {
   textarea,
   input {
     font-size: 16px; } }
-button {
-  cursor: pointer;
-  -webkit-appearance: none; }
-
 @media only screen and (max-width: 480px) {
   .palm--hide {
     display: none; } }

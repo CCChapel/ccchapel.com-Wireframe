@@ -1,31 +1,31 @@
 //**************************************************
-// EVENTS
+// CROSS SELL
 //**************************************************/
-.events {
-    &__title {
-//        @include typecsset-font-size($secondary-headline-size);
-//        font-weight: bold;
-//        
-//        text-align: center;
+.cross-sell {
+    &__section-title {
+        //        @include typecsset-font-size($secondary-headline-size);
+        //        font-weight: bold;
+        //        
+        //        text-align: center;
     }
 
-    &__keywords {
+    &__section-description {
         margin: 0 0 1.5rem 0;
-        
+
         text-align: center;
     }
-    
-    &__cta {
+
+    &__section-cta {
         .cta {
         }
     }
-}
-
-.event {
-    margin-bottom: $magic-number;
     
-    a {
-        color: currentColor;
+    &__item {
+        margin-bottom: $magic-number;
+
+        a {
+            color: currentColor;
+        }
     }
 
     &__image {
@@ -34,7 +34,7 @@
         margin-bottom: 1em;
 
         height: 10em;
-        
+
         @include grid-media-query("lap") {
             height: 20em;
         }
@@ -75,17 +75,17 @@
             height: 20em;
         }
     }
-    
+
     &__cta {
         margin-bottom: $magic-number;
     }
-    
+
     &__social {
         margin-bottom: $magic-number;
-        
+
         text-align: center;
     }
-    
+
     &__name {
         //.header-image__title
         @include typecsset-font-size($primary-headline-size);
@@ -94,53 +94,21 @@
         text-transform: uppercase;
         margin-left: -#{(1/16)}em;
     }
-    
+
     &__date,
     &__time {
         @include typecsset-font-size($tertiary-headline-size);
         font-weight: bold;
     }
-    
+
     &__location {
-        
+
     }
-    
+
     &__map {
         display: none;
-        
+
         height: (15 * $magic-number);
         width: 100%;
     }
 }
-
-//.calendar-marker {
-//    float: left;
-//    margin: .25em 1rem 0 0;
-//    
-//    border: 2px solid currentColor;
-//    border-radius: $border-radius;
-//
-//    height: 5rem;
-//    width: 6rem;
-//    
-//    @include typecsset-font-size($quaternary-headline-size, false);
-//    line-height: 100%;
-//    font-weight: bold;
-//    text-align: center;
-//    
-//    &__month {
-//        
-//    }
-//    
-//    &__day {
-//        @include typecsset-font-size($secondary-headline-size, false); 
-//        line-height: 100%;
-//    }
-//}
-//
-//<div class="calendar-marker">
-//  <div class="center-vertically alt center">
-//      <div class="calendar-marker__month">Feb</div>
-//      <div class="calendar-marker__day">5</div>
-//  </div>
-//</div>
