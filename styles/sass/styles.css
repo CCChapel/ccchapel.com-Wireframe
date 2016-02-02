@@ -1696,8 +1696,8 @@ body {
   font-weight: bold;
   text-align: center; }
 
-/* line 12, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/content-section/cross-sell.scss */
-.cross-sell__section-description {
+/* line 92, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/content-section/content-section.scss */
+.section-description {
   margin: 0 0 1.5rem 0;
   text-align: center; }
 
@@ -2147,9 +2147,6 @@ body {
 .search {
   color: #333;
   text-align: center; }
-  /* line 13, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/body/search.scss */
-  .search__keywords {
-    margin: 0 0 1.5rem 0; }
   /* line 17, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/body/search.scss */
   .search__controls {
     position: relative;

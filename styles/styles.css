@@ -1572,9 +1572,10 @@ body {
   font-weight: bold;
   text-align: center; }
 
-.cross-sell__section-description {
+.section-description {
   margin: 0 0 1.5rem 0;
   text-align: center; }
+
 .cross-sell__item {
   margin-bottom: 24px; }
   .cross-sell__item a {
@@ -1918,8 +1919,6 @@ body {
 .search {
   color: #333;
   text-align: center; }
-  .search__keywords {
-    margin: 0 0 1.5rem 0; }
   .search__controls {
     position: relative;
     height: 3em; }
