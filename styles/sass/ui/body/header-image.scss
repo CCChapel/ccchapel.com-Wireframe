@@ -1,0 +1,127 @@
+//**************************************************
+// HEADER IMAGE
+//**************************************************/
+.header-image {
+    //background: currentColor none center center/cover no-repeat padding-box border-box scroll;
+    //color: #FFF;
+
+    //position: relative;
+
+    min-height: 66vh;
+
+    //    &.dark {
+    //        color: $black;
+    //    }
+
+    &__title {
+        @include typecsset-font-size($primary-headline-size);
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+
+        margin: 0 0 $bottom-margin 0;
+    }
+
+    &__video-controls {
+        cursor: pointer;
+
+        font-size: 6rem;
+        text-align: center;
+        opacity: .4;
+
+        transition: opacity $transition-length $transition-function;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        .fa-stack-1x {
+            margin-left: .1em;
+        }
+    }
+
+    &__copy {
+        margin: 0 auto $bottom-margin auto;
+
+        text-align: center;
+
+        @include grid-media-query("desk") {
+            width: 50%;
+        }
+    }
+
+    &__cta {
+        @include grid-media-query("portable") {
+            & > * {
+                margin-bottom: $magic-number;
+            }
+
+            & div:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__cta1,
+    &__cta2 {
+    }
+}
+
+.header-details {
+    position: relative;
+    margin-top: $magic-number;
+
+    &__left {
+        @include typecsset-font-size($tertiary-headline-size, false);
+        text-align: left;
+
+        height: 3rem;
+
+        @include grid-media-query("palm") {
+            margin-bottom: $magic-number;
+
+            text-align: center;
+
+            & > div {
+                @include justify-content(center !important);
+            }
+        }
+    }
+
+    &__social {
+        height: 100%;
+
+        @include typecsset-font-size($base-font-size, false);
+
+        @include grid-media-query("palm") {
+            text-align: center;
+        }
+    }
+
+    &__right {
+        text-align: right;
+
+        height: 100%;
+
+        @include grid-media-query("palm") {
+            text-align: center;
+        }
+
+        //        & > a:not(:last-child) {
+        //            margin-right: $magic-number;
+        //        }
+    }
+
+    &__buttons {
+        @include flexbox;
+        @include justify-content(space-between);
+
+        .cta {
+            @include flex-grow(1);
+        }
+    }
+
+    &__social {
+        text-align: center;
+    }
+}

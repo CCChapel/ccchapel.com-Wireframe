@@ -1,0 +1,9 @@
+//**************************************************
+// BODY
+//**************************************************/
+.body {
+    @include grid-media-query("desk") {
+        //Adjust for Desk Sticky Menu
+        //padding-top: 6em;
+    }
+}

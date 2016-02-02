@@ -1,0 +1,21 @@
+//**************************************************
+// SEARCH
+//**************************************************/
+.search {
+    color: $black;
+    text-align: center;
+
+    &__title {
+        //        @include typecsset-font-size($secondary-headline-size);
+        //        font-weight: bold;
+    }
+
+    &__keywords {
+        margin: 0 0 1.5rem 0;
+    }
+
+    &__controls {
+        position: relative;
+        height: 3em;
+    }
+}
