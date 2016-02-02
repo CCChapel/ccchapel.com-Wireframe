@@ -820,7 +820,7 @@
                             "&media=" + encodeURIComponent($("meta[property='og:image']").attr("content"));
                         break;
                     case "email":
-                        shareUrl = "mailto:?subject=Check This Out&body=" +
+                        shareUrl = "mailto:?subject=Check%20This%20Out&body=" +
                             encodeURIComponent(location.href);
                         $(this).attr("href", shareUrl);
                         return;
