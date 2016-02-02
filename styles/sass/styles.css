@@ -2760,7 +2760,7 @@ a {
   white-space: nowrap;
   text-overflow: hidden;
   overflow: hidden;
-  height: 3em !important;
+  height: 3rem !important;
   width: 75%;
   transition: background-color 250ms linear, color 250ms linear, border-color 250ms linear; }
   @media only screen and (max-width: 1023px) {
