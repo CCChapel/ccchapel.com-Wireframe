@@ -4,13 +4,6 @@
 // SETUP
 //***********************************************/
 (function( CCChapel, $, undefined ) {
-    //************************************************
-    // Public Methods
-    //***********************************************/
-    
-}( window.CCChapel = window.CCChapel || {}, jQuery ));
-
-(function( CCChapel, $, undefined ) {
 //    //Private Property
 //    var isHot = true;
 //
