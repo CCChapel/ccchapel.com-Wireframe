@@ -81,6 +81,10 @@ p {
     &.full-width {
         max-width: none;
     }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .byline {
