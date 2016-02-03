@@ -672,7 +672,7 @@
         return '<div class="google-map__info-window">' +
                     '<div class="google-map__location-name">' + name + '</div>' +
                     '<div class="google-map__location-address">' + address + '</div>' +
-                    '<div><a class="cta" href="' + link + '" target="_blank">Get Directions</a></div>' +
+                    '<div><a class="cta red" href="' + link + '" target="_blank">Get Directions</a></div>' +
                '</div>';
     }
 }( window.CCChapel = window.CCChapel || {}, jQuery ));
