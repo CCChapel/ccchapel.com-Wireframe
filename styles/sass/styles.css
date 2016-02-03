@@ -2543,20 +2543,27 @@ body {
   max-width: 25%; }
 
 @media only screen and (max-width: 480px) {
-  /* line 5, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/tables.scss */
-  .palm--hide-col {
-    visibility: collapse; } }
+  /* line 14, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/tables.scss */
+  .palm--hide-col-3 tr th:nth-of-type(3),
+  .palm--hide-col-3 tr td:nth-of-type(3) {
+    display: none; } }
 
-/* line 12, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/tables.scss */
+@media only screen and (max-width: 480px) {
+  /* line 23, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/tables.scss */
+  .palm--hide-col-4 tr th:nth-of-type(4),
+  .palm--hide-col-4 tr td:nth-of-type(4) {
+    display: none; } }
+
+/* line 30, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/tables.scss */
 thead,
 tbody {
   border-bottom: 2px solid #333; }
 
-/* line 16, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/tables.scss */
+/* line 34, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/tables.scss */
 th {
   text-align: left; }
 
-/* line 22, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/tables.scss */
+/* line 40, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/tables.scss */
 tr {
   border-bottom: 1px solid #EEE; }
 
