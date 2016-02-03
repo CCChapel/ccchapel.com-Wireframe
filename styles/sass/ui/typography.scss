@@ -208,6 +208,28 @@ a {
             }
         }
     }
+
+    &.no-marker {
+        & > * {
+            padding: 0 !important;
+            
+            &:after {
+                display: none;
+            }
+        }
+    }
+
+    &.palm--no-marker {
+        @include grid-media-query("palm") {
+            & > * {
+                padding: 0 !important;
+
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
 }
 
 //Colors
