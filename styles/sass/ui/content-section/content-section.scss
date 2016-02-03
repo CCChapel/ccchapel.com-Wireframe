@@ -2,15 +2,13 @@
 // CONTAINERS
 //**************************************************/
 .content-section {
-    margin-bottom: $vertical-padding;
+    //margin-bottom: $vertical-padding;
 
-    &--noBottomBuffer,
-    &.no-bottom-margin {
-        margin-bottom: inherit;
+    &.transparent {
+        
     }
 
     &.image {
-
         background: currentColor none center center/cover no-repeat padding-box border-box scroll;
 
         &.light {
@@ -40,6 +38,28 @@
     &.light-gray {
         background: $light-gray;
     }
+    
+    //Handle Spacing Between Sections
+    &.image + &.transparent,
+    &.light-blue + &.transparent,
+    &.light-gray + &.transparent {
+        margin-top: $vertical-padding;
+    }
+    
+    &.transparent + &.image,
+    &.transparent + &.light-blue,
+    &.transparent + &.light-gray {
+        margin-top: $vertical-padding;
+    }
+    
+    &--noBottomBuffer,
+    &.no-bottom-margin {
+        margin-bottom: inherit;
+    }
+}
+
+div.content-section.transparent:last-child {
+    margin-bottom: $vertical-padding;
 }
 
 .content-wrapper {
