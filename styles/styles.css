@@ -2091,6 +2091,8 @@ body {
     display: inline-flex; }
   .footer__navigation {
     text-align: left; }
+    .footer__navigation a {
+      font-weight: normal; }
 
 .square, .circle {
   position: relative;

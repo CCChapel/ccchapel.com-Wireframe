@@ -51,6 +51,10 @@
 
     &__navigation {
         text-align: left;
+        
+        a {
+            font-weight: normal;
+        }
     }
 
     &__copyright {
