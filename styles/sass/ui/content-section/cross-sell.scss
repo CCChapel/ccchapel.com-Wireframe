@@ -52,7 +52,7 @@
             border-bottom: $dark-blue 1pt solid;
             padding-bottom: $magic-number;
 
-            .event:last-child & {
+            .cross-sell:last-child & {
                 border-bottom: none;
                 padding-bottom: 0;
             }
