@@ -8,8 +8,9 @@ table {
     }
 }
 
-thead {
-    //border-bottom: 2px solid $black;
+thead,
+tbody {
+    border-bottom: 2px solid $black;
 }
 
 th {
@@ -20,8 +21,4 @@ th {
 
 tr {
     border-bottom: 1px solid $light-gray;
-    
-    &:last-child {
-        border-bottom: 2px solid $black;
-    }
 }
