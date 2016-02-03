@@ -1883,13 +1883,17 @@ body {
           -webkit-justify-content: center !important;
           -moz-justify-content: center !important;
           justify-content: center !important; } }
+  @media only screen and (max-width: 480px) {
+    .header-details__copy {
+      text-align: center; } }
   .header-details__social {
     height: 100%;
+    width: 50% !important;
     font-size: 16px;
     font-size: 1rem; }
     @media only screen and (max-width: 480px) {
       .header-details__social {
-        text-align: center; } }
+        width: 100% !important; } }
   .header-details__right {
     text-align: right;
     height: 100%; }
@@ -1913,8 +1917,6 @@ body {
       -moz-flex-grow: 1;
       -ms-flex-positive: 1;
       flex-grow: 1; }
-  .header-details__social {
-    text-align: center; }
 
 .search {
   color: #333;

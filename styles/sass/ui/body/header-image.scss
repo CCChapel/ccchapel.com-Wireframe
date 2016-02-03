@@ -86,14 +86,21 @@
             }
         }
     }
+    
+    &__copy {
+        @include grid-media-query("palm") {
+            text-align: center;
+        }
+    }
 
     &__social {
         height: 100%;
-
+        width: 50% !important;
+        
         @include typecsset-font-size($base-font-size, false);
 
         @include grid-media-query("palm") {
-            text-align: center;
+            width: 100% !important;
         }
     }
 
@@ -121,6 +128,5 @@
     }
 
     &__social {
-        text-align: center;
     }
 }
