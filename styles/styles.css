@@ -2624,6 +2624,8 @@ input {
   padding: .5em;
   background: #fff;
   color: #333; }
+  .css3-metro-dropdown option:disabled {
+    color: #AAA; }
 
 .hidden {
   display: none; }

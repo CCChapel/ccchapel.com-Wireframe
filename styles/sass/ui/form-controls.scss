@@ -230,19 +230,8 @@
 //**************************************************/
 input {
     @include form-control-defaults;
-//    box-sizing: border-box;
-//    padding: .5em;
-//    
-//    font-size: $typecsset-base-font-size;
-
-//    height: 100%;
     width: 90%;
 
-//    border: 1px solid $charcoal;
-//    border-radius: 500px;
-    
-//    -webkit-appearance: none;
-    
     &[type="button"] {
         cursor: pointer;
         
@@ -353,12 +342,6 @@ input {
     background: #FFF;
 }
 
-//.css3-metro-dropdown select,
-//.css3-metro-dropdown option
-//{
-//    padding: 8px;
-//}
-
 .css3-metro-dropdown
 {
     position: relative;
@@ -394,7 +377,6 @@ input {
     padding: 0;
     top: 0;
     right: 0;
-//    box-sizing: border-box;
 
     height: 100%;
     width: 3em;
@@ -423,28 +405,12 @@ input {
 
 .css3-metro-dropdown select
 {
-//    -webkit-appearance: none;
-
-//    padding: 0px ($magic-number * 1.25) 0 .5em;
-
-//    //Fix Firefox spacing
-//    #{$firefox} & 
-//    {
-//        padding-right: ($magic-number / 2);
-//    }
-
-
-//    border: 1px solid $medium-gray;
-//    border-radius: 3px;
-
     @include form-control-defaults;
 
     vertical-align: middle;
     outline: 0 none;
 
     cursor: pointer;
-
-//    height: 36px;
 
     font-size: 1em;
     
@@ -459,4 +425,8 @@ input {
 
     background: #fff;
     color: $black;
+    
+    &:disabled {
+        color: $dark-gray;
+    }
 }

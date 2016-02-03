@@ -255,7 +255,7 @@
                     <div class="header-image__cta [ grid grid--center ]">
                         <div class="header-image__cta1 [ grid__item one-third portable--one-whole ]">
                             <a class="cta" href="#">
-                                Calendar
+                                All Events
                             </a>
                         </div>
 
@@ -344,13 +344,12 @@ header-image__cta2
 
                          --><div class="[ grid__item one-third palm--one-whole ]">
                                 <span class="css3-metro-dropdown">
-                                    <select>
-                                        <option disabled selected>Campus</option>
-                                        <option>All</option>
-                                        <option>Hudson</option>
-                                        <option>Aurora</option>
-                                        <option>Stow</option>
-                                        <option>Highland Square</option>
+                                    <select class="search-campus">
+                                        <option value="" selected>All Campuses</option>
+                                        <option value="hudson">Hudson Campus</option>
+                                        <option value="aurora">Aurora Campus</option>
+                                        <option value="stow">Stow Campus</option>
+                                        <option value="highland square">Highland Square Campus</option>
                                     </select>
                                 </span>
                             </div>
@@ -365,15 +364,15 @@ header-image__cta2
                         </colgroup>
                         <thead>
                             <tr>
-                                <th class="one-eighth">Date</th>
-                                <th class="five-eighths">Name</th>
-                                <th class="one-eighth">Time</th>
-                                <th class="one-eighth">Location</th>
+                                <th class="one-sixth palm--one-quarter">Date</th>
+                                <th class="five-twelfths palm--three-quarters">Name</th>
+                                <th class="one-sixth palm--hide">Time</th>
+                                <th class="three-twelfths palm--hide">Location</th>
                             </tr>
                         </thead>
 
                         <tbody>
-                            <tr>
+                            <tr data-campus="hudson">
                                 <td>1.9.2016</td>
                                 <td>
                                     <a class="event__name" href="#">Kids' Basketball League</a>
@@ -384,10 +383,59 @@ header-image__cta2
                                         and includes a t-shirt.
                                     </div>
                                 </td>
-                                <td>9 a.m. &ndash; 12:30 p.m.</td>
-                                <td>Hudson Campus Gym</td>
+                                <td class="palm--hide">9 a.m. &ndash; 12:30 p.m.</td>
+                                <td class="palm--hide">Hudson Campus Gym</td>
                             </tr>
-                            <tr>
+                            <tr data-campus="aurora">
+                                <td>1.12.2016</td>
+                                <td>
+                                    <a class="event__name" href="#">Women's Bible Study</a>
+                                    <div class="description hidden">
+                                        Don't miss the start of our new Bible study, James: Mercy Triumphs, on January 12. 
+                                        We'll kick off this study on Tuesday mornings from 9:15 to 11:15 and Thursday evenings 
+                                        from 7 to 9 p.m. The cost is only $15, so sign up today and invite a friend.
+                                        
+                                        <p>
+                                            <a class="cta auto" href-"#">Register</a>
+                                        </p>
+                                    </div>
+                                </td>
+                                <td class="palm--hide">9:15–11:15 a.m. </td>
+                                <td class="palm--hide">Aurora Campus</td>
+                            </tr>
+                            <tr data-campus="highland square">
+                                <td>1.12.2016</td>
+                                <td>
+                                    <a class="event__name" href="#">Men's Bible Study</a>
+                                    <div class="description hidden">
+                                        Our men will be kicking off their Winter study on January 12 at 6 p.m. at 10 S Portage 
+                                        Path and will be going through the book “Manhood Restored - How the Gospel Makes Men Whole” by Eric Mason.
+
+                                        <p>
+                                            CLOSED! <a class="cta auto" href-"#">Register</a>
+                                        </p>
+                                    </div>
+                                </td>
+                                <td class="palm--hide">9–7:30 p.m. </td>
+                                <td class="palm--hide">Highland Square Campus Offices</td>
+                            </tr>
+                            <tr data-campus="aurora">
+                                <td>1.31.2016</td>
+                                <td>
+                                    <a class="event__name" href="#">Connect Groups</a>
+                                    <div class="description hidden">
+                                        If you are not experiencing group life, it is time to get involved! Connect Groups 
+                                        are a short term, 8 week commitment to get to know others in a small group setting.
+
+                                        <p>
+                                            <a class="cta auto" href-"#">Register</a>
+                                        </p>
+                                    </div>
+                                </td>
+                                <td class="palm--hide">9:15–11:15 a.m. </td>
+                                <td class="palm--hide">Aurora Campus</td>
+                            </tr>
+                            <tr data-campus="hudson aurora highland square">
                                 <td>2.1.2016</td>
                                 <td>
                                     <a class="event__name" href="#">PATH (Post Abortion Truth &amp; Healing) Study</a>
@@ -398,10 +446,10 @@ header-image__cta2
                                         Bible study.
                                     </div>
                                 </td>
-                                <td>7-9 p.m.</td>
-                                <td>Hudson Campus Gym</td>
+                                <td class="palm--hide">7-9 p.m.</td>
+                                <td class="palm--hide">???</td>
                             </tr>
-                            <tr>
+                            <tr data-campus="hudson highland square">
                                 <td>2.5.2016</td>
                                 <td>
                                     <a class="event__name" href="#">Edge Games XII</a>
@@ -410,10 +458,10 @@ header-image__cta2
                                         12 and 19 from 7-9:30 p.m. No pre-registration or payment is required.
                                     </div>
                                 </td>
-                                <td>7-9:30 p.m.</td>
-                                <td>Hudson Campus Gym</td>
+                                <td class="palm--hide">7-9:30 p.m.</td>
+                                <td class="palm--hide">Hudson Campus Gym</td>
                             </tr>
-                            <tr>
+                            <tr data-campus="hudson">
                                 <td>2.6.2016</td>
                                 <td>
                                     <a class="event__name" href="#">Community Group Open House</a>
@@ -425,10 +473,10 @@ header-image__cta2
                                         some coffee and pastries and find the right group for you!
                                     </div>
                                 </td>
-                                <td>???</td>
-                                <td>Hudson Campus Gym</td>
+                                <td class="palm--hide">???</td>
+                                <td class="palm--hide">Hudson Campus Gym</td>
                             </tr>
-                            <tr>
+                            <tr data-campus="hudson">
                                 <td>2.7.2016</td>
                                 <td>
                                     <a class="event__name" href="#">Membership</a>
@@ -443,10 +491,10 @@ header-image__cta2
                                         </p>
                                     </div>
                                 </td>
-                                <td>9:30 a.m. &ndash; 2:30 p.m.</td>
-                                <td>East Hall</td>
+                                <td class="palm--hide">9:30 a.m. &ndash; 2:30 p.m.</td>
+                                <td class="palm--hide">East Hall</td>
                             </tr>
-                            <tr>
+                            <tr data-campus="hudson">
                                 <td>2.7.2016</td>
                                 <td>
                                     <a class="event__name" href="#">Super Bowl House Parties</a>
@@ -456,8 +504,26 @@ header-image__cta2
                                         Location varies by grade.
                                     </div>
                                 </td>
-                                <td>6-11 p.m.</td>
-                                <td>???</td>
+                                <td class="palm--hide">6-11 p.m.</td>
+                                <td class="palm--hide">???</td>
+                            </tr>
+                            <tr data-campus="highland square">
+                                <td>2.21.2016</td>
+                                <td>
+                                    <a class="event__name" href="#">ESL Orientation</a>
+                                    <div class="description hidden">
+                                        For those interested in checking out our Refugee Ministry, this will be our first 
+                                        orientation to help you see how you may best fit. Come hear from our Director of 
+                                        Urban Outreach Keith Jemison and World Relief staff on ways we are hoping to be 
+                                        Jesus' hands and feet with those hurting and in need.
+
+                                        <p>
+                                            <a class="cta auto" href-"#">Register</a>
+                                        </p>
+                                    </div>
+                                </td>
+                                <td class="palm--hide">12:30–2 p.m. </td>
+                                <td class="palm--hide">Highland Square Offices</td>
                             </tr>
                         </tbody>
                     </table>
@@ -598,6 +664,7 @@ header-image__cta2
             $(document).ready(function() {
                 setupDescriptionToggle();
                 setupKeywordSearch();
+                setupCampusSearch();
             });
             
             function setupDescriptionToggle() {
@@ -637,6 +704,30 @@ header-image__cta2
                 function formatStringForComparison(str) {
                     return str.replace(/[^\w\s]/, "").toLowerCase();
                 }
+            }
+            
+            function setupCampusSearch() {
+                var selector = ".search-campus";
+                var eventNameSelector = ".event__name";
+                var dataAttribute = "data-campus";
+                
+                $(selector).change(function() {
+                    var filter = $(selector).val().toLowerCase(); 
+                    console.log(filter);
+                    
+                    //Get Table Row
+                    $(eventNameSelector).closest("tr").each(function() {
+                        //Check for string
+                        if ($(this).attr(dataAttribute).indexOf(filter) >= 0) {
+                            //Show the row
+                            $(this).show();
+                        }
+                        else {
+                            //Hide the row
+                            $(this).hide();
+                        }
+                    });
+                });
             }
         </script>
     </body>
