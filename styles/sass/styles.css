@@ -2883,7 +2883,7 @@ a {
 
 /* line 231, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/form-controls.scss */
 input {
-  padding: .5em;
+  padding: 0.5em 1em;
   font-size: 16px;
   border: 1px solid #333333;
   border-radius: 500px;
@@ -3010,7 +3010,7 @@ input {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f078";
-  padding: .5em;
+  padding: 0.5em 1em;
   font-size: 16px;
   border: 1px solid #333333;
   border-radius: 500px;
@@ -3045,7 +3045,7 @@ input {
 
 /* line 406, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/form-controls.scss */
 .css3-metro-dropdown select {
-  padding: .5em;
+  padding: 0.5em 1em;
   font-size: 16px;
   border: 1px solid #333333;
   border-radius: 500px;
