@@ -1,4 +1,18 @@
 //**************************************************
+// ADD MARGINS
+//**************************************************/
+.addBottomMargin,
+.add-bottom-margin {
+    margin-bottom: $magic-number;
+}
+
+.palm--add-bottom-margin {
+    @include grid-media-query("palm") {
+        margin-bottom: $magic-number;
+    }
+}
+
+//**************************************************
 // CENTER VERTICALLY
 //**************************************************/
 .center-vertically {
