@@ -772,6 +772,7 @@ header-image__cta2
                 
                 $(selector).on("input", function() {
                     filter();
+                });
             }
             
             function setupCampusSearch() {
@@ -813,9 +814,23 @@ header-image__cta2
                         $(this).hide();
                     }
                 });
-
+                
+                //Check for no visible rows
+                if ($(table + " > tbody tr:visible").length <= 0) {
+                    showNoResultsRow();
+                }
+                else {
+                    //Clean up No Results Rows
+                    $(table + " > tbody tr.no-results").remove();
+                }
+                
+                //Companion Functions
                 function formatStringForComparison(str) {
                     return str.replace(/[^\w\s]/, "").toLowerCase();
+                }
+                
+                function showNoResultsRow() {
+                    $(table + " > tbody").append('<tr class="no-results"><td colspan="4" class="accent">Sorry, no events were found.</td></tr>');
                 }
             }
         </script>
