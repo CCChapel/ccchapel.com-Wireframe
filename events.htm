@@ -361,7 +361,7 @@ header-image__cta2
                         </div>
                     </div>
 
-                    <table class="palm--hide-col-3 palm--hide-col-4">
+                    <table class="event__table [ palm--hide-col-3 palm--hide-col-4 ]">
                         <thead>
                             <tr>
                                 <th class="one-sixth palm--one-quarter">Date</th>
@@ -519,6 +519,7 @@ header-image__cta2
                                             simply stop by the gym after service on Saturday or anytime Sunday morning, enjoy 
                                             some coffee and pastries and find the right group for you!
                                         </p>
+                                    </div>
                                 </td>
                                 <td>6:15-7 p.m.</td>
                                 <td>Hudson Campus Gym</td>
@@ -768,53 +769,56 @@ header-image__cta2
             
             function setupKeywordSearch() {
                 var selector = ".search-keywords";
-                var eventNameSelector = ".event__name";
                 
                 $(selector).on("input", function() {
-                    //Get Keywords
-                    var keyword = formatStringForComparison($(selector).val());
-                    
-                    //Get Event Names
-                    $(eventNameSelector).each(function() {
-                        //Check for string
-                        if (formatStringForComparison($(this).html()).indexOf(keyword) >= 0) {
-                            //Show the row
-                            $(this).closest("tr").show();
-                        }
-                        else {
-                            //Hide the row
-                            $(this).closest("tr").hide();
-                        }
-                    });
-                });
-                
-                function formatStringForComparison(str) {
-                    return str.replace(/[^\w\s]/, "").toLowerCase();
-                }
+                    filter();
             }
             
             function setupCampusSearch() {
                 var selector = ".search-campus";
-                var eventNameSelector = ".event__name";
-                var dataAttribute = "data-campus";
                 
                 $(selector).change(function() {
-                    var filter = $(selector).val().toLowerCase(); 
-                    console.log(filter);
-                    
-                    //Get Table Row
-                    $(eventNameSelector).closest("tr").each(function() {
-                        //Check for string
-                        if ($(this).attr(dataAttribute).indexOf(filter) >= 0) {
-                            //Show the row
+                    filter();
+                });
+            }
+            
+            function filter() {
+                var table = ".event__table";
+                var keywordField = ".search-keywords";
+                var campusSelect = ".search-campus";
+                var rowAttribute = "data-campus";
+                var linkClass = ".event__name";
+                
+                //Get Keywords
+                var keyword = formatStringForComparison($(keywordField).val());
+
+                //Get Campus
+                var campus = $(campusSelect).val().toLowerCase(); 
+
+                //Go through each row
+                $(table).children("tbody").children("tr").each(function() {
+                    //Check for campus
+                    if (($(this).attr(rowAttribute) !== undefined) && ($(this).attr(rowAttribute).indexOf(campus) >=0)) {
+                        console.log("campus okay: " + campus);
+                        
+                        //Check for keyword
+                        var eventField = $(this).find(linkClass).html();
+                        
+                        if (formatStringForComparison(eventField).indexOf(keyword) >= 0) {
                             $(this).show();
                         }
                         else {
-                            //Hide the row
                             $(this).hide();
                         }
-                    });
+                    }
+                    else {
+                        $(this).hide();
+                    }
                 });
+
+                function formatStringForComparison(str) {
+                    return str.replace(/[^\w\s]/, "").toLowerCase();
+                }
             }
         </script>
     </body>
