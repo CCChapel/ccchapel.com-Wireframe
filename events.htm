@@ -799,8 +799,6 @@ header-image__cta2
                 $(table).children("tbody").children("tr").each(function() {
                     //Check for campus
                     if (($(this).attr(rowAttribute) !== undefined) && ($(this).attr(rowAttribute).indexOf(campus) >=0)) {
-                        console.log("campus okay: " + campus);
-                        
                         //Check for keyword
                         var eventField = $(this).find(linkClass).html();
                         
