@@ -139,32 +139,32 @@
     }
     
     /** FORM CONTROLS ***/
-    var SearchFields = {
-        //Properties
-        Selector: "input[type='search']",
-        Html: '<div class="search-go"><div class="center-vertically"><i class="fa fa-chevron-right"></i></div></div>',
-
-        //Functions
-        setup: function() {
-            $(this.Selector).each(function() {
-                //Make Parent Position Relative for Absolute Positioning
-                $(this).parent().css("position", "relative");
-
-                $(this).focus(function() {
-                    //Get Horizontal Positioning
-                    var horizontalPosition = $(this).position().left + $(this).width();
-
-                    //Add Chevron
-                    $(this).after(SearchFields.Html);
-                    $(this).parent().find(".search-go").css("left", horizontalPosition);
-                })
-                    .blur(function() {
-                    //Add Chevron
-                    $(this).parent().find(".search-go").remove();
-                });
-            });
-        }
-    }
+//    var SearchFields = {
+//        //Properties
+//        Selector: "input[type='search']",
+//        Html: '<div class="search-go"><div class="center-vertically"><i class="fa fa-chevron-right"></i></div></div>',
+//
+//        //Functions
+//        setup: function() {
+//            $(this.Selector).each(function() {
+//                //Make Parent Position Relative for Absolute Positioning
+//                $(this).parent().css("position", "relative");
+//
+//                $(this).focus(function() {
+//                    //Get Horizontal Positioning
+//                    var horizontalPosition = $(this).position().left + $(this).width();
+//
+//                    //Add Chevron
+//                    $(this).after(SearchFields.Html);
+//                    $(this).parent().find(".search-go").css("left", horizontalPosition);
+//                })
+//                    .blur(function() {
+//                    //Add Chevron
+//                    $(this).parent().find(".search-go").remove();
+//                });
+//            });
+//        }
+//    }
     
     /*** DESKTOP SEARCH ***/
     var DesktopSearch = {
@@ -468,7 +468,7 @@
     CCChapel.initialize = function() {
         CCChapel.setupCampusLinks();
         CampusLocationMap.setup();
-        SearchFields.setup();
+//        SearchFields.setup();
         
         CCChapel.setupWebAppLinks();
         

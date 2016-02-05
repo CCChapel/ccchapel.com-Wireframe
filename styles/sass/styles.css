@@ -2927,18 +2927,6 @@ input {
     font-family: "proxima-nova", "Open Sans", Verdana, sans-serif;
     -webkit-appearance: none; }
 
-/* line 244, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/form-controls.scss */
-.search-go {
-  position: absolute;
-  top: 0;
-  right: 10%;
-  cursor: pointer;
-  height: 100%;
-  color: #AAA; }
-  /* line 255, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/form-controls.scss */
-  .search-go:hover {
-    color: #333; }
-
 /* Safari, Chrome and Opera */
 /* line 272, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/form-controls.scss */
 ::-webkit-input-placeholder {

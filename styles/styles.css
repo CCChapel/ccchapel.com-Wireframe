@@ -2509,16 +2509,6 @@ input {
     font-family: "proxima-nova", "Open Sans", Verdana, sans-serif;
     -webkit-appearance: none; }
 
-.search-go {
-  position: absolute;
-  top: 0;
-  right: 10%;
-  cursor: pointer;
-  height: 100%;
-  color: #AAA; }
-  .search-go:hover {
-    color: #333; }
-
 /* Safari, Chrome and Opera */
 ::-webkit-input-placeholder {
   color: #AAA;
