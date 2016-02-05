@@ -338,8 +338,9 @@ header-image__cta2
                     
                     <div class="section-description">
                         <div class="add-bottom-margin">
-                            Don't miss the events coming up. If you're looking for something particular, try searching for 
-                            a keyword or by campus.
+                            Here's everything happening from <a>DATE1 to DATE2 <i class="fa fa-calendar-o"></i></a>.<br />
+                            If you're looking for something particular, try searching for 
+                            a <a onclick="setFocus('.search-keywords')">keyword</a> or <a onclick="setFocus('.search-campus')">by campus</a>.
                         </div>
                         
                         <div class="grid">
@@ -753,6 +754,8 @@ header-image__cta2
                 setupDescriptionToggle();
                 setupKeywordSearch();
                 setupCampusSearch();
+                
+                
             });
             
             function setupDescriptionToggle() {
@@ -832,6 +835,10 @@ header-image__cta2
                 function showNoResultsRow() {
                     $(table + " > tbody").append('<tr class="no-results"><td colspan="4" class="accent">Sorry, no events were found.</td></tr>');
                 }
+            }
+            
+            function setFocus(selector) {
+                $(selector).focus().click();
             }
         </script>
     </body>
