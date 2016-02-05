@@ -102,6 +102,8 @@ a {
     font-weight: bold;
     text-decoration: none;
     
+    cursor: pointer;
+    
     transition: color $transition-length $transition-function;
     
     &:hover,

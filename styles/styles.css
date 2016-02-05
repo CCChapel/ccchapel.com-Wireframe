@@ -2332,6 +2332,7 @@ a {
   color: #0b4673;
   font-weight: bold;
   text-decoration: none;
+  cursor: pointer;
   transition: color 250ms linear; }
   a:hover, a:active {
     color: #185e94; }
