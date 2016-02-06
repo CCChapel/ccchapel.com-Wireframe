@@ -3091,10 +3091,15 @@ input {
 
 /* line 438, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/form-controls.scss */
 .drs-ticker {
-  font-size: 14px;
-  text-align: left;
-  padding-left: 10px;
-  border-left: 1px solid black; }
+  text-align: left; }
+  /* line 446, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/form-controls.scss */
+  .drs-ticker > div {
+    border-left: none; }
+
+/* line 451, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/form-controls.scss */
+.ui-ruler-tick-label {
+  left: 10px !important;
+  bottom: auto !important; }
 
 /* line 2, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/includes/hacks.scss */
 .hidden {
