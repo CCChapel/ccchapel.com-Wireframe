@@ -2502,7 +2502,7 @@ input {
   height: 2.5em;
   -webkit-appearance: none;
   width: 90%; }
-  input:hover, input:active {
+  input:hover, input:active, input:focus {
     border-color: #41a5ea; }
   input[type="button"] {
     cursor: pointer;
@@ -2618,7 +2618,7 @@ input {
   pointer-events: none;
   color: #CCC;
   line-height: 36px; }
-  .css3-metro-dropdown:after:hover, .css3-metro-dropdown:after:active {
+  .css3-metro-dropdown:after:hover, .css3-metro-dropdown:after:active, .css3-metro-dropdown:after:focus {
     border-color: #41a5ea; }
 
 .css3-metro-dropdown:hover:after {
@@ -2638,7 +2638,7 @@ input {
   font-size: 1em;
   color: #333;
   width: 100%; }
-  .css3-metro-dropdown select:hover, .css3-metro-dropdown select:active {
+  .css3-metro-dropdown select:hover, .css3-metro-dropdown select:active, .css3-metro-dropdown select:focus {
     border-color: #41a5ea; }
 
 .css3-metro-dropdown option {
@@ -2647,6 +2647,12 @@ input {
   color: #333; }
   .css3-metro-dropdown option:disabled {
     color: #AAA; }
+
+.drs-ticker {
+  font-size: 14px;
+  text-align: left;
+  padding-left: 10px;
+  border-left: 1px solid black; }
 
 .hidden {
   display: none; }

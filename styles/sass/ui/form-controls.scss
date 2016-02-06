@@ -11,7 +11,8 @@
     -webkit-appearance: none;
     
     &:hover,
-    &:active {
+    &:active,
+    &:focus {
         border-color: $light-blue;
     }
 }
@@ -429,4 +430,16 @@ input {
     &:disabled {
         color: $dark-gray;
     }
+}
+
+//**************************************************
+// Date Range Selector
+//**************************************************/
+.drs-ticker {
+    font-size: 14px;
+    text-align: left;
+    
+    padding-left: 10px;
+    
+    border-left: 1px solid black;
 }
