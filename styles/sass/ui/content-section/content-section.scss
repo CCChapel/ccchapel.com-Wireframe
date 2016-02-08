@@ -50,6 +50,14 @@
     &.no-bottom-margin {
         margin-bottom: inherit;
     }
+    
+    &.remove-top-margin {
+        margin-top: inherit !important;
+    }
+    
+    &.add-bottom-margin {
+        margin-bottom: $vertical-padding;
+    }
 }
 
 div.content-section.transparent:last-child {
