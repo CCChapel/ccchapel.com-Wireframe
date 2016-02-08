@@ -136,6 +136,10 @@ a {
     }
 }
 
+blockquote {
+    @include typecsset-font-size($secondary-headline-size);
+    font-weight: 800;
+}
 //BLOCK ELEMENTS
 //blockquote, p, ul, ol,  //Included in TypeCsset
 

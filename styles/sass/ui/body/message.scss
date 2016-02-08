@@ -3,6 +3,8 @@
 //**************************************************/
 .message {
     $message-section-height: 24rem;
+    
+    min-height: 0 !important;
 
     &__series-logo {
         height: $message-section-height;

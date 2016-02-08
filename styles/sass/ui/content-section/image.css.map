@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "image.css",
+  "sources": [
+    "image.scss"
+  ],
+  "sourcesContent": [],
+  "mappings": ";AAAgB,gBAAgB,AAAA,MAAM,CAAf;EACnB,UAAU,EAAE,KAAM,GADE",
+  "names": []
+}

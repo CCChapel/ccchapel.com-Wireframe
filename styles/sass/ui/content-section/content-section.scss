@@ -4,30 +4,24 @@
 .content-section {
     //margin-bottom: $vertical-padding;
 
-    &.transparent {
-        
+    &.small {
+        min-height: 18rem;
     }
 
-    &.image {
-        background: currentColor none center center/cover no-repeat padding-box border-box scroll;
+    &.medium {
+        min-height: 24rem;
+    }
 
-        &.light {
-            color: #FFF;
-            text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
-        }
+    &.large {
+        min-height: 30rem;
+    }
 
-        &.dark {
-            color: $charcoal;
-            text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
-        }
+    &.extra-large {
+        min-height: 36rem;
+    }
 
-        &.parallax {
-            background-attachment: fixed;
-
-            @include grid-media-query("palm") {
-                background-attachment: scroll;
-            }
-        }
+    &.transparent {
+        
     }
 
     &.light-blue {
