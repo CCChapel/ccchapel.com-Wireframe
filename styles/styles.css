@@ -2375,6 +2375,11 @@ blockquote {
   font-size: 2rem;
   line-height: 1.5;
   font-weight: 800; }
+  blockquote:after {
+    content: "– " attr(cite);
+    display: block; }
+  blockquote.no-cite:after {
+    content: none; }
 
 .horizontal-list {
   margin-bottom: 0;
