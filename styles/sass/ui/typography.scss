@@ -7,7 +7,6 @@
 small, .smaller
 {
     @include typecsset-font-size(14px);
-    //@include font-size(12px, "em");
 }
 
 i
@@ -20,50 +19,37 @@ b, em
     font-weight: bold;
 }
 
+.footnote {
+    //text-indent: -.5em;
+
+    &:before {
+        content: '*';
+
+        display: inline-block;
+        margin-left: -1em;
+
+        width: 1em;
+
+        color: currentColor;
+
+    }
+}
+
+.center {
+    text-align: center;
+}
+
 //HEADERS
 .primary-header {
     @include typecsset-font-size($primary-headline-size);
-    //@include font-size($primary-headline-size);
     font-weight: bold;
     text-transform: uppercase;
 }
 
 .secondary-header {
     @include typecsset-font-size($secondary-headline-size);
-    //@include font-size($secondary-headline-size);
     font-weight: bold;
 }
-
-/*h1, h2, h3, h4, h5, h6 {
-    margin-bottom: $magic-number;
-}
-
-h1, .h1 {
-    @include typecsset-font-size($primary-headline-size);
-    //@include font-size(48px);
-
-    @include grid-media-query("palm") {
-        @include typecsset-font-size($primary-headline-size);
-        //@include font-size(36px);
-    }
-}
-
-h2, .h2 {
-    @include font-size(22px);
-}
-
-h3, .h3 {
-    @include font-size(20px);
-}
-
-h4, .h4 {
-    @include font-size(18px);
-}
-
-h5, h6,
-.h5, .h6 {
-    @include font-size(16px);
-}*/
 
 h1 > a
 {
@@ -140,24 +126,7 @@ blockquote {
     @include typecsset-font-size($secondary-headline-size);
     font-weight: 800;
 }
-//BLOCK ELEMENTS
-//blockquote, p, ul, ol,  //Included in TypeCsset
 
-.footnote {
-    //text-indent: -.5em;
-    
-    &:before {
-        content: '*';
-        
-        display: inline-block;
-        margin-left: -1em;
-        
-        width: 1em;
-        
-        color: currentColor;
-
-    }
-}
 
 //Lists
 .horizontal-list {

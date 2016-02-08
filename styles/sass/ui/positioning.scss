@@ -34,6 +34,7 @@
     width: 100%;
 
     &.left-justify {
+        text-align: left;
         @include justify-content(flex-start);
 
         &--mobile {
@@ -44,6 +45,7 @@
     }
 
     &.center {
+        text-align: center;
         @include justify-content(center);
         @include align-items(center);
 
@@ -55,6 +57,7 @@
     }
 
     &.right-justify {
+        text-align: right;
         @include justify-content(flex-end);
 
         &--mobile {

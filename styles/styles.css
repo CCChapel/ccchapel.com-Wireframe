@@ -1573,6 +1573,15 @@ div.content-section.transparent:last-child {
   font-weight: bold;
   text-align: center; }
 
+.section-subtitle {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: bold;
+  text-align: center; }
+  .section-subtitle.left-justify {
+    text-align: left; }
+
 .section-description {
   margin: 0 0 1.5rem 0;
   text-align: center; }
@@ -2177,6 +2186,7 @@ div.content-section.transparent:last-child {
   min-height: inherit;
   width: 100%; }
   .center-vertically.left-justify, .left-justify.cta {
+    text-align: left;
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     -webkit-justify-content: flex-start;
@@ -2190,6 +2200,7 @@ div.content-section.transparent:last-child {
         -moz-justify-content: flex-start;
         justify-content: flex-start; } }
   .center-vertically.center, .center.cta {
+    text-align: center;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     -webkit-justify-content: center;
@@ -2208,6 +2219,7 @@ div.content-section.transparent:last-child {
         -moz-justify-content: center !important;
         justify-content: center !important; } }
   .center-vertically.right-justify, .right-justify.cta {
+    text-align: right;
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     -webkit-justify-content: flex-end;
@@ -2297,6 +2309,16 @@ i {
 b, em {
   font-weight: bold; }
 
+.footnote:before {
+  content: '*';
+  display: inline-block;
+  margin-left: -1em;
+  width: 1em;
+  color: currentColor; }
+
+.center {
+  text-align: center; }
+
 .primary-header {
   font-size: 64px;
   font-size: 4rem;
@@ -2310,36 +2332,6 @@ b, em {
   line-height: 1.5;
   font-weight: bold; }
 
-/*h1, h2, h3, h4, h5, h6 {
-    margin-bottom: $magic-number;
-}
-
-h1, .h1 {
-    @include typecsset-font-size($primary-headline-size);
-    //@include font-size(48px);
-
-    @include grid-media-query("palm") {
-        @include typecsset-font-size($primary-headline-size);
-        //@include font-size(36px);
-    }
-}
-
-h2, .h2 {
-    @include font-size(22px);
-}
-
-h3, .h3 {
-    @include font-size(20px);
-}
-
-h4, .h4 {
-    @include font-size(18px);
-}
-
-h5, h6,
-.h5, .h6 {
-    @include font-size(16px);
-}*/
 h1 > a {
   font-weight: normal; }
   h1 > a:hover {
@@ -2383,13 +2375,6 @@ blockquote {
   font-size: 2rem;
   line-height: 1.5;
   font-weight: 800; }
-
-.footnote:before {
-  content: '*';
-  display: inline-block;
-  margin-left: -1em;
-  width: 1em;
-  color: currentColor; }
 
 .horizontal-list {
   margin-bottom: 0;

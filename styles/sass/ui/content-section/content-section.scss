@@ -103,6 +103,17 @@ div.content-section.transparent:last-child {
     text-align: center;
 }
 
+.section-subtitle {
+    @include typecsset-font-size($tertiary-headline-size);
+    font-weight: bold;
+
+    text-align: center;
+    
+    &.left-justify {
+        text-align: left;
+    }
+}
+
 .section-description {
     margin: 0 0 1.5rem 0;
 

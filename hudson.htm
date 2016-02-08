@@ -228,7 +228,7 @@
 CHANGES
 ------------------------------------------------------------------------------------------------->
             <!-- #HEADER IMAGE-->
-            <div class="header-image [ content-section image light ] center-vertically [ grid__item one-whole ] [ wireframe--solid ]" 
+            <div class="header-image [ content-section image light ] center-vertically [ grid__item one-whole ]" 
                  style="background-image: url(./images/backgrounds/orchestra.jpg);">
                 <div class="header-image__content content-wrapper">
                     <div class="header-image__title">
@@ -250,16 +250,12 @@ CHANGES
                 </div> <!-- /header-image__content -->
             </div> <!-- /header-image -->
             
-            <!-- #WELCOME / BASIC INFO / MAP -->
+            <!-- #WELCOME / BASIC INFO -->
             <div class="welcome [ content-section transparent small ] [ grid__item one-whole ]">
                 <div class="grid grid--rev">
                     <div class="basic-info full-height [ grid__item one-third palm--one-whole ]">
-                        <div class="[ content-wrapper no-vertical ] [ center-vertically alt ]">
-                            <div class="basic-info__name font-black">
-                                Hudson Campus
-                            </div> 
-
-                            <div class="basic-info__address">
+                        <div class="[ content-wrapper no-vertical ] [ center-vertically alt left-justify ]">
+                            <div class="basic-info__address add-bottom-margin">
                                 <ul class="horizontal-list">
                                     <li>750 W Streetsboro Street</li><!--
                                  --><li>Hudson, Ohio</li>
@@ -267,8 +263,8 @@ CHANGES
                                 330.650.9533
                             </div>
 
-                            <div class="basic-info__services">
-                                <div class="basic-info__services-title">Worship Times</div>
+                            <div class="basic-info__services add-bottom-margin">
+                                <div class="basic-info__services-title [ section-subtitle left-justify ]">Worship Times</div>
                                 <div>
                                     Saturday Evenings at 5:30<br />
                                     Sunday Mornings at 8:45, 10 &amp; 11:30
@@ -276,25 +272,27 @@ CHANGES
                             </div>
 
                             <div class="basic-info__cta">
-                                <a class="cta auto" href="#">Directions</a>
+                                <a class="show-map cta auto" href="#">Directions</a>
                                 <a class="cta auto" href="#">Contact</a>
                             </div>
                         </div> <!-- /content-wrapper -->
                     </div><!--
 
                  --><div class="pull-quote full-height [ grid__item two-thirds palm--one-whole ]">
-                        <div class="[ content-wrapper no-vertical ] [ center-vertically ]">
+                        <div class="[ content-wrapper no-vertical ] [ center-vertically right-justify ]">
                             <blockquote>
                                 &ldquo;Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Quisque nec mattis nisl.&rdquo;
+                                Quisque nec mattis nisl. Sed congue erat quis ornare posuere.&rdquo;
                             </blockquote>
                         </div>
                     </div>
                 </div><!-- /grid -->
             </div><!-- /welcome -->
 
-            <div class="map [ content-section transparent medium ] [ grid__item one-whole ]"
+            <!-- #MAP -->
+            <div class="map [ content-section image medium ] [ grid__item one-whole ]"
                  style="display: none;">
+                <div id="google-map" style="min-height: inherit;"></div>
             </div>
             
             <!-- #VENUES -->
@@ -532,14 +530,14 @@ CHANGES
 CHANGES
 ------------------------------------------------------------------------------------------------->
     <script>
-        $(".basic-info__cta a").click(function(e) {
+        $(".show-map").click(function(e) {
             e.preventDefault();
 
             //Show Map Section
             $(".map").slideToggle(250, function() {
                 if ($(this).height() > 0) {
                     //Load Map
-                    CCChapel.createMap("map", {
+                    CCChapel.createMap("google-map", {
                         markers: [ CCChapel.CampusLocations[0] ],
                         center: CCChapel.CampusLocations[0].location,
                         zoom: 11
