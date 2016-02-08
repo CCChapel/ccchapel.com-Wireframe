@@ -1541,10 +1541,6 @@ body {
   margin-top: 72px; }
 .content-section--noBottomBuffer, .content-section.no-bottom-margin {
   margin-bottom: inherit; }
-.content-section.remove-top-margin {
-  margin-top: inherit !important; }
-.content-section.add-bottom-margin {
-  margin-bottom: 72px; }
 
 div.content-section.transparent:last-child {
   margin-bottom: 72px; }

@@ -1673,14 +1673,6 @@ body {
 .content-section.no-bottom-margin {
   margin-bottom: inherit; }
 
-/* line 54, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/content-section/content-section.scss */
-.content-section.remove-top-margin {
-  margin-top: inherit !important; }
-
-/* line 58, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/content-section/content-section.scss */
-.content-section.add-bottom-margin {
-  margin-bottom: 72px; }
-
 /* line 63, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/content-section/content-section.scss */
 div.content-section.transparent:last-child {
   margin-bottom: 72px; }
