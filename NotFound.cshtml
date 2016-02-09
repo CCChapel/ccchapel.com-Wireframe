@@ -1,0 +1,26 @@
+﻿@{
+    Layout = "../Shared/_Test.cshtml";
+}
+
+<h2>Not Found</h2>
+
+@{ 
+
+    string str = "{% x = 5; x + 7 %}";
+
+    string resolved = CMS.MacroEngine.MacroResolver.Resolve(str);
+
+    string str2 = "{% ConnectStrings(\"String1\", \"String2\") %}";
+
+    string resolved2 = CMS.MacroEngine.MacroResolver.Resolve(str2);
+
+    <p>@str</p>
+
+    <p>@resolved</p>
+
+    <p>@str2</p>
+
+    <p>@resolved2</p>
+}
+
+@{ Html.RenderPartial("Partials/_PartialPageTest"); }
