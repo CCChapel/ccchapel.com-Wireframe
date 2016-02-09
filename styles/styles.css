@@ -1553,6 +1553,9 @@ div.content-section.transparent:last-child {
     .content-wrapper {
       padding: 72px 10px;
       overflow-x: hidden; } }
+  .content-wrapper.lock-width {
+    margin: 0 auto;
+    max-width: 1280px; }
   .content-wrapper.no-vertical, .content-wrapper--mobile.no-vertical {
     padding-top: 0;
     padding-bottom: 0; }
