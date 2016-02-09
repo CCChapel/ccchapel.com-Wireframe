@@ -7,10 +7,12 @@
     min-height: inherit;
     
     &.left-justify {
-        background-position: left center;    
+        background-position: left center;  
+        padding-right: 25%;
     }
     
     &.right-justify {
         background-position: right center;
+        padding-left: 25%;
     }
 }

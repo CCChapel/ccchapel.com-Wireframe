@@ -2135,9 +2135,11 @@ div.content-section.transparent:last-child {
   padding-bottom: 5% !important;
   min-height: inherit; }
   .bg-layover.left-justify {
-    background-position: left center; }
+    background-position: left center;
+    padding-right: 25%; }
   .bg-layover.right-justify {
-    background-position: right center; }
+    background-position: right center;
+    padding-left: 25%; }
 
 .square, .circle {
   position: relative;
