@@ -1,0 +1,32 @@
+EventID: 445
+
+EventType: E
+
+EventTime: 2/9/2016 2:18:57 PM
+
+Source: MacroResolver
+
+EventCode: RESOLVEDATAMACRO
+
+UserID: 65
+
+UserName: public
+
+IPAddress: 10.1.3.54
+
+EventDescription: Error while evaluating expression:  ConnectStrings("String1", "String2") 
+
+Exception occured while evaluation of the expression ' ConnectStrings("String1", "String2") ': Method 'ConnectStrings' for object of type 'System.String' not found, please check the macro or the method declaration.
+
+   at CMS.MacroEngine.ExpressionEvaluator.ThrowMethodNotFound(Object callingObject)
+   at CMS.MacroEngine.ExpressionEvaluator.EvaluateMethodCall(Boolean& match, Boolean& securityPassed)
+   at CMS.MacroEngine.ExpressionEvaluator.EvaluateInternal(Boolean& match, Boolean& securityPassed)
+   at CMS.MacroEngine.ExpressionEvaluator.Evaluate()
+   at CMS.MacroEngine.MacroResolver.ResolveMacroExpression(ResolveExpressionSettings settings)
+
+EventUrl: /gfhj
+
+EventMachineName: H-WEBSVR-03
+
+EventUserAgent: Mozilla/5.0 (Windows NT 6.3; WOW64; rv:43.0) Gecko/20100101 Firefox/43.0
+
