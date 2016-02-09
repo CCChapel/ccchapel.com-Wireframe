@@ -83,6 +83,8 @@
         &.left-justify {
             @include align-items(flex-start);
             @include justify-content(center);
+            
+            text-align: left;
         }
     }
 }

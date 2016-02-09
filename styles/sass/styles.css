@@ -2622,9 +2622,10 @@ div.content-section.transparent:last-child {
       -ms-flex-pack: center;
       -webkit-justify-content: center;
       -moz-justify-content: center;
-      justify-content: center; }
+      justify-content: center;
+      text-align: left; }
 
-/* line 93, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/positioning.scss */
+/* line 95, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/positioning.scss */
 .bg--center-center {
   background-position: center center; }
 

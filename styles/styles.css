@@ -2280,7 +2280,8 @@ div.content-section.transparent:last-child {
       -ms-flex-pack: center;
       -webkit-justify-content: center;
       -moz-justify-content: center;
-      justify-content: center; }
+      justify-content: center;
+      text-align: left; }
 
 .bg--center-center {
   background-position: center center; }
