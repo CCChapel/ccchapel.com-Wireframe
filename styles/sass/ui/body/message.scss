@@ -2,10 +2,10 @@
 // MESSAGE
 //**************************************************/
 .message {
-    $message-section-height: 24rem;
+    //$message-section-height: 24rem;
     
     &__series-logo {
-        height: $message-section-height !important;
+        //height: $message-section-height !important;
         
         .series-logo {
             max-height: 90%;
@@ -13,7 +13,7 @@
     }
 
     &__info {
-        height: $message-section-height !important;
+        //height: $message-section-height !important;
 
         a {
             color: currentColor;

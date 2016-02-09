@@ -2089,14 +2089,10 @@ div.content-section.transparent:last-child {
         .campus-info__icon img {
           width: 65%; } }
 
-.message__series-logo {
-  height: 24rem !important; }
-  .message__series-logo .series-logo {
-    max-height: 90%; }
-.message__info {
-  height: 24rem !important; }
-  .message__info a {
-    color: currentColor; }
+.message__series-logo .series-logo {
+  max-height: 90%; }
+.message__info a {
+  color: currentColor; }
 .message__title {
   font-size: 32px;
   font-size: 2rem;
@@ -2134,7 +2130,10 @@ div.content-section.transparent:last-child {
       font-weight: normal; }
 
 .bg-layover {
-  background: none no-repeat center center/contain content-box; }
+  background: none no-repeat center center/contain content-box;
+  padding-top: 5% !important;
+  padding-bottom: 5% !important;
+  min-height: inherit; }
   .bg-layover.left-justify {
     background-position: left center; }
   .bg-layover.right-justify {
