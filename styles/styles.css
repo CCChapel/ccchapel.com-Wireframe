@@ -1880,9 +1880,9 @@ div.content-section.transparent:last-child {
     text-align: center; }
 
 .header-image {
-  min-height: 66vh; }
+  min-height: 66vh !important; }
   .header-image.short {
-    min-height: 33vh; }
+    min-height: 33vh !important; }
   .header-image__content {
     min-width: 50%; }
   .header-image__title {

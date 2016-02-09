@@ -2,10 +2,10 @@
 // HEADER IMAGE
 //**************************************************/
 .header-image {
-    min-height: 66vh;
+    min-height: 66vh !important;
     
     &.short {
-        min-height: 33vh;
+        min-height: 33vh !important;
     }
 
     &__content {

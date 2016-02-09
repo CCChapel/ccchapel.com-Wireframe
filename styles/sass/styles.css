@@ -2118,10 +2118,10 @@ div.content-section.transparent:last-child {
 
 /* line 4, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/body/header-image.scss */
 .header-image {
-  min-height: 66vh; }
+  min-height: 66vh !important; }
   /* line 7, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/body/header-image.scss */
   .header-image.short {
-    min-height: 33vh; }
+    min-height: 33vh !important; }
   /* line 11, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/body/header-image.scss */
   .header-image__content {
     min-width: 50%; }
