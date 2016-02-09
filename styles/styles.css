@@ -2129,6 +2129,11 @@ div.content-section.transparent:last-child {
     .footer__navigation a {
       font-weight: normal; }
 
+.pull-quote {
+  border-right: 2px solid #CCC;
+  margin-right: -12px;
+  margin-left: 12px; }
+
 .bg-layover {
   background: none no-repeat center center/contain content-box;
   padding-top: 5% !important;
@@ -2405,7 +2410,8 @@ blockquote {
   font-weight: 800; }
   blockquote:after {
     content: "– " attr(cite);
-    display: block; }
+    display: block;
+    text-indent: 0; }
   blockquote.no-cite:after {
     content: none; }
 
