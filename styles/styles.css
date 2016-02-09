@@ -2133,6 +2133,13 @@ div.content-section.transparent:last-child {
     .footer__navigation a {
       font-weight: normal; }
 
+.bg-layover {
+  background: none no-repeat center center/contain content-box; }
+  .bg-layover.left-justify {
+    background-position: left center; }
+  .bg-layover.right-justify {
+    background-position: right center; }
+
 .square, .circle {
   position: relative;
   padding-left: 0;

@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "background-image.css",
+  "sources": [
+    "background-image.scss"
+  ],
+  "sourcesContent": [],
+  "mappings": ";AAAA,WAAW,CAAC;EACR,UAAU,EAAE,gDAAiD,GADpD;;EAGR,WAAW,AAAA,aAAa,CAAV;IACX,mBAAmB,EAAE,WAAY,GADrB;;EAIf,WAAW,AAAA,cAAc,CAAV;IACZ,mBAAmB,EAAE,YAAa,GADrB",
+  "names": []
+}

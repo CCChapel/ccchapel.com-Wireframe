@@ -2450,6 +2450,16 @@ div.content-section.transparent:last-child {
     .footer__navigation a {
       font-weight: normal; }
 
+/* line 1, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/elements/background-image.scss */
+.bg-layover {
+  background: none no-repeat center center/contain content-box; }
+  /* line 4, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/elements/background-image.scss */
+  .bg-layover.left-justify {
+    background-position: left center; }
+  /* line 8, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/elements/background-image.scss */
+  .bg-layover.right-justify {
+    background-position: right center; }
+
 /* line 4, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/shapes.scss */
 .square, .circle {
   position: relative;

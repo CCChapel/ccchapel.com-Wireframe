@@ -8,6 +8,7 @@
 @import "includes/csswizardry-grids.scss";
 @import "includes/typecsset.scss";
 @import "includes/flexbox.scss";
+@import "includes/namespaces.scss";
 
 //Wireframe
 @import "_wireframe.scss";
@@ -30,6 +31,9 @@
 @import "ui/body/message.scss";
 
 @import "ui/footer.scss";
+
+//Element Styles
+@import "ui/elements/background-image.scss";
 
 @import "ui/shapes.scss";
 @import "ui/positioning.scss";
