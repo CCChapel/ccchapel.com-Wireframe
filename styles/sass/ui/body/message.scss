@@ -4,28 +4,16 @@
 .message {
     $message-section-height: 24rem;
     
-    min-height: 0 !important;
-
     &__series-logo {
-        height: $message-section-height;
-
+        height: $message-section-height !important;
+        
         .series-logo {
             max-height: 90%;
         }
     }
 
     &__info {
-        height: $message-section-height;
-
-        @include grid-media-query("palm") {
-            margin-bottom: $vertical-padding;
-
-            height: auto;
-
-            & > div {
-                align-items: center !important;
-            }
-        }
+        height: $message-section-height !important;
 
         a {
             color: currentColor;
@@ -38,12 +26,11 @@
     }
 
     &__details {
-        margin-bottom: $vertical-padding;
     }
 
     &__cta {
-        text-align: center;
+        //text-align: center;
 
-        display: inline-block;
+        //display: inline-block;
     }
 }

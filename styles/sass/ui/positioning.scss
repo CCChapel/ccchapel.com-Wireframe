@@ -39,6 +39,8 @@
 
         &--mobile {
             @include grid-media-query("portable") {
+                text-align: left;
+
                 @include justify-content(flex-start);
             }
         }
@@ -51,6 +53,8 @@
 
         &--mobile {
             @include grid-media-query("portable") {
+                text-align: center !important;
+                
                 @include justify-content(center !important);
             }
         }
@@ -62,6 +66,8 @@
 
         &--mobile {
             @include grid-media-query("portable") {
+                text-align: right;
+                
                 @include justify-content(flex-end);
             }
         }
