@@ -2407,6 +2407,7 @@ blockquote {
   blockquote:after {
     content: "– " attr(cite);
     display: block;
+    font-weight: normal;
     text-indent: 0; }
   blockquote.no-cite:after {
     content: none; }
