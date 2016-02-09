@@ -75,6 +75,10 @@
 
     &.alt {
         @include flex-flow(column wrap);
+        
+        & > * {
+            width: 100%;
+        }
 
         &.left-justify {
             @include align-items(flex-start);

@@ -2447,13 +2447,23 @@ div.content-section.transparent:last-child {
 /* line 1, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/elements/background-image.scss */
 .bg-layover {
   background: none no-repeat center center/contain content-box;
+  padding-top: 5% !important;
+  padding-bottom: 5% !important;
   min-height: inherit; }
-  /* line 6, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/elements/background-image.scss */
+  /* line 9, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/elements/background-image.scss */
   .bg-layover.left-justify {
-    background-position: left center; }
-  /* line 10, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/elements/background-image.scss */
+    background-position: left center;
+    padding-right: 25%; }
+  /* line 14, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/elements/background-image.scss */
   .bg-layover.right-justify {
-    background-position: right center; }
+    background-position: right center;
+    padding-left: 25%; }
+  @media only screen and (max-width: 480px) {
+    /* line 19, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/elements/background-image.scss */
+    .bg-layover.palm--center {
+      background-position: center center;
+      padding-left: 10px;
+      padding-right: 10px; } }
 
 /* line 4, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/shapes.scss */
 .square, .circle {
@@ -2593,6 +2603,9 @@ div.content-section.transparent:last-child {
     -ms-flex-flow: column wrap;
     flex-flow: column wrap; }
     /* line 79, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/positioning.scss */
+    .center-vertically.alt > *, .alt.cta > * {
+      width: 100%; }
+    /* line 83, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/positioning.scss */
     .center-vertically.alt.left-justify, .alt.left-justify.cta {
       -webkit-box-align: start;
       -ms-flex-align: start;
@@ -2605,7 +2618,7 @@ div.content-section.transparent:last-child {
       -moz-justify-content: center;
       justify-content: center; }
 
-/* line 89, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/positioning.scss */
+/* line 93, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/positioning.scss */
 .bg--center-center {
   background-position: center center; }
 

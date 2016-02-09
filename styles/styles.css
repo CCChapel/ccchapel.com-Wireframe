@@ -2140,6 +2140,11 @@ div.content-section.transparent:last-child {
   .bg-layover.right-justify {
     background-position: right center;
     padding-left: 25%; }
+  @media only screen and (max-width: 480px) {
+    .bg-layover.palm--center {
+      background-position: center center;
+      padding-left: 10px;
+      padding-right: 10px; } }
 
 .square, .circle {
   position: relative;
@@ -2258,6 +2263,8 @@ div.content-section.transparent:last-child {
     -moz-flex-flow: column wrap;
     -ms-flex-flow: column wrap;
     flex-flow: column wrap; }
+    .center-vertically.alt > *, .alt.cta > * {
+      width: 100%; }
     .center-vertically.alt.left-justify, .alt.left-justify.cta {
       -webkit-box-align: start;
       -ms-flex-align: start;

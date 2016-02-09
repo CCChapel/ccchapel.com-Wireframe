@@ -15,4 +15,13 @@
         background-position: right center;
         padding-left: 25%;
     }
+    
+    &.palm--center {
+        @include grid-media-query("palm") {
+            background-position: center center;
+
+            padding-left: $mobile-padding;
+            padding-right: $mobile-padding;
+        }
+    }
 }
