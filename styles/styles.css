@@ -2408,7 +2408,8 @@ blockquote {
   font-size: 32px;
   font-size: 2rem;
   line-height: 1.5;
-  font-weight: 800; }
+  font-weight: 800;
+  quotes: "\201C" "\201D" "\2018" "\2019"; }
   blockquote:after {
     content: "– " attr(cite);
     display: block;
