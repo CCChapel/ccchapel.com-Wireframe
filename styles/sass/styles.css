@@ -2464,6 +2464,14 @@ div.content-section.transparent:last-child {
       padding-left: 10px;
       padding-right: 10px; } }
 
+/* line 27, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/elements/background-image.scss */
+.bg--top-center {
+  background-position: top center !important; }
+
+/* line 31, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/elements/background-image.scss */
+.bg--center-center {
+  background-position: center center !important; }
+
 /* line 4, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/shapes.scss */
 .square, .circle {
   position: relative;
@@ -2617,10 +2625,6 @@ div.content-section.transparent:last-child {
       -moz-justify-content: center;
       justify-content: center;
       text-align: left; }
-
-/* line 95, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/positioning.scss */
-.bg--center-center {
-  background-position: center center; }
 
 /* line 1, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/google-maps.scss */
 .google-map__info-window {

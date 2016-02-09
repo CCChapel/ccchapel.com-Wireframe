@@ -25,3 +25,14 @@
         }
     }
 }
+
+//**************************************************
+// BACKGROUND POSITIONS
+//**************************************************/
+.#{$ns-background-image}--top-center {
+    background-position: top center !important;
+}
+
+.#{$ns-background-image}--center-center {
+    background-position: center center !important;
+}

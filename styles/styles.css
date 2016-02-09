@@ -2145,6 +2145,12 @@ div.content-section.transparent:last-child {
       padding-left: 10px;
       padding-right: 10px; } }
 
+.bg--top-center {
+  background-position: top center !important; }
+
+.bg--center-center {
+  background-position: center center !important; }
+
 .square, .circle {
   position: relative;
   padding-left: 0;
@@ -2276,9 +2282,6 @@ div.content-section.transparent:last-child {
       -moz-justify-content: center;
       justify-content: center;
       text-align: left; }
-
-.bg--center-center {
-  background-position: center center; }
 
 .google-map__info-window {
   padding: 1em 0 1em 1.5em;
