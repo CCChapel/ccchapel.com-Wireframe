@@ -2441,6 +2441,7 @@ div.content-section.transparent:last-child {
 /* line 1, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/blocks/pull-quote.scss */
 .pull-quote {
   border-right: 2px solid #CCC;
+  position: relative;
   margin-right: -12px;
   margin-left: 12px; }
 
@@ -2472,6 +2473,11 @@ div.content-section.transparent:last-child {
 /* line 31, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/elements/background-image.scss */
 .bg--center-center {
   background-position: center center !important; }
+
+/* line 1, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/elements/images.scss */
+.profile-photo {
+  background: #185e94;
+  height: 12rem; }
 
 /* line 4, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/shapes.scss */
 .square, .circle {

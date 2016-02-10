@@ -2126,6 +2126,7 @@ div.content-section.transparent:last-child {
 
 .pull-quote {
   border-right: 2px solid #CCC;
+  position: relative;
   margin-right: -12px;
   margin-left: 12px; }
 
@@ -2151,6 +2152,10 @@ div.content-section.transparent:last-child {
 
 .bg--center-center {
   background-position: center center !important; }
+
+.profile-photo {
+  background: #185e94;
+  height: 12rem; }
 
 .square, .circle {
   position: relative;
