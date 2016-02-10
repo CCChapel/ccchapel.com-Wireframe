@@ -1993,14 +1993,6 @@ div.content-section.transparent:last-child {
         font-size: 3.5rem; } }
   .campus-info__instructions {
     margin-bottom: 72px; }
-  @media only screen and (max-width: 1023px) {
-    .campus-info__cta {
-      margin-bottom: 24px; } }
-  @media only screen and (max-width: 480px) {
-    .campus-info__cta {
-      width: 100%; }
-      .campus-info__cta .cta {
-        width: 100% !important; } }
   .campus-info__campus {
     cursor: pointer;
     margin-bottom: 48px;
@@ -2034,6 +2026,7 @@ div.content-section.transparent:last-child {
     margin-bottom: 24px; }
     @media only screen and (max-width: 480px) {
       .campus-info__current {
+        margin-bottom: 0;
         height: auto;
         text-align: center; } }
     .campus-info__current .campus-info__icon {
@@ -2191,6 +2184,10 @@ div.content-section.transparent:last-child {
 .addBottomMargin,
 .add-bottom-margin {
   margin-bottom: 24px; }
+
+@media only screen and (max-width: 1023px) {
+  .portable--add-bottom-margin {
+    margin-bottom: 24px; } }
 
 @media only screen and (max-width: 480px) {
   .palm--add-bottom-margin {
@@ -2519,10 +2516,13 @@ blockquote {
     margin-left: 0;
     padding: 0 24px;
     width: auto; }
+    .cta.auto.palm--one-whole {
+      width: 100%; }
   .cta.full {
     width: 100% !important; }
-  .cta + .cta {
-    margin-left: 24px; }
+  @media only screen and (min-width: 1024px) {
+    .cta + .cta {
+      margin-left: 24px; } }
   .content-section.transparent .cta, .content-section.light-gray .cta {
     background-color: rgba(202, 55, 55, 0.8);
     border: none;

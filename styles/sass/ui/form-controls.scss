@@ -105,7 +105,11 @@
         margin-left: 0;
         padding: 0 $magic-number;
 
-        width: auto; // !important;
+        width: auto;
+        
+        &.palm--one-whole {
+            width: 100%;
+        }
     }
 
     &.full {
@@ -113,7 +117,9 @@
     }
 
     & + & {
-        margin-left: $magic-number;
+        @include grid-media-query("desk") {
+            margin-left: $magic-number;
+        }
     }
     
     //Transparent & Light Gray Sections

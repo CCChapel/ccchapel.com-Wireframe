@@ -26,21 +26,21 @@
         margin-bottom: ($bottom-margin * 3);
     }
 
-    &__cta {
-        //@include inline-flex;
-
-        @include grid-media-query("portable") {
-            margin-bottom: $bottom-margin;
-        }
-
-        @include grid-media-query("palm") {
-            width: 100%;
-
-            .cta {
-                width: 100% !important;
-            }
-        }
-    }
+//    &__cta {
+//        //@include inline-flex;
+//
+//        @include grid-media-query("portable") {
+//            margin-bottom: $bottom-margin;
+//        }
+//
+////        @include grid-media-query("palm") {
+////            width: 100%;
+////
+//////            .cta {
+//////                width: 100% !important;
+//////            }
+////        }
+//    }
 
     &__campus {
         cursor: pointer;
@@ -105,6 +105,7 @@
         margin-bottom: $magic-number;
 
         @include grid-media-query("palm") {
+            margin-bottom: 0;
             height: auto;
 
             text-align: center;
