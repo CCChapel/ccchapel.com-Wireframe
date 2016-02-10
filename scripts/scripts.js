@@ -271,7 +271,7 @@
         CssClass: ".banner",
         StartingHeight: "64px",
         EndingHeight: "41px",
-        BodySelector: ".body :first-child",
+        BodySelector: ".body :first-child:visible",             //Use :first-child & :visible because Notifications may not always be there
         BodyStartingPosition: "0",
         HeaderClass: ".header",
 
@@ -282,7 +282,7 @@
             this.EndingHeight = Math.round(this.StartingHeight * .64);
 
             //Set BodyStartingPosition
-            //Use :first-child because Notifications may not always be there
+            
             this.BodyStartingPosition = $(this.BodySelector).position().top;
 
             //Setup Scroll Event

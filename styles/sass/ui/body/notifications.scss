@@ -2,6 +2,8 @@
 // NOTIFICATIONS
 //**************************************************/
 .notifications {
+    display: none;
+    
     background-color: $green;
 
     &__item {

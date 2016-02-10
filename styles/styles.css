@@ -1873,6 +1873,7 @@ div.content-section.transparent:last-child {
     transform: rotate3d(0, 0, 1, -45deg); }
 
 .notifications {
+  display: none;
   background-color: #99b624; }
   .notifications__item {
     height: 3em;

@@ -2109,8 +2109,9 @@ div.content-section.transparent:last-child {
 
 /* line 4, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/body/notifications.scss */
 .notifications {
+  display: none;
   background-color: #99b624; }
-  /* line 7, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/body/notifications.scss */
+  /* line 9, C:/Users/eric.rovtar/OneDrive - Christ Community Chapel/Communications/Web/Sites/CCChapel 2016/Wireframe/ccchapel.com-Wireframe/styles/sass/ui/body/notifications.scss */
   .notifications__item {
     height: 3em;
     color: #FFF;
