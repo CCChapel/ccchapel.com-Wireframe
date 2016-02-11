@@ -9,4 +9,8 @@
 
     height: 100vh;
     width: 100vw;
+    
+    &.full {
+        z-index: 1000;
+    }
 }
