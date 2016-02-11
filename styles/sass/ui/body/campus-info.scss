@@ -51,9 +51,9 @@
 
         color: $black;
 
-        &:hover .campus-info__name {
-            //color: #FFF !important;
-        }
+//        &:hover .campus-info__name {
+//            //color: #FFF !important;
+//        }
 
         @include grid-media-query("desk") {
             &:nth-last-child(1),
@@ -164,13 +164,13 @@
     }
 
     // COMMON
-    &__name {
-        @include typecsset-font-size($tertiary-headline-size);
-        font-weight: bold;
-        //color: $black;
-
-        transition: color $transition-length $transition-function;
-    }
+//    &__name {
+//        @include typecsset-font-size($tertiary-headline-size);
+//        font-weight: bold;
+//        //color: $black;
+//
+//        transition: color $transition-length $transition-function;
+//    }
 
     &__icon {
         height: 100%;
