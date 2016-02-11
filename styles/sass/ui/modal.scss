@@ -13,4 +13,29 @@
     &.full {
         z-index: 1000;
     }
+    
+    &-close {
+        background: $red;
+        
+        display: inline-block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        
+        cursor: pointer;
+        
+        height: 3rem;
+        width: 3rem;
+        
+        color: #FFF;
+        
+        &:hover {
+            background: $dark-red;
+        }
+    }
+    
+    &-content {
+        height: 100%;
+        width: 100%;
+    }
 }

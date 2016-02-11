@@ -1503,6 +1503,9 @@ body {
   margin: 0 auto;
   line-height: 1.5em;
   -webkit-font-smoothing: antialiased; }
+  body.locked {
+    height: 100vh;
+    overflow: hidden; }
 
 .grid {
   height: 100%;
@@ -1691,6 +1694,21 @@ div.content-section.transparent:last-child {
   width: 100vw; }
   .modal.full {
     z-index: 1000; }
+  .modal-close {
+    background: #ca3737;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    height: 3rem;
+    width: 3rem;
+    color: #FFF; }
+    .modal-close:hover {
+      background: #b82b2b; }
+  .modal-content {
+    height: 100%;
+    width: 100%; }
 
 .header {
   position: relative;

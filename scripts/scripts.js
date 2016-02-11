@@ -38,63 +38,6 @@
     //************************************************
     // Private Methods
     //***********************************************/
-    /*** MODAL ***/
-    var Modal = {
-        //Properties
-        CssClass: ".modal",
-        TransitionDuration: 250,
-
-        //Functions
-        setup: function() {
-
-        },
-        toggle: function() {
-            $(this.CssClass).fadeToggle(this.TransitionDuration);
-            Viewport.toggle();
-        },
-        open: function() {
-            $(this.CssClass).fadeIn(this.TransitionDuration);
-            Viewport.lock();
-        },
-        close: function() {
-            $(this.CssClass).fadeOut(this.TransitionDuration);
-            Viewport.unlock();
-        }
-    }
-
-    /*** VIEWPORT ***/
-    var Viewport = {
-        //Properties
-        Locked: false,
-        LockProperty: ", maximum-scale=1.0",
-
-        //Functions
-        toggle: function() {
-            if (this.Locked == false) {
-                this.lock();
-            }
-            else {
-                this.unlock();
-            }
-        },
-        lock: function() {
-            var content = $("meta[name='viewport']").attr("content");
-            content += this.LockProperty;
-
-            $("meta[name='viewport']").attr("content", content);
-
-            this.Locked = true;
-        },
-        unlock: function() {
-            var content = $("meta[name='viewport']").attr("content");
-            content = content.replace(this.LockProperty, "");
-
-            $("meta[name='viewport']").attr("content", content);
-
-            this.Locked = false;
-        }
-    }
-
     /*** CAMPUS LOCATION MAP ***/
     var CampusLocationMap = {
         //Properties
@@ -213,7 +156,7 @@
             $(this.FieldClass).toggleClass("show");
 
             //Toggle Modal
-            Modal.toggle();
+            CCChapel.toggleModal();
 
             //Set focus if visible
             if ($(this.FieldClass).hasClass("show")) {
@@ -238,7 +181,7 @@
             $(this.FieldClass).addClass("show");
 
             //Show Modal
-            Modal.open();
+            CCChapel.openModal();
 
             //Set focus
             $(this.SearchField).focus();
@@ -258,7 +201,7 @@
             $(this.BannerClass).removeClass("fullHeight");
 
             //Hide Modal
-            Modal.close();
+            CCChapel.closeModal();
 
             //Hide Search Field
             $(this.FieldClass).removeClass("show");
@@ -420,7 +363,7 @@
             $("body").toggleClass("hide-overflow");
             $("body").toggleClass("lock-position");   
 
-            Modal.toggle();
+            CCChapel.toggleModal();
 
             //toggle menu
             $(this.MenuClass).slideToggle(250, function () {
@@ -436,7 +379,7 @@
             $("body").addClass("hide-overflow");
             $("body").addClass("lock-position");   
 
-            Modal.open();
+            CCChapel.openModal();
 
             //toggle menu
             $(this.MenuClass).slideDown(250, function () {
@@ -452,7 +395,7 @@
             $("body").removeClass("hide-overflow");
             $("body").removeClass("lock-position");   
 
-            Modal.close();
+            CCChapel.closeModal();
 
             //toggle menu
             $(this.MenuClass).slideUp(250, function () {
@@ -469,6 +412,7 @@
         CCChapel.setupCampusLinks();
         CampusLocationMap.setup();
 //        SearchFields.setup();
+        CCChapel.setupModal();
         
         CCChapel.setupWebAppLinks();
         
@@ -826,6 +770,190 @@
     };
 }( window.CCChapel = window.CCChapel || {}, jQuery ));
 
+//************************************************
+// VIDEOS
+//***********************************************/
+(function( CCChapel, $, undefined ) {
+    //************************************************
+    // Public Properties
+    //***********************************************/
+
+    /************************************************
+    // Private Properties
+    //***********************************************/
+    var modalSelector = ".modal-content";
+    
+    /************************************************
+    // Public Methods
+    //***********************************************/
+    CCChapel.showVideo = function(options) {
+        //Setup Defaults
+        var defaults = {
+        };
+
+        options = $.extend({}, defaults, options);
+
+        //Load Video
+        var videoMarkup = 
+            '<div class="center-vertically"><iframe src="https://player.vimeo.com/video/153663975?autoplay=1&color=28708a&title=0&byline=0&portrait=0" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>';
+        
+        //Show Modal
+        CCChapel.openModal({ fullScreen: true });
+        
+        //Insert Video
+        $(modalSelector).html(videoMarkup);
+    }
+
+    //************************************************
+    // Private Methods
+    //***********************************************/
+}( window.CCChapel = window.CCChapel || {}, jQuery ));
+
+//************************************************
+// MODAL
+//***********************************************/
+(function( CCChapel, $, undefined ) {
+    //************************************************
+    // Public Properties
+    //***********************************************/
+
+    /************************************************
+    // Private Properties
+    //***********************************************/
+    var modalCloseSelector = ".modal-close";
+    var modalContentSelector = ".modal-content";
+    var modalOpen = false;
+    
+    var defaults = {
+        cssClass: ".modal",
+        fullScreen: false,
+        transitionDuration: 250,
+        lockViewport: true
+    }
+    
+    /************************************************
+    // Public Methods
+    //***********************************************/
+    CCChapel.openModal = function(options) {
+        //Setup Defaults
+        options = $.extend({}, defaults, options);
+        
+        if (options.fullScreen == true) {
+            $(options.cssClass).addClass("full");
+        }
+        else {
+            $(options.cssClass).removeClass("full");
+        }
+
+        $(options.cssClass).fadeIn(options.transitionDuration);
+        
+        if (options.lockViewport == true) {
+            CCChapel.lockViewport();
+        }
+        
+        modalOpen = true;
+    }
+    
+    CCChapel.closeModal = function(options) {
+        //Setup Defaults
+        options = $.extend({}, defaults, options);
+
+        $(options.cssClass).fadeOut(options.transitionDuration);
+        
+        //Clean out content
+        $(modalContentSelector).html("");
+        
+        CCChapel.unlockViewport();
+        
+        modalOpen = false;
+    }
+    
+    CCChapel.toggleModal = function(options) 
+    {
+        //Setup Defaults
+        options = $.extend({}, defaults, options);
+        
+        if (modalOpen == true) {
+            CCChapel.closeModal(options);
+        }
+        else {
+            CCChapel.openModal(options);
+        }
+    }
+    
+    CCChapel.setupModal = function() {
+        $(document).ready(function(){
+            //Add close button functionality
+            $(modalCloseSelector).click(function(e) {
+                CCChapel.closeModal();
+            });
+        });
+    }
+
+    //************************************************
+    // Private Methods
+    //***********************************************/
+}( window.CCChapel = window.CCChapel || {}, jQuery ));
+
+//************************************************
+// VIEWPORT
+//***********************************************/
+(function( CCChapel, $, undefined ) {
+    //************************************************
+    // Public Properties
+    //***********************************************/
+
+    /************************************************
+    // Private Properties
+    //***********************************************/
+    var selector = "meta[name='viewport']";
+    var locked = false;
+    var lockProperty = ", maximum-scale=1.0";
+    var defaults = {};
+
+    /************************************************
+    // Public Methods
+    //***********************************************/
+    CCChapel.lockViewport = function(options) {
+        //Mobile
+        var content = $(selector).attr("content");
+        content += lockProperty;
+
+        $(selector).attr("content", content);
+
+        //Desktop
+        $("body").addClass("locked");
+
+        locked = true;
+    }
+
+    CCChapel.unlockViewport = function(options) {
+        //Mobile
+        var content = $(selector).attr("content");
+        content = content.replace(lockProperty, "");
+
+        $(selector).attr("content", content);
+
+        //Desktop
+        $("body").removeClass("locked");
+        
+        locked = false;
+    }
+
+    CCChapel.toggleViewport = function(options) 
+    {
+        if (locked == false) {
+            CCChapel.lockViewport();
+        }
+        else {
+            CCChapel.unlockViewport();
+        }
+    }
+    
+    //************************************************
+    // Private Methods
+    //***********************************************/
+}( window.CCChapel = window.CCChapel || {}, jQuery ));
 
 $(document).ready( function() {
     CCChapel.initialize();

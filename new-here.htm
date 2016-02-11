@@ -109,7 +109,15 @@
         <link rel="stylesheet" type="text/css" href="styles/styles.css">
     </head>
     <body>
-        <div class="modal"></div>
+        <div class="modal">
+            <div class="modal-close">
+                <span class="center-vertically">
+                    <i class="fa fa-close fa-2x"></i>
+                </span>
+            </div>
+            
+            <div class="modal-content"></div>
+        </div>
 
         <header class="header">
             <!-- #CAMPUS SELECT -->
@@ -242,7 +250,7 @@ CHANGES
 
                     <div class="header-image__cta [ grid grid--center ]">
                         <div class="header-image__cta1 [ grid__item one-third portable--one-whole ]">
-                            <a class="cta" href="#">
+                            <a class="cta" href="#" onclick="CCChapel.showVideo({ fullScreen: true })">
                                 ??
                             </a>
                         </div>
@@ -424,8 +432,6 @@ CHANGES
                 </div> <!-- /content-wrapper -->
             </div>
             
-
-
             <!-- #LIFE STAGES -->
             <div class="justice-mercy [ content-section white ] [ grid__item one-whole ]">
                 <div class="content-wrapper">
@@ -453,7 +459,6 @@ CHANGES
                      --><div class="grid__item one-third palm--one-whole">
                             <div class="section-subtitle">Adults</div>
                         </div>
-                    </div> <!-- /grid -->
                     </div> <!-- /grid -->
                 </div> <!-- /content-wrapper -->
             </div>
