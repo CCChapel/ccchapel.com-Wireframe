@@ -2150,6 +2150,9 @@ div.content-section.transparent:last-child {
   background: #185e94;
   height: 12rem; }
 
+.img-fit-grid {
+  max-width: 85%; }
+
 .square, .circle {
   position: relative;
   padding-left: 0;
