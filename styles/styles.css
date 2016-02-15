@@ -1598,6 +1598,11 @@ div.content-section.transparent:last-child {
   line-height: 1.5;
   font-weight: bold;
   text-align: center; }
+  .section-title.left-justify {
+    text-align: left; }
+  @media only screen and (max-width: 480px) {
+    .section-title.palm--center {
+      text-align: center; } }
 
 .section-subtitle {
   font-size: 24px;
@@ -2547,7 +2552,7 @@ blockquote {
     padding: 0 24px;
     width: auto; }
     @media only screen and (max-width: 480px) {
-      .cta.auto.palm--one-whole {
+      .cta.auto {
         width: 100%; } }
   .cta.full {
     width: 100% !important; }

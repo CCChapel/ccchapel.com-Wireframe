@@ -107,11 +107,15 @@
 
         width: auto;
         
-        &.palm--one-whole {
-            @include grid-media-query("palm") {
-                width: 100%;
-            }
+        @include grid-media-query("palm") {
+            width: 100%;
         }
+        
+        // &.palm--one-whole {
+        //     @include grid-media-query("palm") {
+        //         width: 100%;
+        //     }
+        // }
     }
 
     &.full {

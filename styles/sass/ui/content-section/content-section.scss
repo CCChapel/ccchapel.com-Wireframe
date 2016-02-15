@@ -154,6 +154,15 @@ div.content-section.transparent:last-child {
     font-weight: bold;
 
     text-align: center;
+    
+    &.left-justify {
+        text-align: left;
+    }
+    &.palm--center {
+        @include grid-media-query("palm") {
+            text-align: center;
+        }
+    }
 }
 
 .section-subtitle {
