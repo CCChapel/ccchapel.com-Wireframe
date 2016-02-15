@@ -9,8 +9,9 @@
     
     @include grid-media-query("palm") {
         border-right: none;
-        margin-right: inherit;
-        margin-left: inherit;
+        
+        margin-right: 0;
+        margin-left: 0;
     }
     
 //    &:before {

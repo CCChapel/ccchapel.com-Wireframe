@@ -2139,8 +2139,8 @@ div.content-section.transparent:last-child {
   @media only screen and (max-width: 480px) {
     .pull-quote {
       border-right: none;
-      margin-right: inherit;
-      margin-left: inherit; } }
+      margin-right: 0;
+      margin-left: 0; } }
 
 .bg-layover {
   background: none no-repeat center center/contain content-box;
@@ -2440,6 +2440,10 @@ blockquote {
     text-indent: 0; }
   blockquote.no-cite:after {
     content: none; }
+  @media only screen and (max-width: 480px) {
+    blockquote {
+      padding-left: 1rem;
+      padding-right: 1rem; } }
 
 .horizontal-list {
   margin-bottom: 0;

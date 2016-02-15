@@ -145,6 +145,11 @@ blockquote {
     &.no-cite:after {
         content: none;
     }
+    
+    @include grid-media-query("palm") {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 }
 
 
