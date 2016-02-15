@@ -2136,6 +2136,11 @@ div.content-section.transparent:last-child {
   position: relative;
   margin-right: -12px;
   margin-left: 12px; }
+  @media only screen and (max-width: 480px) {
+    .pull-quote {
+      border-right: none;
+      margin-right: inherit;
+      margin-left: inherit; } }
 
 .bg-layover {
   background: none no-repeat center center/contain content-box;
