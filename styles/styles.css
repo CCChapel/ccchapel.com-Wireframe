@@ -2215,6 +2215,9 @@ div.content-section.transparent:last-child {
   .palm--add-bottom-margin {
     margin-bottom: 24px; } }
 
+.no-bottom-margin {
+  margin-bottom: 0 !important; }
+
 .full-height {
   height: 100%;
   min-height: inherit; }
@@ -2551,6 +2554,9 @@ blockquote {
   @media only screen and (min-width: 1024px) {
     .cta + .cta {
       margin-left: 24px; } }
+  @media only screen and (max-width: 480px) {
+    .cta + .cta {
+      margin-top: 10px; } }
   .content-section.transparent .cta, .content-section.light-gray .cta {
     background-color: rgba(202, 55, 55, 0.8);
     border: none;

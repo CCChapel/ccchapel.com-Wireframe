@@ -122,6 +122,10 @@
         @include grid-media-query("desk") {
             margin-left: $magic-number;
         }
+        
+        @include grid-media-query("palm") {
+            margin-top: 10px;
+        }
     }
     
     //Transparent & Light Gray Sections
