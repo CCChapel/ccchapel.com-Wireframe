@@ -1504,7 +1504,6 @@ body {
   line-height: 1.5em;
   -webkit-font-smoothing: antialiased; }
   body.locked {
-    height: 100vh;
     overflow: hidden; }
 
 .grid {
