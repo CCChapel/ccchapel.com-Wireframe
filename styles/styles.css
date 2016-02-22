@@ -1639,11 +1639,11 @@ div.content-section.transparent:last-child {
     color: currentColor; }
 .cross-sell__image {
   background: #CCC center bottom/cover no-repeat scroll;
-  margin-bottom: 1em;
-  height: 10em; }
+  margin-bottom: 24px;
+  height: 10rem; }
   @media only screen and (min-width: 481px) and (max-width: 1023px) {
     .cross-sell__image {
-      height: 20em; } }
+      height: 15rem; } }
 .cross-sell__name {
   font-size: 24px;
   font-size: 1.5rem;
@@ -1651,7 +1651,7 @@ div.content-section.transparent:last-child {
   font-weight: bold; }
 .cross-sell__details {
   font-weight: normal !important; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 480px) {
     .cross-sell__details {
       border-bottom: #0b4673 1pt solid;
       padding-bottom: 24px; }

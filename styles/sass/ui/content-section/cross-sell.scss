@@ -2,24 +2,6 @@
 // CROSS SELL
 //**************************************************/
 .cross-sell {
-    &__section-title {
-        //        @include typecsset-font-size($secondary-headline-size);
-        //        font-weight: bold;
-        //        
-        //        text-align: center;
-    }
-
-//    &__section-description {
-//        margin: 0 0 1.5rem 0;
-//
-//        text-align: center;
-//    }
-
-    &__section-cta {
-        .cta {
-        }
-    }
-    
     &__item {
         margin-bottom: $magic-number;
 
@@ -31,12 +13,12 @@
     &__image {
         background: $medium-gray center bottom/cover no-repeat scroll;
 
-        margin-bottom: 1em;
+        margin-bottom: $bottom-margin;
 
-        height: 10em;
+        height: 10rem;
 
         @include grid-media-query("lap") {
-            height: 20em;
+            height: 15rem;
         }
     }
 
@@ -48,7 +30,7 @@
     &__details {
         font-weight: normal !important;
 
-        @include grid-media-query("portable") {
+        @include grid-media-query("palm") {
             border-bottom: $dark-blue 1pt solid;
             padding-bottom: $magic-number;
 
